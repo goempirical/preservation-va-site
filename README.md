@@ -13,7 +13,7 @@ brew install homebrew/php/wp-cli
 brew install mysql
 ```
 
-Now set up a database, user and download and config Wordpress into the folder of your choice--DON'T DO THIS IN THE FOLDER FOR THIS REPO, do it in a blank folder.
+Now set up a database, user and download and config Wordpress into the local repo folder
 
 ```zsh
 mysql -uroot -proot -e 'create database if not exists preservation_va'
@@ -24,15 +24,23 @@ wp core install --url=localhost:8080 --title="Preservation VA" --admin_user="Emp
 wp core config --dbname=preservation_va --dbuser=preservation_va --dbpass=preservation_va --dbhost=0.0.0.0
 ```
 
-Now change to the themes directory and install understrap.
+Now within your local repo folder, install this repo. You can do that with a git clone.
 
 ```zsh
-cd wp-content/themes
-git clone https://github.com/understrap/understrap.git
+git clone https://github.com/goempirical/preservation-va-site.git
 ```
 
-Now within the `themes` folder, install this repo. You can do that with a git clone, or by git cloning elsewhere, the symlining if it's more convenient to have this folder elsewhere for development?
+
+Now change to the directory wp-content/themes/understrap and run npm install
 
 ```zsh
-git clone https://github.com/OKNoah/preservation-va-site.git
+cd wp-content/themes/understrap
+npm install
+```
+
+Now change to the directory wp-content/themes/preservation-va-site and run npm install
+
+```zsh
+cd wp-content/themes/preservation-va-site
+npm install
 ```
