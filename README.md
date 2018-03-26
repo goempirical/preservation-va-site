@@ -30,7 +30,6 @@ Now within your local repo folder, install this repo. You can do that with a git
 git clone https://github.com/goempirical/preservation-va-site.git
 ```
 
-
 Now change to the directory wp-content/themes/understrap and run npm install
 
 ```zsh
@@ -43,4 +42,24 @@ Now change to the directory wp-content/themes/preservation-va-site and run npm i
 ```zsh
 cd wp-content/themes/preservation-va-site
 npm install
+```
+
+# Seba's Notes
+
+Start MySQL
+
+```
+> mysqld
+```
+
+Stop
+
+```
+> mysqld Stop
+```
+
+Start WP server
+
+```
+> wp server
 ```
