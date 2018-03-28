@@ -21,11 +21,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php /*get_template_part( 'loop-templates/content', 'page' );*/ ?>
+					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-          <h1>Title: <?php the_field('hs_title'); ?></h1>
-          <h4>Year of Origintation: <?php the_field('hs_year_of_origination'); ?></h4>
-          <h4>Address: <?php the_field('hs_address'); ?></h4>
+          <?php include 'historic_site_main_section.php' ?>
+
+          <?php include 'historic_site_section_2.php' ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.

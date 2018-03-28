@@ -28,8 +28,8 @@
           'hierarchical' => false,
           'menu_position' => 5,
           'supports' => array('title', 'editor', 'thumbnail'),
-          'rewrite' => array('slug' => 'pdf_resource', 'with_front' => FALSE)
-        ); 
+          'has_archive' => true
+        );
 
       register_post_type('events' , $args);
   }
@@ -46,7 +46,7 @@
     $pdf_file = $custom["pdf_file"][0];
     echo '<input type="hidden" name="mytheme_meta_box_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
     ?>
-      Date field goes here! 
+      Date field goes here!
     <?php
   }
 
@@ -55,7 +55,7 @@
     wp_enqueue_script('thickbox');
     wp_register_script('my-upload', get_bloginfo('template_url') . '/js/my-script.js', array('jquery','media-upload','thickbox'));
     wp_enqueue_script('my-upload');
-  } 
+  }
   function my_admin_styles () {
     wp_enqueue_style('thickbox');
   }

@@ -26,3 +26,5 @@ function theme_enqueue_styles() {
 
 include 'custom-post-types/events.php';
 include 'taxonomies/index.php';
+
+?>

@@ -14,7 +14,7 @@
 
     register_taxonomy(
       "historic_sites",
-      array("page", "events"),
+      array("post", "page", "events"),
       array(
         "hierarchical" => true,
         "label" => "Historic Sites",
@@ -23,3 +23,4 @@
       )
     );
   }
+  ?>
