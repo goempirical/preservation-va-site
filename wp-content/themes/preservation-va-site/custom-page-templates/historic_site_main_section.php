@@ -13,14 +13,16 @@
         <!-- Gallery -->
         <h4>Image Gallery: </h4>
         <?php $image_gallery = get_sub_field('hs_main_gallery') ?>
-        <?php foreach( $image_gallery as $image ): ?>
-            <li>
-                <a href="<?php echo $image['url']; ?>">
-                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                </a>
-                <p><?php echo $image['caption']; ?></p>
-            </li>
-        <?php endforeach; ?>
+        <?php if($image_gallery): ?>
+          <?php foreach( $image_gallery as $image ): ?>
+              <li>
+                  <a href="<?php echo $image['url']; ?>">
+                       <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                  </a>
+                  <p><?php echo $image['caption']; ?></p>
+              </li>
+          <?php endforeach; ?>
+        <?php endif ?>
 
         <h4>Title: <?php the_sub_field('hs_title'); ?></h4>
         <h4>Year of Origintation: <?php the_sub_field('hs_year_of_origination'); ?></h4>
