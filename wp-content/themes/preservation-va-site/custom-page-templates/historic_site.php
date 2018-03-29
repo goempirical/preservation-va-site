@@ -25,7 +25,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
           <?php include 'historic_site_main_section.php' ?>
 
-          <?php include 'historic_site_section_2.php' ?>
+          <?php include 'historic_site_tours_and_rentals.php' ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.

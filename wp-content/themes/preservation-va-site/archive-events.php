@@ -25,7 +25,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-				<h1> Events Archive </h1>
+				<h1> Events Archive </h1>	
 
 				<?php if ( have_posts() ) : ?>
 
