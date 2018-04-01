@@ -3,6 +3,95 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
+	'key' => 'group_5ac0285a73f02',
+	'title' => 'Events - Custom Fields',
+	'fields' => array(
+		array(
+			'key' => 'field_5ac02876a724e',
+			'label' => 'Start Date',
+			'name' => 'e_start_date',
+			'type' => 'date_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'display_format' => 'd/m/Y',
+			'return_format' => 'd/m/Y',
+			'first_day' => 1,
+		),
+		array(
+			'key' => 'field_5ac028bfa724f',
+			'label' => 'End Date',
+			'name' => 'e_end_date',
+			'type' => 'date_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'display_format' => 'd/m/Y',
+			'return_format' => 'd/m/Y',
+			'first_day' => 1,
+		),
+		array(
+			'key' => 'field_5ac02aa3a619f',
+			'label' => 'Link',
+			'name' => 'e_link',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+		),
+		array(
+			'key' => 'field_5ac02b47a61a0',
+			'label' => 'Time',
+			'name' => 'e_time',
+			'type' => 'time_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'display_format' => 'g:i a',
+			'return_format' => 'g:i a',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'events',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5ab98646b0ba0',
 	'title' => 'Historic Site - Main Section',
 	'fields' => array(
