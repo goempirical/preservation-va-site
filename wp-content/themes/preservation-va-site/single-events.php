@@ -38,6 +38,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
           <h4>Link: <?php the_field('e_link'); ?></h4>
           <h4>Time: <?php the_field('e_time'); ?></h4>
 
+          <!-- This is an include to test the query on cutom post events-->
+          <h1> Upcoming events </h1>
+          <?php include 'custom-post-templates/events-search.php' ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
@@ -54,6 +57,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+
 
 	</div><!-- .row -->
 

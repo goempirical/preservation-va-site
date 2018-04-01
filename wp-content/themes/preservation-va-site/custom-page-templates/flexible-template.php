@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Custom Flexible Template
+ * Template Name: Flexible Template
  */
 get_header();
 
@@ -23,7 +23,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-          <h1>Flexible Template, Yeah!</h1>
+          <h1>Flexible Template</h1>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
