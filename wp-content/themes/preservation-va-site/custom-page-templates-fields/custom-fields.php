@@ -411,7 +411,7 @@ Link to event posting',
 			array(
 				'param' => 'page_template',
 				'operator' => '==',
-				'value' => 'custom-page-templates/historic_site.php',
+				'value' => 'custom-page-templates/historic-site.php',
 			),
 		),
 	),
@@ -513,7 +513,7 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'page_template',
 				'operator' => '==',
-				'value' => 'custom-page-templates/historic_site.php',
+				'value' => 'custom-page-templates/historic-site.php',
 			),
 		),
 	),

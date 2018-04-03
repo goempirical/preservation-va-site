@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Historic Site
+ * Template Name: Events Upcoming Template
  */
 get_header();
 
@@ -23,9 +23,10 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
 
-          <?php include 'historic_site_main_section.php' ?>
+          <h1>Upcoming Event List</h1>
 
-          <?php include 'historic_site_tours_and_rentals.php' ?>
+          <!-- This is an include to test the query on cutom post events-->
+          <?php get_template_part('custom-post-templates/events-search') ?>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
