@@ -177,13 +177,10 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'scripts'], function () { });
 // Uglifies and concat all JS files into one
 gulp.task('scripts', function() {
     var scripts = [
-
-        // Start - All BS4 stuff
-        basePaths.dev + 'js/bootstrap4/bootstrap.js',
-
-        // End - All BS4 stuff
-
-        basePaths.dev + 'js/skip-link-focus-fix.js'
+        basePaths.dev + 'js/bootstrap4/bootstrap.js' , 
+        basePaths.dev + 'js/owl-carousel.js',
+        basePaths.js  + 'slider_settings.js',
+        basePaths.dev + 'js/skip-link-focus-fix.js',
     ];
   gulp.src(scripts)
     .pipe(concat('child-theme.min.js'))
@@ -250,6 +247,7 @@ gulp.task('copy-assets', function() {
 
     gulp.src(basePaths.node + 'popper.js/dist/umd/popper.js')
         .pipe(gulp.dest(basePaths.js));
+
 });
 
 // Run
