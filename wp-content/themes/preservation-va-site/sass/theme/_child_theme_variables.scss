@@ -9,8 +9,7 @@
 //
 // Color system
 //
-
-$primary: rgb(81, 91, 95);
+$font-family-base: FreightTextProBook, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $white-one: #f6f5f5;
 $white-two: #ffffff;
 $light-navy: #15467b;
@@ -21,5 +20,6 @@ $white-three: #f2f2f2;
 $greyish-brown-two: #4a4a4a;
 $red-brown: #91331a;
 $aux_gray: #d8d8d8;
+$primary: $greyish-brown;
 $range-head-title: (h1, h2, h3, h4);
 

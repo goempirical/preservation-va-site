@@ -134,30 +134,32 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									</div>
 								
 								<?php elseif ( get_row_layout() == 'call_to_action_block' ) : ?>
-
 									<div class="row">
-
 										<div class="col-md-12 no_padding_both_sides">
-
 											<div class="content_action_block <?php echo get_sub_field('background_color');?>">
-
 												<?php the_sub_field('text') ?>
-
 												<div class="content_button">
+													<?php 
+														$button_1 = get_sub_field('button_1');
+														$button_2 = get_sub_field('button_2');
 														
-														<?php if ( get_sub_field('button_1') ) : ?>
+														$class = "";
+														if ($button_1 && $button_2) :
+															$class = "small";
+														endif;
+													?>
+													<?php if ( $button_1 ) : ?>
+														<button type="button" class="btn_cl <?php echo $class; ?>">
+															<?php echo $button_1['title']?>
+														</button>
+													<?php endif; ?>
 
-															<button type="button" class="btn_cl"> <?php echo get_sub_field('button_1')['title']?> </button>
-															
-														<?php endif; ?>
 
-
-														<?php if ( get_sub_field('button_2') ) : ?>
-
-															<button type="button" class="btn_cl"> <?php echo get_sub_field('button_2')['title']?> </button>
-															
-														<?php endif; ?>
-													
+													<?php if ( $button_2 ) : ?>
+														<button type="button" class="btn_cl <?php echo $class; ?>">
+															<?php echo $button_2['title']?>
+														</button>
+													<?php endif; ?>
 												</div>
 
 											</div>
@@ -321,7 +323,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 														</div>
 
-														<div class="see_all">See All ></div>
+														<a href="#" class="see_all">See All ></a>
 
 													<?php endif; ?>
 												</div>
@@ -364,7 +366,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 														</div>
 
-														<div class="see_all">See All ></div>
+														<a href="#" class="see_all">See All ></a>
 
 													<?php endif; ?>
 													
