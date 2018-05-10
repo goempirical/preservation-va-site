@@ -33,7 +33,8 @@ function understrap_footer_menu() {
 }
 add_action( 'init', 'understrap_footer_menu' );
 
-add_image_size('banner_size', 1023, 339, true);
+add_image_size('banner_size', 1024, 339, true);
+add_image_size('Home Banner', 1024, 514, true);
 
 // Build Table for Plugin https://wordpress.org/plugins/advanced-custom-fields-table-field/
 function buildTable($table) {
@@ -65,4 +66,16 @@ function buildTable($table) {
         echo '</table>';
     }
 }
+
+// Add support to files upload SVG
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
+function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+	return $post_excerpt . '';
+}
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
 ?>

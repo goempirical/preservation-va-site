@@ -135,10 +135,11 @@ ul li {
 }
 
 @mixin btn_big {
+    font-family: GothamNarrow;
     border: none;
-    border-radius: 0px ;
-    font-weight: bold ;
-    text-transform: uppercase ;
+    border-radius: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
     min-width: 167px;
     height: 62px;
     line-height: 52px;
@@ -215,6 +216,109 @@ div[class^="col-"] {
     }
 }
 
+.page-template-homepage-site {
+    .banner_image {
+
+        .heading{
+            position: absolute;
+            top: 0;
+            padding: 0 200px;
+            text-align: center;
+
+            .align-middle {
+                height: 514px; 
+                display: table-cell;
+            }
+            .title{
+                color: $white-two;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+        }
+
+        p {
+            font-family: FreightTextProBook;
+            font-size: 24px;
+            line-height: 1.04;
+            letter-spacing: normal;
+            text-align: center;
+            color: $white-two;
+        }
+    }
+}
+
+.our_work {
+    text-align: center;
+    h2 {
+        font-size: 20px;
+        letter-spacing: 1.4px;
+        text-align: center;
+        color: $white-two;
+        text-transform: uppercase;
+    }
+    p {
+        font-family: FreightTextProBook;
+        font-weight: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        text-align: center;
+        color: $white-two;
+        margin-bottom: 0px;
+    }
+    .focus {
+        padding: 37px 50px;
+        text-align: center;
+
+        img {
+            height: 64px;
+            margin-bottom: 18px;
+        }
+    }
+    .focus1 {
+        background-color: $nice-blue;
+    }
+    .focus2 {
+        background-color: $red-brown;
+    }
+    .focus3 {
+        background-color: $nice-blue;
+    }
+}
+
+.section_temporal {
+    h3 {
+        font-size: 36px;
+        line-height: normal;
+        letter-spacing: 0.7px;
+        color: $light-navy;
+        margin-bottom: 25px;
+    }
+}
+
+.featured_post {
+    background-color: $red-brown;
+
+    h3 {
+        font-size: 36px;
+        line-height: normal;
+        letter-spacing: 0.7px;
+        color: $white-two;
+        margin-bottom: 25px;
+    }
+    p {
+        color: $white-two;
+    }
+    a {
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        font-stretch: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: $white-two;
+    }
+}
+
 .content_side {
     padding: 56px 61px;
 
@@ -225,6 +329,10 @@ div[class^="col-"] {
             @include p_medium;
             color: $greyish-brown-two;
         }
+    }
+
+    img {
+        width: 100%;
     }
     .content_address {
         &, & > * {

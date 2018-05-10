@@ -453,8 +453,8 @@ pre {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
@@ -472,16 +472,16 @@ pre {
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
   margin-right: auto;
   margin-left: auto; }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  margin-right: -25px;
+  margin-left: -25px; }
 
 .no-gutters {
   margin-right: 0;
@@ -500,8 +500,8 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 25px;
+  padding-left: 25px; }
 
 .col {
   flex-basis: 0;
@@ -4040,25 +4040,25 @@ tbody.collapse.show {
   display: flex;
   flex-direction: column; }
   .card-deck .card {
-    margin-bottom: 15px; }
+    margin-bottom: 25px; }
   @media (min-width: 576px) {
     .card-deck {
       flex-flow: row wrap;
-      margin-right: -15px;
-      margin-left: -15px; }
+      margin-right: -25px;
+      margin-left: -25px; }
       .card-deck .card {
         display: flex;
         flex: 1 0 0%;
         flex-direction: column;
-        margin-right: 15px;
+        margin-right: 25px;
         margin-bottom: 0;
-        margin-left: 15px; } }
+        margin-left: 25px; } }
 
 .card-group {
   display: flex;
   flex-direction: column; }
   .card-group > .card {
-    margin-bottom: 15px; }
+    margin-bottom: 25px; }
   @media (min-width: 576px) {
     .card-group {
       flex-flow: row wrap; }
@@ -7045,7 +7045,7 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #ddd !important; } }
 
 .wrapper {
-  padding: 30px 0; }
+  padding: 50px 0; }
 
 #wrapper-hero {
   padding: 0px !important; }
@@ -9817,6 +9817,7 @@ ul li {
   line-height: 36px; }
 
 button.btn_cl {
+  font-family: GothamNarrow;
   border: none;
   border-radius: 0px;
   font-weight: bold;
@@ -9834,6 +9835,7 @@ button.btn_cl {
 
 .btn,
 .wpcf7 input[type=submit] {
+  font-family: GothamNarrow;
   border: none;
   border-radius: 0px;
   font-weight: bold;
@@ -9881,6 +9883,82 @@ div[class^="col-"].padding_all {
 .banner_image > img {
   width: 100%; }
 
+.page-template-homepage-site .banner_image .heading {
+  position: absolute;
+  top: 0;
+  padding: 0 200px;
+  text-align: center; }
+  .page-template-homepage-site .banner_image .heading .align-middle {
+    height: 514px;
+    display: table-cell; }
+  .page-template-homepage-site .banner_image .heading .title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px; }
+
+.page-template-homepage-site .banner_image p {
+  font-family: FreightTextProBook;
+  font-size: 24px;
+  line-height: 1.04;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff; }
+
+.our_work {
+  text-align: center; }
+  .our_work h2 {
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase; }
+  .our_work p {
+    font-family: FreightTextProBook;
+    font-weight: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 0px; }
+  .our_work .focus {
+    padding: 37px 50px;
+    text-align: center; }
+    .our_work .focus img {
+      height: 64px;
+      margin-bottom: 18px; }
+  .our_work .focus1 {
+    background-color: #0f7ab5; }
+  .our_work .focus2 {
+    background-color: #91331a; }
+  .our_work .focus3 {
+    background-color: #0f7ab5; }
+
+.section_temporal h3 {
+  font-size: 36px;
+  line-height: normal;
+  letter-spacing: 0.7px;
+  color: #15467b;
+  margin-bottom: 25px; }
+
+.featured_post {
+  background-color: #91331a; }
+  .featured_post h3 {
+    font-size: 36px;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    color: #ffffff;
+    margin-bottom: 25px; }
+  .featured_post p {
+    color: #ffffff; }
+  .featured_post a {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    color: #ffffff; }
+
 .content_side {
   padding: 56px 61px; }
   .content_side .side_text {
@@ -9894,6 +9972,8 @@ div[class^="col-"].padding_all {
       letter-spacing: normal;
       text-align: left;
       color: #4a4a4a; }
+  .content_side img {
+    width: 100%; }
   .content_side .content_address, .content_side .content_address > * {
     text-align: right; }
   .content_side .content_address h3 {
