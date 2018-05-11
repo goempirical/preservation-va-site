@@ -1,0 +1,183 @@
+@import url("https://use.typekit.net/ixo4yjx.css");
+
+
+@each $header in $range-head-title {
+    #{$header} {
+        color: $greyish-brown-two;
+    }
+}
+
+@mixin p_large {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.04;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+@mixin p_medium {
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+p {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    text-align: left;
+    color: $greyish-brown-two;
+    margin-bottom: 30px;
+}
+
+p {
+    a {
+        color: $red-brown;
+    }
+    a:hover {
+        color: $red-brown;
+    }
+}
+
+.p_large {
+    p {
+        @include p_large;
+    }
+}
+
+.p_medium {
+    p {
+        @include p_medium;
+    }
+}
+
+.p_nomargin {
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+h1 {
+    font-family: $font-family-header;
+    font-size: 48px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    text-align: left;
+    color: $greyish-brown-two;
+}
+
+h2 {
+    font-family: $font-family-header;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-align: left;
+    color: $greyish-brown-two;
+}
+
+h3 {
+    font-family: $font-family-header;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: 1px;
+    text-align: left;
+    color: $greyish-brown-two;
+    margin-bottom: 14px;
+}
+
+h4 {
+    font-family: $font-family-header;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul li {
+    line-height: 36px;
+}
+
+@mixin btn_big {
+    font-family: $font-family-header;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: 167px;
+    height: 62px;
+    line-height: 52px;
+    font-size: 18px ;
+    padding: 5px 22px;
+    cursor: pointer;
+}
+
+@mixin btn_small {
+    font-size: 14px;
+    height: 51px;
+    line-height: 41px;
+}
+
+button.btn_cl {
+    @include btn_big;
+
+    &.small {
+        @include btn_small;
+    }
+}
+
+.btn {
+    @include btn_big;
+
+    &.marigold {
+        background-color: $marigold;
+        color: $light-navy;
+    }
+    &.marigold:hover {
+        background-color: $light-navy;
+        color: $white-two;
+    }
+    &.white {
+        background-color: $white-two;
+        color: $light-navy;
+    }
+    &.white:hover {
+        background-color: $light-navy;
+        color: $white-two;
+    }
+    &.small {
+        @include btn_small;
+    }
+}

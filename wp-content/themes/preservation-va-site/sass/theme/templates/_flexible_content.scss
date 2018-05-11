@@ -1,0 +1,115 @@
+// FLEXIBLE CONTENT
+.content_related {
+    padding: 53px 33px 53px 65px;
+    min-height: 100%;
+
+    .title_related {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.4px;
+    }
+    .see_all {
+        position: absolute;
+        bottom: 53px;
+        right: 82px;
+        font-style: italic;
+    }
+    .wrapper_related {
+        padding: 30px 0px 21px;
+
+
+        .card_related + .card_related {
+            margin-top: 17px;
+        }
+
+        .card_related {
+            display: flex;
+            justify-content: flex-start;
+
+            &:last-child {
+                margin-bottom: 21px;
+            }
+            .side_content_related {
+                * + * {
+                    margin-top: 5px; 
+                    display: block;
+                }
+
+                a {
+                    font-style: italic;
+                }
+            }
+            .title_cont {
+                font-size: 15px;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.47;
+                letter-spacing: normal;
+                text-align: left;
+                display: block;
+                max-width: 350px; 
+            }
+        }
+    }
+
+    &.events {
+        background-color: $marigold;
+        color: $light-navy;
+
+        .card_related {
+
+            .date_release {
+                width: 37px;
+                height: 37px;
+                background-color: $light-navy;
+                margin-right: 17px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch: normal;
+
+                span {
+                    line-height: 1.1;
+                    padding: 0px 2px 0px;
+                    color: $white-two;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 10px
+                }
+            }
+            .title_cont {
+                font-weight: 500;
+            }
+            .time_range {
+                font-weight: 300;
+                line-height: 1.47;
+            }
+        }
+        a {
+            color: $light-navy;
+            
+        }
+    }
+    &.stories  {
+        
+        background-color: $red-brown;
+        color: $white-two;
+
+        .card_related {
+
+            .title_cont {
+                font-weight: 300;
+            }
+        }
+
+        a {
+            color: $white-two;
+        }
+    }
+}

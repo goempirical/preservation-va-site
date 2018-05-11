@@ -5,6 +5,8 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://use.typekit.net/ixo4yjx.css");
+@import url("https://use.typekit.net/ixo4yjx.css");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -46,7 +48,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 @-ms-viewport {
   width: device-width; }
@@ -56,7 +58,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: FreightTextProBook, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "freight-text-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4725,7 +4727,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: FreightTextProBook, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "freight-text-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4810,7 +4812,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: FreightTextProBook, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "freight-text-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -9701,23 +9703,6 @@ a.skip-link {
   height: 100%;
   width: 100%; }
 
-.navbar-dark .navbar-brand a {
-  color: #ffffff; }
-
-#wrapper-navbar .bg-dark {
-  background-color: #15467b !important;
-  padding: 40px .5rem 28px; }
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: 0.5px;
-  text-align: right; }
-
 h1 {
   color: #4a4a4a; }
 
@@ -9770,7 +9755,7 @@ p a:hover {
   padding: 0; }
 
 h1 {
-  font-family: GothamNarrow;
+  font-family: "myriad-pro", sans-serif;
   font-size: 48px;
   font-weight: 500;
   font-style: normal;
@@ -9781,7 +9766,7 @@ h1 {
   color: #4a4a4a; }
 
 h2 {
-  font-family: GothamNarrow;
+  font-family: "myriad-pro", sans-serif;
   font-size: 36px;
   font-weight: 500;
   font-style: normal;
@@ -9792,7 +9777,7 @@ h2 {
   color: #4a4a4a; }
 
 h3 {
-  font-family: GothamNarrow;
+  font-family: "myriad-pro", sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -9804,7 +9789,7 @@ h3 {
   margin-bottom: 14px; }
 
 h4 {
-  font-family: GothamNarrow;
+  font-family: "myriad-pro", sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -9813,11 +9798,15 @@ h4 {
   letter-spacing: 1.4px;
   text-align: left; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased; }
+
 ul li {
   line-height: 36px; }
 
 button.btn_cl {
-  font-family: GothamNarrow;
+  font-family: "myriad-pro", sans-serif;
   border: none;
   border-radius: 0px;
   font-weight: bold;
@@ -9835,7 +9824,7 @@ button.btn_cl {
 
 .btn,
 .wpcf7 input[type=submit] {
-  font-family: GothamNarrow;
+  font-family: "myriad-pro", sans-serif;
   border: none;
   border-radius: 0px;
   font-weight: bold;
@@ -9863,6 +9852,23 @@ button.btn_cl {
     height: 51px;
     line-height: 41px; }
 
+.navbar-dark .navbar-brand a {
+  color: #ffffff; }
+
+#wrapper-navbar .bg-dark {
+  background-color: #15467b !important;
+  padding: 40px .5rem 28px; }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: right; }
+
 .dark_blue .marigold:hover {
   background-color: #ffffff;
   color: #15467b; }
@@ -9876,33 +9882,6 @@ div[class^="col-"].no_padding_left_side {
 
 div[class^="col-"].padding_all {
   padding: 50px; }
-
-.page-template-historic-site h3 {
-  color: #15467b; }
-
-.banner_image > img {
-  width: 100%; }
-
-.page-template-homepage-site .banner_image .heading {
-  position: absolute;
-  top: 0;
-  padding: 0 200px;
-  text-align: center; }
-  .page-template-homepage-site .banner_image .heading .align-middle {
-    height: 514px;
-    display: table-cell; }
-  .page-template-homepage-site .banner_image .heading .title {
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 15px; }
-
-.page-template-homepage-site .banner_image p {
-  font-family: FreightTextProBook;
-  font-size: 24px;
-  line-height: 1.04;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff; }
 
 .our_work {
   text-align: center; }
@@ -10046,81 +10025,6 @@ div[class^="col-"].padding_all {
   letter-spacing: normal;
   text-align: center;
   color: #4a4a4a; }
-
-.content_related {
-  padding: 53px 33px 53px 65px;
-  min-height: 100%; }
-  .content_related .title_related {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 0.4px; }
-  .content_related .see_all {
-    position: absolute;
-    bottom: 53px;
-    right: 82px;
-    font-style: italic; }
-  .content_related .wrapper_related {
-    padding: 30px 0px 21px; }
-    .content_related .wrapper_related .card_related + .card_related {
-      margin-top: 17px; }
-    .content_related .wrapper_related .card_related {
-      display: flex;
-      justify-content: flex-start; }
-      .content_related .wrapper_related .card_related:last-child {
-        margin-bottom: 21px; }
-      .content_related .wrapper_related .card_related .side_content_related * + * {
-        margin-top: 5px;
-        display: block; }
-      .content_related .wrapper_related .card_related .side_content_related a {
-        font-style: italic; }
-      .content_related .wrapper_related .card_related .title_cont {
-        font-size: 15px;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.47;
-        letter-spacing: normal;
-        text-align: left;
-        display: block;
-        max-width: 350px; }
-  .content_related.events {
-    background-color: #ffca05;
-    color: #15467b; }
-    .content_related.events .card_related .date_release {
-      width: 37px;
-      height: 37px;
-      background-color: #15467b;
-      margin-right: 17px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal; }
-      .content_related.events .card_related .date_release span {
-        line-height: 1.1;
-        padding: 0px 2px 0px;
-        color: #ffffff;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 10px; }
-    .content_related.events .card_related .title_cont {
-      font-weight: 500; }
-    .content_related.events .card_related .time_range {
-      font-weight: 300;
-      line-height: 1.47; }
-    .content_related.events a {
-      color: #15467b; }
-  .content_related.stories {
-    background-color: #91331a;
-    color: #ffffff; }
-    .content_related.stories .card_related .title_cont {
-      font-weight: 300; }
-    .content_related.stories a {
-      color: #ffffff; }
 
 .content_two_columns {
   padding: 60px 30px; }
@@ -10377,7 +10281,7 @@ div.owl-dots {
   color: #ffffff; }
 
 .table td {
-  font-family: GothamNarrow;
+  font-family: "myriad-pro", sans-serif;
   font-size: 15px;
   font-weight: 500;
   font-style: normal;
@@ -10399,6 +10303,9 @@ div.owl-dots {
 iframe {
   width: 100%; }
 
+#content {
+  max-width: none; }
+
 #wrapper-footer {
   background-color: #0f7ab5;
   padding: 55px 0 68px; }
@@ -10419,60 +10326,179 @@ iframe {
   color: #ffffff; }
 
 .footer {
-  color: #ffffff; }
-  .footer p {
-    font-family: GothamNarrow;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 1.62;
-    letter-spacing: 0.3px;
-    text-align: left;
-    line-height: 1.62;
-    margin-bottom: 0px;
-    color: #ffffff; }
-  .footer #mc_embed_signup {
-    margin-bottom: 30px;
-    background-color: transparent !important; }
-    .footer #mc_embed_signup form {
-      padding: 0 !important;
-      margin: 0 !important; }
-    .footer #mc_embed_signup input.email {
-      background-color: #ffffff;
-      margin: 0 !important;
-      display: inline-block;
-      line-height: 39px;
-      height: 39px;
-      max-width: 242px;
-      border: 1px solid #ffffff;
-      border-radius: 0; }
-    .footer #mc_embed_signup input.button {
-      display: inline-block;
-      font-family: GothamNarrow;
-      border: none;
-      border-radius: 0px;
+  color: #ffffff; 
+}
+.footer p {
+  font-family: GothamNarrow;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.62;
+  letter-spacing: 0.3px;
+  text-align: left;
+  line-height: 1.62;
+  margin-bottom: 0px;
+  color: #ffffff; 
+}
+.footer #mc_embed_signup {
+  margin-bottom: 30px;
+  background-color: transparent !important; 
+}
+.footer #mc_embed_signup form {
+  padding: 0 !important;
+  margin: 0 !important; 
+}
+.footer #mc_embed_signup input.email {
+  background-color: #ffffff;
+  margin: 0 !important;
+  display: inline-block;
+  line-height: 39px;
+  height: 39px;
+  max-width: 242px;
+  border: 1px solid #ffffff;
+  border-radius: 0; 
+}
+.footer #mc_embed_signup input.button {
+  display: inline-block;
+  font-family: GothamNarrow;
+  border: none;
+  border-radius: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  min-width: 167px;
+  height: 62px;
+  line-height: 52px;
+  font-size: 18px;
+  padding: 5px 22px;
+  cursor: pointer;
+  font-size: 14px;
+  height: 39px;
+  line-height: 30px;
+  background-color: #ffca05;
+  color: #15467b; 
+}
+.footer #mc_embed_signup input.button:hover {
+  background-color: #15467b;
+  color: #ffffff; 
+}
+.footer .social_media {
+  text-align: center; 
+}
+.footer .social_media a {
+  margin-right: 12px;
+  display: inline-block; 
+}
+.footer .social_media .btn.marigold, .footer .social_media .wpcf7 input.marigold[type=submit], .wpcf7 .footer .social_media input.marigold[type=submit] {
+  border: solid 1px #ffca05;
+  background-color: transparent;
+  color: #ffffff;
+  margin-top: 38px; 
+}
+.content_related {
+  padding: 53px 33px 53px 65px;
+  min-height: 100%; }
+  .content_related .title_related {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.4px; }
+  .content_related .see_all {
+    position: absolute;
+    bottom: 53px;
+    right: 82px;
+    font-style: italic; }
+  .content_related .wrapper_related {
+    padding: 30px 0px 21px; }
+    .content_related .wrapper_related .card_related + .card_related {
+      margin-top: 17px; }
+    .content_related .wrapper_related .card_related {
+      display: flex;
+      justify-content: flex-start; }
+      .content_related .wrapper_related .card_related:last-child {
+        margin-bottom: 21px; }
+      .content_related .wrapper_related .card_related .side_content_related * + * {
+        margin-top: 5px;
+        display: block; }
+      .content_related .wrapper_related .card_related .side_content_related a {
+        font-style: italic; }
+      .content_related .wrapper_related .card_related .title_cont {
+        font-size: 15px;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.47;
+        letter-spacing: normal;
+        text-align: left;
+        display: block;
+        max-width: 350px; }
+  .content_related.events {
+    background-color: #ffca05;
+    color: #15467b; }
+    .content_related.events .card_related .date_release {
+      width: 37px;
+      height: 37px;
+      background-color: #15467b;
+      margin-right: 17px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       font-weight: bold;
-      text-transform: uppercase;
-      min-width: 167px;
-      height: 62px;
-      line-height: 52px;
-      font-size: 18px;
-      padding: 5px 22px;
-      cursor: pointer;
-      font-size: 14px;
-      height: 39px;
-      line-height: 30px;
-      background-color: #ffca05;
+      font-style: normal;
+      font-stretch: normal; }
+      .content_related.events .card_related .date_release span {
+        line-height: 1.1;
+        padding: 0px 2px 0px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 10px; }
+    .content_related.events .card_related .title_cont {
+      font-weight: 500; }
+    .content_related.events .card_related .time_range {
+      font-weight: 300;
+      line-height: 1.47; }
+    .content_related.events a {
       color: #15467b; }
-      .footer #mc_embed_signup input.button:hover {
-        background-color: #15467b;
-        color: #ffffff; }
-  .footer .social_media {
-    text-align: center; }
-    .footer .social_media a {
-      margin-right: 12px;
-      display: inline-block; }
-    .footer .social_media .btn.marigold, .footer .social_media .wpcf7 input.marigold[type=submit], .wpcf7 .footer .social_media input.marigold[type=submit] {
-      border: solid 1px #ffca05;
-      background-color: transparent;
+  .content_related.stories {
+    background-color: #91331a;
+    color: #ffffff; }
+    .content_related.stories .card_related .title_cont {
+      font-weight: 300; }
+    .content_related.stories a {
+      color: #ffffff; }
+
+.page-template-homepage-site .banner_image {
+  max-height: calc( 100vh - 200px); }
+  .page-template-homepage-site .banner_image .heading {
+    position: absolute;
+    top: 0;
+    padding: 0 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; }
+    .page-template-homepage-site .banner_image .heading .align-middle {
+      display: flex;
+      max-width: 790px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+    .page-template-homepage-site .banner_image .heading .title {
       color: #ffffff;
-      margin-top: 38px; }
+      text-align: center;
+      margin-bottom: 15px; }
+  .page-template-homepage-site .banner_image p {
+    font-size: 24px;
+    line-height: 1.04;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff; }
+
+.page-template-historic-site h3 {
+  color: #15467b; }
+
+.banner_image > img {
+  width: 100%; }
