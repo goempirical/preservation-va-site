@@ -153,7 +153,43 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						<div class="row">
 							<div class="col-md-12 no_padding_both_sides">
 								<div class="content_action_block dark_blue">
-									<h3><?php the_sub_field('hp_historic_nav_intro_text') ?></h3>
+									<?php the_sub_field('hp_historic_nav_intro_text') ?>
+
+									<?php 
+										// Get Taxonimies Historic Sites
+										$taxonomies_hs = get_terms('historic_sites');
+										$array_taxonomies_hs = array();
+							
+										if ($taxonomies_hs) {
+											foreach ( $taxonomies_hs as $term ) {
+												$array_taxonomies_hs[] = $term->slug;
+											}
+										}
+										// Arguments for get Pages with taxonomies choosed of Historic Sites
+										$args = array(
+											'post_type' => 'page',
+											'tax_query' => array(
+												array(
+													'taxonomy' => 'historic_sites',
+													'field'    => 'slug',
+													'terms'    => $array_taxonomies_hs,
+												)
+											),
+										);
+
+										$query = new WP_Query( $args );
+									?>
+									<div class="select-container align-middle">
+										<div class="select-custom">
+											<select id='historysite'>
+												<?php if ($query->have_posts() ) :?>
+													<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+														<option value="<?php the_permalink() ?>"><?php the_title(); ?></option>
+													<?php endwhile; wp_reset_postdata(); ?>
+												<?php endif; ?>
+											</select>
+										</div><a href="javascript: window.location.href = $('#historysite').val();" class="btn marigold small">LEARN MORE</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -201,7 +237,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									<div class="col-md-6 p_medium">
 										<h3><?php the_title() ?></h3>
 										<?php the_excerpt(); ?>
-										<a href="<?php the_permalink() ?>">Read More ></a> &nbsp; <a href="">Subscribe ></a>
+										<?php $opt_subscribe = get_field('opt_subscribe', 'option'); ?>
+										<a href="<?php the_permalink() ?>">
+											Read More >
+										</a> &nbsp; 
+										<a href="<?php echo ($opt_subscribe['opt_subscribe_link']) ? $opt_subscribe['opt_subscribe_link'] : '' ?>" target="_blank">
+											Subscribe >
+										</a>
 									</div>
 								</div>
 							</div>
