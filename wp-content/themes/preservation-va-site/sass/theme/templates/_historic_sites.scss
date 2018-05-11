@@ -1,0 +1,10 @@
+.page-template-historic-site {
+    h3 {
+        color: $light-navy;
+    }
+}
+.banner_image {
+    & > img {
+            width: 100%;
+    }
+}
