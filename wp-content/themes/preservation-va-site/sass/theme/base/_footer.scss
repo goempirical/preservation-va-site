@@ -1,0 +1,22 @@
+// Footer
+#wrapper-footer {
+    background-color: $nice-blue;
+    padding: 55px 0 68px;
+}
+
+#wrapper-footer #footer-menu{
+    list-style: none;
+    margin: 0;
+}
+
+#wrapper-footer #footer-menu a{
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.78;
+    letter-spacing: 0.5px;
+    text-align: right;
+    color: #ffffff;
+    color: $white-two;
+}
