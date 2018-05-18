@@ -19,8 +19,8 @@
 }
 
 .dark_blue .marigold:hover {
-    background-color: $white-two;
-    color: $light-navy;
+    background-color: $white-two !important;
+    color: $light-navy !important;
 }
 
 div[class^="col-"] {
@@ -129,6 +129,29 @@ div[class^="col-"] {
         -moz-appearance: none;
         -webkit-appearance: none;
         text-transform: uppercase;
+        border-radius: 0;
+    }
+}
+
+@mixin date_release {
+    width: 37px;
+    height: 37px;
+    background-color: $light-navy;
+    margin-right: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+
+    span {
+        line-height: 1.1;
+        padding: 0px 2px 0px;
+        color: $white-two;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 10px;
     }
 }
 
@@ -157,7 +180,7 @@ div[class^="col-"] {
 }
 
 .content_side {
-    padding: 56px 61px;
+    padding: 56px 35px;
 
     .side_text {
         max-width: 550px;

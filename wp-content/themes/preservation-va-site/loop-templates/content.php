@@ -1,11 +1,12 @@
 <?php
 /**
- * Single post partial template.
+ * Post rendering content according to caller of get_template_part.
  *
  * @package understrap
  */
 
 ?>
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<div class="row">
 		<div class="col-1">
@@ -24,16 +25,10 @@
 				?>
 			</header><!-- .entry-header -->
 
+			<?php echo get_the_post_thumbnail( $post->ID, 'thumnail' ); ?>
+
 			<div class="entry-content">
-				<?php 
-					echo get_the_post_thumbnail( $post->ID, 'full');
-
-					$attach_id = get_post_thumbnail_id( $post->ID );
-					$image_data = wp_get_attachment( $attach_id );
-				?>
-				<p class="caption"><?php echo $image_data["caption"]; ?></p>
-
-				<?php the_content(); ?>
+				<?php the_excerpt(); ?>
 
 				<div class="category">category: 
 					<span>
@@ -65,6 +60,8 @@
 						?>
 					</span>
 				</div>
+
+				<a href="<?php the_permalink() ?>" class="btn marigold small">READ MORE</a>
 			</div><!-- .entry-content -->
 		</div>
 	</div>

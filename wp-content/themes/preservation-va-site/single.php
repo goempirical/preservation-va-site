@@ -10,9 +10,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="single-wrapper">
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo (get_post_type() == "post") ? "container" : esc_attr( $container ); ?>" id="content" tabindex="-1">
 		<div class="row justify-content-center">
-			<div class="col-md-10">
+			<div class="col-md-12">
 				<div class="aux_content box-stroke adding__space adding__padding__top">
 					<div class="row">
 						<!-- Do the left sidebar check -->
