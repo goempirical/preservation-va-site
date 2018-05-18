@@ -15,7 +15,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?> footer">
+	<div class="container footer">
 
 		<div class="row">
 			<div class="col-md-6">
@@ -73,7 +73,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</a>
 				<?php endif; ?>
 				<div>
-					<a href="#" class="btn marigold small">CONTACT US</a>
+					<a href="/contact-us" class="btn marigold small">CONTACT US</a>
 				</div>
 			</div>
 
@@ -87,12 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php wp_nav_menu(
 							array(
 								'theme_location'  => 'footermenu',
-								//'container_class' => 'collapse navbar-collapse',
-								//'container_id'    => 'navbarNavDropdown',
-								//'menu_class'      => 'navbar-nav',
-								//'fallback_cb'     => '',
-								'menu_id'         => 'footer-menu',
-								//'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+								'menu_id'         => 'footer-menu'
 							)
 						); ?>
 					</div><!-- .site-info -->
