@@ -63,25 +63,7 @@
         .card_related {
 
             .date_release {
-                width: 37px;
-                height: 37px;
-                background-color: $light-navy;
-                margin-right: 17px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                font-weight: bold;
-                font-style: normal;
-                font-stretch: normal;
-
-                span {
-                    line-height: 1.1;
-                    padding: 0px 2px 0px;
-                    color: $white-two;
-                    text-transform: uppercase;
-                    text-align: center;
-                    font-size: 10px
-                }
+                @include date_release;
             }
             .title_cont {
                 font-weight: 500;

@@ -1,0 +1,84 @@
+.blog .date_release,
+.single .date_release{
+    @include date_release;
+}
+.blog h2, 
+.single h2{
+    margin-bottom: 25px;
+    font-family: GothamNarrow;
+        font-size: 20px;
+        line-height: 1.1;
+        letter-spacing: normal;
+
+    a {
+        
+        color: $light-navy;
+    }
+}
+
+.blog,
+.single {
+    article {
+        margin-bottom: 60px;
+    }
+
+    .entry-content {
+        margin-top: 25px;
+        p {
+            font-family: FreightTextProBook;
+            line-height: 1.38;
+        }
+
+        .category {
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.69;
+            letter-spacing: normal;
+            color: $greyish-brown-two;
+            margin-bottom: 25px;
+
+            span {
+                color: $red-brown;
+                a {
+                    color: $red-brown;
+                }
+            }
+        }
+    }
+    .sidebar-right{
+        text-align: right;
+        h3 {
+            line-height: 1.1;
+            letter-spacing: normal;
+            text-align: right;
+        }
+        h4 {
+            font-family: FreightTextProBook;
+            line-height: 1.69;
+            text-align: right;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        a {
+            font-family: FreightTextProBook;
+            font-size: 16px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.5;
+            letter-spacing: normal;
+            text-align: right;
+            color: $red-brown;
+        }
+    }
+    .caption {
+        font-family: GothamNarrow;
+        font-size: 13px;
+        line-height: 1.31;
+        letter-spacing: normal;
+        color: $greyish-brown-two;
+        width: 449px;
+    }
+}

@@ -100,22 +100,24 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						while ( have_rows('hp_intro_banner_temporarily') ) : the_row(); // loop through the rows of data
 							if (get_sub_field('hp_intro_temp_enable')) :
 					?>
-							<div class="section_temporal content_side">
-								<div class="row">
-									<div class="col-md-6">
-										<?php $hp_intro_temp_content = get_sub_field('hp_intro_temp_content'); ?>
-										<?php echo wp_get_attachment_image( $hp_intro_temp_content['hp_intro_temp_featured_content_image']['ID'], 'full', false, array('alt' => $hp_work_focus_1['hp_work_focus_1_icon']['alt']) ); ?>
-									</div>
-									<div class="col-md-6 p_medium">
-										<h3><?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_heading'] ?></h3>
-										<?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_description'] ?>
-										
-										<a href="<?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_button']['url'] ?>" 
-											target="<?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_button']['target'] ?>" 
-											class="btn marigold small">
-											<?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_button']['title'] ?>
-										</a>
-										
+							<div class="container">
+								<div class="section_temporal content_side">
+									<div class="row">
+										<div class="col-md-6">
+											<?php $hp_intro_temp_content = get_sub_field('hp_intro_temp_content'); ?>
+											<?php echo wp_get_attachment_image( $hp_intro_temp_content['hp_intro_temp_featured_content_image']['ID'], 'full', false, array('alt' => $hp_work_focus_1['hp_work_focus_1_icon']['alt']) ); ?>
+										</div>
+										<div class="col-md-6 p_medium">
+											<h3><?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_heading'] ?></h3>
+											<?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_description'] ?>
+											
+											<a href="<?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_button']['url'] ?>" 
+												target="<?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_button']['target'] ?>" 
+												class="btn marigold small">
+												<?php echo $hp_intro_temp_content['hp_intro_temp_featured_content_button']['title'] ?>
+											</a>
+											
+										</div>
 									</div>
 								</div>
 							</div>
@@ -153,7 +155,43 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						<div class="row">
 							<div class="col-md-12 no_padding_both_sides">
 								<div class="content_action_block dark_blue">
-									<h3><?php the_sub_field('hp_historic_nav_intro_text') ?></h3>
+									<?php the_sub_field('hp_historic_nav_intro_text') ?>
+
+									<?php 
+										// Get Taxonimies Historic Sites
+										$taxonomies_hs = get_terms('historic_sites');
+										$array_taxonomies_hs = array();
+							
+										if ($taxonomies_hs) {
+											foreach ( $taxonomies_hs as $term ) {
+												$array_taxonomies_hs[] = $term->slug;
+											}
+										}
+										// Arguments for get Pages with taxonomies choosed of Historic Sites
+										$args = array(
+											'post_type' => 'page',
+											'tax_query' => array(
+												array(
+													'taxonomy' => 'historic_sites',
+													'field'    => 'slug',
+													'terms'    => $array_taxonomies_hs,
+												)
+											),
+										);
+
+										$query = new WP_Query( $args );
+									?>
+									<div class="select-container align-middle">
+										<div class="select-custom">
+											<select id='historysite'>
+												<?php if ($query->have_posts() ) :?>
+													<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+														<option value="<?php the_permalink() ?>"><?php the_title(); ?></option>
+													<?php endwhile; wp_reset_postdata(); ?>
+												<?php endif; ?>
+											</select>
+										</div><a href="javascript: window.location.href = $('#historysite').val();" class="btn marigold small">LEARN MORE</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -165,6 +203,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					if ( have_rows('hp_call_to_donate') ):  
 						while ( have_rows('hp_call_to_donate') ) : the_row(); // loop through the rows of data
 					?>
+						<div class="container">
 							<div class="row">
 								<div class="col-md-12 no_padding_both_sides">
 									<div class="content_action_block none">
@@ -180,6 +219,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									</div>
 								</div>
 							</div>
+						</div>
 						<?php endwhile; ?>
 					<?php endif; ?>
 
@@ -193,16 +233,20 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								$post = $hp_featured_blog_post;
 								setup_postdata( $post ); 
 					?>
-							<div class="featured_post content_side">
-								<div class="row">
-									<div class="col-md-5">
-										<?php the_post_thumbnail(); ?>
-									</div>
-									<div class="col-md-6 p_medium">
-										<h3><?php the_title() ?></h3>
-										<?php the_excerpt(); ?>
-										<a href="<?php the_permalink() ?>">Read More ></a> &nbsp; <a href="">Subscribe ></a>
-									</div>
+							<div class="featured_post row">
+								<div class="col-md-5 content_side">
+									<?php the_post_thumbnail(); ?>
+								</div>
+								<div class="col-md-6 p_medium content_side">
+									<h3><?php the_title() ?></h3>
+									<?php the_excerpt(); ?>
+									<?php $opt_subscribe = get_field('opt_subscribe', 'option'); ?>
+									<a href="<?php the_permalink() ?>">
+										Read More >
+									</a> &nbsp; 
+									<a href="<?php echo ($opt_subscribe['opt_subscribe_link']) ? $opt_subscribe['opt_subscribe_link'] : '' ?>" target="_blank">
+										Subscribe >
+									</a>
 								</div>
 							</div>
 							<?php wp_reset_postdata();
