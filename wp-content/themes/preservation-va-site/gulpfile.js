@@ -180,6 +180,7 @@ gulp.task('scripts', function() {
         basePaths.dev + 'js/bootstrap4/bootstrap.js' , 
         basePaths.dev + 'js/owl-carousel.js',
         basePaths.js  + 'slider_settings.js',
+        basePaths.js  + 'scrolling.js',
         basePaths.dev + 'js/skip-link-focus-fix.js',
     ];
   gulp.src(scripts)
