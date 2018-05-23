@@ -21,89 +21,282 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<?php if ( have_rows('main_flexible_content') ) : ?>
 						
 						<?php while ( have_rows('main_flexible_content') ) : the_row(); ?>
-
+							<!-- Two Columns -->
 							<?php 
-
 								if ( get_row_layout() == 'two_columns' ) : ?>
 								<div class="container">
-									<div class="row justify-content-center">
-										<div class="col-md-11">
-											<div class="content_two_columns <?php echo get_sub_field('layout_style'); ?>">
-												<div class="row">
-													<div class="col-md-6">
-														<?php $field_column_left = get_sub_field( 'left_column' ); ?>
+									<div class="content_two_columns <?php echo get_sub_field('layout_style'); ?>">
+										<div class="row">
+											<div class="col-md-6 left-column">
+												<?php $field_column_left = get_sub_field( 'left_column' ); ?>
 
-														<div class="content_media">
-														
-															<?php switch ($field_column_left['left_media_type']) {
-																case 'Text':
-																	echo $field_column_left['left_text'];
-																	break;
-																case 'Image':
-																	echo wp_get_attachment_image( $field_column_left['left_image']['ID'], 'full' );
-																	break;
-																case 'Gallery': ?>
-																		<div  class="owl-two owl-carousel owl-theme">
+												<div class="content_media">
+												
+													<?php switch ($field_column_left['left_media_type']) {
+														case 'Text':
+															echo $field_column_left['left_text'];
+															break;
+														case 'Image':
+															echo wp_get_attachment_image( $field_column_left['left_image']['ID'], 'full' );
+															break;
+														case 'Gallery': ?>
+																<div  class="owl-two owl-carousel owl-theme">
 
-																			<?php foreach ( $field_column_left['left_gallery'] as $image ) :?>
+																	<?php foreach ( $field_column_left['left_gallery'] as $image ) :?>
 
-																				<div class="item">
-																					
-																					<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
-
-																				</div>
-
-																			<?php endforeach; ?>
+																		<div class="item">
+																			
+																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
 
 																		</div>
-															<?php	break;
-																case 'Video':
-																	echo $field_column_left['left_video'];
-																	break;
-															}
-															?>
-														</div>
-													</div>
 
-													<div class="col-md-6">
-														<?php $field_column_right = get_sub_field( 'right_column' ); ?>
-														
-														<div class="content_media">
-															<?php switch ($field_column_right['right_media_type']) {
-																case 'Text':
-																	echo $field_column_right['right_text'];
-																	break;
-																case 'Image':
-																	echo wp_get_attachment_image( $field_column_right['right_image']['ID'], 'full' );
-																	break;
-																case 'Gallery': ?>
-																		<div  class="owl-two owl-carousel owl-theme">
+																	<?php endforeach; ?>
 
-																			<?php foreach ( $field_column_right['right_gallery'] as $image ) :?>
-
-																				<div class="item">
-																					
-																					<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
-
-																				</div>
-
-																			<?php endforeach; ?>
-
-																		</div>
-															<?php	break;
-																case 'Video':
-																	echo $field_column_right['right_video'];
-																	break;
-															}
-															?>
-														</div>
-													</div>
-
-												</div> <!-- .ROW -->
+																</div>
+													<?php	break;
+														case 'Video':
+															echo $field_column_left['left_video'];
+															break;
+													}
+													?>
+												</div>
 											</div>
-										</div>
+
+											<div class="col-md-6 right-column">
+												<?php $field_column_right = get_sub_field( 'right_column' ); ?>
+												
+												<div class="content_media">
+													<?php switch ($field_column_right['right_media_type']) {
+														case 'Text':
+															echo $field_column_right['right_text'];
+															break;
+														case 'Image':
+															echo wp_get_attachment_image( $field_column_right['right_image']['ID'], 'full' );
+															break;
+														case 'Gallery': ?>
+																<div  class="owl-two owl-carousel owl-theme">
+
+																	<?php foreach ( $field_column_right['right_gallery'] as $image ) :?>
+
+																		<div class="item">
+																			
+																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+
+																		</div>
+
+																	<?php endforeach; ?>
+
+																</div>
+													<?php	break;
+														case 'Video':
+															echo $field_column_right['right_video'];
+															break;
+													}
+													?>
+												</div>
+											</div>
+
+										</div> <!-- .ROW -->
 									</div>
 								</div>
+								<!-- End Two Columns -->
+
+							<!-- Two Columns with Label -->
+							<?php elseif ( get_row_layout() == 'two_columns_label' ) : ?>
+								<div class="row content_two_columns with_label <?php echo get_sub_field('layout_style'); ?>">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-3 label-column">
+												<label><?php the_sub_field( 'label_two_columns' ) ?></label>
+											</div>
+											<div class="col-md-4 left-column">
+												<?php $field_column_left = get_sub_field( 'left_column' ); ?>
+
+												<div class="content_media">
+												
+													<?php switch ($field_column_left['left_media_type']) {
+														case 'Text':
+															echo $field_column_left['left_text'];
+															break;
+														case 'Image':
+															echo wp_get_attachment_image( $field_column_left['left_image']['ID'], 'full' );
+															break;
+														case 'Gallery': ?>
+																<div  class="owl-two owl-carousel owl-theme">
+
+																	<?php foreach ( $field_column_left['left_gallery'] as $image ) :?>
+
+																		<div class="item">
+																			
+																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+
+																		</div>
+
+																	<?php endforeach; ?>
+
+																</div>
+													<?php	break;
+														case 'Video':
+															echo $field_column_left['left_video'];
+															break;
+													}
+													?>
+												</div>
+											</div>
+
+											<div class="col-md-4 right-column">
+												<?php $field_column_right = get_sub_field( 'right_column' ); ?>
+												
+												<div class="content_media">
+													<?php switch ($field_column_right['right_media_type']) {
+														case 'Text':
+															echo $field_column_right['right_text'];
+															break;
+														case 'Image':
+															echo wp_get_attachment_image( $field_column_right['right_image']['ID'], 'full' );
+															break;
+														case 'Gallery': ?>
+																<div  class="owl-two owl-carousel owl-theme">
+
+																	<?php foreach ( $field_column_right['right_gallery'] as $image ) :?>
+
+																		<div class="item">
+																			
+																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+
+																		</div>
+
+																	<?php endforeach; ?>
+
+																</div>
+													<?php	break;
+														case 'Video':
+															echo $field_column_right['right_video'];
+															break;
+													}
+													?>
+												</div>
+											</div>
+
+										</div> <!-- .ROW -->
+									</div>
+								</div>
+								<!-- End Two Columns Label -->
+
+								<!-- Three Columns -->
+							<?php elseif ( get_row_layout() == 'three_columns' ) : ?>
+								<div class="row content_three_columns <?php echo get_sub_field('layout_style'); ?>">
+									<div class="container">
+										<div class="row">
+											<div class="col-md-4 left-column">
+												<?php $field_column_left = get_sub_field( 'left_column' ); ?>
+
+												<div class="content_media">
+												
+													<?php switch ($field_column_left['left_media_type']) {
+														case 'Text':
+															echo $field_column_left['left_text'];
+															break;
+														case 'Image':
+															echo wp_get_attachment_image( $field_column_left['left_image']['ID'], 'full' );
+															break;
+														case 'Gallery': ?>
+																<div  class="owl-two owl-carousel owl-theme">
+
+																	<?php foreach ( $field_column_left['left_gallery'] as $image ) :?>
+
+																		<div class="item">
+																			
+																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+
+																		</div>
+
+																	<?php endforeach; ?>
+
+																</div>
+													<?php	break;
+														case 'Video':
+															echo $field_column_left['left_video'];
+															break;
+													}
+													?>
+												</div>
+											</div>
+											<div class="col-md-4 center-column">
+												<?php $field_column_center = get_sub_field( 'center_column' ); ?>
+
+												<div class="content_media">
+												
+													<?php switch ($field_column_center['center_media_type']) {
+														case 'Text':
+															echo $field_column_center['center_text'];
+															break;
+														case 'Image':
+															echo wp_get_attachment_image( $field_column_center['center_image']['ID'], 'full' );
+															break;
+														case 'Gallery': ?>
+																<div  class="owl-two owl-carousel owl-theme">
+
+																	<?php foreach ( $field_column_center['center_gallery'] as $image ) :?>
+
+																		<div class="item">
+																			
+																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+
+																		</div>
+
+																	<?php endforeach; ?>
+
+																</div>
+													<?php	break;
+														case 'Video':
+															echo $field_column_center['center_video'];
+															break;
+													}
+													?>
+												</div>
+											</div>
+
+											<div class="col-md-4 right-column">
+												<?php $field_column_right = get_sub_field( 'right_column' ); ?>
+												
+												<div class="content_media">
+													<?php switch ($field_column_right['right_media_type']) {
+														case 'Text':
+															echo $field_column_right['right_text'];
+															break;
+														case 'Image':
+															echo wp_get_attachment_image( $field_column_right['right_image']['ID'], 'full' );
+															break;
+														case 'Gallery': ?>
+																<div  class="owl-two owl-carousel owl-theme">
+
+																	<?php foreach ( $field_column_right['right_gallery'] as $image ) :?>
+
+																		<div class="item">
+																			
+																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+
+																		</div>
+
+																	<?php endforeach; ?>
+
+																</div>
+													<?php	break;
+														case 'Video':
+															echo $field_column_right['right_video'];
+															break;
+													}
+													?>
+												</div>
+											</div>
+
+										</div> <!-- .ROW -->
+									</div>
+								</div>
+								<!-- End Three Columns -->
+
+								<!-- Call to Actions -->
 								<?php elseif ( get_row_layout() == 'call_to_action_block' ) : ?>
 									<?php $bg_call_to_action_block = get_sub_field('background_color'); ?>
 									<?php if ($bg_call_to_action_block == "none") : ?>
@@ -177,7 +370,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 										?>
 
 										<div class="content_images">
-										<div class="row">
+											<div class="row">
 
 													<?php if ( $count_images > 3 ) : ?>
 
@@ -217,9 +410,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 													<?php endif; ?>
 											
-												<pre> <?php //echo print_r( get_sub_field( 'container_images' ) ); ?> </pre>
-											
-										</div>
+											</div>
 										</div>
 									
 									<?php endif; ?>
@@ -362,8 +553,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						<?php endwhile; ?>
 					
 					<?php endif; ?>
-					
-					<pre> <?php //echo print_r( get_field( 'main_flexible_content' ) );?> </pre>
 				</main><!-- #main -->
 			</div> <!-- .col-md-12#primary -->
 		</div><!-- #primary -->
