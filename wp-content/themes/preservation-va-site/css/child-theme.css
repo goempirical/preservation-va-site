@@ -10040,74 +10040,6 @@ div[class^="col-"].padding_all {
   text-align: center;
   color: #4a4a4a; }
 
-.content_two_columns {
-  padding: 60px 30px; }
-  .content_two_columns h1 {
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    margin: 0;
-    text-align: left; }
-  .content_two_columns h2 {
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    margin: 0;
-    text-align: left; }
-  .content_two_columns h3 {
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    margin: 0;
-    text-align: left; }
-  .content_two_columns h4 {
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    margin: 0;
-    text-align: left; }
-  .content_two_columns.intro h1 {
-    color: #0f7ab5 !important; }
-  .content_two_columns.intro h2 {
-    color: #0f7ab5 !important; }
-  .content_two_columns.intro h3 {
-    color: #0f7ab5 !important; }
-  .content_two_columns.intro h4 {
-    color: #0f7ab5 !important; }
-  .content_two_columns.basic h1 {
-    color: #15467b !important;
-    letter-spacing: 1px; }
-  .content_two_columns.basic h2 {
-    color: #15467b !important;
-    letter-spacing: 1px; }
-  .content_two_columns.basic h3 {
-    color: #15467b !important;
-    letter-spacing: 1px; }
-  .content_two_columns.basic h4 {
-    color: #15467b !important;
-    letter-spacing: 1px; }
-  .content_two_columns .content_media > p {
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.38;
-    letter-spacing: normal;
-    text-align: left;
-    color: #4a4a4a;
-    padding: 0;
-    margin: 25px 0; }
-  .content_two_columns .content_media img, .content_two_columns .content_media iframe {
-    display: block;
-    margin: 0 auto; }
-  .content_two_columns .content_media iframe {
-    width: 100%;
-    height: 242px; }
-
 /* Style Image */
 .content_images .pair_image_1 img {
   width: 100%; }
@@ -10482,6 +10414,215 @@ iframe {
     .content_related.stories a {
       color: #ffffff; }
 
+.content_two_columns {
+  padding: 60px 0; }
+  .content_two_columns h1 {
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    text-align: left; }
+  .content_two_columns h2 {
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    text-align: left; }
+  .content_two_columns h3 {
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    text-align: left; }
+  .content_two_columns h4 {
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    text-align: left; }
+  .content_two_columns.intro h1 {
+    color: #0f7ab5 !important; }
+  .content_two_columns.intro h2 {
+    color: #0f7ab5 !important; }
+  .content_two_columns.intro h3 {
+    color: #0f7ab5 !important; }
+  .content_two_columns.intro h4 {
+    color: #0f7ab5 !important; }
+  .content_two_columns.basic h1 {
+    color: #15467b !important;
+    letter-spacing: 1px; }
+  .content_two_columns.basic h2 {
+    color: #15467b !important;
+    letter-spacing: 1px; }
+  .content_two_columns.basic h3 {
+    color: #15467b !important;
+    letter-spacing: 1px; }
+  .content_two_columns.basic h4 {
+    color: #15467b !important;
+    letter-spacing: 1px; }
+  .content_two_columns.sidebar h1 {
+    color: #15467b !important;
+    letter-spacing: 1px;
+    margin-bottom: 15px; }
+  .content_two_columns.sidebar h2 {
+    color: #15467b !important;
+    letter-spacing: 1px;
+    margin-bottom: 15px; }
+  .content_two_columns.sidebar h3 {
+    color: #15467b !important;
+    letter-spacing: 1px;
+    margin-bottom: 15px; }
+  .content_two_columns.sidebar h4 {
+    color: #15467b !important;
+    letter-spacing: 1px;
+    margin-bottom: 15px; }
+  .content_two_columns.sidebar h2 {
+    color: #0f7ab5 !important;
+    margin-bottom: 25px; }
+  .content_two_columns.sidebar .content_media p {
+    margin: 0; }
+  .content_two_columns.sidebar .left-column p {
+    font-size: 20px; }
+  .content_two_columns.sidebar .right-column h1 {
+    margin-top: 15px; }
+  .content_two_columns.sidebar .right-column h1:first-child {
+    margin-top: 0; }
+  .content_two_columns.sidebar .right-column h2 {
+    margin-top: 15px; }
+  .content_two_columns.sidebar .right-column h2:first-child {
+    margin-top: 0; }
+  .content_two_columns.sidebar .right-column h3 {
+    margin-top: 15px; }
+  .content_two_columns.sidebar .right-column h3:first-child {
+    margin-top: 0; }
+  .content_two_columns.sidebar .right-column h4 {
+    margin-top: 15px; }
+  .content_two_columns.sidebar .right-column h4:first-child {
+    margin-top: 0; }
+  .content_two_columns .content_media > p {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4a4a4a;
+    padding: 0;
+    margin: 25px 0; }
+  .content_two_columns .content_media img, .content_two_columns .content_media iframe {
+    display: block;
+    margin: 0 auto; }
+  .content_two_columns .content_media iframe {
+    width: 100%;
+    height: 242px; }
+  .content_two_columns .label-column label {
+    font-family: GothamNarrow;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.05;
+    letter-spacing: normal;
+    text-align: left;
+    color: #15467b; }
+  .content_two_columns .left-column,
+  .content_two_columns .right-column {
+    text-align: left; }
+    .content_two_columns .left-column p,
+    .content_two_columns .right-column p {
+      font-family: FreightTextProBook;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.38;
+      letter-spacing: normal;
+      text-align: left; }
+    .content_two_columns .left-column strong,
+    .content_two_columns .right-column strong {
+      font-family: FreightTextProBold; }
+    .content_two_columns .left-column em,
+    .content_two_columns .right-column em {
+      font-family: FreightTextPro;
+      font-style: italic; }
+    .content_two_columns .left-column img,
+    .content_two_columns .right-column img {
+      margin: initial;
+      margin-bottom: 10px; }
+  .content_two_columns.with_label .left-column p,
+  .content_two_columns.with_label .right-column p {
+    margin: 0; }
+  .content_two_columns.gray {
+    background-color: #f2f2f2; }
+
+.content_three_columns {
+  padding: 60px 0; }
+  .content_three_columns h1 {
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    text-align: left; }
+  .content_three_columns h2 {
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    text-align: left; }
+  .content_three_columns h3 {
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    text-align: left; }
+  .content_three_columns h4 {
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    margin: 0;
+    text-align: left; }
+  .content_three_columns .left-column,
+  .content_three_columns .center-column,
+  .content_three_columns .right-column {
+    text-align: left; }
+    .content_three_columns .left-column p,
+    .content_three_columns .center-column p,
+    .content_three_columns .right-column p {
+      margin: 0;
+      font-family: FreightTextProBook;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.38;
+      letter-spacing: normal;
+      text-align: left; }
+    .content_three_columns .left-column strong,
+    .content_three_columns .center-column strong,
+    .content_three_columns .right-column strong {
+      font-family: FreightTextProBold; }
+    .content_three_columns .left-column em,
+    .content_three_columns .center-column em,
+    .content_three_columns .right-column em {
+      font-family: FreightTextPro;
+      font-style: italic; }
+    .content_three_columns .left-column img,
+    .content_three_columns .center-column img,
+    .content_three_columns .right-column img {
+      margin: initial;
+      margin-bottom: 10px; }
+  .content_three_columns.gray {
+    background-color: #f2f2f2; }
+
 .page-template-homepage-site .banner_image {
   max-height: calc( 100vh - 200px); }
   .page-template-homepage-site .banner_image .heading {
@@ -10513,6 +10654,23 @@ iframe {
 
 .page-template-historic-site h3 {
   color: #15467b; }
+
+.page-template-historic-site .hs_submenu {
+  font-family: GothamNarrow;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.86;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 15px; }
+  .page-template-historic-site .hs_submenu a {
+    color: #ffffff;
+    margin-right: 15px; }
+  .page-template-historic-site .hs_submenu a:hover {
+    color: #ffca05; }
 
 .banner_image > img {
   width: 100%; }

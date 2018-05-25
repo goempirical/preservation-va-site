@@ -20,13 +20,22 @@
         <div class="row">
             <div class="col-md-12 no_padding_both_sides">
                 <div class="content_headline primary ">
-                    <h1> <?php the_sub_field('hs_title'); ?> </h1>
+                    <h1> <?php the_sub_field('hs_title'); ?></h1>
+                    <div class="hs_submenu">
+                        <a href="#basic-info">Basic Info</a>
+                        <a href="#events">Events</a>
+                        <a href="#donate">Donate</a>
+                        <a href="#plan-your-visit">Plan your Visit</a>
+                        <a href="#admissions">Admissions</a>
+                        <a href="#tours-rentals">Tours/Rentals</a>
+                        <a href="#key-visitor-info">Key Visitor Info</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Side Text -->
-        <div class="row">
+        <div id="basic-info" class="row">
             <div class="col-md-12 no_padding_both_sides">
                 <div class="content_side">
                     <div class="row">
@@ -44,7 +53,7 @@
                                 <h3>Hours</h3>
                                 <?php echo $mainContent['right_column']['hs_hours']; ?>
                                 
-                                <a href="#" class="btn marigold small">PLAN YOUR VISIT</a>
+                                <a href="#plan-your-visit" class="btn marigold small">PLAN YOUR VISIT</a>
                             </div>
                         </div>
                     </div>
@@ -82,7 +91,7 @@
 <?php if( have_rows('hs_plan_your_visit') ): ?>
 <?php // loop through the rows of data
         while ( have_rows('hs_plan_your_visit') ) : the_row(); ?>
-        <div class="row">
+        <div id="plan-your-visit" class="row">
             <div class="col-md-12 no_padding_both_sides">
                 <div class="content_side">
                     <div class="row justify-content-between">
@@ -93,7 +102,7 @@
                         </div>
                         <div class="col-md-6">
                             <?php the_sub_field('hs_visit_text') ?>
-                            <a href="#" class="btn marigold small">VISITOR INFO</a>
+                            <a href="#key-visitor-info" class="btn marigold small">VISITOR INFO</a>
                         </div>
                         <div class="col-md-5">
                             <div class="content_address p_nomargin greyish map">
@@ -146,7 +155,7 @@
 <?php if( have_rows('hs_admission_info') ): ?>
 <?php // loop through the rows of data
     while ( have_rows('hs_admission_info') ) : the_row(); ?>
-        <div class="row">
+        <div id="admissions" class="row">
             <div class="col-md-12 no_padding_both_sides">
                 <div class="content_side">
                     <div class="row justify-content-center margin_bottom">
@@ -168,7 +177,7 @@
                                 buildTable($table);
                             ?>
                             <?php echo $admissionContent['hr_admission_left_content']['hs_admission_pricing_text'] ?>
-                            <a href="#" class="btn marigold small">GROUP TOUR INFO</a>
+                            <a href="#tours-rentals" class="btn marigold small">GROUP TOUR INFO</a>
                         </div>
                         <div class="col-md-6">
                             <div class="content_address p_nomargin greyish">
@@ -196,7 +205,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div  id="donate" class="row">
             <div class="col-md-12 no_padding_both_sides">
                 <div class="content_action_block dark_blue">
                     <h2>Donate to <?php the_title() ?></h2>
@@ -210,7 +219,7 @@
 <?php endif; ?>
 
 <!-- Related Content -->
-<div class="row">
+<div id="events" class="row">
     <div class="col-md-6  no_padding_both_sides">
         <div class="content_related events">
             <div class="title_related">
@@ -255,18 +264,6 @@
                     )
                 ),
             );
-
-            // print_r( '<pre>');
-            // var_dump(get_the_terms($post, 'historic_sites'));
-            // print_r( '</pre>');
-
-            // print_r( '<br><br>');
-
-            // print_r( '<pre>');
-            // var_dump(get_the_terms($post, 'our_work'));
-            // print_r( '</pre>');
-
-            // print_r( '<br><br>');
 
             // Query for get Events with taxonomies choosed of Historic Sites and Our Work
             $query = new WP_Query( $args );
@@ -343,7 +340,7 @@
 <?php if( have_rows('hs_tours_and_site_rental') ): ?>
 <?php // loop through the rows of data
     while ( have_rows('hs_tours_and_site_rental') ) : the_row(); ?>
-    <div class="row">
+    <div id="tours-rentals" class="row">
         <div class="col-md-12 no_padding_both_sides">
             <div class="content_side">
                 <div class="row margin_bottom">
@@ -386,7 +383,7 @@
 <?php if( have_rows('hs_key_visitor_info') ): ?>
 <?php // loop through the rows of data
     while ( have_rows('hs_key_visitor_info') ) : the_row(); ?>
-    <div class="row">
+    <div id="key-visitor-info" class="row">
         <div class="col-md-12 no_padding_both_sides">
             <div class="content_side">
                 <div class="row justify-content-center margin_bottom">
