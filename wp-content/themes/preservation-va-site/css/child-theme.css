@@ -10675,6 +10675,118 @@ iframe {
 .banner_image > img {
   width: 100%; }
 
+.historic-mega-menu {
+  background-color: #0f7ab5;
+  height: 78px; }
+
+#mega-menu-wrap-hictoricmenu {
+  background-color: #0f7ab5; }
+  #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu li.mega-menu-item a.mega-menu-link {
+    font-family: GothamNarrow;
+    font-size: 18px;
+    font-weight: bold !important;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.7px;
+    text-align: left;
+    color: #ffffff;
+    line-height: 78px;
+    height: 78px; }
+    #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu li.mega-menu-item a.mega-menu-link:first-child {
+      padding-left: 27px !important;
+      padding-right: 50px !important; }
+  #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu li.mega-menu-item a.mega-menu-link:hover,
+  #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu li.mega-menu-item a.mega-menu-link:focus {
+    font-family: GothamNarrow;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.7px;
+    text-align: left;
+    color: #ffffff;
+    line-height: 78px;
+    height: 78px; }
+    #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu li.mega-menu-item a.mega-menu-link:hover:after,
+    #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu li.mega-menu-item a.mega-menu-link:focus:after {
+      border: solid #15467b;
+      border-width: 2px 0 0 2px;
+      top: calc(50% - 5px); }
+  #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu li.mega-menu-item a.mega-menu-link:after {
+    position: absolute;
+    content: '';
+    display: block;
+    right: 27px;
+    width: 0;
+    height: 0;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: calc(50% - 9px);
+    pointer-events: none; }
+  #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu {
+    padding: 0 !important; }
+    #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item {
+      padding: 36px 50px !important; }
+      #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item:first-child {
+        padding-left: 37px !important; }
+      #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item:last-child {
+        padding-right: 37px !important; }
+      #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item a.mega-menu-link {
+        font-family: GothamNarrow !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
+        font-style: normal !important;
+        font-stretch: normal !important;
+        line-height: normal !important;
+        letter-spacing: 0.6px !important;
+        text-align: left !important;
+        color: #0f7ab5 !important;
+        line-height: 45px !important;
+        height: 45px !important;
+        margin-bottom: 7px !important; }
+        #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item a.mega-menu-link:first-child {
+          padding-left: 0 !important; }
+      #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item .mega-sub-menu {
+        padding: 0 !important; }
+        #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item .mega-sub-menu li.mega-menu-item {
+          padding: 0 !important; }
+          #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item .mega-sub-menu li.mega-menu-item a.mega-menu-link {
+            font-family: GothamNarrow !important;
+            font-size: 18px !important;
+            font-weight: normal !important;
+            font-style: normal !important;
+            font-stretch: normal !important;
+            line-height: normal !important;
+            letter-spacing: 0.5px !important;
+            text-align: left !important;
+            color: #0f7ab5 !important;
+            line-height: 49px !important;
+            height: 49px !important;
+            border-bottom: solid 0.5px #979797 !important;
+            margin-bottom: 0 !important; }
+      #mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu .mega-sub-menu li.mega-menu-item .mega-sub-menu li:last-child a.mega-menu-link {
+        border-bottom: 0 none !important; }
+
+#mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu > li.mega-menu-item.mega-toggle-on >
+a.mega-menu-link,
+#mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu >
+li.mega-menu-item > a.mega-menu-link:hover,
+#mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu > li.mega-menu-item >
+a.mega-menu-link:focus {
+  background-color: #f6f5f5;
+  font-family: GothamNarrow;
+  font-size: 18px;
+  letter-spacing: 1.7px;
+  color: #15467b; }
+
+#mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu > li.mega-menu-megamenu > ul.mega-sub-menu {
+  background-color: #f6f5f5; }
+
 .blog .date_release,
 .single .date_release {
   width: 37px;
