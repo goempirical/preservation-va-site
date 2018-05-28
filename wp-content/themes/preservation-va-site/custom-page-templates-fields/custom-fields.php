@@ -3199,9 +3199,9 @@ if( function_exists('acf_add_local_field_group') ):
 		'location' => array(
 			array(
 				array(
-					'param' => 'options_page',
+					'param' => 'page_template',
 					'operator' => '==',
-					'value' => 'theme-general-settings',
+					'value' => 'custom-page-templates/homepage-site.php',
 				),
 			),
 		),
