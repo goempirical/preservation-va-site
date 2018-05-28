@@ -26,7 +26,7 @@ function theme_enqueue_styles() {
 
 include 'custom-post-types/events.php';
 include 'taxonomies/index.php';
-//include 'custom-page-templates-fields/custom-fields-updated.php';
+include 'custom-page-templates-fields/custom-fields.php';
 
 function understrap_footer_menu() {
     register_nav_menu('hictoricmenu',__( 'Hictoric Mega Menu' ));
