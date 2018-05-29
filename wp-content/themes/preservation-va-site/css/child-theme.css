@@ -10517,8 +10517,6 @@ iframe {
     margin: 0 auto;
     text-align: center; }
   .content_action_block > p {
-    line-height: 1.04;
-    font-size: 24px;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
@@ -10526,6 +10524,9 @@ iframe {
     text-align: center;
     letter-spacing: 1.2px;
     max-width: 519px; }
+  .content_action_block:not(.normal-text) > p {
+    line-height: 1.04;
+    font-size: 24px; }
   .content_action_block p {
     margin-top: 25px; }
   .content_action_block .content_button {

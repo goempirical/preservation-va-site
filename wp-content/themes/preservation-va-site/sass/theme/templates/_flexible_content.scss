@@ -355,9 +355,8 @@
         margin: 0 auto;
         text-align: center;
     }
+
     & > p {
-        line-height: 1.04;
-        font-size: 24px;
         font-weight: 300;
         font-style: normal;
         font-stretch: normal;
@@ -366,9 +365,16 @@
         letter-spacing: 1.2px;
         max-width: 519px;
     }
+
+    &:not(.normal-text) > p {
+        line-height: 1.04;
+        font-size: 24px;
+    }
+
     p {
         margin-top: 25px;
     }
+
     .content_button {
         display: flex;
         margin-top: 50px;
