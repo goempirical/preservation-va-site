@@ -5,8 +5,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://use.typekit.net/ixo4yjx.css");
-@import url("https://use.typekit.net/ixo4yjx.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700|Roboto:400,500,700");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -58,7 +57,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "freight-text-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4719,7 +4718,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "freight-text-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4804,7 +4803,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "freight-text-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -9735,7 +9734,7 @@ p a:hover {
   padding: 0; }
 
 h1 {
-  font-family: "myriad-pro", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 48px;
   font-weight: 500;
   font-style: normal;
@@ -9746,7 +9745,7 @@ h1 {
   color: #4a4a4a; }
 
 h2 {
-  font-family: "myriad-pro", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 36px;
   font-weight: 500;
   font-style: normal;
@@ -9757,7 +9756,7 @@ h2 {
   color: #4a4a4a; }
 
 h3 {
-  font-family: "myriad-pro", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -9769,7 +9768,7 @@ h3 {
   margin-bottom: 14px; }
 
 h4 {
-  font-family: "myriad-pro", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -9791,7 +9790,7 @@ ul li {
   line-height: 36px; }
 
 button.btn_cl {
-  font-family: "myriad-pro", sans-serif !important;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
   border: none;
   border-radius: 0px;
   font-weight: bold !important;
@@ -9808,7 +9807,7 @@ button.btn_cl {
     line-height: 41px !important; }
 
 .btn, .wpcf7 input[type=submit] {
-  font-family: "myriad-pro", sans-serif !important;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
   border: none;
   border-radius: 0px;
   font-weight: bold !important;
@@ -10071,7 +10070,7 @@ div.owl-dots {
   color: #ffffff; }
 
 .table td {
-  font-family: "myriad-pro", sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 15px;
   font-weight: 500;
   font-style: normal;
@@ -10153,7 +10152,7 @@ iframe {
       border-radius: 0; }
     .footer #mc_embed_signup input.button {
       display: inline-block;
-      font-family: "myriad-pro", sans-serif !important;
+      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
       border: none;
       border-radius: 0px;
       font-weight: bold !important;
