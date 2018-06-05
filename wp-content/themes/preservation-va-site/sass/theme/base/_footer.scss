@@ -33,16 +33,16 @@
 
     #mc_embed_signup {
         margin-bottom: 30px;
-        background-color: transparent !important;
+        background-color: transparent;
 
         form {
-            padding: 0 !important;
-            margin: 0 !important;
+            padding: 0;
+            margin: 0;
         }
 
         input.email {
             background-color: $white-two;
-            margin: 0 !important;
+            margin: 0;
             display: inline-block;
             line-height: 39px;
             height: 39px;
@@ -79,10 +79,10 @@
             display: inline-block;
         }
         .btn.marigold {
-            border: solid 1px $marigold !important;
-            background-color: transparent !important;
-            color: $white-two !important;
-            margin-top: 38px !important;
+            border: solid 1px $marigold;
+            background-color: transparent;
+            color: $white-two;
+            margin-top: 38px;
         }
     }
 }

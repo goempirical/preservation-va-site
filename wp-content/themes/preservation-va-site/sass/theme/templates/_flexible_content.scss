@@ -112,14 +112,14 @@
     &.intro {
         @each $header in $range-head-title {
             #{$header} {
-                color: $nice-blue !important;
+                color: $nice-blue;
             }
         }
     }
     &.basic {
         @each $header in $range-head-title {
             #{$header} {
-                color: $light-navy !important;
+                color: $light-navy;
                 letter-spacing: 1px;
             }
         }
@@ -127,13 +127,13 @@
     &.sidebar {
         @each $header in $range-head-title {
             #{$header} {
-                color: $light-navy !important;
+                color: $light-navy;
                 letter-spacing: 1px;
                 margin-bottom: 15px;
             }
         }
         h2 {
-            color: $nice-blue !important;
+            color: $nice-blue;
             margin-bottom: 25px;
         }
         .content_media {

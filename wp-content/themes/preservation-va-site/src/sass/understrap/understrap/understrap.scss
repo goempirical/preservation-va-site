@@ -76,28 +76,28 @@ a.skip-link {
   padding: $dropdown-item-padding-y $dropdown-item-padding-x;
   clear: both;
   font-weight: $font-weight-normal;
-  color: $dropdown-link-color !important;
+  color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background: none; // For `<button>`s
   border: 0; // For `<button>`s
 
   @include hover-focus {
-    color: $dropdown-link-hover-color !important;
+    color: $dropdown-link-hover-color;
     text-decoration: none;
     background-color: $dropdown-link-hover-bg;
   }
 
   &.active,
   &:active {
-    color: $dropdown-link-active-color !important;
+    color: $dropdown-link-active-color;
     text-decoration: none;
     background-color: $dropdown-link-active-bg;
   }
 
   &.disabled,
   &:disabled {
-    color: $dropdown-link-disabled-color !important;
+    color: $dropdown-link-disabled-color;
     background-color: transparent;
     // Remove CSS gradients if they're enabled
     @if $enable-gradients {
