@@ -23,21 +23,12 @@
 
 .footer {
     color: $white-two;
+    @include font-smoothing;
+    font-family: $font-family-header;
 
     ul li {
         text-align: right;
-    }
-
-    p {
-        font-family: GothamNarrow;
-        font-size: 13px;
-        font-weight: normal;
-        line-height: 1.62;
-        letter-spacing: 0.3px;
-        text-align: left;
-        line-height: 1.62;
-        margin-bottom: 0px;
-        color: $white-two;
+        line-height: 21px;
     }
 
     #mc_embed_signup {
@@ -55,9 +46,14 @@
             display: inline-block;
             line-height: 39px;
             height: 39px;
-            max-width: 242px;
+            min-width: 19em;
             border: 1px solid $white-two;
             border-radius: 0;
+            padding: 0 1em;
+
+            &::placeholder {
+                font-size:13px;
+            }
         }
 
         input.button{
@@ -88,5 +84,17 @@
             color: $white-two !important;
             margin-top: 38px !important;
         }
+    }
+}
+
+.footer--contact-details p {
+    @include font-sizing(14, 21);
+    font-weight: 300;
+    margin-bottom: 0;
+    color:$white-two;
+
+    .gold {
+        display: inline-block;
+        margin: 0 .5em;
     }
 }

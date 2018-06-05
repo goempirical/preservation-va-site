@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="container footer">
 
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6 footer--contact-details">
 				<?php 
 				$opt_subscribe = get_field('opt_subscribe', 'option');
 				if ($opt_subscribe["opt_subscribe_snippet"]) {
@@ -33,11 +33,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				echo "<p class='more_info'>";
 				if ($opt_footer["opt_footer_phone"]) {
-					echo "<span>phone " . $opt_footer["opt_footer_phone"] . "</span> &nbsp;| &nbsp;";
+					echo "<span>phone " . $opt_footer["opt_footer_phone"] . "</span> <span class='gold'>|</span> ";
 				}
 
 				if ($opt_footer["opt_footer_fax"]) {
-					echo "<span>fax " . $opt_footer["opt_footer_fax"] . "</span> &nbsp;| &nbsp;";
+					echo "<span>fax " . $opt_footer["opt_footer_fax"] . "</span> <span class='gold'>|</span> ";
 				}
 
 				if ($opt_footer["opt_footer_email"]) {

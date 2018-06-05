@@ -9735,6 +9735,9 @@ p a:hover {
   margin: 0;
   padding: 0; }
 
+.gold {
+  color: #ffca05; }
+
 h1 {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 48px;
@@ -9792,41 +9795,41 @@ ul li {
   line-height: 36px; }
 
 button.btn_cl {
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   border: none;
   border-radius: 0px;
-  font-weight: bold !important;
-  text-transform: uppercase !important;
-  min-width: 167px;
+  font-weight: bold;
+  text-transform: uppercase;
   height: 62px;
   line-height: 52px;
   font-size: 18px;
-  padding: 5px 22px !important;
-  cursor: pointer; }
+  padding: 5px 22px;
+  cursor: pointer;
+  letter-spacing: 0.1em; }
   button.btn_cl.small {
-    font-size: 14px !important;
-    height: 51px !important;
-    line-height: 41px !important; }
+    font-size: 14px;
+    height: 51px;
+    line-height: 41px; }
 
 .btn, .wpcf7 input[type=submit] {
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   border: none;
   border-radius: 0px;
-  font-weight: bold !important;
-  text-transform: uppercase !important;
-  min-width: 167px;
+  font-weight: bold;
+  text-transform: uppercase;
   height: 62px;
   line-height: 52px;
   font-size: 18px;
-  padding: 5px 22px !important;
+  padding: 5px 22px;
   cursor: pointer;
-  border: 0 none !important; }
+  letter-spacing: 0.1em;
+  border: 0 none; }
   .btn.marigold, .wpcf7 input.marigold[type=submit] {
-    background-color: #ffca05 !important;
-    color: #15467b !important; }
+    background-color: #ffca05;
+    color: #15467b; }
   .btn.marigold:hover, .wpcf7 input.marigold[type=submit]:hover {
-    background-color: #15467b !important;
-    color: #ffffff !important; }
+    background-color: #15467b;
+    color: #ffffff; }
   .btn.white, .wpcf7 input.white[type=submit] {
     background-color: #ffffff;
     color: #15467b; }
@@ -9834,9 +9837,9 @@ button.btn_cl {
     background-color: #15467b;
     color: #ffffff; }
   .btn.small, .wpcf7 input.small[type=submit] {
-    font-size: 14px !important;
-    height: 51px !important;
-    line-height: 41px !important; }
+    font-size: 14px;
+    height: 51px;
+    line-height: 41px; }
 
 .dark_blue .marigold:hover {
   background-color: #ffffff !important;
@@ -10190,19 +10193,13 @@ li.search {
   color: #ffffff; }
 
 .footer {
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
   .footer ul li {
-    text-align: right; }
-  .footer p {
-    font-family: GothamNarrow;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 1.62;
-    letter-spacing: 0.3px;
-    text-align: left;
-    line-height: 1.62;
-    margin-bottom: 0px;
-    color: #ffffff; }
+    text-align: right;
+    line-height: 21px; }
   .footer #mc_embed_signup {
     margin-bottom: 30px;
     background-color: transparent !important; }
@@ -10215,22 +10212,25 @@ li.search {
       display: inline-block;
       line-height: 39px;
       height: 39px;
-      max-width: 242px;
+      min-width: 19em;
       border: 1px solid #ffffff;
-      border-radius: 0; }
+      border-radius: 0;
+      padding: 0 1em; }
+      .footer #mc_embed_signup input.email::placeholder {
+        font-size: 13px; }
     .footer #mc_embed_signup input.button {
       display: inline-block;
-      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+      font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
       border: none;
       border-radius: 0px;
-      font-weight: bold !important;
-      text-transform: uppercase !important;
-      min-width: 167px;
+      font-weight: bold;
+      text-transform: uppercase;
       height: 62px;
       line-height: 52px;
       font-size: 18px;
-      padding: 5px 22px !important;
+      padding: 5px 22px;
       cursor: pointer;
+      letter-spacing: 0.1em;
       font-size: 14px;
       height: 39px;
       line-height: 30px;
@@ -10249,6 +10249,16 @@ li.search {
       background-color: transparent !important;
       color: #ffffff !important;
       margin-top: 38px !important; }
+
+.footer--contact-details p {
+  font-size: 0.875em;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 0;
+  color: #ffffff; }
+  .footer--contact-details p .gold {
+    display: inline-block;
+    margin: 0 .5em; }
 
 .content_related {
   padding: 53px 33px 53px 65px;
