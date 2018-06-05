@@ -1,6 +1,6 @@
 .dark_blue .marigold:hover {
-    background-color: $white-two !important;
-    color: $light-navy !important;
+    background-color: $white-two;
+    color: $light-navy;
 }
 
 div[class^="col-"] {
@@ -67,7 +67,7 @@ div[class^="col-"] {
 .select-container,
 .wpforms-field-container {
     position: relative;
-    margin-top: 40px !important;
+    margin-top: 40px;
 
     .select-custom,
     .wpforms-field-select {
@@ -77,7 +77,7 @@ div[class^="col-"] {
         margin-right: 18px;
     }
     .wpforms-field-select {
-        position: relative !important;
+        position: relative;
         display: block;
     }
     .select-custom:before,
@@ -106,7 +106,7 @@ div[class^="col-"] {
         line-height: 51px;
         letter-spacing: 0.4px;
         color: $light-navy;
-        background: linear-gradient(to right, #F5F5F5 0%, #F5F5F5 calc(100% - 35px), #FFC30E calc(100% - 35px), #FFC30E 100%) !important;
+        background: linear-gradient(to right, #F5F5F5 0%, #F5F5F5 calc(100% - 35px), #FFC30E calc(100% - 35px), #FFC30E 100%);
         padding: 0 55px 0 20px;
         border: none;
         transition: border 300ms ease;
@@ -282,11 +282,11 @@ div.owl-dots {
         border-left: 3px solid $light-navy;
     }
     tr:first-child td{
-        border-top: 0 !important;
+        border-top: 0;
     }
     td:first-child{
-        border-left: 0 !important;
-        color: $light-navy !important;
+        border-left: 0;
+        color: $light-navy;
     }
 }
 
