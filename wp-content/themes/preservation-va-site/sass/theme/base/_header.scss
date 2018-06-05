@@ -7,6 +7,12 @@
     @include font-smoothing;
 }
 
+.navbar-med {
+    background-color: $nice-blue;
+    font-weight: 500;
+    @include font-smoothing;
+}
+
 #wrapper-navbar .bg-dark {
     background-color: $light-navy !important;
     padding: 40px 2rem 28px;
@@ -22,12 +28,17 @@
     text-align: right;
 }
 
-.navbar-brand img {
-    width: 100%;
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 13px;
+
+    img {
+        width: 100%;
+    }
 }
 
 li.search {
-    width: calc(10em + 40px);;
+    width: calc(10em + 40px);
     overflow: hidden;
     position: relative;
     transition: width $anim-dur ease;
