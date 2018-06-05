@@ -43,6 +43,9 @@ p {
     }
 }
 
+.gold {
+    color: $marigold;
+}
 
 h1 {
     font-family: $font-family-header;
@@ -107,23 +110,23 @@ ul li {
 }
 
 @mixin btn_big {
-    font-family: $font-family-header !important;
+    font-family: $font-family-header;
     border: none;
     border-radius: 0px;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    min-width: 167px;
+    font-weight: bold;
+    text-transform: uppercase;
     height: 62px;
     line-height: 52px;
     font-size: 18px ;
-    padding: 5px 22px !important;
+    padding: 5px 22px;
     cursor: pointer;
+    letter-spacing: 0.1em
 }
 
 @mixin btn_small {
-    font-size: 14px !important;
-    height: 51px !important;
-    line-height: 41px !important;
+    font-size: 14px;
+    height: 51px;
+    line-height: 41px;
 }
 
 button.btn_cl {
@@ -136,15 +139,15 @@ button.btn_cl {
 
 .btn {
     @include btn_big;
-    border: 0 none !important;
+    border: 0 none;
 
     &.marigold {
-        background-color: $marigold !important;
-        color: $light-navy !important;
+        background-color: $marigold;
+        color: $light-navy;
     }
     &.marigold:hover {
-        background-color: $light-navy !important;
-        color: $white-two !important;
+        background-color: $light-navy;
+        color: $white-two;
     }
     &.white {
         background-color: $white-two;
