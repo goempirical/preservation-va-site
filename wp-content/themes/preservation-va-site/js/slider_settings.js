@@ -1,5 +1,5 @@
 
-    jQuery(document).ready(function() {
+    jQuery( document ).ready(function( $ ) {
         
         var owl_dots = $('.owl-two');
         var owl_next = $('.owl-one');

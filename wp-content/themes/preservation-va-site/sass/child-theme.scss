@@ -12,7 +12,7 @@
 @import "theme/base/typography";
 @import "theme/child_theme";  // <--------- Add your styles into this file
 @import "theme/base/layout";
-//@import "theme/base/header";
+@import "theme/base/header";
 @import "theme/base/footer";
 @import "theme/templates/flexible_content";
 @import "theme/templates/homepage";

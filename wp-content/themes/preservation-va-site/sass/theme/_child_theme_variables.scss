@@ -26,3 +26,78 @@ $primary: $greyish-brown;
 $range-head-title: (h1, h2, h3, h4);
 
 $grid-gutter-width: 50px !default;
+
+$anim-dur : 800ms;
+
+
+@mixin font-sizing($fsize, $lheight) {
+    font-size: $fsize/16 * 1em;
+    line-height: $lheight/$fsize;
+}
+
+@mixin labelfont() {
+  font-family:$font-family-header;
+  text-transform:uppercase;
+  font-size:.875em;
+  letter-spacing: .08em;
+  @include font-smoothing;
+}
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin date_release {
+    width: 37px;
+    height: 37px;
+    background-color: $light-navy;
+    margin-right: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+
+    span {
+        line-height: 1.1;
+        padding: 0px 2px 0px;
+        color: $white-two;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 10px;
+    }
+}
+
+@each $header in $range-head-title {
+    #{$header} {
+        color: $greyish-brown-two;
+    }
+}
+
+@mixin p_large {
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.04;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+@mixin p_medium {
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+}
