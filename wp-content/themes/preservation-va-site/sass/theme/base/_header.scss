@@ -1,0 +1,79 @@
+.navbar-dark .navbar-brand a {
+    color: $white-two;
+}
+
+.navbar-dark {
+    font-family: $font-family-header;
+    @include font-smoothing;
+}
+
+#wrapper-navbar .bg-dark {
+    background-color: $light-navy !important;
+    padding: 40px 2rem 28px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $white-two;
+    @include font-sizing(17, 17);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.5px;
+    text-align: right;
+}
+
+.navbar-brand img {
+    width: 100%;
+}
+
+li.search {
+    width: calc(10em + 40px);;
+    overflow: hidden;
+    position: relative;
+    transition: width $anim-dur ease;
+    height:40px;
+
+    &.closed {
+        width:40px;
+    }
+}
+
+.header__search { 
+    width: calc(10em + 40px);
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    input {
+        border: 0;
+        padding:8px .75em 6px;
+        width: 8em;
+        opacity:1;
+        line-height: 20px;
+        height: 34px;
+        box-sizing: border-box;
+        transition: opacity $anim-dur*.75 ease $anim-dur*.25;
+
+        .closed & {
+            opacity: 0;
+        }
+    }
+
+    button {
+        height: 36px;
+        width: 40px;
+        background: none;
+        border: 0;
+        padding: 3px 0 0 19px;
+        outline: none;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        justify-content: flex-end;
+    }
+}

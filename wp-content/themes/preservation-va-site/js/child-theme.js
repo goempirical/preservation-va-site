@@ -7311,7 +7311,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 })(window.Zepto || window.jQuery, window, document);
 
 
-    jQuery(document).ready(function() {
+    jQuery( document ).ready(function( $ ) {
         
         var owl_dots = $('.owl-two');
         var owl_next = $('.owl-one');
@@ -7383,7 +7383,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /**
  * Scrolling in jquery
  */
-jQuery(document).ready(function() {
+jQuery( document ).ready(function( $ ) {
   $('a[href*="#"]')
     // Remove links that don't actually link to anything
     .not('[href="#"]')
@@ -7419,6 +7419,23 @@ jQuery(document).ready(function() {
         }
       }
   });
+
+  $('.navbar').on('click', '.search.closed button', function(e){
+    e.preventDefault();
+    console.log('search');
+    $('.search.closed').removeClass('closed').addClass('open');
+    $('body').addClass('search-open');
+  });
+
+  $('html').on('click', '.search-open', function(e) {    
+    console.log('click');                
+    if(!$(e.target).hasClass('open') && !$(e.target).parents('.open').length ) {
+      console.log('close');
+      $('.search.open').removeClass('open').addClass('closed');
+      $('body').removeClass('search-open');           
+    }
+  }); 
+
 });
 /**
  * File skip-link-focus-fix.js.
