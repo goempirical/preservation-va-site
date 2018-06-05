@@ -29,6 +29,7 @@ $grid-gutter-width: 50px !default;
 
 $anim-dur : 800ms;
 
+// MIXINS
 
 @mixin font-sizing($fsize, $lheight) {
     font-size: $fsize/16 * 1em;
