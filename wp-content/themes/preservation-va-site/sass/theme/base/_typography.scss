@@ -1,35 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700|Roboto:400,500,700');
 
-
-
-@each $header in $range-head-title {
-    #{$header} {
-        color: $greyish-brown-two;
-    }
-}
-
-@mixin p_large {
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.04;
-    letter-spacing: normal;
-    text-align: left;
-}
-
-@mixin p_medium {
-    font-size: 20px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    text-align: left;
+body {
+    font-size: 16px;
 }
 
 p {
-    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;

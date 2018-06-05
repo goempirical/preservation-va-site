@@ -1,3 +1,7 @@
+.navbar {
+    padding: 0;
+}
+
 .page-template-historic-site {
     h3 {
         color: $light-navy;
@@ -32,10 +36,10 @@
     background-color: $nice-blue;
     height: 78px;
 }
-#mega-menu-wrap-hictoricmenu {
+#mega-menu-wrap-historicmenu {
     background-color: $nice-blue;
 
-    #mega-menu-hictoricmenu {
+    #mega-menu-historicmenu {
         li.mega-menu-item {
             a.mega-menu-link {
                 font-family: GothamNarrow;
@@ -153,12 +157,12 @@
     }
 }
 
-#mega-menu-wrap-hictoricmenu 
-#mega-menu-hictoricmenu > li.mega-menu-item.mega-toggle-on > 
+#mega-menu-wrap-historicmenu 
+#mega-menu-historicmenu > li.mega-menu-item.mega-toggle-on > 
 a.mega-menu-link, 
-#mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu > 
+#mega-menu-wrap-historicmenu #mega-menu-historicmenu > 
 li.mega-menu-item > a.mega-menu-link:hover, 
-#mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu > li.mega-menu-item > 
+#mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-item > 
 a.mega-menu-link:focus {
     background-color: $white-one;
     font-family: GothamNarrow;
@@ -166,6 +170,6 @@ a.mega-menu-link:focus {
     letter-spacing: 1.7px;
     color: $light-navy;
 }
-#mega-menu-wrap-hictoricmenu #mega-menu-hictoricmenu > li.mega-menu-megamenu > ul.mega-sub-menu{
+#mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu{
     background-color: $white-one;
 }
