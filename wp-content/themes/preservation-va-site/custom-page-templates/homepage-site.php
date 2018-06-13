@@ -154,7 +154,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					?>
 						<div class="row">
 							<div class="col-md-12 no_padding_both_sides">
-								<div class="content_action_block dark_blue">
+								<div class="single_column content_action_block dark_blue">
 									<?php the_sub_field('hp_historic_nav_intro_text') ?>
 
 									<?php 
@@ -206,7 +206,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						<div class="container">
 							<div class="row">
 								<div class="col-md-12 no_padding_both_sides">
-									<div class="content_action_block none">
+									<div class="single_column content_action_block none">
 										<?php the_sub_field('hp_call_to_donate_text') ?>
 										<div class="content_button">
 											<?php 

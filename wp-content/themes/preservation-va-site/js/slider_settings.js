@@ -14,7 +14,7 @@
             dots: false,
             autoplayHoverPause:true,
             margin:0,
-            autoHeight:true,
+            autoHeight:false,
             smartSpeed: 1000
         };
         
@@ -26,7 +26,7 @@
             dots:true,
             autoplayHoverPause:true,
             margin:0,
-            autoHeight:true,
+            autoHeight:false,
             smartSpeed: 1000
         });
         
@@ -39,7 +39,7 @@
             dots: false,
             autoplayHoverPause:true,
             margin:0,
-            autoHeight:true,
+            autoHeight:false,
             smartSpeed: 1000
         }); 
         

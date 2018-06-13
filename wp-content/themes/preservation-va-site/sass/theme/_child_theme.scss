@@ -16,44 +16,6 @@ div[class^="col-"] {
     }
 }
 
-.our_work {
-    text-align: center;
-    h2 {
-        font-size: 20px;
-        letter-spacing: 1.4px;
-        text-align: center;
-        color: $white-two;
-        text-transform: uppercase;
-    }
-    p {
-        font-family: $font-family-base;
-        font-weight: normal;
-        line-height: 1.38;
-        letter-spacing: normal;
-        text-align: center;
-        color: $white-two;
-        margin-bottom: 0px;
-    }
-    .focus {
-        padding: 37px 50px;
-        text-align: center;
-
-        img {
-            height: 64px;
-            margin-bottom: 18px;
-        }
-    }
-    .focus1 {
-        background-color: $nice-blue;
-    }
-    .focus2 {
-        background-color: $red-brown;
-    }
-    .focus3 {
-        background-color: $nice-blue;
-    }
-}
-
 .section_temporal {
     h3 {
         font-size: 36px;
@@ -98,13 +60,6 @@ div[class^="col-"] {
         pointer-events: none; 
     }
     select {
-        font-family: GothamNarrow;
-        font-size: 14px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 51px;
-        letter-spacing: 0.4px;
         color: $light-navy;
         background: linear-gradient(to right, #F5F5F5 0%, #F5F5F5 calc(100% - 35px), #FFC30E calc(100% - 35px), #FFC30E 100%);
         padding: 0 55px 0 20px;
@@ -144,49 +99,6 @@ div[class^="col-"] {
     }
 }
 
-.content_side {
-    padding: 56px 35px;
-
-    .side_text {
-        max-width: 550px;
-
-        & > p {
-            @include p_medium;
-            color: $greyish-brown-two;
-        }
-    }
-
-    img {
-        width: 100%;
-    }
-    .content_address {
-        &, & > * {
-            text-align: right;
-        }
-        h3 {
-            line-height: 26px;
-            margin-top: 20px;
-            margin-bottom: 3px;
-            :first-child {
-                margin-top: 0px;
-            }
-        }
-        p {
-            color: $light-navy;
-            line-height: 22px;
-        }
-        .btn {
-            margin-top: 30px;
-        }
-        &.greyish p {
-            color: $greyish-brown-two;
-        }
-        &.map iframe {
-            height: 242px;
-        }
-    }
-
-}
 
 .intro_text p {
   font-family: $font-family-base;

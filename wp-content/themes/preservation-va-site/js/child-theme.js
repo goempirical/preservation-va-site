@@ -7326,7 +7326,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
             dots: false,
             autoplayHoverPause:true,
             margin:0,
-            autoHeight:true,
+            autoHeight:false,
             smartSpeed: 1000
         };
         
@@ -7338,7 +7338,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
             dots:true,
             autoplayHoverPause:true,
             margin:0,
-            autoHeight:true,
+            autoHeight:false,
             smartSpeed: 1000
         });
         
@@ -7351,7 +7351,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
             dots: false,
             autoplayHoverPause:true,
             margin:0,
-            autoHeight:true,
+            autoHeight:false,
             smartSpeed: 1000
         }); 
         

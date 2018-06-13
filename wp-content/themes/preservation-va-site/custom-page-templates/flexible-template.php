@@ -304,7 +304,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									<?php endif; ?>
 										<div class="row">
 											<div class="col-md-12 no_padding_both_sides">
-												<div class="content_action_block <?php echo get_sub_field('normal_text_size') ? 'normal-text ':''; ?><?php echo $bg_call_to_action_block;?>">
+												<div class="single_column <?php echo get_sub_field('call_to_action_mode') ? 'content_action_block ':''; ?><?php echo $bg_call_to_action_block;?>">
 													<?php the_sub_field('text') ?>
 													<div class="content_button">
 														<?php 

@@ -83,23 +83,3 @@ $anim-dur : 800ms;
         color: $greyish-brown-two;
     }
 }
-
-@mixin p_large {
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.04;
-    letter-spacing: normal;
-    text-align: left;
-}
-
-@mixin p_medium {
-    font-size: 20px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    text-align: left;
-}
