@@ -19,8 +19,22 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<!-- BEGIN CONTENT -->
 					
 					<?php if ( have_rows('main_flexible_content') ) : ?>
+
+						<?php 
+							echo '<pre>';
+							$fields = get_field_objects();
+							var_dump( $fields );
+							echo '</pre>';
+							 ?>
 						
 						<?php while ( have_rows('main_flexible_content') ) : the_row(); ?>
+
+							<?php 
+							echo '<pre>';
+							print_r(the_row());
+							echo '</pre>';
+							 ?>
+
 							<!-- Two Columns -->
 							<?php 
 								if ( get_row_layout() == 'two_columns' ) : ?>
