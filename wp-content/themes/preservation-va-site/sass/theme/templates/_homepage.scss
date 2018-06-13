@@ -3,6 +3,7 @@
         max-height: calc( 100vh - 200px );
 
         .heading{
+            @include font-smoothing;
             position: absolute;
             top: 0;
             padding: 0 200px;
@@ -23,16 +24,57 @@
             .title{
                 color: $white-two;
                 text-align: center;
-                margin-bottom: 15px;
+                margin-bottom: 36px;
             }
         }
 
         p {
-            font-size: 24px;
-            line-height: 1.04;
+            @include font-sizing(24,28);
             letter-spacing: normal;
             text-align: center;
             color: $white-two;
+            margin-bottom: 36px;
         }
+    }
+}
+
+.our_work {
+    text-align: center;
+    @include font-smoothing;
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 1.4px;
+        text-align: center;
+        color: $white-two;
+        text-transform: uppercase;
+    }
+
+    p {
+        text-align: center;
+        color: $white-two;
+        margin-bottom: 0px;
+    }
+
+    .focus {
+        padding: 37px 50px;
+        text-align: center;
+
+        img {
+            height: 64px;
+            margin-bottom: 18px;
+        }
+    }
+
+    .focus1 {
+        background-color: $nice-blue;
+    }
+
+    .focus2 {
+        background-color: $red-brown;
+    }
+
+    .focus3 {
+        background-color: $nice-blue;
     }
 }

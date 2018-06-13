@@ -345,39 +345,16 @@
 }
 
 /*  Style CTA  */
-.content_action_block {
-    padding: 67px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.single_column {
+    padding: 80px 60px;
 
-    & > * {
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    & > p {
-        font-weight: 300;
-        font-style: normal;
-        font-stretch: normal;
-        letter-spacing: normal;
-        text-align: center;
-        letter-spacing: 1.2px;
-        max-width: 519px;
-    }
-
-    &:not(.normal-text) > p {
-        line-height: 1.04;
-        font-size: 24px;
-    }
-
-    p {
-        margin-top: 25px;
+    > * {
+        @include narrow_block;
     }
 
     .content_button {
         display: flex;
-        margin-top: 50px;
+        margin-top: 12px;
         
         button + button {
            margin-left: 34px;
@@ -392,10 +369,11 @@
                 color: $nice-blue;
             }
         }
+
         p {
-            max-width: 618px;
             color: $greyish-brown-two;
         }
+
         button {
             background-color: $marigold;
             color: $light-navy;
@@ -407,6 +385,7 @@
         }
     }
     &[class$="blue"] {
+        @include font-smoothing;
         button {
             background-color: $marigold;
             color: $light-navy;
@@ -416,24 +395,36 @@
                 color: $light-navy;
             }
         }
+
+        a:not(.btn) {
+            color: $marigold;
+        }
     }
 
     &.dark_blue {
         background-color: $light-navy;
         color: $white-two;
+        @include font-smoothing;
 
         @each $header in $range-head-title {
             #{$header} {
                 color: $white-two;
             }
         }
+
         p {
             color: $white-two;
         }
+
+        a:not(.btn) {
+            color: $marigold;
+        }
     }
+
     &.gold {
         background-color: $marigold;
         color: $light-navy;
+        @include font-smoothing;
 
         @each $header in $range-head-title {
             #{$header} {
@@ -453,6 +444,7 @@
     &.red {
         background-color: $red-brown;
         color: $white-two;
+        @include font-smoothing;
 
         @each $header in $range-head-title {
             #{$header} {
@@ -468,5 +460,25 @@
                 color: $white-two;
             }
         }
+
+        a {
+            color: $marigold;
+        }
     }
 }  
+
+.content_action_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include font-smoothing;
+    text-align: center;
+
+    .content_button {
+        justify-content: center;
+    }
+
+    p {
+        @include p_large;
+    }
+} 
