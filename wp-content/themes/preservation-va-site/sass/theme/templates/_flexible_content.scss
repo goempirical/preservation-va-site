@@ -1,4 +1,14 @@
 // FLEXIBLE CONTENT
+
+.layout-block {
+    @include max_block;
+    padding: 80px 0;
+
+    &.gray {
+        background-color: $white-three;
+    }
+}
+
 .content_related {
     padding: 53px 33px 53px 65px;
     min-height: 100%;
@@ -346,10 +356,10 @@
 
 /*  Style CTA  */
 .single_column {
-    padding: 80px 60px;
 
-    > * {
+    .row {
         @include narrow_block;
+        flex-direction: column;
     }
 
     .content_button {
@@ -484,8 +494,6 @@
 } 
 
 .two_column_with_left_label {
-    @include max_block;
-    padding: 80px 0;
 
     .row {
     }
@@ -505,8 +513,6 @@
 }
 
 .section_with_sidebar {
-    @include max_block;
-    padding: 80px 0;
 
     .row {
         justify-content: space-between;
@@ -537,8 +543,6 @@
 }
 
 .three_column_grid {
-    @include max_block;
-    padding: 80px 0;
 
     .grid-three-col {
         display: grid;
