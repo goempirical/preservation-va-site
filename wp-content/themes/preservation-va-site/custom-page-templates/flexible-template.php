@@ -21,11 +21,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<?php if ( have_rows('main_flexible_content') ) : ?>
 						
 						<?php while ( have_rows('main_flexible_content') ) : the_row(); ?>
-<<<<<<< Updated upstream
-=======
 
-
->>>>>>> Stashed changes
 							<!-- Two Columns -->
 							<?php 
 								if ( get_row_layout() == 'two_columns' ) : ?>
