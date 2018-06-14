@@ -186,7 +186,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 								<!-- Two Columns with Left Label -->
 							<?php elseif ( get_row_layout() == 'two_column_with_left_label' ) : ?>
-								<section class="two_column_with_left_label <?php the_sub_field('background_color'); ?>">
+								<section class="layout-block two_column_with_left_label <?php the_sub_field('background_color'); ?>">
 
 									<div class="row">
 
@@ -355,7 +355,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 							<!-- Three Column Grid -->
 							<?php elseif ( get_row_layout() == 'three_column_grid' ) : ?>
-								<section class="three_column_grid <?php the_sub_field('background_color'); ?>">
+								<section class="layout-block three_column_grid <?php the_sub_field('background_color'); ?>">
 
 									<div class="row grid-three-col">
 
@@ -395,7 +395,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								<!-- section_with_sidebar -->
 							<?php elseif ( get_row_layout() == 'section_with_sidebar' ) : ?>
 
-							<section class="section_with_sidebar <?php the_sub_field('background_color'); ?>">
+							<section class="layout-block section_with_sidebar <?php the_sub_field('background_color'); ?>">
 
 								<div class="row">
 
@@ -414,43 +414,37 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 								<!-- Call to Actions -->
 								<?php elseif ( get_row_layout() == 'call_to_action_block' ) : ?>
-									<?php $bg_call_to_action_block = get_sub_field('background_color'); ?>
-									<?php if ($bg_call_to_action_block == "none") : ?>
-									<div class="container">
-									<?php endif; ?>
+
+									<section class="layout-block single_column <?php the_sub_field('background_color'); echo get_sub_field('call_to_action_mode') ? ' content_action_block':''; ?>">
+
 										<div class="row">
-											<div class="col-md-12 no_padding_both_sides">
-												<div class="single_column <?php echo get_sub_field('call_to_action_mode') ? 'content_action_block ':''; ?><?php echo $bg_call_to_action_block;?>">
-													<?php the_sub_field('text') ?>
-													<div class="content_button">
-														<?php 
-															$button_1 = get_sub_field('button_1');
-															$button_2 = get_sub_field('button_2');
-															
-															$class = "";
-															if ($button_1 && $button_2) :
-																$class = "small";
-															endif;
-														?>
+											<?php the_sub_field('text') ?>
+											<div class="content_button">
+												<?php 
+													$button_1 = get_sub_field('button_1');
+													$button_2 = get_sub_field('button_2');
+													
+													$class = "";
+													if ($button_1 && $button_2) :
+														$class = "small";
+													endif;
+												?>
 
-														<?php if ( $button_1 ) : ?>
-															<button type="button" class="btn_cl <?php echo $class; ?>">
-																<?php echo $button_1['title']?>
-															</button>
-														<?php endif; ?>
+												<?php if ( $button_1 ) : ?>
+													<button type="button" class="btn_cl <?php echo $class; ?>">
+														<?php echo $button_1['title']?>
+													</button>
+												<?php endif; ?>
 
-														<?php if ( $button_2 ) : ?>
-															<button type="button" class="btn_cl <?php echo $class; ?>">
-																<?php echo $button_2['title']?>
-															</button>
-														<?php endif; ?>
-													</div>
-												</div>
+												<?php if ( $button_2 ) : ?>
+													<button type="button" class="btn_cl <?php echo $class; ?>">
+														<?php echo $button_2['title']?>
+													</button>
+												<?php endif; ?>
 											</div>
 										</div>
-									<?php if ($bg_call_to_action_block == "none") : ?>
-									</div>
-									<?php endif; ?>
+
+									</section>
 								
 								<?php elseif ( get_row_layout() == 'headline' ) : ?>
 									

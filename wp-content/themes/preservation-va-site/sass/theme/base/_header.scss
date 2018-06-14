@@ -292,6 +292,7 @@ li.search {
         }
     }
 
+
     > li.mega-menu-megamenu > ul.mega-sub-menu {
         background-color: $white-one;
         width: 100vw;
@@ -305,6 +306,22 @@ li.search {
             &:focus, &:hover {
                 color: $light-navy;
             }
+        }
+
+        > li.mega-menu-item > h4.mega-block-title {
+            color: $nice-blue;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            text-transform: none;
+            
+            @include media-breakpoint-up(md) { 
+                margin-top:68px;
+            }
+        }
+
+        > li.mega-menu-item.mega-menu-item-type-widget {
+            margin-bottom: 2.5rem;
         }
 
         > li.mega-menu-item,
@@ -325,4 +342,13 @@ li.search {
         border-width: 0 2px 2px 0;
         top: calc(50% - 9px);
     }
+}
+
+.textwidget p {
+    @include font-sizing(15,22);
+    font-weight: 300;
+    font-family: $font-family-base;
+    letter-spacing: 0;
+    color: $primary;
+    max-width: 55ch;
 }
