@@ -21,6 +21,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<?php if ( have_rows('main_flexible_content') ) : ?>
 						
 						<?php while ( have_rows('main_flexible_content') ) : the_row(); ?>
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 							<!-- Two Columns -->
 							<?php 
 								if ( get_row_layout() == 'two_columns' ) : ?>
@@ -183,17 +188,73 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								</div>
 								<!-- End Two Columns Label -->
 
+								<!-- Two Columns with Left Label -->
+							<?php elseif ( get_row_layout() == 'two_column_with_left_label' ) : ?>
+								<section class="two_column_with_left_label <?php the_sub_field('background_color'); ?>">
+
+									<div class="row">
+
+										<div class="col-md-2 tcll_label_col">
+										
+											<?php if ( get_sub_field('section_title') ) :?>
+
+											<h4><?php the_sub_field('section_title') ?></h4>
+										
+											<?php endif; ?>
+										
+										</div>
+
+										<div class="col-md-8 grid-two-col">
+
+												<?php
+
+													// check if the repeater field has rows of data
+													if( have_rows('grid_items') ):
+
+													 	// loop through the rows of data
+													    while ( have_rows('grid_items') ) : the_row();
+
+												?>
+
+												<div class="gi">
+
+													<?php the_sub_field('item_content'); ?>
+
+												</div>
+
+												<?php
+
+													    endwhile;
+
+													else :
+
+													    // no rows found
+
+													endif;
+
+													?>
+										</div>
+
+									</div>
+
+								</section>
+								<!-- End Two Columns Left Label -->
+
 								<!-- Three Columns -->
 							<?php elseif ( get_row_layout() == 'three_columns' ) : ?>
 								<div class="row content_three_columns <?php echo get_sub_field('layout_style'); ?>">
 									<div class="container">
+
+										<code>three_columns</code>
 										<div class="row">
 											<div class="col-md-4 left-column">
 												<?php $field_column_left = get_sub_field( 'left_column' ); ?>
 
 												<div class="content_media">
 												
-													<?php switch ($field_column_left['left_media_type']) {
+													<?php 
+
+														switch ($field_column_left['left_media_type']) {
 														case 'Text':
 															echo $field_column_left['left_text'];
 															break;
@@ -295,6 +356,65 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									</div>
 								</div>
 								<!-- End Three Columns -->
+
+							<!-- Three Column Grid -->
+							<?php elseif ( get_row_layout() == 'three_column_grid' ) : ?>
+								<section class="three_column_grid <?php the_sub_field('background_color'); ?>">
+
+									<div class="row grid-three-col">
+
+											<?php
+
+												// check if the repeater field has rows of data
+												if( have_rows('grid_items') ):
+
+												 	// loop through the rows of data
+												    while ( have_rows('grid_items') ) : the_row();
+
+											?>
+
+											<div class="gi">
+
+												<?php the_sub_field('item_content'); ?>
+
+											</div>
+
+											<?php
+
+												    endwhile;
+
+												else :
+
+												    // no rows found
+
+												endif;
+
+												?>
+
+									</div>
+
+								</section>
+								<!-- End Three Column Grid -->
+
+								<!-- section_with_sidebar -->
+							<?php elseif ( get_row_layout() == 'section_with_sidebar' ) : ?>
+
+							<section class="section_with_sidebar <?php the_sub_field('background_color'); ?>">
+
+								<div class="row">
+
+                    <div class="col-md-6 sws_left-col">
+                        <?php the_sub_field('main_section_content'); ?>
+                    </div>
+
+                    <div class="col-md-4 sws_right-col">
+                        <?php the_sub_field('section_sidebar_content'); ?>
+                    </div>
+
+                </div>
+
+			        </section>
+								<!-- End section_with_sidebar -->
 
 								<!-- Call to Actions -->
 								<?php elseif ( get_row_layout() == 'call_to_action_block' ) : ?>
