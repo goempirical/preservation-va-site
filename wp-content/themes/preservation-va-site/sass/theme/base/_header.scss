@@ -1,5 +1,5 @@
 .navbar-dark .navbar-brand a {
-    color: $white-two;
+    color: $white;
 }
 
 .navbar-dark {
@@ -14,7 +14,7 @@
 }
 
 #wrapper-navbar .navbar-dark {
-    background-color: $light-navy;
+    background-color: $dark-blue;
     padding: 40px $grid-gutter-width 28px;
 
     .dropdown-toggle::after {
@@ -24,7 +24,7 @@
 
 #wrapper-navbar .navbar-dark .navbar-nav {
     .nav-link {
-        color: $white-two;
+        color: $white;
         @include font-sizing(17, 17);
         letter-spacing: 0.5px;
 
@@ -46,7 +46,7 @@
             position: relative;
 
             &:hover, &:focus {
-                color: $light-navy;
+                color: $dark-blue;
                 background: $aux_gray;
 
                 &:after {
@@ -140,7 +140,7 @@ li.search {
     font-weight: 700;
     letter-spacing: 1.7px;
     text-align: left;
-    color: $white-two;
+    color: $white;
 
     #mega-menu-historicmenu {
         li.mega-menu-item {
@@ -153,7 +153,7 @@ li.search {
                 height: 78px;
 
                 &:after {
-                    border: solid $light-navy;
+                    border: solid $dark-blue;
                     border-width: 2px 0 0 2px;
                     top: calc(50% - 5px);
                 }
@@ -165,7 +165,7 @@ li.search {
                 right: 27px;
                 width: 0;
                 height: 0;
-                border: solid $white-two;
+                border: solid $white;
                 border-width: 0 2px 2px 0;
                 padding: 4px;
                 transform: rotate(45deg);
@@ -276,7 +276,7 @@ li.search {
             }
 
             &:focus, &:hover {
-                color: $light-navy;
+                color: $dark-blue;
             }
         }
     }
@@ -285,13 +285,25 @@ li.search {
     > li.mega-menu-item > a.mega-menu-link:hover, 
     > li.mega-menu-item > a.mega-menu-link:focus {
         background-color: $white-one;
-        color: $light-navy;
+        color: $dark-blue;
 
         &:after {
-            border-color: $light-navy;
+            border-color: $dark-blue;
         }
     }
 
+    > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link {
+        background: $nice-blue;
+
+        &:hover, 
+        &:focus {
+            background: $white-one;
+        }
+    }
+
+    > li.mega-menu-item.mega-current-menu-ancestor.mega-toggle-on > a.mega-menu-link {
+        background: $white-one;
+    }
 
     > li.mega-menu-megamenu > ul.mega-sub-menu {
         background-color: $white-one;
@@ -304,7 +316,7 @@ li.search {
             color: $nice-blue;
 
             &:focus, &:hover {
-                color: $light-navy;
+                color: $dark-blue;
             }
         }
 

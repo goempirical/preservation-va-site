@@ -6,9 +6,34 @@
 
     &.gray,
     &.grey {
-
         background-color: $white-three;
-    
+    }
+
+    &.dark_blue {
+        background-color: $dark-blue;
+        color: $white;
+        @include font-smoothing;
+
+        h1, h2, h3, h4, h5, h5 {
+            color: $white;
+        }
+
+        a {
+            color: $marigold;
+
+            &:hover, &:focus {
+                text-transform: underline;
+            }
+        }
+
+        button, .btn {
+            background-color: $marigold;
+            color: $dark-blue;
+
+            &:hover, &:focus {
+                background-color: $white;
+            }
+        }
     }
 }
 
@@ -71,7 +96,7 @@
 
     &.events {
         background-color: $marigold;
-        color: $light-navy;
+        color: $dark-blue;
 
         .card_related {
 
@@ -87,14 +112,14 @@
             }
         }
         a {
-            color: $light-navy;
+            color: $dark-blue;
             
         }
     }
     &.stories  {
         
         background-color: $red-brown;
-        color: $white-two;
+        color: $white;
 
         .card_related {
 
@@ -104,86 +129,15 @@
         }
 
         a {
-            color: $white-two;
+            color: $white;
         }
     }
 }
 
-.content_two_columns {
-    padding: 60px 0;
+.two_columns {
 
-    @each $header in $range-head-title {
-        #{$header} {
-            font-weight: 500;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            margin: 0;
-            text-align: left;
-        }
-    }
-    &.intro {
-        @each $header in $range-head-title {
-            #{$header} {
-                color: $nice-blue;
-            }
-        }
-    }
-    &.basic {
-        @each $header in $range-head-title {
-            #{$header} {
-                color: $light-navy;
-                letter-spacing: 1px;
-            }
-        }
-    }
-    &.sidebar {
-        @each $header in $range-head-title {
-            #{$header} {
-                color: $light-navy;
-                letter-spacing: 1px;
-                margin-bottom: 15px;
-            }
-        }
-        h2 {
-            color: $nice-blue;
-            margin-bottom: 25px;
-        }
-        .content_media {
-            p {
-                margin: 0;
-            }
-        }
-        .left-column {
-            p {
-                font-size: 20px;
-            }
-        }
-        .right-column {
-            @each $header in $range-head-title {
-                #{$header} {
-                    margin-top: 15px;
-                }
-
-                #{$header}:first-child {
-                    margin-top: 0;
-                }
-            }
-        }
-    }
     .content_media {
-        & > p {
-            font-size: 16px;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.38;
-            letter-spacing: normal;
-            text-align: left;
-            color: $greyish-brown-two;
-            padding: 0;
-            margin: 25px 0;
-        }
+
         img, iframe {
             display: block;
             margin: 0 auto;
@@ -197,55 +151,7 @@
             }
         }
     }
-    .label-column {
-        label {
-            font-family: GothamNarrow;
-            font-size: 20px;
-            font-weight: 500;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.05;
-            letter-spacing: normal;
-            text-align: left;
-            color: $light-navy;
-        }
-    }
-    .left-column,
-    .right-column {
-        text-align: left;
-        p {
-            font-family: $font-family-base;
-            font-size: 16px;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.38;
-            letter-spacing: normal;
-            text-align: left;
-        }
-        strong {
-            font-family: FreightTextProBold;
-        }
-        em {
-            font-family: FreightTextPro;
-            font-style: italic;
-        }
-        img {
-            margin: initial;
-            margin-bottom: 10px;
-        }
-    }
-    &.with_label {
-        .left-column,
-        .right-column {
-            p {
-                margin: 0;
-            }
-        }
-    }
-    &.gray {
-        background-color: $white-three;
-    }
+
 }
 
 .content_three_columns{
@@ -304,18 +210,18 @@
     }
     &.primary {
         h1 {
-            color: $white-two;
+            color: $white;
         }
         padding: 46px 0px;
-        background-color: $light-navy;
-        color: $white-two;
+        background-color: $dark-blue;
+        color: $white;
     }
     &.secondary {
         &_white, &_gray {
             padding: 21px 0px;
         }
         &_white {
-            background-color: $white-two;
+            background-color: $white;
             
             & > h2 {
                 color: $nice-blue;
@@ -325,7 +231,7 @@
             background-color: $white-three;
 
             & > h2 {
-                color: $light-navy;
+                color: $dark-blue;
             }
         }
     }
@@ -375,7 +281,7 @@
     }
    
     &.none {
-        background: $white-two;       
+        background: $white;       
 
         @each $header in $range-head-title {
             #{$header} {
@@ -387,13 +293,13 @@
             color: $greyish-brown-two;
         }
 
-        button {
+        button, .btn {
             background-color: $marigold;
-            color: $light-navy;
+            color: $dark-blue;
 
             &:hover {
-                background-color: $light-navy;
-                color: $white-two;
+                background-color: $dark-blue;
+                color: $white;
             }
         }
     }
@@ -401,11 +307,11 @@
         @include font-smoothing;
         button {
             background-color: $marigold;
-            color: $light-navy;
+            color: $dark-blue;
 
             &:hover {
-                background-color: $white-two;
-                color: $light-navy;
+                background-color: $white;
+                color: $dark-blue;
             }
         }
 
@@ -415,18 +321,18 @@
     }
 
     &.dark_blue {
-        background-color: $light-navy;
-        color: $white-two;
+        background-color: $dark-blue;
+        color: $white;
         @include font-smoothing;
 
         @each $header in $range-head-title {
             #{$header} {
-                color: $white-two;
+                color: $white;
             }
         }
 
         p {
-            color: $white-two;
+            color: $white;
         }
 
         a:not(.btn) {
@@ -436,41 +342,41 @@
 
     &.gold {
         background-color: $marigold;
-        color: $light-navy;
+        color: $dark-blue;
         @include font-smoothing;
 
         @each $header in $range-head-title {
             #{$header} {
-                color: $light-navy;
+                color: $dark-blue;
             }
         }
         button {
-            background-color: $light-navy;
-            color: $white-two;
+            background-color: $dark-blue;
+            color: $white;
 
             &:hover {
-                background-color: $white-two;
-                color: $light-navy;
+                background-color: $white;
+                color: $dark-blue;
             }
         }
     }
     &.red {
         background-color: $red-brown;
-        color: $white-two;
+        color: $white;
         @include font-smoothing;
 
         @each $header in $range-head-title {
             #{$header} {
-                color: $white-two;
+                color: $white;
             }
         }
         button {
-            background-color: $white-two;
-            color: $light-navy;
+            background-color: $white;
+            color: $dark-blue;
 
             &:hover {
-                background-color: $light-navy;
-                color: $white-two;
+                background-color: $dark-blue;
+                color: $white;
             }
         }
 

@@ -68,6 +68,14 @@ function buildTable($table) {
     }
 }
 
+// register google map API for acf
+function my_acf_init() {
+    
+    acf_update_setting('google_api_key', 'AIzaSyBGoU3uwZTeYotBXgkkUKL0ipu6l6CfiGs');
+}
+
+add_action('acf/init', 'my_acf_init');
+
 // Add support to files upload SVG
 function cc_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';

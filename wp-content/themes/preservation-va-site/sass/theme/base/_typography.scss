@@ -51,6 +51,12 @@ p {
     color: $marigold;
 }
 
+
+.intro_text p {
+  @include p_large;
+  text-align: center;
+}
+
 h1 {
     font-family: $font-family-header;
     @include font-sizing(48,54);
@@ -76,7 +82,7 @@ h3 {
     line-height: 1.15;
     letter-spacing: 1px;
     color: $greyish-brown-two;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 h4 {
@@ -143,19 +149,19 @@ button.btn_cl {
 
     &.marigold {
         background-color: $marigold;
-        color: $light-navy;
+        color: $dark-blue;
     }
     &.marigold:hover {
-        background-color: $light-navy;
-        color: $white-two;
+        background-color: $dark-blue;
+        color: $white;
     }
     &.white {
-        background-color: $white-two;
-        color: $light-navy;
+        background-color: $white;
+        color: $dark-blue;
     }
     &.white:hover {
-        background-color: $light-navy;
-        color: $white-two;
+        background-color: $dark-blue;
+        color: $white;
     }
     &.small {
         @include btn_small;
@@ -165,4 +171,28 @@ button.btn_cl {
 select {
     @include labelfont();
     font-weight: 500;
+}
+
+/* Tables */
+
+.table {
+    td {
+        font-family: $font-family-header;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: 0.04em;
+        text-align: left;
+        color: $nice-blue;
+        border-top: 1px solid $dark-blue;
+        border-left: 1px solid $dark-blue;
+        padding: .75rem 1em;
+    }
+    tr:first-child td{
+        border-top: 0;
+    }
+    td:first-child{
+        border-left: 0;
+        color: $dark-blue;
+    }
 }

@@ -9,6 +9,8 @@
     width: 1px;
 }
 
+/*//deprecate this*/
+
 .content_side {
     padding: 60px 35px;
 
@@ -41,7 +43,7 @@
             }
         }
         p {
-            color: $light-navy;
+            color: $dark-blue;
             line-height: 22px;
         }
         .btn {
@@ -54,5 +56,25 @@
             height: 242px;
         }
     }
+}
 
+section {
+    &.red {
+        background: $red-brown;
+        color: $white;
+
+        *:not(a) {
+            color: $white;
+        }
+
+        a:not(.btn) {
+            color: $marigold;
+
+            &:hover,
+            &:focus {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
 }
