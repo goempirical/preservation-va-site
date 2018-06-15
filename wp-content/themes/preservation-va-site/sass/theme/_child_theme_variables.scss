@@ -13,9 +13,9 @@ $font-family-base: "Noto Serif", Georgia, Times, "Times New Roman", serif;
 $font-family-header: "Roboto", "Helvetica Neue", Arial, sans-serif;
 
 $white-one: #f6f5f5;
-$white-two: #ffffff;
+$white: #ffffff;
 $white-three: #f2f2f2;
-$light-navy: #15467b;
+$dark-blue : #15467b;
 $marigold: #ffca05;
 $nice-blue: #0f7ab5;
 $greyish-brown: #4a4a4a;
@@ -77,7 +77,7 @@ $anim-dur : 800ms;
 @mixin date_release {
     width: 37px;
     height: 37px;
-    background-color: $light-navy;
+    background-color: $dark-blue;
     margin-right: 17px;
     display: flex;
     flex-direction: column;
@@ -89,7 +89,7 @@ $anim-dur : 800ms;
     span {
         line-height: 1.1;
         padding: 0px 2px 0px;
-        color: $white-two;
+        color: $white;
         text-transform: uppercase;
         text-align: center;
         font-size: 10px;

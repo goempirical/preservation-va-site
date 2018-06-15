@@ -1,6 +1,6 @@
 .dark_blue .marigold:hover {
-    background-color: $white-two;
-    color: $light-navy;
+    background-color: $white;
+    color: $dark-blue;
 }
 
 div[class^="col-"] {
@@ -21,7 +21,7 @@ div[class^="col-"] {
         font-size: 36px;
         line-height: normal;
         letter-spacing: 0.7px;
-        color: $light-navy;
+        color: $dark-blue;
         margin-bottom: 25px;
     }
 }
@@ -50,7 +50,7 @@ div[class^="col-"] {
         right: 11px;
         width: 0;
         height: 0;
-        border: solid $light-navy;
+        border: solid $dark-blue;
         border-width: 0 2px 2px 0;
         display: inline-block;
         padding: 4px;
@@ -60,7 +60,7 @@ div[class^="col-"] {
         pointer-events: none; 
     }
     select {
-        color: $light-navy;
+        color: $dark-blue;
         background: linear-gradient(to right, #F5F5F5 0%, #F5F5F5 calc(100% - 35px), #FFC30E calc(100% - 35px), #FFC30E 100%);
         padding: 0 55px 0 20px;
         border: none;
@@ -82,11 +82,11 @@ div[class^="col-"] {
         font-size: 36px;
         line-height: normal;
         letter-spacing: 0.7px;
-        color: $white-two;
+        color: $white;
         margin-bottom: 25px;
     }
     p {
-        color: $white-two;
+        color: $white;
     }
     a {
         font-size: 20px;
@@ -95,21 +95,8 @@ div[class^="col-"] {
         font-stretch: normal;
         line-height: 1.25;
         letter-spacing: normal;
-        color: $white-two;
+        color: $white;
     }
-}
-
-
-.intro_text p {
-  font-family: $font-family-base;
-  font-size: 20px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.1;
-  letter-spacing: normal;
-  text-align: center;
-  color: $greyish-brown-two;
 }
 
 .margin_bottom {
@@ -120,7 +107,7 @@ div[class^="col-"] {
 div.owl-nav {
     position: absolute;
     z-index: 9999;
-    color: $white-two;
+    color: $white;
     top: 50%;
     width: 100%;
     transform: translateY(-50%);
@@ -167,38 +154,14 @@ div.owl-dots {
 // Highlight blue
 .highlight {
     h1, h2, h3, h4 {
-        color: $white-two;
+        color: $white;
         margin-bottom: 25px;
     }
     &.blue {
-        background-color: $light-navy;
+        background-color: $dark-blue;
     }
     p {
-        color: $white-two;
-    }
-}
-
-// Tables
-.table {
-    td {
-        font-family: $font-family-header;
-        font-size: 15px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.4;
-        letter-spacing: normal;
-        text-align: left;
-        color: $nice-blue;
-        border-top: 1px solid $light-navy;
-        border-left: 3px solid $light-navy;
-    }
-    tr:first-child td{
-        border-top: 0;
-    }
-    td:first-child{
-        border-left: 0;
-        color: $light-navy;
+        color: $white;
     }
 }
 

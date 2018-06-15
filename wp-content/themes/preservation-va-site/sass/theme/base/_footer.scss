@@ -18,11 +18,11 @@
     letter-spacing: 0.5px;
     text-align: right;
     color: #ffffff;
-    color: $white-two;
+    color: $white;
 }
 
 .footer {
-    color: $white-two;
+    color: $white;
     @include font-smoothing;
     font-family: $font-family-header;
 
@@ -41,13 +41,13 @@
         }
 
         input.email {
-            background-color: $white-two;
+            background-color: $white;
             margin: 0;
             display: inline-block;
             line-height: 39px;
             height: 39px;
             min-width: 19em;
-            border: 1px solid $white-two;
+            border: 1px solid $white;
             border-radius: 0;
             padding: 0 1em;
 
@@ -63,11 +63,11 @@
             height: 39px;
             line-height: 30px;
             background-color: $marigold;
-            color: $light-navy;
+            color: $dark-blue;
 
             &:hover {
-                background-color: $light-navy;
-                color: $white-two;
+                background-color: $dark-blue;
+                color: $white;
             }
         }
     }
@@ -81,7 +81,7 @@
         .btn.marigold {
             border: solid 1px $marigold;
             background-color: transparent;
-            color: $white-two;
+            color: $white;
             margin-top: 38px;
         }
     }
@@ -91,7 +91,7 @@
     @include font-sizing(14, 21);
     font-weight: 300;
     margin-bottom: 0;
-    color:$white-two;
+    color:$white;
 
     .gold {
         display: inline-block;
