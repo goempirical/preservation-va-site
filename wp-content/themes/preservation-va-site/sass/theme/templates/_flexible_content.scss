@@ -40,21 +40,33 @@
 .content_related {
     padding: 53px 33px 53px 65px;
     min-height: 100%;
+    font-family: $font-family-header;
 
-    .title_related {
+    h3.title_related {
         text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: 0.4px;
+
+        .stories & {
+            color: $white;
+        }
     }
+
+    &.stories {
+        @include font-smoothing;
+
+        h3.title_related {
+            color: $white;
+        }
+    }
+
     .see_all {
         position: absolute;
         bottom: 53px;
         right: 82px;
         font-style: italic;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        display: inline-block;
+        font-family: $font-family-base;
     }
     .wrapper_related {
         padding: 30px 0px 21px;
@@ -79,15 +91,15 @@
 
                 a {
                     font-style: italic;
+                    text-decoration: none;
+                    border-bottom: 1px solid;
+                    display: inline-block;
+                    font-family: $font-family-base;
                 }
             }
             .title_cont {
                 font-size: 15px;
-                font-style: normal;
-                font-stretch: normal;
                 line-height: 1.47;
-                letter-spacing: normal;
-                text-align: left;
                 display: block;
                 max-width: 350px; 
             }
@@ -102,6 +114,7 @@
 
             .date_release {
                 @include date_release;
+                @include font-smoothing;
             }
             .title_cont {
                 font-weight: 500;
@@ -153,50 +166,13 @@
     }
 
 }
+/* Three col grid */
 
-.content_three_columns{
-    padding: 60px 0;
-
-    @each $header in $range-head-title {
-        #{$header} {
-            font-weight: 500;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: normal;
-            margin: 0;
-            text-align: left;
-        }
-    }
-
-    .left-column,
-    .center-column,
-    .right-column {
-        text-align: left;
-        p {
-            margin: 0;
-            font-family: $font-family-base;
-            font-size: 16px;
-            font-weight: normal;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.38;
-            letter-spacing: normal;
-            text-align: left;
-        }
-        strong {
-            font-family: FreightTextProBold;
-        }
-        em {
-            font-family: FreightTextPro;
-            font-style: italic;
-        }
-        img {
-            margin: initial;
-            margin-bottom: 10px;
-        }
-    }
-    &.gray {
-        background-color: $white-three;
+.three_column_grid {
+    .headline h2 {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        padding-bottom: 40px;
     }
 }
 
