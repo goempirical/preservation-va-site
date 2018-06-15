@@ -156,126 +156,18 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								</section>
 								<!-- End Two Columns Left Label -->
 
-								<!-- Three Columns -->
-							<?php elseif ( get_row_layout() == 'three_columns' ) : ?>
-								<div class="row content_three_columns <?php echo get_sub_field('layout_style'); ?>">
-									<div class="container">
-
-										<code>three_columns</code>
-										<div class="row">
-											<div class="col-md-4 left-column">
-												<?php $field_column_left = get_sub_field( 'left_column' ); ?>
-
-												<div class="content_media">
-												
-													<?php 
-
-														switch ($field_column_left['left_media_type']) {
-														case 'Text':
-															echo $field_column_left['left_text'];
-															break;
-														case 'Image':
-															echo wp_get_attachment_image( $field_column_left['left_image']['ID'], 'full' );
-															break;
-														case 'Gallery': ?>
-																<div  class="owl-two owl-carousel owl-theme">
-
-																	<?php foreach ( $field_column_left['left_gallery'] as $image ) :?>
-
-																		<div class="item">
-																			
-																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
-
-																		</div>
-
-																	<?php endforeach; ?>
-
-																</div>
-													<?php	break;
-														case 'Video':
-															echo $field_column_left['left_video'];
-															break;
-													}
-													?>
-												</div>
-											</div>
-											<div class="col-md-4 center-column">
-												<?php $field_column_center = get_sub_field( 'center_column' ); ?>
-
-												<div class="content_media">
-												
-													<?php switch ($field_column_center['center_media_type']) {
-														case 'Text':
-															echo $field_column_center['center_text'];
-															break;
-														case 'Image':
-															echo wp_get_attachment_image( $field_column_center['center_image']['ID'], 'full' );
-															break;
-														case 'Gallery': ?>
-																<div  class="owl-two owl-carousel owl-theme">
-
-																	<?php foreach ( $field_column_center['center_gallery'] as $image ) :?>
-
-																		<div class="item">
-																			
-																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
-
-																		</div>
-
-																	<?php endforeach; ?>
-
-																</div>
-													<?php	break;
-														case 'Video':
-															echo $field_column_center['center_video'];
-															break;
-													}
-													?>
-												</div>
-											</div>
-
-											<div class="col-md-4 right-column">
-												<?php $field_column_right = get_sub_field( 'right_column' ); ?>
-												
-												<div class="content_media">
-													<?php switch ($field_column_right['right_media_type']) {
-														case 'Text':
-															echo $field_column_right['right_text'];
-															break;
-														case 'Image':
-															echo wp_get_attachment_image( $field_column_right['right_image']['ID'], 'full' );
-															break;
-														case 'Gallery': ?>
-																<div  class="owl-two owl-carousel owl-theme">
-
-																	<?php foreach ( $field_column_right['right_gallery'] as $image ) :?>
-
-																		<div class="item">
-																			
-																			<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
-
-																		</div>
-
-																	<?php endforeach; ?>
-
-																</div>
-													<?php	break;
-														case 'Video':
-															echo $field_column_right['right_video'];
-															break;
-													}
-													?>
-												</div>
-											</div>
-
-										</div> <!-- .ROW -->
-									</div>
-								</div>
-								<!-- End Three Columns -->
 
 							<!-- Three Column Grid -->
 							<?php elseif ( get_row_layout() == 'three_column_grid' ) : ?>
 								<section class="layout-block three_column_grid <?php the_sub_field('background_color'); ?>">
+
+									<div class="row headline">
+										<?php if ( get_sub_field('section_title') ) :?>
+
+											<h2><?php the_sub_field('section_title') ?></h2>
+
+										<?php endif; ?>
+									</div>
 
 									<div class="row grid-three-col">
 

@@ -98,7 +98,8 @@
     }
 }
 
-.hs_admission_info {
+.hs_admission_info,
+.hs_tours_and_site_rental {
     .intro_text {
         @include narrow_block;
 

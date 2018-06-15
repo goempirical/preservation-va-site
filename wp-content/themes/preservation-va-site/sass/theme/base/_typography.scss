@@ -3,11 +3,13 @@
 @mixin p_large {
     @include font-sizing(22,28);
     margin-bottom: 28px;
+    @include font-smoothing;
 }
 
 @mixin p_medium {
     @include font-sizing(17,24);
     margin-bottom: 24px;
+    @include font-smoothing;
 }
 
 body {
@@ -98,7 +100,7 @@ h3,
 h4,
 h5,
 h6 {
-    -webkit-font-smoothing: antialiased;
+    @include font-smoothing;
 
     .content-area &,
     .widget_text & {
