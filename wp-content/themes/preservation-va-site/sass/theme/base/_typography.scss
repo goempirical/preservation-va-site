@@ -131,6 +131,7 @@ ul li {
     letter-spacing: 0.1em;
     background-color: $marigold;
     color: $dark-blue;
+    @include font-smoothing;
 }
 
 @mixin btn_small {
