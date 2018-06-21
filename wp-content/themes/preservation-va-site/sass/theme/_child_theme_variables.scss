@@ -27,7 +27,9 @@ $primary: $greyish-brown;
 $range-head-title: (h1, h2, h3, h4);
 
 $grid-gutter-width: 3rem;
-$max-width: 1140px;
+$max-width: 1300px;
+$narrow-width: 618px;
+$mid-width: 800px;
 
 $anim-dur : 800ms;
 
@@ -58,7 +60,13 @@ $anim-dur : 800ms;
 }
 
 @mixin narrow_block {
-  max-width: 618px;
+  max-width: $narrow-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin mid_width_block {
+  max-width: $mid-width;
   margin-left: auto;
   margin-right: auto;
 }
@@ -71,6 +79,13 @@ $anim-dur : 800ms;
 	  margin-left: auto;
 	  margin-right: auto;
 	  max-width: $max-width;
+	  padding-right: 1rem;
+    padding-left: 1rem;
+
+	  @include media-breakpoint-up(md) { 	
+	  	padding-right: 1.5rem;
+	    padding-left: 1.5rem;
+	  }
   }
 }
 

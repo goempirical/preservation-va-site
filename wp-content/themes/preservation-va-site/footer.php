@@ -15,10 +15,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="container footer">
+	<div class="footer">
 
 		<div class="row">
-			<div class="col-md-6 footer--contact-details">
+			<div class="col-lg-7 col-xl-6 footer--contact-details">
 				<?php 
 				$opt_subscribe = get_field('opt_subscribe', 'option');
 				if ($opt_subscribe["opt_subscribe_snippet"]) {
@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
 				<p>&copy; <?php echo date('Y') ?> Preservation Virginia. All Rights Reserved.</p>
 			</div>
-			<div class="col-md-4 social_media">
+			<div class="col-xl-4 col-lg-3 social_media">
 				<?php $opt_social = get_field('opt_social', 'option'); ?>
 				<?php if ($opt_social["opt_social_facebook"]) : ?>
 					<a href="<?php echo $opt_social['opt_social_facebook'] ?>" target="_blank">
@@ -77,7 +77,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div>
 			</div>
 
-			<div class="col-md-2">
+			<div class="col-lg-2">
 
 				<footer class="site-footer" id="colophon">
 

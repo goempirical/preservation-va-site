@@ -15,16 +15,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12 content-area" id="primary">
 
 				<main class="site-main" id="main" role="main">
-
-					<!-- BEGIN CONTENT -->
 					
 					<?php if ( have_rows('main_flexible_content') ) : ?>
 						
 						<?php while ( have_rows('main_flexible_content') ) : the_row(); ?>
 
-							<!-- Two Columns -->
-							<?php 
-								if ( get_row_layout() == 'two_columns' ) : ?>
+<?php // <!-- Two Columns --> ?>
+
+							<?php  if ( get_row_layout() == 'two_columns' ) : ?>
 
 							<section class="layout-block two_columns <?php the_sub_field('background_color'); ?>">
 
@@ -102,9 +100,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								</div> <!-- .ROW -->
 
 							</section>
-								<!-- End Two Columns -->
 
-								<!-- Two Columns with Left Label -->
+<?php // <!-- End Two Columns --> ?>
+
+<?php // <!-- Two Columns with Left Label --> ?>
+
 							<?php elseif ( get_row_layout() == 'two_column_with_left_label' ) : ?>
 								<section class="layout-block two_column_with_left_label <?php the_sub_field('background_color'); ?>">
 
@@ -154,19 +154,23 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									</div>
 
 								</section>
-								<!-- End Two Columns Left Label -->
 
+<?php // <!-- End Two Columns Left Label --> ?>
 
-							<!-- Three Column Grid -->
+<?php // <!-- Three Column Grid --> ?>
+
 							<?php elseif ( get_row_layout() == 'three_column_grid' ) : ?>
+
 								<section class="layout-block three_column_grid <?php the_sub_field('background_color'); ?>">
 
 									<div class="row headline">
+
 										<?php if ( get_sub_field('section_title') ) :?>
 
 											<h2><?php the_sub_field('section_title') ?></h2>
 
 										<?php endif; ?>
+
 									</div>
 
 									<div class="row grid-three-col">
@@ -202,9 +206,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									</div>
 
 								</section>
-								<!-- End Three Column Grid -->
 
-								<!-- section_with_sidebar -->
+<?php // <!-- End Three Column Grid --> ?>
+
+<?php // <!-- section_with_sidebar --> ?>
+							
 							<?php elseif ( get_row_layout() == 'section_with_sidebar' ) : ?>
 
 							<section class="layout-block section_with_sidebar <?php the_sub_field('background_color'); ?>">
@@ -222,9 +228,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 </div>
 
 			        </section>
-								<!-- End section_with_sidebar -->
 
-								<!-- Call to Actions -->
+<?php // <!-- End section_with_sidebar --> ?>
+
+<?php // <!-- Call to Actions --> ?>
+
 								<?php elseif ( get_row_layout() == 'call_to_action_block' ) : ?>
 
 									<section class="layout-block single_column <?php the_sub_field('background_color'); echo get_sub_field('call_to_action_mode') ? ' content_action_block':''; ?>">
@@ -243,21 +251,25 @@ $container   = get_theme_mod( 'understrap_container_type' );
 												?>
 
 												<?php if ( $button_1 ) : ?>
-													<button type="button" class="btn_cl <?php echo $class; ?>">
+													<a class="btn <?php echo $class; ?>">
 														<?php echo $button_1['title']?>
-													</button>
+													</a>
 												<?php endif; ?>
 
 												<?php if ( $button_2 ) : ?>
-													<button type="button" class="btn_cl <?php echo $class; ?>">
+													<a class="btn <?php echo $class; ?>">
 														<?php echo $button_2['title']?>
-													</button>
+													</a>
 												<?php endif; ?>
 											</div>
 										</div>
 
 									</section>
-								
+
+<?php // <!-- End Call to Actions --> ?>
+
+<?php // 	<!-- Begin Headline -->	?>
+
 								<?php elseif ( get_row_layout() == 'headline' ) : ?>
 									
 									<div class="row">
@@ -281,7 +293,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 										</div>
 
 									</div>
-								
+
+<?php // <!-- End Headline --> ?>
+
+<?php // 	<!-- Begin Images -->	?>
+
 								<?php elseif ( get_row_layout() == 'images' ) : ?>
 									
 									<?php $container_images = get_sub_field( 'container_images' ); ?>
@@ -336,7 +352,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 										</div>
 									
 									<?php endif; ?>
-								
+
+<?php // <!-- End Images --> ?>
+
+<?php // 	<!-- Begin Related -->	?>
+
 								<?php elseif ( get_row_layout() == 'related_content_layout' ) : ?>	
 
 									<?php 
@@ -368,7 +388,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 										<div class="row">
 
-											<div class="col-md-6  no_padding_both_sides">
+											<div class="col-md-6 no_padding_both_sides">
 
 												<div class="content_related events">
 
@@ -469,18 +489,19 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 								</div>
 
+<?php // <!-- End Related -->	?>
 
 							<?php endif; ?>	<!-- CONDITIONAL LAYOUTS -->						
 
 						<?php endwhile; ?>
 					
 					<?php endif; ?>
-				</main><!-- #main -->
-			</div> <!-- .col-md-12#primary -->
-		</div><!-- #primary -->
 
-		<!-- Do the right sidebar check -->
-		<?php //get_template_part( 'global-templates/right-sidebar-check' ); ?>
+				</main><!-- #main -->
+
+			</div> <!-- .col-md-12#primary -->
+
+		</div><!-- #primary -->
 
 	</div><!-- .row -->
 

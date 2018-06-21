@@ -2,22 +2,27 @@
 #wrapper-footer {
     background-color: $nice-blue;
     padding: 55px 0 68px;
+
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
 }
 
 #wrapper-footer #footer-menu{
     list-style: none;
     margin: 0;
+    text-align: right;
+
+    @include media-breakpoint-down(md) {
+        padding:0;
+        text-align: center;
+        margin-top: 2rem;
+    }
 }
 
 #wrapper-footer #footer-menu a{
-    font-size: 18px;
+    @include font-sizing(18, 36);
     font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.78;
     letter-spacing: 0.5px;
-    text-align: right;
-    color: #ffffff;
     color: $white;
 }
 
@@ -25,9 +30,9 @@
     color: $white;
     @include font-smoothing;
     font-family: $font-family-header;
+    @include max_block;
 
     ul li {
-        text-align: right;
         line-height: 21px;
     }
 
@@ -87,14 +92,21 @@
     }
 }
 
-.footer--contact-details p {
-    @include font-sizing(14, 21);
-    font-weight: 300;
-    margin-bottom: 0;
-    color:$white;
+.footer--contact-details {
+    @include media-breakpoint-down(md) {
+        margin: 0 auto 2rem;
+        text-align: center;
+    }
 
-    .gold {
-        display: inline-block;
-        margin: 0 .5em;
+    p {
+        @include font-sizing(14, 21);
+        font-weight: 300;
+        margin-bottom: 0;
+        color:$white;
+
+        .gold {
+            display: inline-block;
+            margin: 0 .5em;
+        }
     }
 }
