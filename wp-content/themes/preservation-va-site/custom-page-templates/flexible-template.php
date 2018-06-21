@@ -302,55 +302,44 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									
 									<?php $container_images = get_sub_field( 'container_images' ); ?>
 
-									<?php if ( $container_images ) : 
+									<?php 
+
+									if($container_images): 
+
 										$count_images = sizeof( $container_images );
+
 										$grid_total = 12;
-										?>
 
-										<div class="content_images">
-											<div class="row">
+									?>
+									<section class="image_row">
+										<div class="row">
+										<?php if ( $count_images > 3 ) : ?>
 
-													<?php if ( $count_images > 3 ) : ?>
-
-														<div class="col-md-12 no_padding_both_sides">
-
-															<div  class="owl-one owl-carousel owl-theme next">
-
-																<?php foreach ( $container_images as $image ) :?>
-
-																	<div class="item">
-																		
-																		<?php echo  wp_get_attachment_image( $image['content_image']['ID'], 'full' );?>
-
-																	</div>
-
-																<?php endforeach; ?>
-
-															</div>
-
+											<div class="col-md-12 no_padding_both_sides">
+												<div  class="owl-one owl-carousel owl-theme next owl-height_for_three">
+													<?php foreach ( $container_images as $image ) :?>
+														<div class="item">
+															<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
 														</div>
-													
-													<?php else: ?>
-
-														<?php foreach ( $container_images as $image ) :?>
-
-															<div class="col-md-<?php echo $grid_total / $count_images ?> no_padding_both_sides" >
-
-																<div class="<?php echo "pair_image_{$count_images}"?>">
-
-																<?php echo  wp_get_attachment_image( $image['content_image']['ID'], 'full' );?>
-
-																</div>
-															
-															</div>
-
-														<?php endforeach; ?>
-
-													<?php endif; ?>
-											
+													<?php endforeach; ?>
+												</div>
 											</div>
+
+										<?php else: ?>
+
+											<?php foreach ( $container_images as $image ) :?>
+
+												<div class="image_row--static col-md-<?php echo $grid_total / $count_images ?> <?php echo "images_{$count_images}"?> no_padding_both_sides" >
+
+													<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+												
+												</div>
+
+											<?php endforeach; ?>
+
+										<?php endif; ?>
 										</div>
-									
+									</section>
 									<?php endif; ?>
 
 <?php // <!-- End Images --> ?>

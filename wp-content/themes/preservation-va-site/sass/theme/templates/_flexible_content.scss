@@ -38,6 +38,11 @@
     }
 }
 
+section.none + section.white,
+section.white + section.white {
+    padding-top: 0;
+}
+
 .content_related {
     padding: 53px 33px 53px 65px;
     min-height: 100%;
@@ -167,6 +172,50 @@
     }
 
 }
+
+/* Images */
+
+.image_row {
+    .owl-height_for_three {
+        .owl-stage {
+            display: flex;
+            align-items: center;
+            height: 22vw;
+            overflow: hidden;
+            background: $aux_gray;
+        }
+    }
+
+    .image_row--static {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background: $aux_gray;
+        padding:0;
+        margin:0;
+
+        img {
+            max-width: none;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .images {
+        &_3 {
+            height: 22vw;
+        }
+
+        &_2 {
+            height:31vw;
+        }
+
+        &_1 {
+            height:50vw;
+        }
+    }
+}
+
 /* Three col grid */
 
 .three_column_grid {
