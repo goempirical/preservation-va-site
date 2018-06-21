@@ -10074,13 +10074,13 @@ section.red {
   -moz-osx-font-smoothing: grayscale; }
 
 .navbar-med {
-  background-color: #0f7ab5;
+  background-color: #15467b;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 #wrapper-navbar .navbar-dark {
-  background-color: #15467b;
+  background-color: #0f7ab5;
   padding: 40px 3rem 28px; }
   #wrapper-navbar .navbar-dark .dropdown-toggle::after {
     display: none; }
@@ -10099,13 +10099,13 @@ section.red {
   transform: translateX(-50%);
   background: #f6f5f5; }
   #wrapper-navbar .navbar-dark .navbar-nav .dropdown-menu a.nav-link {
-    color: #0f7ab5;
+    color: #15467b;
     font-size: 0.9375em;
     line-height: 2.13333;
     padding-right: 2em;
     position: relative; }
     #wrapper-navbar .navbar-dark .navbar-nav .dropdown-menu a.nav-link:hover, #wrapper-navbar .navbar-dark .navbar-nav .dropdown-menu a.nav-link:focus {
-      color: #15467b;
+      color: #0f7ab5;
       background: #d8d8d8; }
       #wrapper-navbar .navbar-dark .navbar-nav .dropdown-menu a.nav-link:hover:after, #wrapper-navbar .navbar-dark .navbar-nav .dropdown-menu a.nav-link:focus:after {
         content: '';
@@ -10164,11 +10164,11 @@ li.search {
     justify-content: flex-end; } }
 
 .historic-mega-menu {
-  background-color: #0f7ab5;
+  background-color: #15467b;
   height: 78px; }
 
 .navbar #mega-menu-wrap-historicmenu {
-  background-color: #0f7ab5;
+  background-color: #15467b;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.0625em;
   line-height: 4.58824;
