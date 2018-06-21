@@ -101,7 +101,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<?php endwhile;
 					endif; ?>
 
-					<!-- Banner Temporarily -->
+					<!-- Optional Feature -->
 					<?php 
 					if ( have_rows('hp_intro_banner_temporarily') ):  
 						while ( have_rows('hp_intro_banner_temporarily') ) : the_row(); // loop through the rows of data
@@ -143,25 +143,57 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<?php endif; ?>
 
 					<!-- Gallery -->
-					<?php if ( have_rows('hp_gallery') ):  
+					<?php 
+
+					if ( have_rows('hp_gallery') ):  
+					
 						while ( have_rows('hp_gallery') ) : the_row(); // loop through the rows of data
-					?>
-							<?php $container_images = get_sub_field('hp_images_container'); ?>
-				
-							<?php if($container_images): ?>
-							<div class="row">
-								<div class="col-md-12 no_padding_both_sides">
-									<div  class="owl-one owl-carousel owl-theme next">
-										<?php foreach ( $container_images as $image ) :?>
-											<div class="item">
-												<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
-											</div>
-										<?php endforeach; ?>
+						
+						$container_images = get_sub_field('hp_images_container');
+
+							if($container_images): 
+
+								$count_images = sizeof( $container_images );
+
+								$grid_total = 12;
+
+							?>
+
+							<section class="image_row">
+								<div class="row">
+								<?php if ( $count_images > 3 ) : ?>
+
+									<div class="col-md-12 no_padding_both_sides">
+										<div  class="owl-one owl-carousel owl-theme next owl-height_for_three">
+											<?php foreach ( $container_images as $image ) :?>
+												<div class="item">
+													<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+												</div>
+											<?php endforeach; ?>
+										</div>
 									</div>
+
+								<?php else: ?>
+
+									<?php foreach ( $container_images as $image ) :?>
+
+										<div class="image_row--static col-md-<?php echo $grid_total / $count_images ?> <?php echo "images_{$count_images}"?> no_padding_both_sides" >
+
+											<?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+										
+										</div>
+
+									<?php endforeach; ?>
+
+								<?php endif; ?>
+								
 								</div>
-							</div>
+							</section>
+
 							<?php endif; ?>
+
 						<?php endwhile; ?>
+
 					<?php endif; ?>
 
 					<!-- Historic Sites Navigator -->
@@ -173,7 +205,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						<section class="hp_historic_sites_navigator layout-block single_column mid_width dark_blue content_action_block">
 
 							<div class="row">
-								<?php the_sub_field('hp_historic_nav_intro_text') ?>
+								<h2><?php the_sub_field('hp_historic_nav_intro_text') ?></h2>
 								<div class="content_button">
 									<?php 
 										// Get Taxonimies Historic Sites
@@ -260,7 +292,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						while ( have_rows('hp_featured_blog') ) : the_row(); // loop through the rows of data
 							$hp_featured_blog_post = get_sub_field('hp_featured_blog_post');
 
-							if ($hp_featured_blog_post) :
+							if ($hp_featured_blog_post && get_sub_field('enable')) :
 								$post = $hp_featured_blog_post;
 								setup_postdata( $post ); 
 					?>
