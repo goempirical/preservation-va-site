@@ -334,6 +334,7 @@ li.search {
 
         > li.mega-menu-item.mega-menu-item-type-widget {
             margin-bottom: 2.5rem;
+            @include font-sizing(18,24);
         }
 
         > li.mega-menu-item,
@@ -344,6 +345,10 @@ li.search {
                 color: $nice-blue;
                 text-transform: none;
             }
+        }
+
+        > li.mega-menu-item > h4.mega-block-title {
+            @include font-sizing(24,32);
         }
     }
 
@@ -356,11 +361,13 @@ li.search {
     }
 }
 
+.navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu>li.mega-menu-megamenu>ul.mega-sub-menu>li.mega-menu-item.mega-menu-item-type-widget
+
 .textwidget p {
     @include font-sizing(15,22);
     font-weight: 300;
     font-family: $font-family-base;
     letter-spacing: 0;
     color: $primary;
-    max-width: 55ch;
+    max-width: 50ch;
 }
