@@ -8,13 +8,13 @@
 }
 
 .navbar-med {
-    background-color: $nice-blue;
+    background-color: $dark-blue;
     font-weight: 700;
     @include font-smoothing;
 }
 
 #wrapper-navbar .navbar-dark {
-    background-color: $dark-blue;
+    background-color: $nice-blue;
     padding: 40px $grid-gutter-width 28px;
 
     .dropdown-toggle::after {
@@ -40,13 +40,13 @@
         background: $white-one;
 
         a.nav-link {
-            color: $nice-blue;
+            color: $dark-blue;
             @include font-sizing(15,32);
             padding-right:2em;
             position: relative;
 
             &:hover, &:focus {
-                color: $dark-blue;
+                color: $nice-blue;
                 background: $aux_gray;
 
                 &:after {
@@ -128,12 +128,12 @@ li.search {
 
 
 .historic-mega-menu {
-    background-color: $nice-blue;
+    background-color: $dark-blue;
     height: 78px;
 }
 
 .navbar #mega-menu-wrap-historicmenu {
-    background-color: $nice-blue;
+    background-color: $dark-blue;
     font-family: $font-family-header;
 
     @include font-sizing(17,78);
