@@ -260,6 +260,13 @@ section.white + section.white {
                 color: $dark-blue;
             }
         }
+        &_light_blue {
+            background-color: $nice-blue;
+            
+            & > h2 {
+                color: $white;
+            }
+        }
     }
 }
 
