@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* $weight = 700,500,400 */
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700|Roboto:400,500,700");
 h1 {
   color: #4a4a4a; }
@@ -9819,7 +9820,9 @@ button.btn_cl {
   cursor: pointer;
   letter-spacing: 0.1em;
   background-color: #ffca05;
-  color: #15467b; }
+  color: #15467b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
   button.btn_cl.small {
     font-size: 14px;
     height: 51px;
@@ -9839,6 +9842,8 @@ button.btn_cl {
   letter-spacing: 0.1em;
   background-color: #ffca05;
   color: #15467b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   border: 0 none; }
   .btn:hover, .wpcf7 input[type=submit]:hover {
     background-color: #15467b;
@@ -9860,6 +9865,7 @@ select {
   text-transform: uppercase;
   font-size: .875em;
   letter-spacing: .08em;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 500; }
@@ -9993,7 +9999,7 @@ iframe {
 .page-contact {
   text-align: center; }
   .page-contact article h1 {
-    font-family: GothamNarrow;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
     font-size: 36px;
     letter-spacing: 0.7px;
     text-align: center;
@@ -10410,6 +10416,8 @@ li.search {
       letter-spacing: 0.1em;
       background-color: #ffca05;
       color: #15467b;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       font-size: 14px;
       height: 39px;
       line-height: 30px;
@@ -10538,9 +10546,7 @@ section.white + section.white {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      font-weight: bold;
-      font-style: normal;
-      font-stretch: normal;
+      text-align: center;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
       .content_related.events .card_related .date_release span {
@@ -11015,9 +11021,14 @@ section.white + section.white {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal; }
+  text-align: center;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: .875em;
+  letter-spacing: .08em;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
   .blog .date_release span,
   .single .date_release span {
     line-height: 1.1;
@@ -11030,7 +11041,7 @@ section.white + section.white {
 .blog h2,
 .single h2 {
   margin-bottom: 25px;
-  font-family: GothamNarrow;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 20px;
   line-height: 1.1;
   letter-spacing: normal; }
@@ -11048,7 +11059,8 @@ section.white + section.white {
   .blog .entry-content p,
   .single .entry-content p {
     font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
-    line-height: 1.38; }
+    font-size: 1em;
+    line-height: 1.375; }
   .blog .entry-content .category,
   .single .entry-content .category {
     font-size: 13px;
@@ -11095,7 +11107,7 @@ section.white + section.white {
 
 .blog .caption,
 .single .caption {
-  font-family: GothamNarrow;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 13px;
   line-height: 1.31;
   letter-spacing: normal;

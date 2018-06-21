@@ -1,17 +1,18 @@
 .blog .date_release,
 .single .date_release{
     @include date_release;
+    @include labelfont();
 }
+
 .blog h2, 
-.single h2{
+.single h2 {
     margin-bottom: 25px;
-    font-family: GothamNarrow;
-        font-size: 20px;
-        line-height: 1.1;
-        letter-spacing: normal;
+    font-family: $font-family-header;
+    font-size: 20px;
+    line-height: 1.1;
+    letter-spacing: normal;
 
     a {
-        
         color: $dark-blue;
     }
 }
@@ -24,9 +25,10 @@
 
     .entry-content {
         margin-top: 25px;
+
         p {
             font-family: $font-family-base;
-            line-height: 1.38;
+            @include font-sizing(16,22);
         }
 
         .category {
@@ -47,6 +49,7 @@
             }
         }
     }
+
     .sidebar-right{
         text-align: right;
         h3 {
@@ -73,8 +76,9 @@
             color: $red-brown;
         }
     }
+
     .caption {
-        font-family: GothamNarrow;
+        font-family: $font-family-header;
         font-size: 13px;
         line-height: 1.31;
         letter-spacing: normal;

@@ -11,7 +11,7 @@
 	<div class="row">
 		<div class="col-1">
 			<div class="date_release">
-				<span><?php echo date( 'F j', strtotime( get_the_date() ) );?></span>
+				<span><?php echo date( 'M<\b\\r>j', strtotime( get_the_date() ) );?></span>
 			</div>
 		</div>
 		<div class="col-11">
@@ -30,8 +30,7 @@
 			<div class="entry-content">
 				<?php the_excerpt(); ?>
 
-				<div class="category">category: 
-					<span>
+				<div class="category">
 						<?php 
 							$array_categories = [];
 							$array_hs = get_the_terms($post, 'historic_sites');
@@ -51,14 +50,14 @@
 
 							$array_term = [];
 							foreach ( $array_categories as $term ) {
-								$array_term[] = $term->slug;
+								$array_term[] = $term->name;
 							}
 
 							$string = join(', ', $array_term);
-
+							echo empty($array_term) ? '' : 'category: <span>';
 							echo $string;
+							echo empty($array_term) ? '' : '</span>';
 						?>
-					</span>
 				</div>
 
 				<a href="<?php the_permalink() ?>" class="btn marigold small">READ MORE</a>

@@ -60,20 +60,47 @@
         <!-- End section_with_sidebar -->
 
         <!-- Gallery -->
-        <?php $container_images = get_sub_field('hs_main_gallery') ?>
+        <?php $container_images = get_sub_field('hs_main_gallery'); ?>
         
-        <?php if($container_images): ?>
-        <section class="full_image_gallery">
+        <?php 
+
+        if($container_images): 
+
+            $count_images = sizeof( $container_images );
+
+            $grid_total = 12;
+
+        ?>
+        <section class="image_row">
             <div class="row">
-                <div  class="owl-one owl-carousel owl-theme next">
-                    <?php foreach ( $container_images as $image ) :?>
-                        <div class="item">
-                            <?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
-                        </div>
-                    <?php endforeach; ?>
+            <?php if ( $count_images > 3 ) : ?>
+
+                <div class="col-md-12 no_padding_both_sides">
+                    <div  class="owl-one owl-carousel owl-theme next owl-height_for_three">
+                        <?php foreach ( $container_images as $image ) :?>
+                            <div class="item">
+                                <?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
+
+            <?php else: ?>
+
+                <?php foreach ( $container_images as $image ) :?>
+
+                    <div class="image_row--static col-md-<?php echo $grid_total / $count_images ?> <?php echo "images_{$count_images}"?> no_padding_both_sides" >
+
+                        <?php echo  wp_get_attachment_image( $image['ID'], 'full' );?>
+                    
+                    </div>
+
+                <?php endforeach; ?>
+
+            <?php endif; ?>
             </div>
         </section>
+        <?php endif; ?>
 
         <!-- Red Banner Message -->
         <section class="red_banner_message red layout-block">
@@ -82,7 +109,6 @@
             </div>
         </section>
 
-        <?php endif; ?>
     <?php endwhile; ?>
 <?php endif ?>
 
