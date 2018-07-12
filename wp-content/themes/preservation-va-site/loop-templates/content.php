@@ -50,7 +50,8 @@
 
 							$array_term = [];
 							foreach ( $array_categories as $term ) {
-								$array_term[] = $term->name;
+								$term_link = get_term_link( $term );
+								$array_term[] = '<a href="' . esc_url( $term_link ) . '">' . $term->name . '</a>';
 							}
 
 							$string = join(', ', $array_term);
