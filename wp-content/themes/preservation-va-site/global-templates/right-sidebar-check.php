@@ -13,27 +13,30 @@
     <h3>Blog Categories</h3>
   
     <h4>Historic Sites</h4>
-    <?php 
-      $terms = get_terms('historic_sites'); 
+    <ul class="historic_sites-list">
+      <?php 
+        $terms = get_terms('historic_sites'); 
 
-      foreach ($terms as $term) : 
-    ?>
-        <a href="<?php echo get_term_link($term) ?>"><?php echo $term->name; ?></a>
-    <?php  
-      endforeach;
-    ?>
+        foreach ($terms as $term) : 
+      ?>
+          <li><a href="<?php echo get_term_link($term) ?>"><?php echo $term->name; ?></a></li>
+      <?php  
+        endforeach;
+      ?>
+    </ul>
 
     <h4>Our Work</h4>
-    <?php 
-      $terms = get_terms('our_work'); 
+    <ul class="our_work-list">
+      <?php 
+        $terms = get_terms('our_work'); 
 
-      foreach ($terms as $term) : 
-    ?>
-        <a href="<?php echo get_term_link($term) ?>"><?php echo $term->name; ?></a>
-    <?php  
-      endforeach;
-    ?>
-
+        foreach ($terms as $term) : 
+      ?>
+          <li><a href="<?php echo get_term_link($term) ?>"><?php echo $term->name; ?></a></li>
+      <?php  
+        endforeach;
+      ?>
+    </ul>
     <?php get_sidebar( 'right' ); ?>
 
   <?php endif; ?>

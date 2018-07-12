@@ -78,10 +78,23 @@
         text-transform: uppercase;
     }
 
+    a:hover {
+        text-decoration: none;
+    }
+
     p {
         text-align: center;
         color: $white;
         margin-bottom: 0px;
+
+        a {
+            color:$white;
+            text-decoration: underline;
+
+            &:hover, &:active, &:focus {
+                color: $marigold;
+            }
+        }
     }
 
     .focus {

@@ -64,39 +64,28 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						while ( have_rows('hp_our_work') ) : // loop through the rows of data
 							the_row(); ?>
 							<div class="row our_work">
-								<!-- Focus 1 -->
-								<div class="col-md-4 focus focus1">
-									<?php $hp_work_focus_1 = get_sub_field('hp_work_focus_1'); ?>
+								<?php 
+								$our_work_sections = array('1','2','3');
+								foreach ($our_work_sections as $section => $val) {
+								?>
+								<div class="col-md-4 focus focus<?php echo $val; ?>">
+									<?php 
+										$ow_key = 'hp_work_focus_'.$val;
+										$hp_work_focus = get_sub_field($ow_key); 
+
+									?>
 									
-									<a href="<?php echo $hp_work_focus_1['hp_work_focus_1_link']['url'] ?>" target="<?php echo $hp_work_focus_1['hp_work_focus_1_link']['target'] ?>">
-										<?php echo wp_get_attachment_image( $hp_work_focus_1['hp_work_focus_1_icon']['ID'], 'full', false, array('alt' => $hp_work_focus_1['hp_work_focus_1_icon']['alt']) ); ?>
-										<h2><?php echo $hp_work_focus_1['hp_work_focus_1_title'] ?></h2>
-										<?php echo $hp_work_focus_1['hp_work_focus_1_description'] ?>
+									<a href="<?php echo $hp_work_focus[$ow_key.'_link']['url'] ?>" target="<?php echo $hp_work_focus[$ow_key.'_link']['target'] ?>">
+										<?php echo wp_get_attachment_image( $hp_work_focus[$ow_key.'_icon']['ID'], 'full', false, array('alt' => $hp_work_focus[$ow_key.'_icon']['alt']) ); ?>
 									</a>
-									
+									<a href="<?php echo $hp_work_focus[$ow_key.'_link']['url'] ?>" target="<?php echo $hp_work_focus[$ow_key.'_link']['target'] ?>">
+										<h2><?php echo $hp_work_focus[$ow_key.'_title'] ?></h2>
+									</a>	
+										<?php echo $hp_work_focus[$ow_key.'_description'] ?>
 								</div>
-								<!-- Focus 2 -->
-								<div class="col-md-4 focus focus2">
-									<?php $hp_work_focus_2 = get_sub_field('hp_work_focus_2'); ?>
-									
-									<a href="<?php echo $hp_work_focus_2['hp_work_focus_2_link']['url'] ?>" target="<?php echo $hp_work_focus_2['hp_work_focus_2_link']['target'] ?>">
-										<?php echo wp_get_attachment_image( $hp_work_focus_2['hp_work_focus_2_icon']['ID'], 'full', false, array('alt' => $hp_work_focus_2['hp_work_focus_2_icon']['alt']) ); ?>
-										<h2><?php echo $hp_work_focus_2['hp_work_focus_2_title'] ?></h2>
-										<?php echo $hp_work_focus_2['hp_work_focus_2_description'] ?>
-									</a>
-									
-								</div>
-								<!-- Focus 3 -->
-								<div class="col-md-4 focus focus3">
-									<?php $hp_work_focus_3 = get_sub_field('hp_work_focus_3'); ?>
-									
-									<a href="<?php echo $hp_work_focus_3['hp_work_focus_3_link']['url'] ?>" target="<?php echo $hp_work_focus_3['hp_work_focus_3_link']['target'] ?>">
-										<?php echo wp_get_attachment_image( $hp_work_focus_3['hp_work_focus_3_icon']['ID'], 'full', false, array('alt' => $hp_work_focus_3['hp_work_focus_3_icon']['alt']) ); ?>
-										<h2><?php echo $hp_work_focus_3['hp_work_focus_3_title'] ?></h2>
-										<?php echo $hp_work_focus_3['hp_work_focus_3_description'] ?>
-									</a>
-									
-								</div>
+								<?php
+								}
+								?>
 							</div>
 					<?php endwhile;
 					endif; ?>
@@ -115,7 +104,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 										<div class="col-md-6 left-column">
 
 											<?php $hp_intro_temp_content = get_sub_field('hp_intro_temp_content'); ?>
-											<?php echo wp_get_attachment_image( $hp_intro_temp_content['hp_intro_temp_featured_content_image']['ID'], 'full', false, array('alt' => $hp_work_focus_1['hp_work_focus_1_icon']['alt']) ); ?>
+											<?php echo wp_get_attachment_image( $hp_intro_temp_content['hp_intro_temp_featured_content_image']['ID'], 'full', false, array('alt' => $hp_intro_temp_content['hp_intro_temp_featured_content_image']['alt']) ); ?>
 
 										</div>
 

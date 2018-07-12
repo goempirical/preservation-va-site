@@ -10006,6 +10006,12 @@ iframe {
     color: #0f7ab5;
     margin-bottom: 30px; }
 
+a.acf-button.button.button-primary {
+  background: indianred;
+  border-color: #9a3a3a;
+  box-shadow: 0 1px #6f1717;
+  text-shadow: 0 -1px 1px #6f1717, 1px 0 1px #6f1717, 0 1px 1px #6f1717, -1px 0 1px #6f1717; }
+
 body {
   overflow-x: hidden;
   /* prevents mega menu overflow to the right of the body */ }
@@ -10886,10 +10892,17 @@ section.white + section.white {
     text-align: center;
     color: #ffffff;
     text-transform: uppercase; }
+  .our_work a:hover {
+    text-decoration: none; }
   .our_work p {
     text-align: center;
     color: #ffffff;
     margin-bottom: 0px; }
+    .our_work p a {
+      color: #ffffff;
+      text-decoration: underline; }
+      .our_work p a:hover, .our_work p a:active, .our_work p a:focus {
+        color: #ffca05; }
   .our_work .focus {
     padding: 37px 50px;
     text-align: center; }
@@ -11097,7 +11110,13 @@ section.white + section.white {
     line-height: 1.69;
     text-align: right;
     margin-top: 25px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.25;
+    font-weight: 700; }
+  .blog .sidebar-right ul li,
+  .single .sidebar-right ul li {
+    list-style: none; }
   .blog .sidebar-right a,
   .single .sidebar-right a {
     font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
