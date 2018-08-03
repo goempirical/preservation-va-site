@@ -5,9 +5,8 @@
  * @package understrap
  */
 ?>
-
-<?php $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' ); ?>
-<div class="col-4 sidebar-right">
+<!-- sidebar check --><?php $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' ); ?>
+<div class="col-lg-4 sidebar-right">
   <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
     
     <h3>Blog Categories</h3>

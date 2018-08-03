@@ -7,13 +7,13 @@
 
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-	<div class="row">
-		<div class="col-1">
+	<div class="row blog-flex-row">
+		<div>
 			<div class="date_release">
-				<span><?php echo date( 'F j', strtotime( get_the_date() ) );?></span>
+				<span><?php echo date( 'M<\b\\r>j', strtotime( get_the_date() ) );?></span>
 			</div>
 		</div>
-		<div class="col-11">
+		<div>
 			<header class="entry-header">
 				<?php 
 					the_title( sprintf( 

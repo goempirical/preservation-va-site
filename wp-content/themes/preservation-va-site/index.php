@@ -22,6 +22,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="index-wrapper">
 	<div class="<?php echo (get_post_type() == "post") ? "container" : esc_attr( $container ); ?>" id="content" tabindex="-1">
+		<h2 class="blog-title">Preservation Virginia Blog</h2>
 
 		<div class="row">
 
