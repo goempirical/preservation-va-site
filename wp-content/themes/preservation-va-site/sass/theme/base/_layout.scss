@@ -64,11 +64,13 @@ body {
 }
 
 section {
-    &.red {
+    &.red,
+    &.light_blue,
+    &.dark_blue {
         background: $red-brown;
         color: $white;
 
-        *:not(a) {
+        *:not(a, select, button) {
             color: $white;
         }
 
@@ -85,39 +87,9 @@ section {
 
     &.light_blue {
         background: $nice_blue;
-        color: $white;
-
-        *:not(a) {
-            color: $white;
-        }
-
-        a:not(.btn) {
-            color: $marigold;
-
-            &:hover,
-            &:focus {
-                color: $white;
-                text-decoration: underline;
-            }
-        }
     }
 
     &.dark_blue {
         background: $dark_blue;
-        color: $white;
-
-        *:not(a) {
-            color: $white;
-        }
-
-        a:not(.btn) {
-            color: $marigold;
-
-            &:hover,
-            &:focus {
-                color: $white;
-                text-decoration: underline;
-            }
-        }
     }
 }
