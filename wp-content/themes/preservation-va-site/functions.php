@@ -25,6 +25,7 @@ function theme_enqueue_styles() {
 }
 
 include 'custom-post-types/events.php';
+include 'custom-post-types/press-releases.php';
 include 'taxonomies/index.php';
 //include 'custom-page-templates-fields/custom-fields.php';
 
