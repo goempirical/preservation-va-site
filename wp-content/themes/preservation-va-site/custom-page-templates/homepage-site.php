@@ -191,7 +191,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						while ( have_rows('hp_historic_sites_navigator') ) : the_row(); // loop through the rows of data
 					?>
 
-						<section class="hp_historic_sites_navigator layout-block single_column mid_width dark_blue content_action_block">
+						<section class="hp_historic_sites_navigator layout-block single_column mid_width <?php echo get_sub_field('background_color') ? get_sub_field('background_color') : 'dark_blue'; ?> content_action_block">
 
 							<div class="row">
 								<h2><?php the_sub_field('hp_historic_nav_intro_text') ?></h2>
@@ -286,7 +286,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								setup_postdata( $post ); 
 					?>
 
-							<section class="featured_post layout-block two_columns red">
+							<section class="featured_post layout-block two_columns <?php echo get_sub_field('background_color') ? get_sub_field('background_color') : 'red'; ?>">
 
 								<div class="row align-items-center p_medium">
 
