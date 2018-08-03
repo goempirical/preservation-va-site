@@ -1,7 +1,40 @@
-.blog .date_release,
-.single .date_release{
-    @include date_release;
+
+.blog h2.blog-title {
+    color: $nice-blue;
+    @include font-sizing(36,44);
+    text-align: center;
+    margin: 1em 0 2em;
+}
+.date_release{
+    background-color: $dark-blue;
+    margin-right: 17px;
+    display: inline-block;
+    text-align: center;
     @include labelfont();
+
+    span {
+        line-height: 1.1;
+        padding: 8px;
+        color: $white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 10px;
+        display: block;
+    }
+}
+
+.blog-flex-row {
+    @include media-breakpoint-down(md) { 
+        margin:0;
+    }
+
+    > div {
+        flex:1;
+
+        &:last-child {
+            flex:10;
+        }
+    }
 }
 
 .blog h2, 
@@ -93,6 +126,33 @@
         line-height: 1.31;
         letter-spacing: normal;
         color: $greyish-brown-two;
-        width: 449px;
+    }
+}
+
+.pagination {
+    margin-left: 5%;
+
+    .page-link {
+        color: $dark-blue;
+        background-color: #fff;
+        border: none;
+        font-family: $font-family-header;
+
+        a {
+           color: $dark-blue;
+        }
+    }
+
+    .page-item-direction .page-link {
+        font-size: 1.25em;
+        padding-top: .25rem;
+    }
+
+    .page-item.active .page-link {
+        z-index: 1;
+        color: $nice-blue;
+        background-color: white;
+        border-color: white;
+        text-decoration: underline;
     }
 }

@@ -13,7 +13,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 	<div class="<?php echo (get_post_type() == "post") ? "container" : esc_attr( $container ); ?>" id="content" tabindex="-1">
 		<div class="row justify-content-center">
 			<div class="col-md-12">
-				<div class="aux_content box-stroke adding__space adding__padding__top">
+				<div class="blog">
+					<h2 class="blog-title">Preservation Virginia Blog</h2>
 					<div class="row">
 						<!-- Do the left sidebar check -->
 						<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>

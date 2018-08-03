@@ -92,26 +92,6 @@ $anim-dur : 800ms;
   }
 }
 
-@mixin date_release {
-    width: 37px;
-    height: 37px;
-    background-color: $dark-blue;
-    margin-right: 17px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-
-    span {
-        line-height: 1.1;
-        padding: 0px 2px 0px;
-        color: $white;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 10px;
-    }
-}
-
 @each $header in $range-head-title {
     #{$header} {
         color: $greyish-brown-two;

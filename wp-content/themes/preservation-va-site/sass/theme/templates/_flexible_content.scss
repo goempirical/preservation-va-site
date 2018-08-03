@@ -117,11 +117,6 @@ section.white + section.white {
         color: $dark-blue;
 
         .card_related {
-
-            .date_release {
-                @include date_release;
-                @include font-smoothing;
-            }
             .title_cont {
                 font-weight: 500;
             }

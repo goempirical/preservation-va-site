@@ -10544,24 +10544,6 @@ section.white + section.white {
   .content_related.events {
     background-color: #ffca05;
     color: #15467b; }
-    .content_related.events .card_related .date_release {
-      width: 37px;
-      height: 37px;
-      background-color: #15467b;
-      margin-right: 17px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale; }
-      .content_related.events .card_related .date_release span {
-        line-height: 1.1;
-        padding: 0px 2px 0px;
-        color: #ffffff;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 10px; }
     .content_related.events .card_related .title_cont {
       font-weight: 500; }
     .content_related.events .card_related .time_range {
@@ -11030,15 +11012,17 @@ section.white + section.white {
     .hs_donate_info > .row .btn:hover, .hs_donate_info > .row .wpcf7 input[type=submit]:hover, .wpcf7 .hs_donate_info > .row input[type=submit]:hover, .hs_donate_info > .row .btn:focus, .hs_donate_info > .row .wpcf7 input[type=submit]:focus, .wpcf7 .hs_donate_info > .row input[type=submit]:focus {
       background-color: #ffca05; }
 
-.blog .date_release,
-.single .date_release {
-  width: 37px;
-  height: 37px;
+.blog h2.blog-title {
+  color: #0f7ab5;
+  font-size: 2.25em;
+  line-height: 1.22222;
+  text-align: center;
+  margin: 1em 0 2em; }
+
+.date_release {
   background-color: #15467b;
   margin-right: 17px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: inline-block;
   text-align: center;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
@@ -11047,14 +11031,23 @@ section.white + section.white {
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  .blog .date_release span,
-  .single .date_release span {
+  .date_release span {
     line-height: 1.1;
-    padding: 0px 2px 0px;
+    padding: 8px;
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
-    font-size: 10px; }
+    font-size: 10px;
+    display: block; }
+
+@media (max-width: 991.98px) {
+  .blog-flex-row {
+    margin: 0; } }
+
+.blog-flex-row > div {
+  flex: 1; }
+  .blog-flex-row > div:last-child {
+    flex: 10; }
 
 .blog h2,
 .single h2 {
@@ -11135,8 +11128,26 @@ section.white + section.white {
   font-size: 13px;
   line-height: 1.31;
   letter-spacing: normal;
-  color: #4a4a4a;
-  width: 449px; }
+  color: #4a4a4a; }
+
+.pagination {
+  margin-left: 5%; }
+  .pagination .page-link {
+    color: #15467b;
+    background-color: #fff;
+    border: none;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
+    .pagination .page-link a {
+      color: #15467b; }
+  .pagination .page-item-direction .page-link {
+    font-size: 1.25em;
+    padding-top: .25rem; }
+  .pagination .page-item.active .page-link {
+    z-index: 1;
+    color: #0f7ab5;
+    background-color: white;
+    border-color: white;
+    text-decoration: underline; }
 
 .form_pva input[type=text],
 .form_pva textarea,
