@@ -82,4 +82,42 @@ section {
             }
         }
     }
+
+    &.light_blue {
+        background: $nice_blue;
+        color: $white;
+
+        *:not(a) {
+            color: $white;
+        }
+
+        a:not(.btn) {
+            color: $marigold;
+
+            &:hover,
+            &:focus {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &.dark_blue {
+        background: $dark_blue;
+        color: $white;
+
+        *:not(a) {
+            color: $white;
+        }
+
+        a:not(.btn) {
+            color: $marigold;
+
+            &:hover,
+            &:focus {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
 }

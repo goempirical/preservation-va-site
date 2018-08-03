@@ -10071,6 +10071,28 @@ section.red {
       color: #ffffff;
       text-decoration: underline; }
 
+section.light_blue {
+  background: #0f7ab5;
+  color: #ffffff; }
+  section.light_blue *:not(a) {
+    color: #ffffff; }
+  section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]) {
+    color: #ffca05; }
+    section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]):hover, section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]):focus {
+      color: #ffffff;
+      text-decoration: underline; }
+
+section.dark_blue {
+  background: #15467b;
+  color: #ffffff; }
+  section.dark_blue *:not(a) {
+    color: #ffffff; }
+  section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]) {
+    color: #ffca05; }
+    section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):hover, section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):focus {
+      color: #ffffff;
+      text-decoration: underline; }
+
 .navbar-dark .navbar-brand a {
   color: #ffffff; }
 
