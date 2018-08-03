@@ -9979,7 +9979,7 @@ div.owl-dots {
     border-radius: 100%;
     background-color: #d8d8d8; }
     div.owl-dots .owl-dot.active {
-      background-color: #91331a; }
+      background-color: #A12017; }
     div.owl-dots .owl-dot + .owl-dot {
       margin-left: 13px; }
 
@@ -10558,7 +10558,7 @@ section.white + section.white {
     .content_related.events a {
       color: #15467b; }
   .content_related.stories {
-    background-color: #91331a;
+    background-color: #A12017;
     color: #ffffff; }
     .content_related.stories .card_related .title_cont {
       font-weight: 300; }
@@ -10741,7 +10741,7 @@ section.white + section.white {
       color: #15467b; }
 
 .single_column.red {
-  background-color: #91331a;
+  background-color: #A12017;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -10900,7 +10900,7 @@ section.white + section.white {
   .our_work .focus1 {
     background-color: #0f7ab5; }
   .our_work .focus2 {
-    background-color: #91331a; }
+    background-color: #A12017; }
   .our_work .focus3 {
     background-color: #0f7ab5; }
 

@@ -132,7 +132,7 @@ section.white + section.white {
     }
     &.stories  {
         
-        background-color: $red-brown;
+        background-color: $red-punch;
         color: $white;
 
         .card_related {
@@ -393,7 +393,7 @@ section.white + section.white {
         }
     }
     &.red {
-        background-color: $red-brown;
+        background-color: $red-punch;
         color: $white;
         @include font-smoothing;
 
