@@ -27,6 +27,7 @@
           'capability_type' => 'post',
           'hierarchical' => false,
           'menu_position' => 5,
+          'menu_icon'             => 'dashicons-calendar-alt',
           'supports' => array('title', 'editor', 'thumbnail'),
           'has_archive' => true
         );
