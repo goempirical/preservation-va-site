@@ -93,3 +93,36 @@ section {
         background: $dark_blue;
     }
 }
+
+.pr-items {
+    margin:0;
+    padding:0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+        margin:0 0 24px;
+
+        @include media-breakpoint-up(lg) {
+            width: 45%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: 30%;
+        }
+    }
+
+    .date {
+        padding:0;
+        margin:0;
+        font-family: $font-family-header;
+        letter-spacing: 0.04em;
+    }
+    h4 {
+        margin-top: 0;
+    }
+}
+

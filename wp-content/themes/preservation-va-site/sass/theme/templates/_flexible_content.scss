@@ -294,8 +294,11 @@ section.white + section.white {
 /*  Style CTA  */
 .single_column {
 
-    .row {
+    &:not(.full_width_mode) {
         @include narrow_block;
+    }
+
+    .row {
         flex-direction: column;
     }
 

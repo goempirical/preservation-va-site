@@ -14,7 +14,10 @@ $container   = get_theme_mod( 'understrap_container_type' );
 		<div class="row justify-content-center">
 			<div class="col-md-12">
 				<div class="blog">
-					<h2 class="blog-title">Preservation Virginia Blog</h2>
+					<?php
+						$section_title = is_singular( 'press_release' ) ? 'Press Release' : 'Preservation Virginia Blog';
+					?>
+					<h2 class="blog-title"><?php echo $section_title; ?></h2>
 					<div class="row">
 						<!-- Do the left sidebar check -->
 						<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
