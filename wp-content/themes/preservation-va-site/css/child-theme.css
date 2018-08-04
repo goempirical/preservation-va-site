@@ -10077,6 +10077,29 @@ section.light_blue {
 section.dark_blue {
   background: #15467b; }
 
+.pr-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .pr-items li {
+    margin: 0 0 24px; }
+    @media (min-width: 992px) {
+      .pr-items li {
+        width: 45%; } }
+    @media (min-width: 1200px) {
+      .pr-items li {
+        width: 30%; } }
+  .pr-items .date {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.04em; }
+  .pr-items h4 {
+    margin-top: 0; }
+
 .navbar-dark .navbar-brand a {
   color: #ffffff; }
 
@@ -10654,10 +10677,12 @@ section.white + section.white {
   height: 272px; }
 
 /*  Style CTA  */
-.single_column .row {
+.single_column:not(.full_width_mode) {
   max-width: 618px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; }
+
+.single_column .row {
   flex-direction: column; }
 
 .single_column.mid_width .row {
@@ -11018,6 +11043,7 @@ section.white + section.white {
     .hs_donate_info > .row .btn:hover, .hs_donate_info > .row .wpcf7 input[type=submit]:hover, .wpcf7 .hs_donate_info > .row input[type=submit]:hover, .hs_donate_info > .row .btn:focus, .hs_donate_info > .row .wpcf7 input[type=submit]:focus, .wpcf7 .hs_donate_info > .row input[type=submit]:focus {
       background-color: #ffca05; }
 
+.archive h2.blog-title,
 .blog h2.blog-title {
   color: #0f7ab5;
   font-size: 2.25em;
@@ -11055,6 +11081,7 @@ section.white + section.white {
   .blog-flex-row > div:last-child {
     flex: 10; }
 
+.archive h2,
 .blog h2,
 .single h2 {
   margin-bottom: 25px;
@@ -11062,22 +11089,27 @@ section.white + section.white {
   font-size: 20px;
   line-height: 1.1;
   letter-spacing: normal; }
+  .archive h2 a,
   .blog h2 a,
   .single h2 a {
     color: #15467b; }
 
+.archive article,
 .blog article,
 .single article {
   margin-bottom: 60px; }
 
+.archive .entry-content,
 .blog .entry-content,
 .single .entry-content {
   margin-top: 25px; }
+  .archive .entry-content p,
   .blog .entry-content p,
   .single .entry-content p {
     font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
     font-size: 1em;
     line-height: 1.375; }
+  .archive .entry-content .category,
   .blog .entry-content .category,
   .single .entry-content .category {
     font-size: 13px;
@@ -11088,21 +11120,26 @@ section.white + section.white {
     letter-spacing: normal;
     color: #4a4a4a;
     margin-bottom: 25px; }
+    .archive .entry-content .category span,
     .blog .entry-content .category span,
     .single .entry-content .category span {
       color: #91331a; }
+      .archive .entry-content .category span a,
       .blog .entry-content .category span a,
       .single .entry-content .category span a {
         color: #91331a; }
 
+.archive .sidebar-right,
 .blog .sidebar-right,
 .single .sidebar-right {
   text-align: right; }
+  .archive .sidebar-right h3,
   .blog .sidebar-right h3,
   .single .sidebar-right h3 {
     line-height: 1.1;
     letter-spacing: normal;
     text-align: right; }
+  .archive .sidebar-right h4,
   .blog .sidebar-right h4,
   .single .sidebar-right h4 {
     font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
@@ -11113,9 +11150,11 @@ section.white + section.white {
     font-size: 1em;
     line-height: 1.25;
     font-weight: 700; }
+  .archive .sidebar-right ul li,
   .blog .sidebar-right ul li,
   .single .sidebar-right ul li {
     list-style: none; }
+  .archive .sidebar-right a,
   .blog .sidebar-right a,
   .single .sidebar-right a {
     font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
@@ -11128,6 +11167,7 @@ section.white + section.white {
     text-align: right;
     color: #91331a; }
 
+.archive .caption,
 .blog .caption,
 .single .caption {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;

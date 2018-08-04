@@ -235,7 +235,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 								<?php elseif ( get_row_layout() == 'call_to_action_block' ) : ?>
 
-									<section class="layout-block single_column <?php the_sub_field('background_color'); echo get_sub_field('call_to_action_mode') ? ' content_action_block':''; ?>">
+									<section class="layout-block single_column <?php the_sub_field('background_color'); echo get_sub_field('call_to_action_mode') ? ' content_action_block':''; echo get_sub_field('fw_mode') ? ' full_width_mode':'';?>">
 
 										<div class="row">
 											<?php the_sub_field('text') ?>

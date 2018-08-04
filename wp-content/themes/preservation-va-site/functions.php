@@ -136,3 +136,34 @@ function add_search_form($items, $args) {
     }
     return $items;
 }
+
+function pr_archive($atts){
+    extract(shortcode_atts(array(
+      'count' => 2
+    ), $atts));
+
+    $args = array(
+        'post_type' => 'press_release',
+        'order' => 'DESC',
+        'posts_per_page' => -1
+    );
+
+    $pr_query = new wp_query( $args );
+
+    $return_string = '<ul class="pr-items">';
+
+    while( $pr_query->have_posts() ) {
+        $pr_query->the_post();
+        $return_string .= '<li>';
+        $return_string .= '<p class="date">'.get_the_date( 'F j, Y' ).'</p>';
+        $return_string .= '<h4><a href="'.get_permalink().'">'.get_the_title().'</a></h4>';
+        $return_string .= '</li>';
+    }
+
+    $return_string .= '</ul>';
+
+    wp_reset_query();
+    return $return_string;
+
+}
+add_shortcode( 'pr-archive', 'pr_archive' );
