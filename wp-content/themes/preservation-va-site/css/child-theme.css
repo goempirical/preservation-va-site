@@ -10677,7 +10677,7 @@ section.white + section.white {
   height: 272px; }
 
 /*  Style CTA  */
-.single_column:not(.full_width_mode) {
+.single_column:not(.full_width_mode) .row {
   max-width: 618px;
   margin-left: auto;
   margin-right: auto; }

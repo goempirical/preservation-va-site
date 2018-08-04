@@ -295,7 +295,9 @@ section.white + section.white {
 .single_column {
 
     &:not(.full_width_mode) {
-        @include narrow_block;
+        .row {
+            @include narrow_block;
+        }
     }
 
     .row {
