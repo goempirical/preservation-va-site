@@ -10,7 +10,7 @@ h2 {
 h3 {
   color: #4a4a4a; }
 
-h4 {
+h4, #give-recurring-form h3.give-section-break, #give-recurring-form h4.give-section-break, #give-recurring-form legend, form.give-form h3.give-section-break, form.give-form h4.give-section-break, form.give-form legend, form[id*=give-form] h3.give-section-break, form[id*=give-form] h4.give-section-break, form[id*=give-form] legend {
   color: #4a4a4a; }
 
 /*!
@@ -86,7 +86,7 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, #give-recurring-form h3.give-section-break, #give-recurring-form h4.give-section-break, #give-recurring-form legend, form.give-form h3.give-section-break, form.give-form h4.give-section-break, form.give-form legend, form[id*=give-form] h3.give-section-break, form[id*=give-form] h4.give-section-break, form[id*=give-form] legend, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -311,7 +311,7 @@ template {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4, #give-recurring-form h3.give-section-break, #give-recurring-form h4.give-section-break, #give-recurring-form legend, form.give-form h3.give-section-break, form.give-form h4.give-section-break, form.give-form legend, form[id*=give-form] h3.give-section-break, form[id*=give-form] h4.give-section-break, form[id*=give-form] legend, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -328,7 +328,7 @@ h2, .h2 {
 h3, .h3 {
   font-size: 1.75rem; }
 
-h4, .h4 {
+h4, #give-recurring-form h3.give-section-break, #give-recurring-form h4.give-section-break, #give-recurring-form legend, form.give-form h3.give-section-break, form.give-form h4.give-section-break, form.give-form legend, form[id*=give-form] h3.give-section-break, form[id*=give-form] h4.give-section-break, form[id*=give-form] legend, .h4 {
   font-size: 1.5rem; }
 
 h5, .h5 {
@@ -1456,9 +1456,11 @@ select.form-control:focus::-ms-value,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-sm > .input-group-prepend > .form-control-plaintext.btn, .wpcf7
-  .input-group-sm > .input-group-prepend > input.form-control-plaintext[type=submit],
+  .input-group-sm > .input-group-prepend > input.form-control-plaintext[type=submit], .give-submit-button-wrap
+  .input-group-sm > .input-group-prepend > .form-control-plaintext.give-submit,
   .input-group-sm > .input-group-append > .form-control-plaintext.btn, .wpcf7
-  .input-group-sm > .input-group-append > input.form-control-plaintext[type=submit], .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .wpcf7 .input-group-lg > input.form-control-plaintext[type=text],
+  .input-group-sm > .input-group-append > input.form-control-plaintext[type=submit], .give-submit-button-wrap
+  .input-group-sm > .input-group-append > .form-control-plaintext.give-submit, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .wpcf7 .input-group-lg > input.form-control-plaintext[type=text],
   .wpcf7 .input-group-lg > input.form-control-plaintext[type=search],
   .wpcf7 .input-group-lg > input.form-control-plaintext[type=url],
   .wpcf7 .input-group-lg > input.form-control-plaintext[type=tel],
@@ -1479,9 +1481,11 @@ select.form-control:focus::-ms-value,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-append > .form-control-plaintext.input-group-text,
   .input-group-lg > .input-group-prepend > .form-control-plaintext.btn, .wpcf7
-  .input-group-lg > .input-group-prepend > input.form-control-plaintext[type=submit],
+  .input-group-lg > .input-group-prepend > input.form-control-plaintext[type=submit], .give-submit-button-wrap
+  .input-group-lg > .input-group-prepend > .form-control-plaintext.give-submit,
   .input-group-lg > .input-group-append > .form-control-plaintext.btn, .wpcf7
-  .input-group-lg > .input-group-append > input.form-control-plaintext[type=submit] {
+  .input-group-lg > .input-group-append > input.form-control-plaintext[type=submit], .give-submit-button-wrap
+  .input-group-lg > .input-group-append > .form-control-plaintext.give-submit {
     padding-right: 0;
     padding-left: 0; }
 
@@ -1506,9 +1510,11 @@ select.form-control:focus::-ms-value,
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn, .wpcf7
-.input-group-sm > .input-group-prepend > input[type=submit],
+.input-group-sm > .input-group-prepend > input[type=submit], .give-submit-button-wrap
+.input-group-sm > .input-group-prepend > .give-submit,
 .input-group-sm > .input-group-append > .btn, .wpcf7
-.input-group-sm > .input-group-append > input[type=submit] {
+.input-group-sm > .input-group-append > input[type=submit], .give-submit-button-wrap
+.input-group-sm > .input-group-append > .give-submit {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1518,8 +1524,10 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .wpcf7 .input-group-sm > select:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
+.input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]), .give-submit-button-wrap
+.input-group-sm > .input-group-prepend > select.give-submit:not([size]):not([multiple]),
+.input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]), .give-submit-button-wrap
+.input-group-sm > .input-group-append > select.give-submit:not([size]):not([multiple]) {
   height: calc(1.8125rem + 2px); }
 
 .form-control-lg, .input-group-lg > .form-control, .wpcf7 .input-group-lg > input[type=text],
@@ -1543,9 +1551,11 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn, .wpcf7
-.input-group-lg > .input-group-prepend > input[type=submit],
+.input-group-lg > .input-group-prepend > input[type=submit], .give-submit-button-wrap
+.input-group-lg > .input-group-prepend > .give-submit,
 .input-group-lg > .input-group-append > .btn, .wpcf7
-.input-group-lg > .input-group-append > input[type=submit] {
+.input-group-lg > .input-group-append > input[type=submit], .give-submit-button-wrap
+.input-group-lg > .input-group-append > .give-submit {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -1555,8 +1565,10 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .wpcf7 .input-group-lg > select:not([size]):not([multiple]),
 .input-group-lg > .input-group-prepend > select.input-group-text:not([size]):not([multiple]),
 .input-group-lg > .input-group-append > select.input-group-text:not([size]):not([multiple]),
-.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]),
-.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]) {
+.input-group-lg > .input-group-prepend > select.btn:not([size]):not([multiple]), .give-submit-button-wrap
+.input-group-lg > .input-group-prepend > select.give-submit:not([size]):not([multiple]),
+.input-group-lg > .input-group-append > select.btn:not([size]):not([multiple]), .give-submit-button-wrap
+.input-group-lg > .input-group-append > select.give-submit:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px); }
 
 .form-group, .wpcf7 .wpcf7-form p {
@@ -2317,7 +2329,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit], .give-submit-button-wrap .give-submit {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -2330,20 +2342,22 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .btn:hover, .wpcf7 input[type=submit]:hover, .btn:focus, .wpcf7 input[type=submit]:focus {
+  .btn:hover, .wpcf7 input[type=submit]:hover, .give-submit-button-wrap .give-submit:hover, .btn:focus, .wpcf7 input[type=submit]:focus, .give-submit-button-wrap .give-submit:focus {
     text-decoration: none; }
-  .btn:focus, .wpcf7 input[type=submit]:focus, .btn.focus, .wpcf7 input.focus[type=submit] {
+  .btn:focus, .wpcf7 input[type=submit]:focus, .give-submit-button-wrap .give-submit:focus, .btn.focus, .wpcf7 input.focus[type=submit], .give-submit-button-wrap .focus.give-submit {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(74, 74, 74, 0.25); }
-  .btn.disabled, .wpcf7 input.disabled[type=submit], .btn:disabled, .wpcf7 input[type=submit]:disabled {
+  .btn.disabled, .wpcf7 input.disabled[type=submit], .give-submit-button-wrap .disabled.give-submit, .btn:disabled, .wpcf7 input[type=submit]:disabled, .give-submit-button-wrap .give-submit:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), .wpcf7 input[type=submit]:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .wpcf7 input[type=submit]:not(:disabled):not(.disabled), .give-submit-button-wrap .give-submit:not(:disabled):not(.disabled) {
     cursor: pointer; }
-  .btn:not(:disabled):not(.disabled):active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active {
+  .btn:not(:disabled):not(.disabled):active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled):active, .give-submit-button-wrap .give-submit:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active, .wpcf7 input[type=submit]:not(:disabled):not(.disabled).active, .give-submit-button-wrap .give-submit:not(:disabled):not(.disabled).active {
     background-image: none; }
 
-a.btn.disabled,
-fieldset:disabled a.btn {
+a.btn.disabled, .give-submit-button-wrap a.disabled.give-submit,
+fieldset:disabled a.btn,
+fieldset:disabled .give-submit-button-wrap a.give-submit, .give-submit-button-wrap
+fieldset:disabled a.give-submit {
   pointer-events: none; }
 
 .btn-primary {
@@ -2732,13 +2746,13 @@ fieldset:disabled a.btn {
   .btn-link:disabled, .btn-link.disabled {
     color: #6c757d; }
 
-.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit] {
+.btn-lg, .btn-group-lg > .btn, .wpcf7 .btn-group-lg > input[type=submit], .give-submit-button-wrap .btn-group-lg > .give-submit {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit] {
+.btn-sm, .btn-group-sm > .btn, .wpcf7 .btn-group-sm > input[type=submit], .give-submit-button-wrap .btn-group-sm > .give-submit {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2933,44 +2947,71 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit],
+  .btn-group > .btn, .wpcf7 .btn-group > input[type=submit], .give-submit-button-wrap .btn-group > .give-submit,
   .btn-group-vertical > .btn, .wpcf7
-  .btn-group-vertical > input[type=submit] {
+  .btn-group-vertical > input[type=submit], .give-submit-button-wrap
+  .btn-group-vertical > .give-submit {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover,
+    .btn-group > .btn:hover, .wpcf7 .btn-group > input[type=submit]:hover, .give-submit-button-wrap .btn-group > .give-submit:hover,
     .btn-group-vertical > .btn:hover, .wpcf7
-    .btn-group-vertical > input[type=submit]:hover {
+    .btn-group-vertical > input[type=submit]:hover, .give-submit-button-wrap
+    .btn-group-vertical > .give-submit:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit],
+    .btn-group > .btn:focus, .wpcf7 .btn-group > input[type=submit]:focus, .give-submit-button-wrap .btn-group > .give-submit:focus, .btn-group > .btn:active, .wpcf7 .btn-group > input[type=submit]:active, .give-submit-button-wrap .btn-group > .give-submit:active, .btn-group > .btn.active, .wpcf7 .btn-group > input.active[type=submit], .give-submit-button-wrap .btn-group > .active.give-submit,
     .btn-group-vertical > .btn:focus, .wpcf7
-    .btn-group-vertical > input[type=submit]:focus,
+    .btn-group-vertical > input[type=submit]:focus, .give-submit-button-wrap
+    .btn-group-vertical > .give-submit:focus,
     .btn-group-vertical > .btn:active, .wpcf7
-    .btn-group-vertical > input[type=submit]:active,
+    .btn-group-vertical > input[type=submit]:active, .give-submit-button-wrap
+    .btn-group-vertical > .give-submit:active,
     .btn-group-vertical > .btn.active, .wpcf7
-    .btn-group-vertical > input.active[type=submit] {
+    .btn-group-vertical > input.active[type=submit], .give-submit-button-wrap
+    .btn-group-vertical > .active.give-submit {
       z-index: 1; }
-  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit],
+  .btn-group .btn + .btn, .btn-group .wpcf7 input[type=submit] + .btn, .wpcf7 .btn-group input[type=submit] + .btn, .btn-group .give-submit-button-wrap .give-submit + .btn, .give-submit-button-wrap .btn-group .give-submit + .btn, .btn-group .wpcf7 .btn + input[type=submit], .wpcf7 .btn-group .btn + input[type=submit], .btn-group .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .btn-group input[type=submit] + input[type=submit], .btn-group .give-submit-button-wrap .wpcf7 .give-submit + input[type=submit], .wpcf7 .btn-group .give-submit-button-wrap .give-submit + input[type=submit], .give-submit-button-wrap .btn-group .wpcf7 .give-submit + input[type=submit], .wpcf7 .give-submit-button-wrap .btn-group .give-submit + input[type=submit], .btn-group .give-submit-button-wrap .btn + .give-submit, .give-submit-button-wrap .btn-group .btn + .give-submit, .btn-group .wpcf7 .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .btn-group .wpcf7 input[type=submit] + .give-submit, .wpcf7 .btn-group .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .wpcf7 .btn-group input[type=submit] + .give-submit, .btn-group .give-submit-button-wrap .give-submit + .give-submit, .give-submit-button-wrap .btn-group .give-submit + .give-submit,
   .btn-group .btn + .btn-group,
   .btn-group .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group input[type=submit] + .btn-group,
+  .btn-group .give-submit-button-wrap .give-submit + .btn-group, .give-submit-button-wrap
+  .btn-group .give-submit + .btn-group,
   .btn-group .btn-group + .btn,
   .btn-group .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group .btn-group + input[type=submit],
+  .btn-group .give-submit-button-wrap .btn-group + .give-submit, .give-submit-button-wrap
+  .btn-group .btn-group + .give-submit,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn, .wpcf7
   .btn-group-vertical input[type=submit] + .btn,
+  .btn-group-vertical .give-submit-button-wrap .give-submit + .btn, .give-submit-button-wrap
+  .btn-group-vertical .give-submit + .btn,
   .btn-group-vertical .wpcf7 .btn + input[type=submit], .wpcf7
   .btn-group-vertical .btn + input[type=submit],
   .btn-group-vertical .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .btn-group-vertical input[type=submit] + input[type=submit],
+  .btn-group-vertical .give-submit-button-wrap .wpcf7 .give-submit + input[type=submit], .wpcf7
+  .btn-group-vertical .give-submit-button-wrap .give-submit + input[type=submit], .give-submit-button-wrap
+  .btn-group-vertical .wpcf7 .give-submit + input[type=submit], .wpcf7 .give-submit-button-wrap
+  .btn-group-vertical .give-submit + input[type=submit],
+  .btn-group-vertical .give-submit-button-wrap .btn + .give-submit, .give-submit-button-wrap
+  .btn-group-vertical .btn + .give-submit,
+  .btn-group-vertical .wpcf7 .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap
+  .btn-group-vertical .wpcf7 input[type=submit] + .give-submit, .wpcf7
+  .btn-group-vertical .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .wpcf7
+  .btn-group-vertical input[type=submit] + .give-submit,
+  .btn-group-vertical .give-submit-button-wrap .give-submit + .give-submit, .give-submit-button-wrap
+  .btn-group-vertical .give-submit + .give-submit,
   .btn-group-vertical .btn + .btn-group,
   .btn-group-vertical .wpcf7 input[type=submit] + .btn-group, .wpcf7
   .btn-group-vertical input[type=submit] + .btn-group,
+  .btn-group-vertical .give-submit-button-wrap .give-submit + .btn-group, .give-submit-button-wrap
+  .btn-group-vertical .give-submit + .btn-group,
   .btn-group-vertical .btn-group + .btn,
   .btn-group-vertical .wpcf7 .btn-group + input[type=submit], .wpcf7
   .btn-group-vertical .btn-group + input[type=submit],
+  .btn-group-vertical .give-submit-button-wrap .btn-group + .give-submit, .give-submit-button-wrap
+  .btn-group-vertical .btn-group + .give-submit,
   .btn-group-vertical .btn-group + .btn-group {
     margin-left: -1px; }
 
@@ -2981,18 +3022,20 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child {
+.btn-group > .btn:first-child, .wpcf7 .btn-group > input[type=submit]:first-child, .give-submit-button-wrap .btn-group > .give-submit:first-child {
   margin-left: 0; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group > input[type=submit]:not(:last-child):not(.dropdown-toggle), .give-submit-button-wrap .btn-group > .give-submit:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn, .wpcf7
-.btn-group > .btn-group:not(:last-child) > input[type=submit] {
+.btn-group > .btn-group:not(:last-child) > input[type=submit], .give-submit-button-wrap
+.btn-group > .btn-group:not(:last-child) > .give-submit {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child),
+.btn-group > .btn:not(:first-child), .wpcf7 .btn-group > input[type=submit]:not(:first-child), .give-submit-button-wrap .btn-group > .give-submit:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn, .wpcf7
-.btn-group > .btn-group:not(:first-child) > input[type=submit] {
+.btn-group > .btn-group:not(:first-child) > input[type=submit], .give-submit-button-wrap
+.btn-group > .btn-group:not(:first-child) > .give-submit {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -3002,11 +3045,11 @@ tbody.collapse.show {
   .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-sm > input[type=submit] + .dropdown-toggle-split, .give-submit-button-wrap .btn-group-sm > .give-submit + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .wpcf7 .btn-group-lg > input[type=submit] + .dropdown-toggle-split, .give-submit-button-wrap .btn-group-lg > .give-submit + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -3014,39 +3057,47 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit],
+  .btn-group-vertical .btn, .btn-group-vertical .wpcf7 input[type=submit], .wpcf7 .btn-group-vertical input[type=submit], .btn-group-vertical .give-submit-button-wrap .give-submit, .give-submit-button-wrap .btn-group-vertical .give-submit,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit],
+  .btn-group-vertical > .btn + .btn, .wpcf7 .btn-group-vertical > input[type=submit] + .btn, .give-submit-button-wrap .btn-group-vertical > .give-submit + .btn, .wpcf7 .btn-group-vertical > .btn + input[type=submit], .wpcf7 .btn-group-vertical > input[type=submit] + input[type=submit], .give-submit-button-wrap .wpcf7 .btn-group-vertical > .give-submit + input[type=submit], .wpcf7 .give-submit-button-wrap .btn-group-vertical > .give-submit + input[type=submit], .give-submit-button-wrap .btn-group-vertical > .btn + .give-submit, .wpcf7 .give-submit-button-wrap .btn-group-vertical > input[type=submit] + .give-submit, .give-submit-button-wrap .wpcf7 .btn-group-vertical > input[type=submit] + .give-submit, .give-submit-button-wrap .btn-group-vertical > .give-submit + .give-submit,
   .btn-group-vertical > .btn + .btn-group, .wpcf7
-  .btn-group-vertical > input[type=submit] + .btn-group,
+  .btn-group-vertical > input[type=submit] + .btn-group, .give-submit-button-wrap
+  .btn-group-vertical > .give-submit + .btn-group,
   .btn-group-vertical > .btn-group + .btn, .wpcf7
-  .btn-group-vertical > .btn-group + input[type=submit],
+  .btn-group-vertical > .btn-group + input[type=submit], .give-submit-button-wrap
+  .btn-group-vertical > .btn-group + .give-submit,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7 .btn-group-vertical > input[type=submit]:not(:last-child):not(.dropdown-toggle), .give-submit-button-wrap .btn-group-vertical > .give-submit:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn, .wpcf7
-  .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit] {
+  .btn-group-vertical > .btn-group:not(:last-child) > input[type=submit], .give-submit-button-wrap
+  .btn-group-vertical > .btn-group:not(:last-child) > .give-submit {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .wpcf7 .btn-group-vertical > input[type=submit]:not(:first-child), .give-submit-button-wrap .btn-group-vertical > .give-submit:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn, .wpcf7
-  .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit] {
+  .btn-group-vertical > .btn-group:not(:first-child) > input[type=submit], .give-submit-button-wrap
+  .btn-group-vertical > .btn-group:not(:first-child) > .give-submit {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .wpcf7 .btn-group-toggle > input[type=submit],
+.btn-group-toggle > .btn, .wpcf7 .btn-group-toggle > input[type=submit], .give-submit-button-wrap .btn-group-toggle > .give-submit,
 .btn-group-toggle > .btn-group > .btn, .wpcf7
-.btn-group-toggle > .btn-group > input[type=submit] {
+.btn-group-toggle > .btn-group > input[type=submit], .give-submit-button-wrap
+.btn-group-toggle > .btn-group > .give-submit {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .wpcf7 .btn-group-toggle > input[type=submit] input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .wpcf7 .btn-group-toggle > input[type=submit] input[type="radio"], .give-submit-button-wrap .btn-group-toggle > .give-submit input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"], .wpcf7
-  .btn-group-toggle > input[type=submit] input[type="checkbox"],
+  .btn-group-toggle > input[type=submit] input[type="checkbox"], .give-submit-button-wrap
+  .btn-group-toggle > .give-submit input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"], .wpcf7
-  .btn-group-toggle > .btn-group > input[type=submit] input[type="radio"],
+  .btn-group-toggle > .btn-group > input[type=submit] input[type="radio"], .give-submit-button-wrap
+  .btn-group-toggle > .btn-group > .give-submit input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"], .wpcf7
-  .btn-group-toggle > .btn-group > input[type=submit] input[type="checkbox"] {
+  .btn-group-toggle > .btn-group > input[type=submit] input[type="checkbox"], .give-submit-button-wrap
+  .btn-group-toggle > .btn-group > .give-submit input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -3347,34 +3398,58 @@ tbody.collapse.show {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .wpcf7 input[type=submit], .wpcf7 .input-group-prepend input[type=submit],
+  .input-group-prepend .btn, .input-group-prepend .wpcf7 input[type=submit], .wpcf7 .input-group-prepend input[type=submit], .input-group-prepend .give-submit-button-wrap .give-submit, .give-submit-button-wrap .input-group-prepend .give-submit,
   .input-group-append .btn,
   .input-group-append .wpcf7 input[type=submit], .wpcf7
-  .input-group-append input[type=submit] {
+  .input-group-append input[type=submit],
+  .input-group-append .give-submit-button-wrap .give-submit, .give-submit-button-wrap
+  .input-group-append .give-submit {
     position: relative;
     z-index: 2; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .wpcf7 input[type=submit] + .btn, .wpcf7 .input-group-prepend input[type=submit] + .btn, .input-group-prepend .wpcf7 .btn + input[type=submit], .wpcf7 .input-group-prepend .btn + input[type=submit], .input-group-prepend .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .input-group-prepend input[type=submit] + input[type=submit],
+  .input-group-prepend .btn + .btn, .input-group-prepend .wpcf7 input[type=submit] + .btn, .wpcf7 .input-group-prepend input[type=submit] + .btn, .input-group-prepend .give-submit-button-wrap .give-submit + .btn, .give-submit-button-wrap .input-group-prepend .give-submit + .btn, .input-group-prepend .wpcf7 .btn + input[type=submit], .wpcf7 .input-group-prepend .btn + input[type=submit], .input-group-prepend .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .input-group-prepend input[type=submit] + input[type=submit], .input-group-prepend .give-submit-button-wrap .wpcf7 .give-submit + input[type=submit], .wpcf7 .input-group-prepend .give-submit-button-wrap .give-submit + input[type=submit], .give-submit-button-wrap .input-group-prepend .wpcf7 .give-submit + input[type=submit], .wpcf7 .give-submit-button-wrap .input-group-prepend .give-submit + input[type=submit], .input-group-prepend .give-submit-button-wrap .btn + .give-submit, .give-submit-button-wrap .input-group-prepend .btn + .give-submit, .input-group-prepend .wpcf7 .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .input-group-prepend .wpcf7 input[type=submit] + .give-submit, .wpcf7 .input-group-prepend .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .wpcf7 .input-group-prepend input[type=submit] + .give-submit, .input-group-prepend .give-submit-button-wrap .give-submit + .give-submit, .give-submit-button-wrap .input-group-prepend .give-submit + .give-submit,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .wpcf7 input[type=submit] + .input-group-text, .wpcf7
   .input-group-prepend input[type=submit] + .input-group-text,
+  .input-group-prepend .give-submit-button-wrap .give-submit + .input-group-text, .give-submit-button-wrap
+  .input-group-prepend .give-submit + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .wpcf7 .input-group-text + input[type=submit], .wpcf7
   .input-group-prepend .input-group-text + input[type=submit],
+  .input-group-prepend .give-submit-button-wrap .input-group-text + .give-submit, .give-submit-button-wrap
+  .input-group-prepend .input-group-text + .give-submit,
   .input-group-append .btn + .btn,
   .input-group-append .wpcf7 input[type=submit] + .btn, .wpcf7
   .input-group-append input[type=submit] + .btn,
+  .input-group-append .give-submit-button-wrap .give-submit + .btn, .give-submit-button-wrap
+  .input-group-append .give-submit + .btn,
   .input-group-append .wpcf7 .btn + input[type=submit], .wpcf7
   .input-group-append .btn + input[type=submit],
   .input-group-append .wpcf7 input[type=submit] + input[type=submit], .wpcf7
   .input-group-append input[type=submit] + input[type=submit],
+  .input-group-append .give-submit-button-wrap .wpcf7 .give-submit + input[type=submit], .wpcf7
+  .input-group-append .give-submit-button-wrap .give-submit + input[type=submit], .give-submit-button-wrap
+  .input-group-append .wpcf7 .give-submit + input[type=submit], .wpcf7 .give-submit-button-wrap
+  .input-group-append .give-submit + input[type=submit],
+  .input-group-append .give-submit-button-wrap .btn + .give-submit, .give-submit-button-wrap
+  .input-group-append .btn + .give-submit,
+  .input-group-append .wpcf7 .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap
+  .input-group-append .wpcf7 input[type=submit] + .give-submit, .wpcf7
+  .input-group-append .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .wpcf7
+  .input-group-append input[type=submit] + .give-submit,
+  .input-group-append .give-submit-button-wrap .give-submit + .give-submit, .give-submit-button-wrap
+  .input-group-append .give-submit + .give-submit,
   .input-group-append .btn + .input-group-text,
   .input-group-append .wpcf7 input[type=submit] + .input-group-text, .wpcf7
   .input-group-append input[type=submit] + .input-group-text,
+  .input-group-append .give-submit-button-wrap .give-submit + .input-group-text, .give-submit-button-wrap
+  .input-group-append .give-submit + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append .wpcf7 .input-group-text + input[type=submit], .wpcf7
-  .input-group-append .input-group-text + input[type=submit] {
+  .input-group-append .input-group-text + input[type=submit],
+  .input-group-append .give-submit-button-wrap .input-group-text + .give-submit, .give-submit-button-wrap
+  .input-group-append .input-group-text + .give-submit {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -3401,24 +3476,28 @@ tbody.collapse.show {
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group > .input-group-prepend > .btn, .wpcf7 .input-group > .input-group-prepend > input[type=submit],
+.input-group > .input-group-prepend > .btn, .wpcf7 .input-group > .input-group-prepend > input[type=submit], .give-submit-button-wrap .input-group > .input-group-prepend > .give-submit,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn, .wpcf7
-.input-group > .input-group-append:not(:last-child) > input[type=submit],
+.input-group > .input-group-append:not(:last-child) > input[type=submit], .give-submit-button-wrap
+.input-group > .input-group-append:not(:last-child) > .give-submit,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle), .wpcf7
-.input-group > .input-group-append:last-child > input[type=submit]:not(:last-child):not(.dropdown-toggle),
+.input-group > .input-group-append:last-child > input[type=submit]:not(:last-child):not(.dropdown-toggle), .give-submit-button-wrap
+.input-group > .input-group-append:last-child > .give-submit:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .wpcf7 .input-group > .input-group-append > input[type=submit],
+.input-group > .input-group-append > .btn, .wpcf7 .input-group > .input-group-append > input[type=submit], .give-submit-button-wrap .input-group > .input-group-append > .give-submit,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn, .wpcf7
-.input-group > .input-group-prepend:not(:first-child) > input[type=submit],
+.input-group > .input-group-prepend:not(:first-child) > input[type=submit], .give-submit-button-wrap
+.input-group > .input-group-prepend:not(:first-child) > .give-submit,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child), .wpcf7
-.input-group > .input-group-prepend:first-child > input[type=submit]:not(:first-child),
+.input-group > .input-group-prepend:first-child > input[type=submit]:not(:first-child), .give-submit-button-wrap
+.input-group > .input-group-prepend:first-child > .give-submit:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -4234,7 +4313,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .wpcf7 input[type=submit] .badge {
+.btn .badge, .wpcf7 input[type=submit] .badge, .give-submit-button-wrap .give-submit .badge {
   position: relative;
   top: -1px; }
 
@@ -6996,7 +7075,7 @@ a.text-dark:hover, a.text-dark:focus {
   *::after {
     text-shadow: none !important;
     box-shadow: none !important; }
-  a:not(.btn):not(.wpcf7 input[type=submit]) {
+  a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
     text-decoration: underline; }
   abbr[title]::after {
     content: " (" attr(title) ")"; }
@@ -9766,7 +9845,7 @@ h3 {
   color: #4a4a4a;
   margin-bottom: 12px; }
 
-h4 {
+h4, #give-recurring-form h3.give-section-break, #give-recurring-form h4.give-section-break, #give-recurring-form legend, form.give-form h3.give-section-break, form.give-form h4.give-section-break, form.give-form legend, form[id*=give-form] h3.give-section-break, form[id*=give-form] h4.give-section-break, form[id*=give-form] legend {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 1.125em;
   line-height: 1.33333;
@@ -9777,6 +9856,15 @@ h1,
 h2,
 h3,
 h4,
+#give-recurring-form h3.give-section-break,
+#give-recurring-form h4.give-section-break,
+#give-recurring-form legend,
+form.give-form h3.give-section-break,
+form.give-form h4.give-section-break,
+form.give-form legend,
+form[id*=give-form] h3.give-section-break,
+form[id*=give-form] h4.give-section-break,
+form[id*=give-form] legend,
 h5,
 h6 {
   -webkit-font-smoothing: antialiased;
@@ -9788,10 +9876,56 @@ h6 {
   h2, .content-area
   h3,
   .widget_text
-  h3, .content-area
+  h3,
+  .content-area
   h4,
+  .content-area #give-recurring-form h3.give-section-break,
+  #give-recurring-form .content-area h3.give-section-break,
+  .content-area #give-recurring-form h4.give-section-break,
+  #give-recurring-form .content-area h4.give-section-break,
+  .content-area #give-recurring-form legend,
+  #give-recurring-form .content-area legend,
+  .content-area form.give-form h3.give-section-break,
+  form.give-form .content-area h3.give-section-break,
+  .content-area form.give-form h4.give-section-break,
+  form.give-form .content-area h4.give-section-break,
+  .content-area form.give-form legend,
+  form.give-form .content-area legend,
+  .content-area form[id*=give-form] h3.give-section-break,
+  form[id*=give-form] .content-area h3.give-section-break,
+  .content-area form[id*=give-form] h4.give-section-break,
+  form[id*=give-form] .content-area h4.give-section-break,
+  .content-area form[id*=give-form] legend,
+  form[id*=give-form] .content-area legend,
   .widget_text
-  h4, .content-area
+  h4,
+  .widget_text #give-recurring-form h3.give-section-break,
+  #give-recurring-form
+  .widget_text h3.give-section-break,
+  .widget_text #give-recurring-form h4.give-section-break,
+  #give-recurring-form
+  .widget_text h4.give-section-break,
+  .widget_text #give-recurring-form legend,
+  #give-recurring-form
+  .widget_text legend,
+  .widget_text form.give-form h3.give-section-break,
+  form.give-form
+  .widget_text h3.give-section-break,
+  .widget_text form.give-form h4.give-section-break,
+  form.give-form
+  .widget_text h4.give-section-break,
+  .widget_text form.give-form legend,
+  form.give-form
+  .widget_text legend,
+  .widget_text form[id*=give-form] h3.give-section-break,
+  form[id*=give-form]
+  .widget_text h3.give-section-break,
+  .widget_text form[id*=give-form] h4.give-section-break,
+  form[id*=give-form]
+  .widget_text h4.give-section-break,
+  .widget_text form[id*=give-form] legend,
+  form[id*=give-form]
+  .widget_text legend, .content-area
   h5,
   .widget_text
   h5, .content-area
@@ -9828,7 +9962,7 @@ button.btn_cl {
     height: 51px;
     line-height: 41px; }
 
-.btn, .wpcf7 input[type=submit] {
+.btn, .wpcf7 input[type=submit], .give-submit-button-wrap .give-submit {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   border: none;
   border-radius: 0px;
@@ -9845,16 +9979,16 @@ button.btn_cl {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: 0 none; }
-  .btn:hover, .wpcf7 input[type=submit]:hover {
+  .btn:hover, .wpcf7 input[type=submit]:hover, .give-submit-button-wrap .give-submit:hover {
     background-color: #15467b;
     color: #ffffff; }
-  .btn.white, .wpcf7 input.white[type=submit] {
+  .btn.white, .wpcf7 input.white[type=submit], .give-submit-button-wrap .white.give-submit {
     background-color: #ffffff;
     color: #15467b; }
-  .btn.white:hover, .wpcf7 input.white[type=submit]:hover {
+  .btn.white:hover, .wpcf7 input.white[type=submit]:hover, .give-submit-button-wrap .white.give-submit:hover {
     background-color: #15467b;
     color: #ffffff; }
-  .btn.small, .wpcf7 input.small[type=submit] {
+  .btn.small, .wpcf7 input.small[type=submit], .give-submit-button-wrap .small.give-submit {
     font-size: 14px;
     height: 51px;
     line-height: 41px; }
@@ -9983,7 +10117,7 @@ div.owl-dots {
     div.owl-dots .owl-dot + .owl-dot {
       margin-left: 13px; }
 
-.highlight h1, .highlight h2, .highlight h3, .highlight h4 {
+.highlight h1, .highlight h2, .highlight h3, .highlight h4, .highlight #give-recurring-form h3.give-section-break, #give-recurring-form .highlight h3.give-section-break, .highlight #give-recurring-form h4.give-section-break, #give-recurring-form .highlight h4.give-section-break, .highlight #give-recurring-form legend, #give-recurring-form .highlight legend, .highlight form.give-form h3.give-section-break, form.give-form .highlight h3.give-section-break, .highlight form.give-form h4.give-section-break, form.give-form .highlight h4.give-section-break, .highlight form.give-form legend, form.give-form .highlight legend, .highlight form[id*=give-form] h3.give-section-break, form[id*=give-form] .highlight h3.give-section-break, .highlight form[id*=give-form] h4.give-section-break, form[id*=give-form] .highlight h4.give-section-break, .highlight form[id*=give-form] legend, form[id*=give-form] .highlight legend {
   color: #ffffff;
   margin-bottom: 25px; }
 
@@ -10053,7 +10187,7 @@ body {
   .content_side .content_address p {
     color: #15467b;
     line-height: 22px; }
-  .content_side .content_address .btn, .content_side .content_address .wpcf7 input[type=submit], .wpcf7 .content_side .content_address input[type=submit] {
+  .content_side .content_address .btn, .content_side .content_address .wpcf7 input[type=submit], .wpcf7 .content_side .content_address input[type=submit], .content_side .content_address .give-submit-button-wrap .give-submit, .give-submit-button-wrap .content_side .content_address .give-submit {
     margin-top: 30px; }
   .content_side .content_address.greyish p {
     color: #4a4a4a; }
@@ -10065,9 +10199,9 @@ section.red, section.light_blue, section.dark_blue {
   color: #ffffff; }
   section.red *:not(a):not(select):not(button), section.light_blue *:not(a):not(select):not(button), section.dark_blue *:not(a):not(select):not(button) {
     color: #ffffff; }
-  section.red a:not(.btn):not(.wpcf7 input[type=submit]), section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]), section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]) {
+  section.red a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit), section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit), section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
     color: #ffca05; }
-    section.red a:not(.btn):not(.wpcf7 input[type=submit]):hover, section.red a:not(.btn):not(.wpcf7 input[type=submit]):focus, section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]):hover, section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]):focus, section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):hover, section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):focus {
+    section.red a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit):hover, section.red a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit):focus, section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit):hover, section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit):focus, section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit):hover, section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit):focus {
       color: #ffffff;
       text-decoration: underline; }
 
@@ -10097,8 +10231,14 @@ section.dark_blue {
     margin: 0;
     font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0.04em; }
-  .pr-items h4 {
+  .pr-items h4, .pr-items #give-recurring-form h3.give-section-break, #give-recurring-form .pr-items h3.give-section-break, .pr-items #give-recurring-form h4.give-section-break, #give-recurring-form .pr-items h4.give-section-break, .pr-items #give-recurring-form legend, #give-recurring-form .pr-items legend, .pr-items form.give-form h3.give-section-break, form.give-form .pr-items h3.give-section-break, .pr-items form.give-form h4.give-section-break, form.give-form .pr-items h4.give-section-break, .pr-items form.give-form legend, form.give-form .pr-items legend, .pr-items form[id*=give-form] h3.give-section-break, form[id*=give-form] .pr-items h3.give-section-break, .pr-items form[id*=give-form] h4.give-section-break, form[id*=give-form] .pr-items h4.give-section-break, .pr-items form[id*=give-form] legend, form[id*=give-form] .pr-items legend {
     margin-top: 0; }
+
+.sws_right-col ul {
+  list-style: none; }
+  .sws_right-col ul li {
+    line-height: 1.5;
+    margin-bottom: 8px; }
 
 .navbar-dark .navbar-brand a {
   color: #ffffff; }
@@ -10342,14 +10482,14 @@ li.search {
       .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item li.mega-menu-item > a.mega-menu-link:focus,
       .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item li.mega-menu-item > a.mega-menu-link:hover {
         color: #15467b; }
-    .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title {
+    .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, #give-recurring-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, #give-recurring-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, form.give-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, form.give-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, form[id*=give-form] .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, form[id*=give-form] .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title {
       color: #0f7ab5;
       font-weight: 500;
       font-size: 18px;
       line-height: 24px;
       text-transform: none; }
       @media (min-width: 768px) {
-        .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title {
+        .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, #give-recurring-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, #give-recurring-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, form.give-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, form.give-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, form[id*=give-form] .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, form[id*=give-form] .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title {
           margin-top: 68px; } }
     .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item.mega-menu-item-type-widget {
       margin-bottom: 2.5rem;
@@ -10362,7 +10502,7 @@ li.search {
       .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item a.mega-menu-link {
         color: #0f7ab5;
         text-transform: none; }
-    .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title {
+    .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, #give-recurring-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu #give-recurring-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, #give-recurring-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, form.give-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form.give-form #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, form.give-form .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, form[id*=give-form] .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h3.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > h4.mega-block-title.give-section-break, .navbar #mega-menu-wrap-historicmenu form[id*=give-form] #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title, form[id*=give-form] .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item > legend.mega-block-title {
       font-size: 1.5em;
       line-height: 1.33333; }
   .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu li.mega-menu-item a.mega-menu-link:focus:after,
@@ -10471,7 +10611,7 @@ li.search {
     .footer .social_media a {
       margin-right: 12px;
       display: inline-block; }
-    .footer .social_media .btn.marigold, .footer .social_media .wpcf7 input.marigold[type=submit], .wpcf7 .footer .social_media input.marigold[type=submit] {
+    .footer .social_media .btn.marigold, .footer .social_media .wpcf7 input.marigold[type=submit], .wpcf7 .footer .social_media input.marigold[type=submit], .footer .social_media .give-submit-button-wrap .marigold.give-submit, .give-submit-button-wrap .footer .social_media .marigold.give-submit {
       border: solid 1px #ffca05;
       background-color: transparent;
       color: #ffffff;
@@ -10513,16 +10653,16 @@ li.search {
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-    .layout-block.dark_blue h1, .layout-block.dark_blue h2, .layout-block.dark_blue h3, .layout-block.dark_blue h4, .layout-block.dark_blue h5, .layout-block.dark_blue h5 {
+    .layout-block.dark_blue h1, .layout-block.dark_blue h2, .layout-block.dark_blue h3, .layout-block.dark_blue h4, .layout-block.dark_blue #give-recurring-form h3.give-section-break, #give-recurring-form .layout-block.dark_blue h3.give-section-break, .layout-block.dark_blue #give-recurring-form h4.give-section-break, #give-recurring-form .layout-block.dark_blue h4.give-section-break, .layout-block.dark_blue #give-recurring-form legend, #give-recurring-form .layout-block.dark_blue legend, .layout-block.dark_blue form.give-form h3.give-section-break, form.give-form .layout-block.dark_blue h3.give-section-break, .layout-block.dark_blue form.give-form h4.give-section-break, form.give-form .layout-block.dark_blue h4.give-section-break, .layout-block.dark_blue form.give-form legend, form.give-form .layout-block.dark_blue legend, .layout-block.dark_blue form[id*=give-form] h3.give-section-break, form[id*=give-form] .layout-block.dark_blue h3.give-section-break, .layout-block.dark_blue form[id*=give-form] h4.give-section-break, form[id*=give-form] .layout-block.dark_blue h4.give-section-break, .layout-block.dark_blue form[id*=give-form] legend, form[id*=give-form] .layout-block.dark_blue legend, .layout-block.dark_blue h5, .layout-block.dark_blue h5 {
       color: #ffffff; }
     .layout-block.dark_blue a {
       color: #ffca05; }
       .layout-block.dark_blue a:hover, .layout-block.dark_blue a:focus {
         text-transform: underline; }
-    .layout-block.dark_blue button, .layout-block.dark_blue .btn, .layout-block.dark_blue .wpcf7 input[type=submit], .wpcf7 .layout-block.dark_blue input[type=submit] {
+    .layout-block.dark_blue button, .layout-block.dark_blue .btn, .layout-block.dark_blue .wpcf7 input[type=submit], .wpcf7 .layout-block.dark_blue input[type=submit], .layout-block.dark_blue .give-submit-button-wrap .give-submit, .give-submit-button-wrap .layout-block.dark_blue .give-submit {
       background-color: #ffca05;
       color: #15467b; }
-      .layout-block.dark_blue button:hover, .layout-block.dark_blue button:focus, .layout-block.dark_blue .btn:hover, .layout-block.dark_blue .wpcf7 input[type=submit]:hover, .wpcf7 .layout-block.dark_blue input[type=submit]:hover, .layout-block.dark_blue .btn:focus, .layout-block.dark_blue .wpcf7 input[type=submit]:focus, .wpcf7 .layout-block.dark_blue input[type=submit]:focus {
+      .layout-block.dark_blue button:hover, .layout-block.dark_blue button:focus, .layout-block.dark_blue .btn:hover, .layout-block.dark_blue .wpcf7 input[type=submit]:hover, .wpcf7 .layout-block.dark_blue input[type=submit]:hover, .layout-block.dark_blue .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .layout-block.dark_blue .give-submit:hover, .layout-block.dark_blue .btn:focus, .layout-block.dark_blue .wpcf7 input[type=submit]:focus, .wpcf7 .layout-block.dark_blue input[type=submit]:focus, .layout-block.dark_blue .give-submit-button-wrap .give-submit:focus, .give-submit-button-wrap .layout-block.dark_blue .give-submit:focus {
         background-color: #ffffff;
         color: #15467b; }
 
@@ -10702,7 +10842,7 @@ section.white + section.white {
 .single_column .content_button {
   display: flex;
   margin-top: 24px; }
-  .single_column .content_button .btn + .btn, .single_column .content_button .wpcf7 input[type=submit] + .btn, .wpcf7 .single_column .content_button input[type=submit] + .btn, .single_column .content_button .wpcf7 .btn + input[type=submit], .wpcf7 .single_column .content_button .btn + input[type=submit], .single_column .content_button .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .single_column .content_button input[type=submit] + input[type=submit] {
+  .single_column .content_button .btn + .btn, .single_column .content_button .wpcf7 input[type=submit] + .btn, .wpcf7 .single_column .content_button input[type=submit] + .btn, .single_column .content_button .give-submit-button-wrap .give-submit + .btn, .give-submit-button-wrap .single_column .content_button .give-submit + .btn, .single_column .content_button .wpcf7 .btn + input[type=submit], .wpcf7 .single_column .content_button .btn + input[type=submit], .single_column .content_button .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .single_column .content_button input[type=submit] + input[type=submit], .single_column .content_button .give-submit-button-wrap .wpcf7 .give-submit + input[type=submit], .wpcf7 .single_column .content_button .give-submit-button-wrap .give-submit + input[type=submit], .give-submit-button-wrap .single_column .content_button .wpcf7 .give-submit + input[type=submit], .wpcf7 .give-submit-button-wrap .single_column .content_button .give-submit + input[type=submit], .single_column .content_button .give-submit-button-wrap .btn + .give-submit, .give-submit-button-wrap .single_column .content_button .btn + .give-submit, .single_column .content_button .wpcf7 .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .single_column .content_button .wpcf7 input[type=submit] + .give-submit, .wpcf7 .single_column .content_button .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .wpcf7 .single_column .content_button input[type=submit] + .give-submit, .single_column .content_button .give-submit-button-wrap .give-submit + .give-submit, .give-submit-button-wrap .single_column .content_button .give-submit + .give-submit {
     margin-left: 34px; }
 
 .single_column.none {
@@ -10713,14 +10853,14 @@ section.white + section.white {
     color: #0f7ab5; }
   .single_column.none h3 {
     color: #0f7ab5; }
-  .single_column.none h4 {
+  .single_column.none h4, .single_column.none #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.none h3.give-section-break, .single_column.none #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.none h4.give-section-break, .single_column.none #give-recurring-form legend, #give-recurring-form .single_column.none legend, .single_column.none form.give-form h3.give-section-break, form.give-form .single_column.none h3.give-section-break, .single_column.none form.give-form h4.give-section-break, form.give-form .single_column.none h4.give-section-break, .single_column.none form.give-form legend, form.give-form .single_column.none legend, .single_column.none form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.none h3.give-section-break, .single_column.none form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.none h4.give-section-break, .single_column.none form[id*=give-form] legend, form[id*=give-form] .single_column.none legend {
     color: #0f7ab5; }
   .single_column.none p {
     color: #4a4a4a; }
-  .single_column.none button, .single_column.none .btn, .single_column.none .wpcf7 input[type=submit], .wpcf7 .single_column.none input[type=submit] {
+  .single_column.none button, .single_column.none .btn, .single_column.none .wpcf7 input[type=submit], .wpcf7 .single_column.none input[type=submit], .single_column.none .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.none .give-submit {
     background-color: #ffca05;
     color: #15467b; }
-    .single_column.none button:hover, .single_column.none .btn:hover, .single_column.none .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.none input[type=submit]:hover {
+    .single_column.none button:hover, .single_column.none .btn:hover, .single_column.none .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.none input[type=submit]:hover, .single_column.none .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.none .give-submit:hover {
       background-color: #15467b;
       color: #ffffff; }
 
@@ -10733,7 +10873,7 @@ section.white + section.white {
     .single_column[class$="blue"] button:hover {
       background-color: #ffffff;
       color: #15467b; }
-  .single_column[class$="blue"] a:not(.btn):not(.wpcf7 input[type=submit]) {
+  .single_column[class$="blue"] a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
     color: #ffca05; }
 
 .single_column.dark_blue {
@@ -10747,11 +10887,11 @@ section.white + section.white {
     color: #ffffff; }
   .single_column.dark_blue h3 {
     color: #ffffff; }
-  .single_column.dark_blue h4 {
+  .single_column.dark_blue h4, .single_column.dark_blue #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.dark_blue h3.give-section-break, .single_column.dark_blue #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.dark_blue h4.give-section-break, .single_column.dark_blue #give-recurring-form legend, #give-recurring-form .single_column.dark_blue legend, .single_column.dark_blue form.give-form h3.give-section-break, form.give-form .single_column.dark_blue h3.give-section-break, .single_column.dark_blue form.give-form h4.give-section-break, form.give-form .single_column.dark_blue h4.give-section-break, .single_column.dark_blue form.give-form legend, form.give-form .single_column.dark_blue legend, .single_column.dark_blue form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.dark_blue h3.give-section-break, .single_column.dark_blue form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.dark_blue h4.give-section-break, .single_column.dark_blue form[id*=give-form] legend, form[id*=give-form] .single_column.dark_blue legend {
     color: #ffffff; }
   .single_column.dark_blue p {
     color: #ffffff; }
-  .single_column.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]) {
+  .single_column.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
     color: #ffca05; }
 
 .single_column.gold {
@@ -10765,7 +10905,7 @@ section.white + section.white {
     color: #15467b; }
   .single_column.gold h3 {
     color: #15467b; }
-  .single_column.gold h4 {
+  .single_column.gold h4, .single_column.gold #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.gold h3.give-section-break, .single_column.gold #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.gold h4.give-section-break, .single_column.gold #give-recurring-form legend, #give-recurring-form .single_column.gold legend, .single_column.gold form.give-form h3.give-section-break, form.give-form .single_column.gold h3.give-section-break, .single_column.gold form.give-form h4.give-section-break, form.give-form .single_column.gold h4.give-section-break, .single_column.gold form.give-form legend, form.give-form .single_column.gold legend, .single_column.gold form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.gold h3.give-section-break, .single_column.gold form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.gold h4.give-section-break, .single_column.gold form[id*=give-form] legend, form[id*=give-form] .single_column.gold legend {
     color: #15467b; }
   .single_column.gold button {
     background-color: #15467b;
@@ -10785,7 +10925,7 @@ section.white + section.white {
     color: #ffffff; }
   .single_column.red h3 {
     color: #ffffff; }
-  .single_column.red h4 {
+  .single_column.red h4, .single_column.red #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.red h3.give-section-break, .single_column.red #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.red h4.give-section-break, .single_column.red #give-recurring-form legend, #give-recurring-form .single_column.red legend, .single_column.red form.give-form h3.give-section-break, form.give-form .single_column.red h3.give-section-break, .single_column.red form.give-form h4.give-section-break, form.give-form .single_column.red h4.give-section-break, .single_column.red form.give-form legend, form.give-form .single_column.red legend, .single_column.red form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.red h3.give-section-break, .single_column.red form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.red h4.give-section-break, .single_column.red form[id*=give-form] legend, form[id*=give-form] .single_column.red legend {
     color: #ffffff; }
   .single_column.red button {
     background-color: #ffffff;
@@ -10841,7 +10981,7 @@ section.white + section.white {
 .section_with_sidebar .sws_right-col {
   text-align: right;
   padding-top: 14px; }
-  .section_with_sidebar .sws_right-col h3, .section_with_sidebar .sws_right-col h4 {
+  .section_with_sidebar .sws_right-col h3, .section_with_sidebar .sws_right-col h4, .section_with_sidebar .sws_right-col #give-recurring-form h3.give-section-break, #give-recurring-form .section_with_sidebar .sws_right-col h3.give-section-break, .section_with_sidebar .sws_right-col #give-recurring-form h4.give-section-break, #give-recurring-form .section_with_sidebar .sws_right-col h4.give-section-break, .section_with_sidebar .sws_right-col #give-recurring-form legend, #give-recurring-form .section_with_sidebar .sws_right-col legend, .section_with_sidebar .sws_right-col form.give-form h3.give-section-break, form.give-form .section_with_sidebar .sws_right-col h3.give-section-break, .section_with_sidebar .sws_right-col form.give-form h4.give-section-break, form.give-form .section_with_sidebar .sws_right-col h4.give-section-break, .section_with_sidebar .sws_right-col form.give-form legend, form.give-form .section_with_sidebar .sws_right-col legend, .section_with_sidebar .sws_right-col form[id*=give-form] h3.give-section-break, form[id*=give-form] .section_with_sidebar .sws_right-col h3.give-section-break, .section_with_sidebar .sws_right-col form[id*=give-form] h4.give-section-break, form[id*=give-form] .section_with_sidebar .sws_right-col h4.give-section-break, .section_with_sidebar .sws_right-col form[id*=give-form] legend, form[id*=give-form] .section_with_sidebar .sws_right-col legend {
     margin-bottom: 16px; }
 
 .three_column_grid .grid-three-col {
@@ -10884,7 +11024,7 @@ section.white + section.white {
     @media (max-width: 991.98px) {
       .page-template-homepage-site .banner_image .heading {
         font-size: .75em; } }
-    .page-template-homepage-site .banner_image .heading .btn, .page-template-homepage-site .banner_image .heading .wpcf7 input[type=submit], .wpcf7 .page-template-homepage-site .banner_image .heading input[type=submit] {
+    .page-template-homepage-site .banner_image .heading .btn, .page-template-homepage-site .banner_image .heading .wpcf7 input[type=submit], .wpcf7 .page-template-homepage-site .banner_image .heading input[type=submit], .page-template-homepage-site .banner_image .heading .give-submit-button-wrap .give-submit, .give-submit-button-wrap .page-template-homepage-site .banner_image .heading .give-submit {
       font-size: 18px; }
     .page-template-homepage-site .banner_image .heading .align-middle {
       display: flex;
@@ -11007,7 +11147,7 @@ section.white + section.white {
     margin-bottom: 8px; }
   .hs-basic-info .content_address p {
     color: #15467b; }
-  .hs-basic-info .content_address .btn, .hs-basic-info .content_address .wpcf7 input[type=submit], .wpcf7 .hs-basic-info .content_address input[type=submit] {
+  .hs-basic-info .content_address .btn, .hs-basic-info .content_address .wpcf7 input[type=submit], .wpcf7 .hs-basic-info .content_address input[type=submit], .hs-basic-info .content_address .give-submit-button-wrap .give-submit, .give-submit-button-wrap .hs-basic-info .content_address .give-submit {
     margin-top: 30px; }
   .hs-basic-info .content_address.greyish p {
     color: #4a4a4a; }
@@ -11047,9 +11187,9 @@ section.white + section.white {
   max-width: none; }
   .hs_donate_info > .row h2 {
     margin-bottom: 40px; }
-  .hs_donate_info > .row .btn, .hs_donate_info > .row .wpcf7 input[type=submit], .wpcf7 .hs_donate_info > .row input[type=submit] {
+  .hs_donate_info > .row .btn, .hs_donate_info > .row .wpcf7 input[type=submit], .wpcf7 .hs_donate_info > .row input[type=submit], .hs_donate_info > .row .give-submit-button-wrap .give-submit, .give-submit-button-wrap .hs_donate_info > .row .give-submit {
     background-color: #ffffff; }
-    .hs_donate_info > .row .btn:hover, .hs_donate_info > .row .wpcf7 input[type=submit]:hover, .wpcf7 .hs_donate_info > .row input[type=submit]:hover, .hs_donate_info > .row .btn:focus, .hs_donate_info > .row .wpcf7 input[type=submit]:focus, .wpcf7 .hs_donate_info > .row input[type=submit]:focus {
+    .hs_donate_info > .row .btn:hover, .hs_donate_info > .row .wpcf7 input[type=submit]:hover, .wpcf7 .hs_donate_info > .row input[type=submit]:hover, .hs_donate_info > .row .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .hs_donate_info > .row .give-submit:hover, .hs_donate_info > .row .btn:focus, .hs_donate_info > .row .wpcf7 input[type=submit]:focus, .wpcf7 .hs_donate_info > .row input[type=submit]:focus, .hs_donate_info > .row .give-submit-button-wrap .give-submit:focus, .give-submit-button-wrap .hs_donate_info > .row .give-submit:focus {
       background-color: #ffca05; }
 
 .archive h2.blog-title,
@@ -11148,9 +11288,45 @@ section.white + section.white {
     line-height: 1.1;
     letter-spacing: normal;
     text-align: right; }
-  .archive .sidebar-right h4,
+  .archive .sidebar-right h4, .archive .sidebar-right #give-recurring-form h3.give-section-break, #give-recurring-form .archive .sidebar-right h3.give-section-break, .archive .sidebar-right #give-recurring-form h4.give-section-break, #give-recurring-form .archive .sidebar-right h4.give-section-break, .archive .sidebar-right #give-recurring-form legend, #give-recurring-form .archive .sidebar-right legend, .archive .sidebar-right form.give-form h3.give-section-break, form.give-form .archive .sidebar-right h3.give-section-break, .archive .sidebar-right form.give-form h4.give-section-break, form.give-form .archive .sidebar-right h4.give-section-break, .archive .sidebar-right form.give-form legend, form.give-form .archive .sidebar-right legend, .archive .sidebar-right form[id*=give-form] h3.give-section-break, form[id*=give-form] .archive .sidebar-right h3.give-section-break, .archive .sidebar-right form[id*=give-form] h4.give-section-break, form[id*=give-form] .archive .sidebar-right h4.give-section-break, .archive .sidebar-right form[id*=give-form] legend, form[id*=give-form] .archive .sidebar-right legend,
   .blog .sidebar-right h4,
-  .single .sidebar-right h4 {
+  .blog .sidebar-right #give-recurring-form h3.give-section-break, #give-recurring-form
+  .blog .sidebar-right h3.give-section-break,
+  .blog .sidebar-right #give-recurring-form h4.give-section-break, #give-recurring-form
+  .blog .sidebar-right h4.give-section-break,
+  .blog .sidebar-right #give-recurring-form legend, #give-recurring-form
+  .blog .sidebar-right legend,
+  .blog .sidebar-right form.give-form h3.give-section-break, form.give-form
+  .blog .sidebar-right h3.give-section-break,
+  .blog .sidebar-right form.give-form h4.give-section-break, form.give-form
+  .blog .sidebar-right h4.give-section-break,
+  .blog .sidebar-right form.give-form legend, form.give-form
+  .blog .sidebar-right legend,
+  .blog .sidebar-right form[id*=give-form] h3.give-section-break, form[id*=give-form]
+  .blog .sidebar-right h3.give-section-break,
+  .blog .sidebar-right form[id*=give-form] h4.give-section-break, form[id*=give-form]
+  .blog .sidebar-right h4.give-section-break,
+  .blog .sidebar-right form[id*=give-form] legend, form[id*=give-form]
+  .blog .sidebar-right legend,
+  .single .sidebar-right h4,
+  .single .sidebar-right #give-recurring-form h3.give-section-break, #give-recurring-form
+  .single .sidebar-right h3.give-section-break,
+  .single .sidebar-right #give-recurring-form h4.give-section-break, #give-recurring-form
+  .single .sidebar-right h4.give-section-break,
+  .single .sidebar-right #give-recurring-form legend, #give-recurring-form
+  .single .sidebar-right legend,
+  .single .sidebar-right form.give-form h3.give-section-break, form.give-form
+  .single .sidebar-right h3.give-section-break,
+  .single .sidebar-right form.give-form h4.give-section-break, form.give-form
+  .single .sidebar-right h4.give-section-break,
+  .single .sidebar-right form.give-form legend, form.give-form
+  .single .sidebar-right legend,
+  .single .sidebar-right form[id*=give-form] h3.give-section-break, form[id*=give-form]
+  .single .sidebar-right h3.give-section-break,
+  .single .sidebar-right form[id*=give-form] h4.give-section-break, form[id*=give-form]
+  .single .sidebar-right h4.give-section-break,
+  .single .sidebar-right form[id*=give-form] legend, form[id*=give-form]
+  .single .sidebar-right legend {
     font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
     line-height: 1.69;
     text-align: right;
@@ -11255,3 +11431,10 @@ section.white + section.white {
 
 div.wpforms-container-full {
   margin-bottom: 54px; }
+
+form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before,
+form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
+  background: #15467b;
+  color: white;
+  border-color: #15467b;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
