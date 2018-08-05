@@ -199,7 +199,7 @@ select {
     pointer-events: none; 
 }
 
-select {
+select.select-custom {
     color: $dark-blue;
     background: linear-gradient(to right, $white-one 0%, $white-one calc(100% - 35px), $marigold calc(100% - 35px), $marigold 100%);
     padding: 0 55px 0 20px;
