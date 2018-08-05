@@ -10635,6 +10635,30 @@ li.search {
     display: inline-block;
     margin: 0 .5em; }
 
+.page-template-flexible-template h2[id],
+.page-template-flexible-template h3[id],
+.page-template-flexible-template h4[id],
+.page-template-flexible-template #give-recurring-form h3[id].give-section-break, #give-recurring-form
+.page-template-flexible-template h3[id].give-section-break,
+.page-template-flexible-template #give-recurring-form h4[id].give-section-break, #give-recurring-form
+.page-template-flexible-template h4[id].give-section-break,
+.page-template-flexible-template #give-recurring-form legend[id], #give-recurring-form
+.page-template-flexible-template legend[id],
+.page-template-flexible-template form.give-form h3[id].give-section-break, form.give-form
+.page-template-flexible-template h3[id].give-section-break,
+.page-template-flexible-template form.give-form h4[id].give-section-break, form.give-form
+.page-template-flexible-template h4[id].give-section-break,
+.page-template-flexible-template form.give-form legend[id], form.give-form
+.page-template-flexible-template legend[id],
+.page-template-flexible-template form[id*=give-form] h3[id].give-section-break, form[id*=give-form]
+.page-template-flexible-template h3[id].give-section-break,
+.page-template-flexible-template form[id*=give-form] h4[id].give-section-break, form[id*=give-form]
+.page-template-flexible-template h4[id].give-section-break,
+.page-template-flexible-template form[id*=give-form] legend[id], form[id*=give-form]
+.page-template-flexible-template legend[id] {
+  padding-top: 60px;
+  margin-top: -60px; }
+
 .layout-block {
   margin-right: -1.5rem;
   margin-left: -1.5rem;
