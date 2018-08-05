@@ -1,0 +1,15 @@
+form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before,
+form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
+    background: $dark-blue;
+    color: white;
+    border-color: $dark-blue;
+    font-family: $font-family-header;
+}
+
+.give-submit-button-wrap .give-submit {
+    @extend .btn;
+}
+
+#give-recurring-form h3.give-section-break, #give-recurring-form h4.give-section-break, #give-recurring-form legend, form.give-form h3.give-section-break, form.give-form h4.give-section-break, form.give-form legend, form[id*=give-form] h3.give-section-break, form[id*=give-form] h4.give-section-break, form[id*=give-form] legend {
+    @extend h4;
+}
