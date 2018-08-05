@@ -10026,7 +10026,7 @@ select {
   top: calc(50% - 9px);
   pointer-events: none; }
 
-select {
+select.select-custom {
   color: #15467b;
   background: linear-gradient(to right, #f6f5f5 0%, #f6f5f5 calc(100% - 35px), #ffca05 calc(100% - 35px), #ffca05 100%);
   padding: 0 55px 0 20px;
@@ -10195,7 +10195,7 @@ body {
     height: 242px; }
 
 section.red, section.light_blue, section.dark_blue {
-  background: #91331a;
+  background: #A12017;
   color: #ffffff; }
   section.red *:not(a):not(select):not(button), section.light_blue *:not(a):not(select):not(button), section.dark_blue *:not(a):not(select):not(button) {
     color: #ffffff; }
@@ -10428,7 +10428,8 @@ li.search {
     font-size: 1.0625em;
     line-height: 1.23529;
     letter-spacing: 1.7px;
-    padding: 1.75rem 3.125rem 1.75rem 3rem; }
+    padding: 1.75rem 3.125rem 1.75rem 3rem;
+    text-transform: uppercase; }
   .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-three-levels > ul.mega-sub-menu > li.mega-menu-item a.mega-menu-link,
   .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu > li.mega-three-levels > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item a.mega-menu-link {
     color: #0f7ab5;
