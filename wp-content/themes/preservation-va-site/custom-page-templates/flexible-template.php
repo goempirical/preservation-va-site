@@ -251,13 +251,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
 												?>
 
 												<?php if ( $button_1 ) : ?>
-													<a class="btn <?php echo $class; ?>">
+													<a class="btn <?php echo $class; ?>" href="<?php echo $button_1['url']?>">
 														<?php echo $button_1['title']?>
 													</a>
 												<?php endif; ?>
 
 												<?php if ( $button_2 ) : ?>
-													<a class="btn <?php echo $class; ?>">
+													<a class="btn <?php echo $class; ?>" href="<?php echo $button_2['url']?>">
 														<?php echo $button_2['title']?>
 													</a>
 												<?php endif; ?>
