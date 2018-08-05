@@ -10239,6 +10239,8 @@ section.dark_blue {
   .sws_right-col ul li {
     line-height: 1.5;
     margin-bottom: 8px; }
+    .sws_right-col ul li::before {
+      content: "• "; }
 
 .navbar-dark .navbar-brand a {
   color: #ffffff; }
@@ -11434,7 +11436,7 @@ div.wpforms-container-full {
 
 form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before,
 form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
-  background: #15467b;
+  background: #0f7ab5;
   color: white;
-  border-color: #15467b;
+  border-color: #0f7ab5;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
