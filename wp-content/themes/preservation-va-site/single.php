@@ -10,7 +10,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="single-wrapper">
-	<div class="<?php echo (get_post_type() == "post") ? "container" : esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 		<div class="row justify-content-center">
 			<div class="col-md-12">
 				<div class="blog">

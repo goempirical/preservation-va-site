@@ -233,6 +233,15 @@ li.search {
 
 .navbar #mega-menu-wrap-historicmenu #mega-menu-historicmenu {
 
+     > li.mega-menu-flyout ul.mega-sub-menu {
+        min-width: 100%;
+
+        > li.mega-menu-item a.mega-menu-link {
+            padding:0 1em;
+            letter-spacing: 0.2em;
+        }
+     }
+
     /* First Level */
     > li.mega-menu-item.mega-toggle-on > a.mega-menu-link, 
     > li.mega-menu-item > a.mega-menu-link, 
