@@ -137,6 +137,27 @@ function add_search_form($items, $args) {
     return $items;
 }
 
+add_filter( 'tiny_mce_before_init', 'pva_tiny_mce_before_init' );
+
+function pva_tiny_mce_before_init( $settings ) {
+
+  $style_formats = array(
+      array(
+          'title' => 'Button Link',
+          'classes' => 'btn',
+          'inline' => 'a'
+      )
+  );
+  
+    if ( isset( $settings['style_formats'] ) ) {
+      $orig_style_formats = json_decode($settings['style_formats'],true);
+      $style_formats = array_merge($orig_style_formats,$style_formats);
+    }
+
+    $settings['style_formats'] = json_encode( $style_formats );
+    return $settings;
+}
+
 function pr_archive($atts){
     extract(shortcode_atts(array(
       'count' => 2
