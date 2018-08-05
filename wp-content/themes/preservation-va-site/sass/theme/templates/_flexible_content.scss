@@ -299,6 +299,10 @@ section.white + section.white {
             @include narrow_block;
         }
     }
+    &.full_width_mode .row {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 
     .row {
         flex-direction: column;
