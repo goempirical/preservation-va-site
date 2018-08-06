@@ -26,12 +26,14 @@
 
 			<div class="entry-content">
 				<?php 
-					echo get_the_post_thumbnail( $post->ID, 'full');
+					if ( has_post_thumbnail() ) :
+						echo get_the_post_thumbnail( $post->ID, 'full');
 
-					$attach_id = get_post_thumbnail_id( $post->ID );
-					$image_data = wp_get_attachment( $attach_id );
+						$attach_id = get_post_thumbnail_id( $post->ID );
+						$image_data = wp_get_attachment( $attach_id );
 				?>
-				<p class="caption"><?php echo $image_data["caption"]; ?></p>
+						<p class="caption"><?php echo $image_data["caption"]; ?></p>
+			<?php endif; ?>
 
 				<?php the_content(); ?>
 

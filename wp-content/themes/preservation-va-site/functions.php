@@ -188,3 +188,13 @@ function pr_archive($atts){
 
 }
 add_shortcode( 'pr-archive', 'pr_archive' );
+
+// filter used on upcoming events template
+function pva_events_where( $where ) {
+    
+    $where = str_replace("meta_key = 'event_dates_times_$", "meta_key LIKE 'event_dates_times_%", $where);
+
+    return $where;
+}
+
+add_filter('posts_where', 'pva_events_where');
