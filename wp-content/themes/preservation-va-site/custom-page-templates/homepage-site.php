@@ -239,7 +239,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									
 									</div>
 									
-									<button type="button" onclick="javascript: window.location.href = document.getElementById('historysite').value;" class="btn marigold small">{fix this button label}</button>
+									<button type="button" onclick="javascript: window.location.href = document.getElementById('historysite').value;" class="btn marigold small"><?php the_sub_field('button_text') ?></button>
 							
 							</div>
 
@@ -310,8 +310,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 											<?php the_excerpt(); ?>
 											<?php $opt_subscribe = get_field('opt_subscribe', 'option'); ?>
 											<p class="links">
-												<a href="<?php the_permalink() ?>">Read More</a> &nbsp; 
-												<a href="<?php echo ($opt_subscribe['opt_subscribe_link']) ? $opt_subscribe['opt_subscribe_link'] : '' ?>" target="_blank">Subscribe</a>
+												<a href="<?php the_permalink() ?>">Read More</a>
 											</p>
 
 										</div>
