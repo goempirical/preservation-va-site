@@ -237,3 +237,9 @@ function pva_give_form_required_fields( $required_fields ) {
     return $required_fields;
 }
 add_filter( 'give_purchase_form_required_fields', 'pva_give_form_required_fields' );
+
+add_filter('give_checkout_personal_info_text', 'new_personal_info_text');
+
+function new_personal_info_text() { 
+    return __('Your Personal Info', 'give');
+}
