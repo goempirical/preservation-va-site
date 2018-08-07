@@ -9788,9 +9788,9 @@ p {
     color: #91331a;
     text-decoration: underline; }
 
-.content-area a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
+.content-area a {
   color: #91331a; }
-  .content-area a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit):hover {
+  .content-area a:hover {
     color: #91331a;
     text-decoration: underline; }
 
@@ -9968,7 +9968,12 @@ button.btn_cl {
     height: 51px;
     line-height: 41px; }
 
-.btn, .wpcf7 input[type=submit], .give-submit-button-wrap .give-submit {
+.btn, .wpcf7 input[type=submit], .give-submit-button-wrap .give-submit,
+.content-area .btn,
+.content-area .wpcf7 input[type=submit], .wpcf7
+.content-area input[type=submit],
+.content-area .give-submit-button-wrap .give-submit, .give-submit-button-wrap
+.content-area .give-submit {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   border: none;
   border-radius: 0px;
@@ -9984,17 +9989,39 @@ button.btn_cl {
   color: #15467b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 0 none; }
-  .btn:hover, .wpcf7 input[type=submit]:hover, .give-submit-button-wrap .give-submit:hover {
+  border: 0 none;
+  color: #15467b;
+  text-decoration: none; }
+  .btn:hover, .wpcf7 input[type=submit]:hover, .give-submit-button-wrap .give-submit:hover,
+  .content-area .btn:hover,
+  .content-area .wpcf7 input[type=submit]:hover, .wpcf7
+  .content-area input[type=submit]:hover,
+  .content-area .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap
+  .content-area .give-submit:hover {
     background-color: #15467b;
     color: #ffffff; }
-  .btn.white, .wpcf7 input.white[type=submit], .give-submit-button-wrap .white.give-submit {
+  .btn.white, .wpcf7 input.white[type=submit], .give-submit-button-wrap .white.give-submit,
+  .content-area .btn.white,
+  .content-area .wpcf7 input.white[type=submit], .wpcf7
+  .content-area input.white[type=submit],
+  .content-area .give-submit-button-wrap .white.give-submit, .give-submit-button-wrap
+  .content-area .white.give-submit {
     background-color: #ffffff;
     color: #15467b; }
-  .btn.white:hover, .wpcf7 input.white[type=submit]:hover, .give-submit-button-wrap .white.give-submit:hover {
+  .btn.white:hover, .wpcf7 input.white[type=submit]:hover, .give-submit-button-wrap .white.give-submit:hover,
+  .content-area .btn.white:hover,
+  .content-area .wpcf7 input.white[type=submit]:hover, .wpcf7
+  .content-area input.white[type=submit]:hover,
+  .content-area .give-submit-button-wrap .white.give-submit:hover, .give-submit-button-wrap
+  .content-area .white.give-submit:hover {
     background-color: #15467b;
     color: #ffffff; }
-  .btn.small, .wpcf7 input.small[type=submit], .give-submit-button-wrap .small.give-submit {
+  .btn.small, .wpcf7 input.small[type=submit], .give-submit-button-wrap .small.give-submit,
+  .content-area .btn.small,
+  .content-area .wpcf7 input.small[type=submit], .wpcf7
+  .content-area input.small[type=submit],
+  .content-area .give-submit-button-wrap .small.give-submit, .give-submit-button-wrap
+  .content-area .small.give-submit {
     font-size: 14px;
     height: 51px;
     line-height: 41px; }
