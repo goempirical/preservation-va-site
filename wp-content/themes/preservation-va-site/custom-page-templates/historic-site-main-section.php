@@ -193,7 +193,6 @@
                         buildTable($table);
                     ?>
                     <?php echo $admissionContent['hr_admission_left_content']['hs_admission_pricing_text'] ?>
-                    <a href="#tours-rentals" class="btn marigold small">GROUP TOUR INFO</a>
                 </div>
                 <div class="col-md-6 content_address">
                     <h3>Contact</h3>
@@ -375,7 +374,6 @@
                     $table = $tourSiteRental['hs_tour_content']['content_left']['hr_tour_table_prices'];
                     buildTable($table);
                 ?>
-                <a href="<?php the_sub_field('hs_donate_button_link') ?>" class="btn marigold small">BOOK NOW</a>
             </div>
             <div class="col-md-6 content_address">
                 <h3>Contact</h3>
