@@ -239,7 +239,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 									
 									</div>
 									
-									<button type="button" onclick="javascript: window.location.href = document.getElementById('historysite').value;" class="btn marigold small">LEARN MORE</button>
+									<button type="button" onclick="javascript: window.location.href = document.getElementById('historysite').value;" class="btn marigold small">{fix this button label}</button>
 							
 							</div>
 
