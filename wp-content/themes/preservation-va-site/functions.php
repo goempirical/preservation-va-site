@@ -198,3 +198,42 @@ function pva_events_where( $where ) {
 }
 
 add_filter('posts_where', 'pva_events_where');
+
+/**
+ * Give Form Require Fields
+ *
+ * @description: Cusomize the prefix of this function before using. The $required_fields array key is the name of the field you would like to make required; ie " name='card_address_2' " - find using Debug Tools, etc.
+ *
+ * @param $required_fields
+ *
+ * @return mixed
+ */
+function pva_give_form_required_fields( $required_fields ) {
+
+    //First Name
+    $required_fields['give_first'] = array(
+        'error_id' => 'invalid_last_name',
+        'error_message' => __( 'Please enter your first name.', 'give' )
+    );
+
+    //Last Name
+    $required_fields['give_last'] = array(
+        'error_id' => 'invalid_last_name',
+        'error_message' => __( 'Please enter your last name.', 'give' )
+    );
+
+        //Uncomment to add Address
+   $required_fields['card_address'] = array(
+       'error_id' => 'invalid_card_address',
+       'error_message' => __( 'Please enter your address.', 'give' )
+   );
+
+      //ACustom Field
+//    $required_fields['my_custom_field'] = array(
+//        'error_id' => 'invalid_my_custom_field',
+//        'error_message' => __( 'Custom field required message.', 'give' )
+//    );
+
+    return $required_fields;
+}
+add_filter( 'give_purchase_form_required_fields', 'pva_give_form_required_fields' );
