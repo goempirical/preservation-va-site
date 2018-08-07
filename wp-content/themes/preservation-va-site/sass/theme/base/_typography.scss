@@ -30,7 +30,7 @@ p {
     }
 }
 .content-area {
-    a:not(.btn) {
+    a {
         color: $red-brown;
 
         &:hover {
@@ -158,9 +158,12 @@ button.btn_cl {
     }
 }
 
-.btn {
+.btn,
+.content-area .btn {
     @include btn_big;
     border: 0 none;
+    color: $dark-blue;
+    text-decoration: none;
 
     &:hover {
         background-color: $dark-blue;
