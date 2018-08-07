@@ -7338,10 +7338,11 @@ jQuery( document ).ready(function( $ ) {
 
         $("#ffm-historic_site > option").each(function() {
             var slugVal = convertToSlug(this.value);
-            console.log(slugVal);
+            console.log(slugVal+' - '+ hsd);
 
             if (slugVal == hsd) {
                 $("#ffm-historic_site").val(hsd);
+                console.log('match');
             }
         });
     }
