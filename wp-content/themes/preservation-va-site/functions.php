@@ -165,13 +165,13 @@ function pva_tiny_mce_before_init( $settings ) {
 
 function pr_archive($atts){
     extract(shortcode_atts(array(
-      'count' => 2
+      'count' => 9
     ), $atts));
 
     $args = array(
         'post_type' => 'press_release',
         'order' => 'DESC',
-        'posts_per_page' => -1
+        'posts_per_page' => $count
     );
 
     $pr_query = new wp_query( $args );

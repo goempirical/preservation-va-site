@@ -168,6 +168,7 @@ button.btn_cl {
     &:hover {
         background-color: $dark-blue;
         color: $white;
+        text-decoration: none;
     }
     &.white {
         background-color: $white;
