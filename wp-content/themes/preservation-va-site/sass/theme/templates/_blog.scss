@@ -1,4 +1,5 @@
-
+.page-template-events-upcoming h2.blog-title,
+.events h2.blog-title,
 .archive h2.blog-title,
 .blog h2.blog-title {
     color: $nice-blue;
@@ -37,7 +38,8 @@
         }
     }
 }
-
+.page-template-events-upcoming h2,
+.events h2,
 .archive h2,
 .blog h2, 
 .single h2 {
@@ -52,6 +54,95 @@
     }
 }
 
+.page-template-events-upcoming {
+    .header {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 80px;
+
+        h2 {
+            margin-bottom: 12px;
+        }
+
+        p {
+            @include p_large;
+        }
+    }
+}
+
+.events {
+    .entry-content {
+
+        .image-text {
+            margin-bottom: 20px;
+        }
+        @include media-breakpoint-up(md) { 
+            .image-text {
+
+                > div + div {
+                    padding-left: 2em;
+                }
+
+                > div {
+                    flex:1;
+                }
+            }
+        }
+
+        .details {
+            @include media-breakpoint-up(md) { 
+                > div + div {
+                    padding-left: 2em;
+                }
+
+                > div {
+                    flex:1;
+                }
+            }
+            .event-date {
+                display: flex;
+                color: $dark-blue;
+                margin-bottom: 8px;
+
+                p {
+                    font-family: $font-family-header;
+                    margin-bottom: 0;
+                }
+                > p {
+                    width: 100px;
+                }
+            }
+
+            .calendar-event-time p {
+                color: $nice-blue;
+                margin-left: 1em;
+            }
+        }
+    }
+
+    .event-link {
+        font-style: italic;
+        color: $red-brown;
+
+        &:hover {
+            color: $red-brown;
+            text-decoration: underline;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: .4em;
+            height: .4em;
+            border-right:2px solid $red-brown;
+            border-top:2px solid $red-brown;
+            transform: translateX(.25em) translateY(-0.125em) rotate(45deg);
+        }
+    }
+}
+
+.page-template-events-upcoming,
+.events,
 .archive,
 .blog,
 .single {

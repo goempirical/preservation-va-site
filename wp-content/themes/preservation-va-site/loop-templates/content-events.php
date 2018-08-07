@@ -5,83 +5,62 @@
  * @package understrap
  */
 
-$eTitle = get_field('event_title');
-$eDesc = get_field('event_description');
-
-$eLocation = get_field('e_location');
+$eLocation = get_field('location');
 $link = get_field('e_link');
 ?>
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-	<div class="row blog-flex-row">
-		<div>
-			<header class="entry-header">
-				<?php 
-					the_title( sprintf( 
-						'<h2 class="entry-title"><a href="%s" rel="bookmark">', 
-						esc_url( get_permalink() ) ), 
-						'</a></h2>' 
-					); 
-				?>
-			</header><!-- .entry-header -->
 
-			<div class="entry-content">
-				<?php 
-					if ( has_post_thumbnail() ) :
-						echo get_the_post_thumbnail( $post->ID, 'full');
+			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+					<header class="entry-header">
+						<?php 
+							the_title( sprintf( 
+								'<h2 class="entry-title"><a href="%s" rel="bookmark">', 
+								esc_url( get_permalink() ) ), 
+								'</a></h2>' 
+							); 
+						?>
+					</header><!-- .entry-header -->
 
-						$attach_id = get_post_thumbnail_id( $post->ID );
-						$image_data = wp_get_attachment( $attach_id );
-				?>
-						<p class="caption"><?php echo $image_data["caption"]; ?></p>
-			<?php endif; ?>
+					<div class="entry-content">
 
-				<?php 
+						<div class="flex-row image-text">
+							<?php  if ( has_post_thumbnail() ) : ?>
+								<div class="image">
+									<?php
+										echo get_the_post_thumbnail( $post->ID, 'full');
 
-						// check if the repeater field has rows of data
-						if( have_rows('event_dates_times') ):
-
-						 	// loop through the rows of data
-						    while ( have_rows('event_dates_times') ) : the_row();
-						    	?>
-
-						    	<span class="calendar-event-date"><strong>Date: </strong><?php the_sub_field('e_start_date'); ?></span>
-						    	<?php
-						    		
-
-						        if( have_rows('event_times') ):
-
-									 	// loop through the rows of data
-									    while ( have_rows('event_times') ) : the_row();
+										$attach_id = get_post_thumbnail_id( $post->ID );
+										$image_data = wp_get_attachment( $attach_id );
 									?>
-						    	<span class="calendar-event-date"><strong>Date: </strong><?php the_sub_field('e_end_time'); ?></span>
-						    	<?php
+									<?php if($image_data["caption"]) { ?><p class="caption"><?php echo $image_data["caption"]; ?></p> <?php } ?>
+								</div>
+							<?php endif; ?>
+							<div class="content">
+								<?php the_content(); ?>
+							</div>
+						</div>
+						<div class="details flex-row">
+							<?php if( have_rows('event_dates_times') ): ?>
+								<div class="event-dates">
+								<?php while ( have_rows('event_dates_times') ) : the_row(); ?>
+							    	<div class="event-date"><p><?php the_sub_field('e_start_date'); ?></p>
+								    	<?php if( have_rows('event_times') ): ?>
+										 		<div class="calendar-event-time">
+											    <?php while ( have_rows('event_times') ) : the_row(); ?>
+										    		<p> <?php the_sub_field('e_start_time'); ?> – <?php the_sub_field('e_end_time'); ?></p>
+										    	<?php endwhile; ?>
+										    </div>
+											<?php else : ?>
+											    // no rows found
+											<?php endif; ?>
+											</div>
+								<?php endwhile; ?>
+								</div>
+								<?php else :
+								    // no rows found
+								endif; ?>
+							<?php if ( $eLocation ) echo '<div class="event-location" ><p>'.$eLocation.'</p></div>'; ?>
 
-									    endwhile;
-
-									else :
-
-									    // no rows found
-
-									endif;
-
-						    endwhile;
-
-						else :
-
-						    // no rows found
-
-						endif;
-				?>
-					<?php if ( $eLocation ) echo '<span class="calendar-event-location"><strong>Location: </strong>'.$eLocation.'</span>'; ?>
-				</div>
-
-				<?php if ( $eDesc ) echo '<span class="calendar-event-desc">'.$eDesc.'</span>'; ?>
-
-				<?php if ( $link ) echo '<a class="calendar-event-link" href="'.$link['url'].'" target="'.$link['target'].'">more info</a>'; ?>
-
-				<?php the_content(); ?>
-
-			</div><!-- .entry-content -->
-		</div>
-	</div>
-</article><!-- #post-## -->
+						</div><!-- .details -->
+					</div><!-- .entry-content -->
+					<?php if ( $link ) echo '<a class="event-link" href="'.$link['url'].'" target="'.$link['target'].'">more info</a>'; ?>
+			</article><!-- #post-## -->

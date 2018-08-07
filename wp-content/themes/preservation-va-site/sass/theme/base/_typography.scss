@@ -29,6 +29,16 @@ p {
         text-decoration: underline;
     }
 }
+.content-area {
+    a:not(.btn) {
+        color: $red-brown;
+
+        &:hover {
+            color: $red-brown;
+            text-decoration: underline;
+        }
+    }
+}
 
 .p_large {
     p {
