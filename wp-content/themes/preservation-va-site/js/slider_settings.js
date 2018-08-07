@@ -25,8 +25,9 @@ jQuery( document ).ready(function( $ ) {
         console.log(hsd);
 
         $("#ffm-historic_site > option").each(function() {
-            alert(this.text + ' ' + this.value);
-            if (this.value === hsd) {
+            var slugVal = convertToSlug(this.value);
+
+            if (slugVal === hsd) {
                 $("#ffm-historic_site").val(hsd);
             }
         });
