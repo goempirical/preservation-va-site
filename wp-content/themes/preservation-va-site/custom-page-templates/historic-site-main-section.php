@@ -28,7 +28,15 @@
                         <a href="#plan-your-visit">Plan your Visit</a>
                         <a href="#admissions">Admissions</a>
                         <a href="#tours-rentals">Tours/Rentals</a>
+                        <?php 
+
+                        $hs_key_visitor_info = get_field('hs_key_visitor_info');
+
+                        if($hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] && $hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] !== ''){ 
+
+                        ?>
                         <a href="#key-visitor-info">Key Visitor Info</a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -390,6 +398,11 @@
 <?php if( have_rows('hs_key_visitor_info') ): ?>
 <?php // loop through the rows of data
     while ( have_rows('hs_key_visitor_info') ) : the_row(); ?>
+        <?php 
+        $hs_key_visitor_info = get_field('hs_key_visitor_info');
+
+        if($hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] && $hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] !== ''){ 
+        ?>
     <div id="key-visitor-info" class="row">
         <div class="col-md-12 no_padding_both_sides margin_bottom">
             <div class="content_headline secondary_gray">                  
@@ -414,6 +427,7 @@
         </div> <!-- .ROW -->
 
     </section>
+        <?php } ?>
 
     <?php endwhile; ?>
 <?php endif; ?>
