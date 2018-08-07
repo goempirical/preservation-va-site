@@ -22,6 +22,7 @@ jQuery( document ).ready(function( $ ) {
 
     if(getParameterByName('hsd')){
         var hsd = getParameterByName('hsd')
+        console.log(hsd);
 
         $("#ffm-historic_site > option").each(function() {
             alert(this.text + ' ' + this.value);
