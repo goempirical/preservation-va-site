@@ -11199,6 +11199,9 @@ section.white + section.white {
 .full_image_gallery .owl-carousel .owl-item {
   height: 22vw; }
 
+.hs_plan_your_visit .content_headline.secondary_white {
+  padding-top: 0; }
+
 .hs_plan_your_visit .content_address {
   text-align: right; }
   .hs_plan_your_visit .content_address iframe {
