@@ -143,8 +143,13 @@ function pva_tiny_mce_before_init( $settings ) {
 
   $style_formats = array(
       array(
-          'title' => 'Button Link',
+          'title' => 'Large Button Link',
           'classes' => 'btn',
+          'inline' => 'a'
+      ),
+      array(
+          'title' => 'Small Button Link',
+          'classes' => 'btn small',
           'inline' => 'a'
       )
   );
