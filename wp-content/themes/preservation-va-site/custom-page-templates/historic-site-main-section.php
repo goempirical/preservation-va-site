@@ -228,7 +228,7 @@
                     <?php $button_1 = get_sub_field('hs_donate_button_link'); ?>
 
                     <?php if ( $button_1 ) : ?>
-                        <a href="<?php echo $button_1; ?>" class="btn">Donate</a>
+                        <a href="<?php echo site_url(); ?>/support/historic-site-donation/?hsb=<?php echo $post->post_name; ?>" class="btn">Donate</a>
                     <?php endif; ?>
                 </div>
             </div>
