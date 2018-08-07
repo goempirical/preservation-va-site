@@ -278,7 +278,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 											<div class="content_headline <?php echo get_sub_field('layout_style');?> ">
 
-												<?php if ( get_sub_field('layout_style') == 'primary' ) :?>
+												<?php if ( get_sub_field('layout_style') == 'primary' || get_sub_field('layout_style') == 'light_blue') :?>
 
 															<h1> <?php the_sub_field('headline_text') ?> </h1>
 												

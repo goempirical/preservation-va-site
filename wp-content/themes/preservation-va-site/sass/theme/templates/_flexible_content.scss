@@ -263,12 +263,14 @@ section.white + section.white {
                 color: $dark-blue;
             }
         }
-        &_light_blue {
-            background-color: $nice-blue;
-            
-            & > h2 {
-                color: $white;
-            }
+        
+    }
+    &.light_blue {
+        background-color: $nice-blue;
+        padding: 46px 0px;
+        
+        & > h1 {
+            color: $white;
         }
     }
 }

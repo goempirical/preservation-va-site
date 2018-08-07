@@ -10840,9 +10840,10 @@ section.white + section.white {
   .content_headline.secondary_gray > h2 {
     color: #15467b; }
 
-.content_headline.secondary_light_blue {
-  background-color: #0f7ab5; }
-  .content_headline.secondary_light_blue > h2 {
+.content_headline.light_blue {
+  background-color: #0f7ab5;
+  padding: 46px 0px; }
+  .content_headline.light_blue > h1 {
     color: #ffffff; }
 
 /* Style Image */
