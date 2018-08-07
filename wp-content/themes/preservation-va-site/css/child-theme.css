@@ -9788,6 +9788,12 @@ p {
     color: #91331a;
     text-decoration: underline; }
 
+.content-area a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
+  color: #91331a; }
+  .content-area a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit):hover {
+    color: #91331a;
+    text-decoration: underline; }
+
 .p_large p {
   font-size: 1.375em;
   line-height: 1.27273;
@@ -10149,6 +10155,10 @@ a.acf-button.button.button-primary {
 body {
   overflow-x: hidden;
   /* prevents mega menu overflow to the right of the body */ }
+
+@media (min-width: 768px) {
+  .flex-row {
+    display: flex; } }
 
 .ui-hidden {
   border: 0;
@@ -11219,6 +11229,8 @@ section.white + section.white {
     .hs_donate_info > .row .btn:hover, .hs_donate_info > .row .wpcf7 input[type=submit]:hover, .wpcf7 .hs_donate_info > .row input[type=submit]:hover, .hs_donate_info > .row .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .hs_donate_info > .row .give-submit:hover, .hs_donate_info > .row .btn:focus, .hs_donate_info > .row .wpcf7 input[type=submit]:focus, .wpcf7 .hs_donate_info > .row input[type=submit]:focus, .hs_donate_info > .row .give-submit-button-wrap .give-submit:focus, .give-submit-button-wrap .hs_donate_info > .row .give-submit:focus {
       background-color: #ffca05; }
 
+.page-template-events-upcoming h2.blog-title,
+.events h2.blog-title,
 .archive h2.blog-title,
 .blog h2.blog-title {
   color: #0f7ab5;
@@ -11257,6 +11269,8 @@ section.white + section.white {
   .blog-flex-row > div:last-child {
     flex: 10; }
 
+.page-template-events-upcoming h2,
+.events h2,
 .archive h2,
 .blog h2,
 .single h2 {
@@ -11265,26 +11279,93 @@ section.white + section.white {
   font-size: 20px;
   line-height: 1.1;
   letter-spacing: normal; }
+  .page-template-events-upcoming h2 a,
+  .events h2 a,
   .archive h2 a,
   .blog h2 a,
   .single h2 a {
     color: #15467b; }
 
+.page-template-events-upcoming .header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 80px; }
+  .page-template-events-upcoming .header h2 {
+    margin-bottom: 12px; }
+  .page-template-events-upcoming .header p {
+    font-size: 1.375em;
+    line-height: 1.27273;
+    margin-bottom: 28px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.events .entry-content .image-text {
+  margin-bottom: 20px; }
+
+@media (min-width: 768px) {
+  .events .entry-content .image-text > div + div {
+    padding-left: 2em; }
+  .events .entry-content .image-text > div {
+    flex: 1; } }
+
+@media (min-width: 768px) {
+  .events .entry-content .details > div + div {
+    padding-left: 2em; }
+  .events .entry-content .details > div {
+    flex: 1; } }
+
+.events .entry-content .details .event-date {
+  display: flex;
+  color: #15467b;
+  margin-bottom: 8px; }
+  .events .entry-content .details .event-date p {
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+    margin-bottom: 0; }
+  .events .entry-content .details .event-date > p {
+    width: 100px; }
+
+.events .entry-content .details .calendar-event-time p {
+  color: #0f7ab5;
+  margin-left: 1em; }
+
+.events .event-link {
+  font-style: italic;
+  color: #91331a; }
+  .events .event-link:hover {
+    color: #91331a;
+    text-decoration: underline; }
+  .events .event-link:after {
+    content: '';
+    display: inline-block;
+    width: .4em;
+    height: .4em;
+    border-right: 2px solid #91331a;
+    border-top: 2px solid #91331a;
+    transform: translateX(0.25em) translateY(-0.125em) rotate(45deg); }
+
+.page-template-events-upcoming article,
+.events article,
 .archive article,
 .blog article,
 .single article {
   margin-bottom: 60px; }
 
+.page-template-events-upcoming .entry-content,
+.events .entry-content,
 .archive .entry-content,
 .blog .entry-content,
 .single .entry-content {
   margin-top: 25px; }
+  .page-template-events-upcoming .entry-content p,
+  .events .entry-content p,
   .archive .entry-content p,
   .blog .entry-content p,
   .single .entry-content p {
     font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
     font-size: 1em;
     line-height: 1.375; }
+  .page-template-events-upcoming .entry-content .category,
+  .events .entry-content .category,
   .archive .entry-content .category,
   .blog .entry-content .category,
   .single .entry-content .category {
@@ -11296,26 +11377,72 @@ section.white + section.white {
     letter-spacing: normal;
     color: #4a4a4a;
     margin-bottom: 25px; }
+    .page-template-events-upcoming .entry-content .category span,
+    .events .entry-content .category span,
     .archive .entry-content .category span,
     .blog .entry-content .category span,
     .single .entry-content .category span {
       color: #91331a; }
+      .page-template-events-upcoming .entry-content .category span a,
+      .events .entry-content .category span a,
       .archive .entry-content .category span a,
       .blog .entry-content .category span a,
       .single .entry-content .category span a {
         color: #91331a; }
 
+.page-template-events-upcoming .sidebar-right,
+.events .sidebar-right,
 .archive .sidebar-right,
 .blog .sidebar-right,
 .single .sidebar-right {
   text-align: right; }
+  .page-template-events-upcoming .sidebar-right h3,
+  .events .sidebar-right h3,
   .archive .sidebar-right h3,
   .blog .sidebar-right h3,
   .single .sidebar-right h3 {
     line-height: 1.1;
     letter-spacing: normal;
     text-align: right; }
-  .archive .sidebar-right h4, .archive .sidebar-right #give-recurring-form h3.give-section-break, #give-recurring-form .archive .sidebar-right h3.give-section-break, .archive .sidebar-right #give-recurring-form h4.give-section-break, #give-recurring-form .archive .sidebar-right h4.give-section-break, .archive .sidebar-right #give-recurring-form legend, #give-recurring-form .archive .sidebar-right legend, .archive .sidebar-right form.give-form h3.give-section-break, form.give-form .archive .sidebar-right h3.give-section-break, .archive .sidebar-right form.give-form h4.give-section-break, form.give-form .archive .sidebar-right h4.give-section-break, .archive .sidebar-right form.give-form legend, form.give-form .archive .sidebar-right legend, .archive .sidebar-right form[id*=give-form] h3.give-section-break, form[id*=give-form] .archive .sidebar-right h3.give-section-break, .archive .sidebar-right form[id*=give-form] h4.give-section-break, form[id*=give-form] .archive .sidebar-right h4.give-section-break, .archive .sidebar-right form[id*=give-form] legend, form[id*=give-form] .archive .sidebar-right legend,
+  .page-template-events-upcoming .sidebar-right h4, .page-template-events-upcoming .sidebar-right #give-recurring-form h3.give-section-break, #give-recurring-form .page-template-events-upcoming .sidebar-right h3.give-section-break, .page-template-events-upcoming .sidebar-right #give-recurring-form h4.give-section-break, #give-recurring-form .page-template-events-upcoming .sidebar-right h4.give-section-break, .page-template-events-upcoming .sidebar-right #give-recurring-form legend, #give-recurring-form .page-template-events-upcoming .sidebar-right legend, .page-template-events-upcoming .sidebar-right form.give-form h3.give-section-break, form.give-form .page-template-events-upcoming .sidebar-right h3.give-section-break, .page-template-events-upcoming .sidebar-right form.give-form h4.give-section-break, form.give-form .page-template-events-upcoming .sidebar-right h4.give-section-break, .page-template-events-upcoming .sidebar-right form.give-form legend, form.give-form .page-template-events-upcoming .sidebar-right legend, .page-template-events-upcoming .sidebar-right form[id*=give-form] h3.give-section-break, form[id*=give-form] .page-template-events-upcoming .sidebar-right h3.give-section-break, .page-template-events-upcoming .sidebar-right form[id*=give-form] h4.give-section-break, form[id*=give-form] .page-template-events-upcoming .sidebar-right h4.give-section-break, .page-template-events-upcoming .sidebar-right form[id*=give-form] legend, form[id*=give-form] .page-template-events-upcoming .sidebar-right legend,
+  .events .sidebar-right h4,
+  .events .sidebar-right #give-recurring-form h3.give-section-break, #give-recurring-form
+  .events .sidebar-right h3.give-section-break,
+  .events .sidebar-right #give-recurring-form h4.give-section-break, #give-recurring-form
+  .events .sidebar-right h4.give-section-break,
+  .events .sidebar-right #give-recurring-form legend, #give-recurring-form
+  .events .sidebar-right legend,
+  .events .sidebar-right form.give-form h3.give-section-break, form.give-form
+  .events .sidebar-right h3.give-section-break,
+  .events .sidebar-right form.give-form h4.give-section-break, form.give-form
+  .events .sidebar-right h4.give-section-break,
+  .events .sidebar-right form.give-form legend, form.give-form
+  .events .sidebar-right legend,
+  .events .sidebar-right form[id*=give-form] h3.give-section-break, form[id*=give-form]
+  .events .sidebar-right h3.give-section-break,
+  .events .sidebar-right form[id*=give-form] h4.give-section-break, form[id*=give-form]
+  .events .sidebar-right h4.give-section-break,
+  .events .sidebar-right form[id*=give-form] legend, form[id*=give-form]
+  .events .sidebar-right legend,
+  .archive .sidebar-right h4,
+  .archive .sidebar-right #give-recurring-form h3.give-section-break, #give-recurring-form
+  .archive .sidebar-right h3.give-section-break,
+  .archive .sidebar-right #give-recurring-form h4.give-section-break, #give-recurring-form
+  .archive .sidebar-right h4.give-section-break,
+  .archive .sidebar-right #give-recurring-form legend, #give-recurring-form
+  .archive .sidebar-right legend,
+  .archive .sidebar-right form.give-form h3.give-section-break, form.give-form
+  .archive .sidebar-right h3.give-section-break,
+  .archive .sidebar-right form.give-form h4.give-section-break, form.give-form
+  .archive .sidebar-right h4.give-section-break,
+  .archive .sidebar-right form.give-form legend, form.give-form
+  .archive .sidebar-right legend,
+  .archive .sidebar-right form[id*=give-form] h3.give-section-break, form[id*=give-form]
+  .archive .sidebar-right h3.give-section-break,
+  .archive .sidebar-right form[id*=give-form] h4.give-section-break, form[id*=give-form]
+  .archive .sidebar-right h4.give-section-break,
+  .archive .sidebar-right form[id*=give-form] legend, form[id*=give-form]
+  .archive .sidebar-right legend,
   .blog .sidebar-right h4,
   .blog .sidebar-right #give-recurring-form h3.give-section-break, #give-recurring-form
   .blog .sidebar-right h3.give-section-break,
@@ -11362,10 +11489,14 @@ section.white + section.white {
     font-size: 1em;
     line-height: 1.25;
     font-weight: 700; }
+  .page-template-events-upcoming .sidebar-right ul li,
+  .events .sidebar-right ul li,
   .archive .sidebar-right ul li,
   .blog .sidebar-right ul li,
   .single .sidebar-right ul li {
     list-style: none; }
+  .page-template-events-upcoming .sidebar-right a,
+  .events .sidebar-right a,
   .archive .sidebar-right a,
   .blog .sidebar-right a,
   .single .sidebar-right a {
@@ -11379,6 +11510,8 @@ section.white + section.white {
     text-align: right;
     color: #91331a; }
 
+.page-template-events-upcoming .caption,
+.events .caption,
 .archive .caption,
 .blog .caption,
 .single .caption {

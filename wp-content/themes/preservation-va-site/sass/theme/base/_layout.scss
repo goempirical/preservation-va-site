@@ -2,6 +2,11 @@ body {
     overflow-x: hidden; /* prevents mega menu overflow to the right of the body */
 }
 
+.flex-row {
+    @include media-breakpoint-up(md) { 
+        display: flex;
+    }
+}
 
 .ui-hidden {
     border: 0;
