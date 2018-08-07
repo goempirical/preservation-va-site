@@ -244,59 +244,57 @@
 
     <?php endwhile; ?>
 <?php endif; ?>
+<?php
+// Get Taxonimies Historic Sites
+$taxonomies_hs = get_the_terms($post, 'historic_sites');
+$array_taxonomies_hs = array();
 
+if ($taxonomies_hs) {
+    foreach ( $taxonomies_hs as $term ) {
+        $array_taxonomies_hs[] = $term->slug;
+    }
+}
+
+// Get Taxonimies Our Work
+$taxonomies_ow = get_the_terms($post, 'our_work');
+$array_taxonomies_ow = array();
+
+if ($taxonomies_ow) {
+    foreach ( $taxonomies_ow as $term ) {
+        $array_taxonomies_ow[] = $term->slug;
+    }
+}
+
+// Arguments for get Events with taxonomies choosed of Historic Sites and Our Work
+$args = array(
+    'post_type' => 'events',
+    'tax_query' => array(
+        'relation' => 'OR',
+        array(
+            'taxonomy' => 'historic_sites',
+            'field'    => 'slug',
+            'terms'    => $array_taxonomies_hs,
+        ),
+        array(
+            'taxonomy' => 'our_work',
+            'field'    => 'slug',
+            'terms'    => $array_taxonomies_ow,
+        )
+    ),
+);
+
+// Query for get Events with taxonomies choosed of Historic Sites and Our Work
+$eventquery = new WP_Query( $args );
+?>
+
+<?php if ($eventquery->have_posts() ) :?>
 <!-- Related Content -->
 <div id="events" class="row">
     <div class="col-md-6  no_padding_both_sides">
         <div class="content_related events">
             <h3 class="title_related"><?php the_title() ?> Events</h3>
-            
-            <?php
-            // Get Taxonimies Historic Sites
-            $taxonomies_hs = get_the_terms($post, 'historic_sites');
-            $array_taxonomies_hs = array();
-
-            if ($taxonomies_hs) {
-                foreach ( $taxonomies_hs as $term ) {
-                    $array_taxonomies_hs[] = $term->slug;
-                }
-            }
-
-            // Get Taxonimies Our Work
-            $taxonomies_ow = get_the_terms($post, 'our_work');
-            $array_taxonomies_ow = array();
-            
-            if ($taxonomies_ow) {
-                foreach ( $taxonomies_ow as $term ) {
-                    $array_taxonomies_ow[] = $term->slug;
-                }
-            }
-
-            // Arguments for get Events with taxonomies choosed of Historic Sites and Our Work
-            $args = array(
-                'post_type' => 'events',
-                'tax_query' => array(
-                    'relation' => 'OR',
-                    array(
-                        'taxonomy' => 'historic_sites',
-                        'field'    => 'slug',
-                        'terms'    => $array_taxonomies_hs,
-                    ),
-                    array(
-                        'taxonomy' => 'our_work',
-                        'field'    => 'slug',
-                        'terms'    => $array_taxonomies_ow,
-                    )
-                ),
-            );
-
-            // Query for get Events with taxonomies choosed of Historic Sites and Our Work
-            $query = new WP_Query( $args );
-            ?>
-
-            <?php if ($query->have_posts() ) :?>
                 <div class="wrapper_related">
-                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php while ( $eventquery->have_posts() ) : $eventquery->the_post(); ?>
                     <div class="card_related"> 
                         <div class="date_release">
                             <span><?php echo date( 'F j', strtotime( get_field('e_start_date') ) );?></span>
@@ -311,7 +309,6 @@
                 </div>
 
                 <div class="see_all">See all &gt;</div>
-            <?php endif; ?>
         </div>
     </div>
 
@@ -320,7 +317,7 @@
             <h3 class="title_related"><?php the_title() ?> Stories</h3>
 
             <?php
-            // Arguments for get Posts with taxonomies choosed of Historic Sites and Our Work
+            // Arguments for get Posts with taxonomies from Historic Sites and Our Work
             $args = array(
                 'post_type' => 'post',
                 'tax_query' => array(
@@ -358,6 +355,7 @@
         </div>
     </div>
 </div>
+<?php endif; // event query ?>
 
 <!-- Tours & Site Rental -->
 <?php if( have_rows('hs_tours_and_site_rental') ): ?>
@@ -399,9 +397,9 @@
 <?php // loop through the rows of data
     while ( have_rows('hs_key_visitor_info') ) : the_row(); ?>
         <?php 
-        $hs_key_visitor_info = get_field('hs_key_visitor_info');
+            $hs_key_visitor_info = get_field('hs_key_visitor_info');
 
-        if($hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] && $hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] !== ''){ 
+            if($hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] && $hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] !== ''){ 
         ?>
     <div id="key-visitor-info" class="row">
         <div class="col-md-12 no_padding_both_sides margin_bottom">

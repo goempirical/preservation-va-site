@@ -9999,7 +9999,8 @@ button.btn_cl {
   .content-area .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap
   .content-area .give-submit:hover {
     background-color: #15467b;
-    color: #ffffff; }
+    color: #ffffff;
+    text-decoration: none; }
   .btn.white, .wpcf7 input.white[type=submit], .give-submit-button-wrap .white.give-submit,
   .content-area .btn.white,
   .content-area .wpcf7 input.white[type=submit], .wpcf7
