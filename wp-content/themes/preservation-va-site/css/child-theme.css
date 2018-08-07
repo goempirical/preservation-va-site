@@ -10732,6 +10732,7 @@ li.search {
         color: #15467b; }
 
 section.none + section.white,
+section.white + section.none,
 section.white + section.white {
   padding-top: 0; }
 
