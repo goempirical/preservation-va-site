@@ -278,13 +278,24 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 											<div class="content_headline <?php echo get_sub_field('layout_style');?> ">
 
+												<?php 
+														$str_to_slug = get_sub_field('headline_text');
+														// replace non letter or digits by -
+													  $str_to_slug = preg_replace('~[^\pL\d]+~u', '-', $str_to_slug);
+													  $str_to_slug = iconv('utf-8', 'us-ascii//TRANSLIT', $str_to_slug);
+													  $str_to_slug = preg_replace('~[^-\w]+~', '', $str_to_slug);
+													  $str_to_slug = trim($str_to_slug, '-');
+													  $str_to_slug = preg_replace('~-+~', '-', $str_to_slug);
+													  $str_to_slug = strtolower($str_to_slug);
+													?>
+
 												<?php if ( get_sub_field('layout_style') == 'primary' || get_sub_field('layout_style') == 'light_blue') :?>
 
-															<h1> <?php the_sub_field('headline_text') ?> </h1>
+															<h1 id="<?php echo $str_to_slug; ?>"><?php the_sub_field('headline_text') ?></h1>
 												
 														<?php else: ?>
 															
-															<h2> <?php the_sub_field('headline_text') ?> </h2>
+															<h2 id="<?php echo $str_to_slug; ?>"><?php the_sub_field('headline_text') ?></h2>
 
 												<?php endif; ?>
 												 
