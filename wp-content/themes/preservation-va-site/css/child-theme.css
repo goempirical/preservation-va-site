@@ -10743,6 +10743,9 @@ section.grey + section.grey,
 .grey + .grey {
   padding-top: 0; }
 
+section.headline-row + section {
+  padding-top: 48px; }
+
 .content_related {
   padding: 53px 33px 53px 65px;
   min-height: 100%;
@@ -11659,6 +11662,9 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
 
 .give-label {
   font-family: Roboto,"Helvetica Neue",Arial,sans-serif; }
+
+.ffm-radio-field {
+  width: 100%; }
 
 #give_error_test_mode {
   height: 3px;

@@ -54,6 +54,10 @@ section.grey + section.grey,
     padding-top: 0;
 }
 
+section.headline-row + section {
+    padding-top: 48px;
+}
+
 .content_related {
     padding: 53px 33px 53px 65px;
     min-height: 100%;

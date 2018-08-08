@@ -272,7 +272,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 								<?php elseif ( get_row_layout() == 'headline' ) : ?>
 									
-									<div class="row">
+									<section class="row headline-row">
 
 										<div class="col-md-12 no_padding_both_sides">
 
@@ -292,7 +292,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 										</div>
 
-									</div>
+									</section>
 
 <?php // <!-- End Headline --> ?>
 
