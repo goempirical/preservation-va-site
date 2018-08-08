@@ -518,7 +518,15 @@ section.grey + section.grey,
     .gi {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
-        flex: 1;
+        width: 100%;
+
+        @include media-breakpoint-up(sm) { 
+            width:50%;
+        }
+
+        @include media-breakpoint-up(lg) { 
+            width:33%;
+        }
     }
 }
 
