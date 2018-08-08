@@ -11712,6 +11712,10 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
   border-color: #0f7ab5;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
 
+#give-form-1194-1 {
+  display: flex;
+  justify-content: center; }
+
 #give_error_test_mode {
   height: 3px;
   overflow: hidden;
@@ -11725,7 +11729,8 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
     height: auto;
     width: auto;
-    overflow: visible; }
+    overflow: visible;
+    border-radius: 0; }
 
 .give-btn-reveal {
   font-size: 14px;
