@@ -11661,7 +11661,12 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
   justify-content: center; }
 
 .give-label {
-  font-family: Roboto,"Helvetica Neue",Arial,sans-serif; }
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
+
+form[id*=give-form] label {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 2.5; }
 
 .ffm-radio-field {
   width: 100%; }
