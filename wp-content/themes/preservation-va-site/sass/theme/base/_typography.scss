@@ -159,7 +159,8 @@ button.btn_cl {
 }
 
 .btn,
-.content-area .btn {
+.content-area .btn,
+.give-btn-reveal {
     @include btn_big;
     border: 0 none;
     color: $dark-blue;
