@@ -11649,11 +11649,12 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
   border-color: #0f7ab5;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
 
-#give-form-1194-1:not(.give-display-reveal) {
+.give-form-1194 .give-btn-reveal {
+  margin: 0 auto; }
+
+.give-form-1194 .give-total-wrap {
   display: flex;
   justify-content: center; }
-  #give-form-1194-1:not(.give-display-reveal) .give-total-wrap {
-    margin-right: 1em; }
 
 #give_error_test_mode {
   height: 3px;

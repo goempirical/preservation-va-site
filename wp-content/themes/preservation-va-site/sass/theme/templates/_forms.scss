@@ -14,12 +14,14 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
     @extend h4;
 }
 
-#give-form-1194-1:not(.give-display-reveal) {
-    display: flex;
-    justify-content: center;
+.give-form-1194 {
+    .give-btn-reveal {
+    	margin: 0 auto;
+    }
 
     .give-total-wrap {
-    	margin-right: 1em;
+	    display: flex;
+	    justify-content: center;
     }
 }
 
@@ -32,13 +34,13 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
     border-radius: 50%;
 
     &:hover {
-    position: relative;
+    	position: relative;
 	    padding: 1em 1.5em 1em 2em;
 	    box-shadow: 0 1px 1px rgba(0,0,0,.125);
 	    height: auto;
 	    width: auto;
 	    overflow: visible;
-	    border-radius:0;
+	    border-radius: 0;
     }
 }
 
