@@ -48,7 +48,9 @@
 
 section.none + section.white,
 section.white + section.none,
-section.white + section.white {
+section.white + section.white,
+section.grey + section.grey,
+.grey + .grey {
     padding-top: 0;
 }
 
