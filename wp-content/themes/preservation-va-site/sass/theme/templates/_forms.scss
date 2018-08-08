@@ -13,3 +13,26 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
 #give-recurring-form h3.give-section-break, #give-recurring-form h4.give-section-break, #give-recurring-form legend, form.give-form h3.give-section-break, form.give-form h4.give-section-break, form.give-form legend, form[id*=give-form] h3.give-section-break, form[id*=give-form] h4.give-section-break, form[id*=give-form] legend {
     @extend h4;
 }
+
+#give_error_test_mode {
+    height: 3px;
+    overflow: hidden;
+    padding: initial;
+    box-shadow: none;
+    width: 3px;
+    border-radius: 50%;
+
+    &:hover {
+    position: relative;
+	    padding: 1em 1.5em 1em 2em;
+	    box-shadow: 0 1px 1px rgba(0,0,0,.125);
+	    height: auto;
+	    width: auto;
+	    overflow: visible;
+    }
+}
+
+.give-btn-reveal {
+	@extend .btn;
+	@include btn_small;
+}
