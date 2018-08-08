@@ -14,9 +14,13 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
     @extend h4;
 }
 
-#give-form-1194-1 {
+#give-form-1194-1:not(.give-display-reveal) {
     display: flex;
     justify-content: center;
+
+    .give-total-wrap {
+    	margin-right: 1em;
+    }
 }
 
 #give_error_test_mode {
@@ -39,6 +43,5 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
 }
 
 .give-btn-reveal {
-	@extend .btn;
 	@include btn_small;
 }
