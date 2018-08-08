@@ -9783,15 +9783,15 @@ p {
   line-height: 1.46667;
   margin: 0 0 22px; }
   p a {
-    color: #91331a; }
+    color: #A12017; }
   p a:hover {
-    color: #91331a;
+    color: #A12017;
     text-decoration: underline; }
 
 .content-area a {
-  color: #91331a; }
+  color: #A12017; }
   .content-area a:hover {
-    color: #91331a;
+    color: #A12017;
     text-decoration: underline; }
 
 .p_large p {
@@ -10733,7 +10733,9 @@ li.search {
 
 section.none + section.white,
 section.white + section.none,
-section.white + section.white {
+section.white + section.white,
+section.grey + section.grey,
+.grey + .grey {
   padding-top: 0; }
 
 .content_related {
@@ -11367,17 +11369,17 @@ section.white + section.white {
 
 .events .event-link {
   font-style: italic;
-  color: #91331a; }
+  color: #A12017; }
   .events .event-link:hover {
-    color: #91331a;
+    color: #A12017;
     text-decoration: underline; }
   .events .event-link:after {
     content: '';
     display: inline-block;
     width: .4em;
     height: .4em;
-    border-right: 2px solid #91331a;
-    border-top: 2px solid #91331a;
+    border-right: 2px solid #A12017;
+    border-top: 2px solid #A12017;
     transform: translateX(0.25em) translateY(-0.125em) rotate(45deg); }
 
 .page-template-events-upcoming article,
@@ -11419,13 +11421,13 @@ section.white + section.white {
     .archive .entry-content .category span,
     .blog .entry-content .category span,
     .single .entry-content .category span {
-      color: #91331a; }
+      color: #A12017; }
       .page-template-events-upcoming .entry-content .category span a,
       .events .entry-content .category span a,
       .archive .entry-content .category span a,
       .blog .entry-content .category span a,
       .single .entry-content .category span a {
-        color: #91331a; }
+        color: #A12017; }
 
 .page-template-events-upcoming .sidebar-right,
 .events .sidebar-right,
@@ -11545,7 +11547,7 @@ section.white + section.white {
     line-height: 1.5;
     letter-spacing: normal;
     text-align: right;
-    color: #91331a; }
+    color: #A12017; }
 
 .page-template-events-upcoming .caption,
 .events .caption,
