@@ -11052,12 +11052,16 @@ section.white + section.white {
     margin-bottom: 16px; }
 
 .three_column_grid .grid-three-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 52px;
-  grid-row-gap: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-right: 1.5rem;
   padding-left: 1.5rem; }
+
+.three_column_grid .gi {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  flex: 1; }
 
 .page-template-homepage-site .banner_image {
   height: calc( 100vh - 220px);
