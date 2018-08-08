@@ -16,13 +16,18 @@ form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
 
 .give-form-1194 {
     .give-btn-reveal {
-    	margin: 0 auto;
+    	margin: 0 auto!important;
+    	display: block;
     }
 
     .give-total-wrap {
 	    display: flex;
 	    justify-content: center;
     }
+}
+
+.give-label {
+  font-family: Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
 #give_error_test_mode {
