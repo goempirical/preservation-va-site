@@ -7336,10 +7336,10 @@ jQuery( document ).ready(function( $ ) {
         $('#address_of_person_to_notify-wrap, #name_of_honoreememorium-wrap, #type_of_gift-wrap').hide();
 
         $('input[name=is_this_a_gift]').click(function() {
-        console.log($('input[name=is_this_a_gift]:checked').val());
-        
             if($('input[name=is_this_a_gift]:checked').val() === 'yes') { 
-                $('#address_of_person_to_notify-wrap, #name_of_honoreememorium-wrap, #type_of_gift-wrap').show();
+                $('#address_of_person_to_notify-wrap, #name_of_honoreememorium-wrap, #type_of_gift-wrap').show('fast');
+            } else {
+                $('#address_of_person_to_notify-wrap, #name_of_honoreememorium-wrap, #type_of_gift-wrap').hide('fast');
             }
         });
     }
