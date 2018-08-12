@@ -10032,52 +10032,6 @@ button.btn_cl {
     height: 51px;
     line-height: 41px; }
 
-/* FORMS */
-select {
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: .875em;
-  letter-spacing: .08em;
-  font-weight: 700;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 500; }
-
-.select-container,
-.wpforms-field-container {
-  position: relative;
-  display: inline-block;
-  margin-right: 18px; }
-
-.select-container:after,
-.wpforms-field-container:after {
-  position: absolute;
-  content: '';
-  display: block;
-  right: 11px;
-  width: 0;
-  height: 0;
-  border: solid #15467b;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 4px;
-  transform: rotate(45deg);
-  top: calc(50% - 9px);
-  pointer-events: none; }
-
-select.select-custom {
-  color: #15467b;
-  background: linear-gradient(to right, #f6f5f5 0%, #f6f5f5 calc(100% - 35px), #ffca05 calc(100% - 35px), #ffca05 100%);
-  padding: 0 55px 0 20px;
-  border: none;
-  transition: border 300ms ease;
-  border-radius: 0;
-  height: 51px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  text-transform: uppercase;
-  border-radius: 0; }
-
 /* Tables */
 .table td {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
@@ -11644,6 +11598,58 @@ section.headline-row + section {
 
 div.wpforms-container-full {
   margin-bottom: 54px; }
+
+/* FORMS */
+form {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
+
+select {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: .875em;
+  letter-spacing: .08em;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500; }
+
+.select-container {
+  position: relative; }
+
+.hp_historic_sites_navigator .select-container {
+  display: inline-block;
+  margin-right: 18px; }
+
+.select-container:after {
+  position: absolute;
+  content: '';
+  display: block;
+  right: 11px;
+  width: 0;
+  height: 0;
+  border: solid #15467b;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  top: calc(50% - 9px);
+  pointer-events: none; }
+
+select.select-custom {
+  color: #15467b;
+  background: linear-gradient(to right, #f6f5f5 0%, #f6f5f5 calc(100% - 35px), #ffca05 calc(100% - 35px), #ffca05 100%);
+  padding: 0 55px 0 20px;
+  border: none;
+  transition: border 300ms ease;
+  border-radius: 0;
+  height: 51px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  text-transform: uppercase;
+  border-radius: 0; }
+
+.wpforms-container .wpforms-field-label {
+  font-weight: normal; }
 
 form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before,
 form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
