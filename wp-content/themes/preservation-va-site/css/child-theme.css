@@ -11684,23 +11684,23 @@ select.select-custom {
   text-transform: uppercase;
   border-radius: 0; }
 
-.wpforms-container form .wpforms-field-label {
+form[id*=wpforms] .wpforms-field-label {
   font-weight: normal;
   opacity: 0.85; }
 
-.wpforms-container form .wpforms-field {
+form[id*=wpforms] .wpforms-field {
   padding: 0 0 20px; }
 
-.wpforms-container form ul {
+form[id*=wpforms] ul {
   padding: 0;
   font-size: 1em;
   margin-bottom: 0; }
 
-.wpforms-container form .wpforms-field-radio ul {
+form[id*=wpforms] .wpforms-field-radio ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; }
-  .wpforms-container form .wpforms-field-radio ul li {
+  form[id*=wpforms] .wpforms-field-radio ul li {
     margin-right: 1em; }
 
 form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before,
