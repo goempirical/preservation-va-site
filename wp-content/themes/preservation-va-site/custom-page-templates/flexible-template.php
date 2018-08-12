@@ -364,22 +364,42 @@ $container   = get_theme_mod( 'understrap_container_type' );
 										$work = get_sub_field('related_work');
 
 										$tax_query = array(
-											'posts_per_page' => 2,
-											'taxt_query' => array(
+											'posts_per_page' => 3,
+											'order' => 'ASC',
+										);
+
+										if($historic && $work) {
+											$tax_query['tax_query'] = array(
 												'relation' => 'OR',
 												array(
 													'taxonomy' => 'historic_sites',
-													'field' => 'term_id',
-													'terms' => $historic
+													'field'    => 'term_id',
+													'terms'    => $historic,
 												),
 												array(
 													'taxonomy' => 'our_work',
-													'field' => 'term_id',
-													'terms' => $work
-												)
-											),
-											'order' => 'ASC',
-									);
+													'field'    => 'term_id',
+													'terms'    => $work,
+												),
+											);
+										} elseif($historic) {
+											$tax_query['tax_query'] = array(
+												array(
+													'taxonomy' => 'historic_sites',
+													'field'    => 'term_id',
+													'terms'    => $historic,
+												),
+											);
+										}	else {
+											$tax_query['tax_query'] = array(
+												array(
+													'taxonomy' => 'our_work',
+													'field'    => 'term_id',
+													'terms'    => $work,
+												),
+											);
+										}							
+
 									?>
 									
 									<div class="row">
@@ -392,13 +412,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 												<div class="content_related events">
 
-														<div class="title_related">
+													<h3 class="title_related">Related Events</h3>
 
-															Scotchtown Events 
-
-														</div>
-
-													
 													<?php
 													$tax_query["post_type"] = "events";
 													
@@ -407,33 +422,53 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 													<?php if ($query->have_posts() ) :?>
 
+														<?php $cnt = 0; ?>
+
 														<div class="wrapper_related">
 
 														<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
+															<?php if( have_rows('event_dates_times') ): ?>
+																<?php while ( have_rows('event_dates_times') ) : the_row(); ?>
+																	<?php if ($cnt < 3) : ?>
+
 															<div class="card_related">
 																
 																<div class="date_release">
-																	<span><?php echo date( 'M<\b\\r>j', strtotime( get_the_date() ) );?></span>
+																	<span><?php echo date( 'M<\b\\r>j', strtotime( get_sub_field('e_start_date') ) );?></span>
 																</div>
 																
 																<div class="side_content_related">
 																	
 																	<span class="title_cont"> <?php the_title(); ?> </span>
 
-																	<span class="time_range"> <?php echo get_field('e_start_time'); ?> </span>
+																    	<?php if( have_rows('event_times') ): ?>
+																			    <?php while ( have_rows('event_times') ) : the_row(); ?>
+																		    		<span class="time_range"><?php the_sub_field('e_start_time'); ?> – <?php the_sub_field('e_end_time'); ?></span>
+																		    	<?php endwhile; ?>
+																			<?php else : ?>
+																			    // no rows found
+
+																		<?php endif; ?>
 
 																	<a class="more-link" href="<?php echo get_field('e_link')['url'] ?>">Learn more</a>
 												
 																</div>
 
-															</div>
+															</div>						
+																			<?php $cnt++; ?>
+																		<?php endif; ?>
+																	<?php endwhile; ?>
+
+																<?php else :
+																    // no rows found
+																endif; ?>
 
 														<?php endwhile; wp_reset_postdata(); ?>
 
 														</div>
 
-														<a href="#" class="see_all more-link">See All</a>
+														<a href="<?php echo site_url(); ?>/upcoming-events" class="see_all more-link">See All</a>
 
 													<?php endif; ?>
 												</div>
@@ -444,12 +479,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 												<div class="content_related stories">
 
-													<div class="title_related">
-
-														 Scotchtown Stories 
-														
-													</div>
-													
+													<h3 class="title_related">Related Stories</h3>
 
 													<?php
 													$tax_query["post_type"] = "post";

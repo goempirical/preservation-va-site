@@ -9,7 +9,7 @@
 <div class="col-lg-4 sidebar-right">
   <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
     
-    <h3>Blog Categories</h3>
+    <h3>Categories</h3>
   
     <h4>Historic Sites</h4>
     <ul class="historic_sites-list">

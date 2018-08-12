@@ -275,35 +275,20 @@ if ($taxonomies_hs) {
     }
 }
 
-// Get Taxonimies Our Work
-$taxonomies_ow = get_the_terms($post, 'our_work');
-$array_taxonomies_ow = array();
-
-if ($taxonomies_ow) {
-    foreach ( $taxonomies_ow as $term ) {
-        $array_taxonomies_ow[] = $term->slug;
-    }
-}
-
 // Arguments for get Events with taxonomies choosed of Historic Sites and Our Work
 $args = array(
+    'posts_per_page' => 3,
+    'order' => 'ASC',
     'post_type' => 'events',
     'tax_query' => array(
-        'relation' => 'OR',
-        array(
-            'taxonomy' => 'historic_sites',
-            'field'    => 'slug',
-            'terms'    => $array_taxonomies_hs,
-        ),
-        array(
-            'taxonomy' => 'our_work',
-            'field'    => 'slug',
-            'terms'    => $array_taxonomies_ow,
-        )
+        'taxonomy' => 'historic_sites',
+        'field'    => 'slug',
+        'terms'    => $array_taxonomies_hs,
     ),
 );
 
 // Query for get Events with taxonomies choosed of Historic Sites and Our Work
+
 $eventquery = new WP_Query( $args );
 ?>
 
@@ -327,7 +312,7 @@ $eventquery = new WP_Query( $args );
                     </div>
                 <?php endwhile; wp_reset_postdata(); ?>
                 </div>
-                <div class="see_all"><a href="" class="more-link">See all</a></div>
+                <div class="see_all"><a href="<?php site_url(); ?>/historic_sites/<?php echo $post->post_name; ?>" class="more-link">See all</a></div>
         </div>
     </div>
 
@@ -337,22 +322,7 @@ $eventquery = new WP_Query( $args );
 
             <?php
             // Arguments for get Posts with taxonomies from Historic Sites and Our Work
-            $args = array(
-                'post_type' => 'post',
-                'tax_query' => array(
-                    'relation' => 'OR',
-                    array(
-                        'taxonomy' => 'historic_sites',
-                        'field'    => 'slug',
-                        'terms'    => $array_taxonomies_hs,
-                    ),
-                    array(
-                        'taxonomy' => 'our_work',
-                        'field'    => 'slug',
-                        'terms'    => $array_taxonomies_ow,
-                    )
-                ),
-            );
+            $args['post_type'] = 'post';
 
             // Query for get Posts with taxonomies choosed of Historic Sites and Our Work
             $query = new WP_Query( $args );
@@ -369,7 +339,7 @@ $eventquery = new WP_Query( $args );
                         </div>														
                     <?php endwhile; wp_reset_postdata(); ?>
                 </div>
-                <div class="see_all"><a href="" class="more-link">See all</a></div>
+                <div class="see_all"><a href="<?php site_url(); ?>/historic_sites/<?php echo $post->post_name; ?>" class="more-link">See all</a></div>
             <?php endif; ?>
         </div>
     </div>
