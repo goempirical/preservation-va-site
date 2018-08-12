@@ -26,4 +26,4 @@
 	}
 	wp_reset_postdata();
 ?>
-<a class="btn" href="<?php echo home_url(); ?>/events">See all events</a>
+<a class="btn small" href="<?php echo home_url(); ?>/events">See all events</a>

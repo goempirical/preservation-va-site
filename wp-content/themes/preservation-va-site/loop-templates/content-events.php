@@ -62,5 +62,5 @@ $link = get_field('e_link');
 							<?php the_content(); ?>
 						</div>
 					</div><!-- .entry-content -->
-					<?php if ( $link ) echo '<a class="event-link" href="'.$link['url'].'" target="'.$link['target'].'">more info</a>'; ?>
+					<?php if ( $link ) echo '<a class="event-link more-link" href="'.$link['url'].'" target="'.$link['target'].'">more info</a>'; ?>
 			</article><!-- #post-## -->

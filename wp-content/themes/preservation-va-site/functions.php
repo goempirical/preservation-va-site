@@ -29,6 +29,8 @@ include 'custom-post-types/press-releases.php';
 include 'taxonomies/index.php';
 //include 'custom-page-templates-fields/custom-fields.php';
 
+add_post_type_support( 'page', 'excerpt' );
+
 function understrap_footer_menu() {
     register_nav_menu('historicmenu',__( 'Historic Mega Menu' ));
     register_nav_menu('footermenu',__( 'Footer Menu' ));
