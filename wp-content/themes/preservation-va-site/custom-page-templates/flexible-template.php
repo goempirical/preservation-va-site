@@ -413,7 +413,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 															<div class="card_related">
 																
-																<div class="date_release"> <span> <?php echo date( 'F j', strtotime( get_field('e_start_date') ) );?> </span>  </div>
+																<div class="date_release">
+																	<span><?php echo date( 'M<\b\\r>j', strtotime( get_the_date() ) );?></span>
+																</div>
 																
 																<div class="side_content_related">
 																	
