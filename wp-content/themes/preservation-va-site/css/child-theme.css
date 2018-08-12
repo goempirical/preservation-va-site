@@ -11684,6 +11684,11 @@ select.select-custom {
   text-transform: uppercase;
   border-radius: 0; }
 
+.page-template-flexible-template form h3[id] {
+  margin-top: 12px;
+  padding-top: 0;
+  margin-bottom: 0px; }
+
 form[id*=wpforms] .wpforms-field-label {
   font-weight: normal;
   opacity: 0.85; }
