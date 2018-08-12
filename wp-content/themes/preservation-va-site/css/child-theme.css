@@ -11689,12 +11689,12 @@ form[id*=wpforms] .wpforms-field-label {
   opacity: 0.85; }
 
 form[id*=wpforms] .wpforms-field {
-  padding: 0 0 20px; }
+  padding: 0 0 28px; }
 
 form[id*=wpforms] ul {
   padding: 0;
-  font-size: 1em;
-  margin-bottom: 0; }
+  font-size: 1em !important;
+  margin-bottom: 0 !important; }
 
 form[id*=wpforms] .wpforms-field-radio ul {
   display: flex;
