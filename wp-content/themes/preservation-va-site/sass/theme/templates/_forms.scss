@@ -113,8 +113,29 @@ select.select-custom {
     border-radius: 0;
 }
 
-.wpforms-container .wpforms-field-label {
+form .wpforms-container .wpforms-field-label {
 	font-weight: normal;
+	opacity: 0.85;
+}
+
+form .wpforms-container .wpforms-field {
+    padding: 0 0 20px;
+}
+
+form .wpforms-container ul {
+	padding:0;
+	font-size: 1em;
+	margin-bottom: 0;
+}
+
+form .wpforms-field-radio ul {
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: flex-start;
+
+  li {
+  	margin-right: 1em;
+  }
 }
 
 form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before,
