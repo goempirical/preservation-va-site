@@ -4,12 +4,12 @@ form {
 	font-family: $font-family-header;
 }
 
-.wp_forms_container,
+.wpforms-container,
 form[id*=give-form] .form-row {
     input[type=text], 
-    textarea, 
+    textarea,
     input[type=email],
-    select{
+    select {
         font-family: $font-family-header;
         font-size: 14px;
         font-weight: normal;
@@ -57,6 +57,10 @@ form[id*=give-form] .form-row {
     }
 }
 
+form[id*=give-form] select {
+  padding: 2px 17px;
+}
+
 div.wpforms-container-full {
     margin-bottom: 54px;
 }
@@ -75,7 +79,7 @@ select {
     margin-right: 18px;
 }
 
-.select-container:after {
+.select-container::after {
     position: absolute;
     content: '';
     display: block;
