@@ -26,7 +26,7 @@ $link = get_field('e_link');
 							<?php  if ( has_post_thumbnail() ) : ?>
 								<div class="image">
 									<?php
-										echo get_the_post_thumbnail( $post->ID, 'full');
+										echo get_the_post_thumbnail( $post->ID, 'medium');
 
 										$attach_id = get_post_thumbnail_id( $post->ID );
 										$image_data = wp_get_attachment( $attach_id );
@@ -34,33 +34,33 @@ $link = get_field('e_link');
 									<?php if($image_data["caption"]) { ?><p class="caption"><?php echo $image_data["caption"]; ?></p> <?php } ?>
 								</div>
 							<?php endif; ?>
-							<div class="content">
-								<?php the_content(); ?>
-							</div>
-						</div>
-						<div class="details flex-row">
-							<?php if( have_rows('event_dates_times') ): ?>
-								<div class="event-dates">
-								<?php while ( have_rows('event_dates_times') ) : the_row(); ?>
-							    	<div class="event-date"><p><?php the_sub_field('e_start_date'); ?></p>
-								    	<?php if( have_rows('event_times') ): ?>
-										 		<div class="calendar-event-time">
-											    <?php while ( have_rows('event_times') ) : the_row(); ?>
-										    		<p> <?php the_sub_field('e_start_time'); ?> – <?php the_sub_field('e_end_time'); ?></p>
-										    	<?php endwhile; ?>
-										    </div>
-											<?php else : ?>
-											    // no rows found
-											<?php endif; ?>
-											</div>
-								<?php endwhile; ?>
-								</div>
-								<?php else :
-								    // no rows found
-								endif; ?>
-							<?php if ( $eLocation ) echo '<div class="event-location" ><p>'.$eLocation.'</p></div>'; ?>
+							<div class="details">
+								<?php if( have_rows('event_dates_times') ): ?>
+									<div class="event-dates">
+									<?php while ( have_rows('event_dates_times') ) : the_row(); ?>
+								    	<div class="event-date"><p><?php the_sub_field('e_start_date'); ?></p>
+									    	<?php if( have_rows('event_times') ): ?>
+											 		<div class="calendar-event-time">
+												    <?php while ( have_rows('event_times') ) : the_row(); ?>
+											    		<p> <?php the_sub_field('e_start_time'); ?> – <?php the_sub_field('e_end_time'); ?></p>
+											    	<?php endwhile; ?>
+											    </div>
+												<?php else : ?>
+												    // no rows found
+												<?php endif; ?>
+												</div>
+									<?php endwhile; ?>
+									</div>
+									<?php else :
+									    // no rows found
+									endif; ?>
+								<?php if ( $eLocation ) echo '<div class="event-location" ><p>'.$eLocation.'</p></div>'; ?>
 
-						</div><!-- .details -->
+							</div><!-- .details -->
+						</div>
+						<div class="content">
+							<?php the_content(); ?>
+						</div>
 					</div><!-- .entry-content -->
 					<?php if ( $link ) echo '<a class="event-link" href="'.$link['url'].'" target="'.$link['target'].'">more info</a>'; ?>
 			</article><!-- #post-## -->

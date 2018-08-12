@@ -11311,18 +11311,16 @@ section.headline-row + section {
 
 .events .entry-content .image-text {
   margin-bottom: 20px; }
+  .events .entry-content .image-text .image {
+    margin-bottom: 20px; }
 
 @media (min-width: 768px) {
   .events .entry-content .image-text > div + div {
     padding-left: 2em; }
-  .events .entry-content .image-text > div {
-    flex: 1; } }
-
-@media (min-width: 768px) {
-  .events .entry-content .details > div + div {
-    padding-left: 2em; }
-  .events .entry-content .details > div {
-    flex: 1; } }
+  .events .entry-content .image-text .details {
+    flex: 3; }
+  .events .entry-content .image-text .image {
+    flex: 2; } }
 
 .events .entry-content .details .event-date {
   display: flex;
@@ -11337,6 +11335,9 @@ section.headline-row + section {
 .events .entry-content .details .calendar-event-time p {
   color: #0f7ab5;
   margin-left: 1em; }
+
+.events .entry-content .event-dates {
+  margin-bottom: 20px; }
 
 .events .event-link {
   font-style: italic;
