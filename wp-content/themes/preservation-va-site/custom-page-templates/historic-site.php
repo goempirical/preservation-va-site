@@ -317,18 +317,17 @@ $eventquery = new WP_Query( $args );
                 <?php while ( $eventquery->have_posts() ) : $eventquery->the_post(); ?>
                     <div class="card_related"> 
                         <div class="date_release">
-                            <span><?php echo date( 'F j', strtotime( get_field('e_start_date') ) );?></span>
-                        </div>
+													<span><?php echo date( 'M<\b\\r>j', strtotime( get_the_date() ) );?></span>
+												</div>
                         <div class="side_content_related">
                             <span class="title_cont"> <?php the_title(); ?> </span>
                             <span class="time_range"> <?php echo get_field('e_start_time'); ?> </span>
-                            <a href="<?php echo get_field('e_link')['url'] ?>">Learn more &gt;</a>
+                            <a class="more-link" href="<?php echo get_field('e_link')['url'] ?>">Learn more</a>
                         </div>
                     </div>
                 <?php endwhile; wp_reset_postdata(); ?>
                 </div>
-
-                <div class="see_all">See all &gt;</div>
+                <div class="see_all"><a href="" class="more-link">See all</a></div>
         </div>
     </div>
 
@@ -365,12 +364,12 @@ $eventquery = new WP_Query( $args );
                         <div class="card_related">
                             <div class="side_content_related">
                                 <span class="title_cont"> <?php the_title(); ?> </span>
-                                <a href="<?php echo esc_url( get_permalink( get_post()->ID ) ); ?>">Read more &gt;</a>
+                                <a class="more-link" href="<?php echo esc_url( get_permalink( get_post()->ID ) ); ?>">Read more</a>
                             </div>
                         </div>														
                     <?php endwhile; wp_reset_postdata(); ?>
                 </div>
-                <div class="see_all">See all &gt;</div>
+                <div class="see_all"><a href="" class="more-link">See all</a></div>
             <?php endif; ?>
         </div>
     </div>

@@ -69,6 +69,10 @@ section.headline-row + section {
     min-height: 100%;
     font-family: $font-family-header;
 
+    .more-link {
+        margin-top: 8px;
+    }
+
     h3.title_related {
         text-align: center;
 
@@ -83,52 +87,55 @@ section.headline-row + section {
         h3.title_related {
             color: $white;
         }
+
+        .more-link {
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $white;
+            }
+
+            &::after {
+                border-color: $white;
+            }
+        }
     }
 
     .see_all {
         position: absolute;
         bottom: 53px;
         right: 82px;
-        font-style: italic;
-        text-decoration: none;
-        border-bottom: 1px solid;
         display: inline-block;
-        font-family: $font-family-base;
     }
     .wrapper_related {
         padding: 30px 0px 21px;
 
 
         .card_related + .card_related {
-            margin-top: 17px;
+            margin-top: 24px;
         }
 
         .card_related {
             display: flex;
             justify-content: flex-start;
+            align-items: flex-start;
 
             &:last-child {
                 margin-bottom: 21px;
             }
             .side_content_related {
-                * + * {
-                    margin-top: 5px; 
-                    display: block;
-                }
 
-                a {
-                    font-style: italic;
-                    text-decoration: none;
-                    border-bottom: 1px solid;
-                    display: inline-block;
-                    font-family: $font-family-base;
+                .more-link {
+                    &::hover {
+                        border-color: $white;
+                    }
                 }
             }
             .title_cont {
                 font-size: 15px;
                 line-height: 1.47;
                 display: block;
-                max-width: 350px; 
             }
         }
     }
@@ -146,9 +153,21 @@ section.headline-row + section {
                 line-height: 1.47;
             }
         }
+
         a {
             color: $dark-blue;
             
+            &:hover,
+            &:active,
+            &:focus {
+                color: $dark-blue;
+            }
+        }
+
+        .more-link {
+            &::after {
+                border-color: $dark-blue;
+            }
         }
     }
     &.stories  {
@@ -414,7 +433,7 @@ section.headline-row + section {
                 color: $dark-blue;
             }
         }
-        button {
+        button, .btn {
             background-color: $dark-blue;
             color: $white;
 
@@ -422,6 +441,10 @@ section.headline-row + section {
                 background-color: $white;
                 color: $dark-blue;
             }
+        }
+
+        a:not(.btn) {
+            color: $dark-blue;
         }
     }
     &.red {
@@ -434,7 +457,12 @@ section.headline-row + section {
                 color: $white;
             }
         }
-        button {
+
+        a {
+            color: $marigold;
+        }
+
+        button, .btn {
             background-color: $white;
             color: $dark-blue;
 
@@ -443,9 +471,21 @@ section.headline-row + section {
                 color: $white;
             }
         }
+    }
+    &.light_blue {
+        background-color: $nice-blue;
 
         a {
             color: $marigold;
+        }
+
+        button, .btn {
+            color: $dark-blue;
+
+            &:hover {
+                background-color: $dark-blue;
+                color: $white;
+            }
         }
     }
 }  

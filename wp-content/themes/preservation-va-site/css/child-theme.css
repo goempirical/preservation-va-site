@@ -10052,6 +10052,26 @@ button.btn_cl {
   border-left: 0;
   color: #15467b; }
 
+.more-link,
+.content-area .more-link {
+  font-style: italic;
+  color: #A12017;
+  border-bottom: 1px solid;
+  font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif; }
+  .more-link:hover,
+  .content-area .more-link:hover {
+    color: #A12017;
+    text-decoration: none; }
+  .more-link:after,
+  .content-area .more-link:after {
+    content: '';
+    display: inline-block;
+    width: .4em;
+    height: .4em;
+    border-right: 2px solid #A12017;
+    border-top: 2px solid #A12017;
+    transform: translateX(0.25em) translateY(-0.125em) rotate(45deg); }
+
 .dark_blue .marigold:hover {
   background-color: #ffffff;
   color: #15467b; }
@@ -10707,6 +10727,8 @@ section.headline-row + section {
   padding: 53px 33px 53px 65px;
   min-height: 100%;
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
+  .content_related .more-link {
+    margin-top: 8px; }
   .content_related h3.title_related {
     text-align: center; }
     .stories .content_related h3.title_related {
@@ -10716,38 +10738,31 @@ section.headline-row + section {
     -moz-osx-font-smoothing: grayscale; }
     .content_related.stories h3.title_related {
       color: #ffffff; }
+    .content_related.stories .more-link:hover, .content_related.stories .more-link:active, .content_related.stories .more-link:focus {
+      color: #ffffff; }
+    .content_related.stories .more-link::after {
+      border-color: #ffffff; }
   .content_related .see_all {
     position: absolute;
     bottom: 53px;
     right: 82px;
-    font-style: italic;
-    text-decoration: none;
-    border-bottom: 1px solid;
-    display: inline-block;
-    font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif; }
+    display: inline-block; }
   .content_related .wrapper_related {
     padding: 30px 0px 21px; }
     .content_related .wrapper_related .card_related + .card_related {
-      margin-top: 17px; }
+      margin-top: 24px; }
     .content_related .wrapper_related .card_related {
       display: flex;
-      justify-content: flex-start; }
+      justify-content: flex-start;
+      align-items: flex-start; }
       .content_related .wrapper_related .card_related:last-child {
         margin-bottom: 21px; }
-      .content_related .wrapper_related .card_related .side_content_related * + * {
-        margin-top: 5px;
-        display: block; }
-      .content_related .wrapper_related .card_related .side_content_related a {
-        font-style: italic;
-        text-decoration: none;
-        border-bottom: 1px solid;
-        display: inline-block;
-        font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif; }
+      .content_related .wrapper_related .card_related .side_content_related .more-link::hover {
+        border-color: #ffffff; }
       .content_related .wrapper_related .card_related .title_cont {
         font-size: 15px;
         line-height: 1.47;
-        display: block;
-        max-width: 350px; }
+        display: block; }
   .content_related.events {
     background-color: #ffca05;
     color: #15467b; }
@@ -10758,6 +10773,10 @@ section.headline-row + section {
       line-height: 1.47; }
     .content_related.events a {
       color: #15467b; }
+      .content_related.events a:hover, .content_related.events a:active, .content_related.events a:focus {
+        color: #15467b; }
+    .content_related.events .more-link::after {
+      border-color: #15467b; }
   .content_related.stories {
     background-color: #A12017;
     color: #ffffff; }
@@ -10941,12 +10960,14 @@ section.headline-row + section {
     color: #15467b; }
   .single_column.gold h4, .single_column.gold #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.gold h3.give-section-break, .single_column.gold #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.gold h4.give-section-break, .single_column.gold #give-recurring-form legend, #give-recurring-form .single_column.gold legend, .single_column.gold form.give-form h3.give-section-break, form.give-form .single_column.gold h3.give-section-break, .single_column.gold form.give-form h4.give-section-break, form.give-form .single_column.gold h4.give-section-break, .single_column.gold form.give-form legend, form.give-form .single_column.gold legend, .single_column.gold form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.gold h3.give-section-break, .single_column.gold form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.gold h4.give-section-break, .single_column.gold form[id*=give-form] legend, form[id*=give-form] .single_column.gold legend {
     color: #15467b; }
-  .single_column.gold button {
+  .single_column.gold button, .single_column.gold .btn, .single_column.gold .wpcf7 input[type=submit], .wpcf7 .single_column.gold input[type=submit], .single_column.gold .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.gold .give-submit {
     background-color: #15467b;
     color: #ffffff; }
-    .single_column.gold button:hover {
+    .single_column.gold button:hover, .single_column.gold .btn:hover, .single_column.gold .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.gold input[type=submit]:hover, .single_column.gold .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.gold .give-submit:hover {
       background-color: #ffffff;
       color: #15467b; }
+  .single_column.gold a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
+    color: #15467b; }
 
 .single_column.red {
   background-color: #A12017;
@@ -10961,14 +10982,24 @@ section.headline-row + section {
     color: #ffffff; }
   .single_column.red h4, .single_column.red #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.red h3.give-section-break, .single_column.red #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.red h4.give-section-break, .single_column.red #give-recurring-form legend, #give-recurring-form .single_column.red legend, .single_column.red form.give-form h3.give-section-break, form.give-form .single_column.red h3.give-section-break, .single_column.red form.give-form h4.give-section-break, form.give-form .single_column.red h4.give-section-break, .single_column.red form.give-form legend, form.give-form .single_column.red legend, .single_column.red form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.red h3.give-section-break, .single_column.red form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.red h4.give-section-break, .single_column.red form[id*=give-form] legend, form[id*=give-form] .single_column.red legend {
     color: #ffffff; }
-  .single_column.red button {
-    background-color: #ffffff;
-    color: #15467b; }
-    .single_column.red button:hover {
-      background-color: #15467b;
-      color: #ffffff; }
   .single_column.red a {
     color: #ffca05; }
+  .single_column.red button, .single_column.red .btn, .single_column.red .wpcf7 input[type=submit], .wpcf7 .single_column.red input[type=submit], .single_column.red .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.red .give-submit {
+    background-color: #ffffff;
+    color: #15467b; }
+    .single_column.red button:hover, .single_column.red .btn:hover, .single_column.red .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.red input[type=submit]:hover, .single_column.red .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.red .give-submit:hover {
+      background-color: #15467b;
+      color: #ffffff; }
+
+.single_column.light_blue {
+  background-color: #0f7ab5; }
+  .single_column.light_blue a {
+    color: #ffca05; }
+  .single_column.light_blue button, .single_column.light_blue .btn, .single_column.light_blue .wpcf7 input[type=submit], .wpcf7 .single_column.light_blue input[type=submit], .single_column.light_blue .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.light_blue .give-submit {
+    color: #15467b; }
+    .single_column.light_blue button:hover, .single_column.light_blue .btn:hover, .single_column.light_blue .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.light_blue input[type=submit]:hover, .single_column.light_blue .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.light_blue .give-submit:hover {
+      background-color: #15467b;
+      color: #ffffff; }
 
 .content_action_block {
   display: flex;
@@ -11338,21 +11369,6 @@ section.headline-row + section {
 
 .events .entry-content .event-dates {
   margin-bottom: 20px; }
-
-.more-link {
-  font-style: italic;
-  color: #A12017; }
-  .more-link:hover {
-    color: #A12017;
-    text-decoration: underline; }
-  .more-link:after {
-    content: '';
-    display: inline-block;
-    width: .4em;
-    height: .4em;
-    border-right: 2px solid #A12017;
-    border-top: 2px solid #A12017;
-    transform: translateX(0.25em) translateY(-0.125em) rotate(45deg); }
 
 .page-template-events-upcoming article,
 .events article,

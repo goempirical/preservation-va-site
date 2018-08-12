@@ -423,7 +423,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 																	<span class="time_range"> <?php echo get_field('e_start_time'); ?> </span>
 
-																	<a href="<?php echo get_field('e_link')['url'] ?>">Learn more ></a>
+																	<a class="more-link" href="<?php echo get_field('e_link')['url'] ?>">Learn more</a>
 												
 																</div>
 
@@ -433,7 +433,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 														</div>
 
-														<a href="#" class="see_all">See All ></a>
+														<a href="#" class="see_all more-link">See All</a>
 
 													<?php endif; ?>
 												</div>
@@ -468,7 +468,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 																	
 																	<div class="side_content_related">
 																		<span class="title_cont"> <?php the_title(); ?> </span>
-																		<a href="<?php echo esc_url( get_permalink( get_post()->ID ) ); ?>">Learn more ></a>
+																		<a class="more-link" href="<?php echo esc_url( get_permalink( get_post()->ID ) ); ?>">Learn more</a>
 																	</div>
 																</div>														
 
@@ -476,7 +476,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 														</div>
 
-														<a href="#" class="see_all">See All ></a>
+														<a href="#" class="see_all more-link">See All</a>
 
 													<?php endif; ?>
 													
