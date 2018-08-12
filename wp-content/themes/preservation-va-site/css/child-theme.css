@@ -11555,10 +11555,10 @@ form {
 .wp_forms_container textarea,
 .wp_forms_container input[type=email],
 .wp_forms_container select,
-.give-form input[type=text],
-.give-form textarea,
-.give-form input[type=email],
-.give-form select {
+form[id*=give-form] .form-row input[type=text],
+form[id*=give-form] .form-row textarea,
+form[id*=give-form] .form-row input[type=email],
+form[id*=give-form] .form-row select {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -11574,42 +11574,42 @@ form {
   padding: 6px 17px; }
 
 .wp_forms_container select option,
-.give-form select option {
+form[id*=give-form] .form-row select option {
   color: #4a4a4a; }
 
 .wp_forms_container textarea,
-.give-form textarea {
+form[id*=give-form] .form-row textarea {
   padding: 17px;
   height: 179px;
   line-height: 1.36; }
 
 .wp_forms_container select,
-.give-form select {
+form[id*=give-form] .form-row select {
   padding: 2px 17px; }
 
 .wp_forms_container.wpforms-container-full .wpforms-form .wpforms-field,
-.give-form.wpforms-container-full .wpforms-form .wpforms-field {
+form[id*=give-form] .form-row.wpforms-container-full .wpforms-form .wpforms-field {
   padding: 7px 0; }
 
 .wp_forms_container ::placeholder,
-.give-form ::placeholder {
+form[id*=give-form] .form-row ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #4a4a4a;
   opacity: 1;
   /* Firefox */ }
 
 .wp_forms_container :-ms-input-placeholder,
-.give-form :-ms-input-placeholder {
+form[id*=give-form] .form-row :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #4a4a4a; }
 
 .wp_forms_container ::-ms-input-placeholder,
-.give-form ::-ms-input-placeholder {
+form[id*=give-form] .form-row ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #4a4a4a; }
 
 .wp_forms_container .wpforms-submit-container,
-.give-form .wpforms-submit-container {
+form[id*=give-form] .form-row .wpforms-submit-container {
   text-align: left; }
 
 div.wpforms-container-full {
