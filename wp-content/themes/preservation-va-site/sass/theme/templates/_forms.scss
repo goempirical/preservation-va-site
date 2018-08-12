@@ -5,11 +5,13 @@ form {
 }
 
 .wpforms-container,
+form[id*=give-form],
 form[id*=give-form] .form-row {
     input[type=text], 
     textarea,
     input[type=email],
-    select {
+    select,
+    select.give-select {
         font-family: $font-family-header;
         font-size: 14px;
         font-weight: normal;
@@ -25,7 +27,8 @@ form[id*=give-form] .form-row {
         padding: 6px 17px;
         
     }
-    select option {
+    select option,
+    select.give-select option {
         color: $greyish-brown-two;
     }
     textarea {
@@ -33,7 +36,8 @@ form[id*=give-form] .form-row {
         height: 179px;
         line-height: 1.36;
     }
-    select {
+    select,
+    select.give-select {
         padding: 2px 17px;
     }
     &.wpforms-container-full .wpforms-form .wpforms-field {

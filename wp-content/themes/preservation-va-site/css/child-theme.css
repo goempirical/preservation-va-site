@@ -11555,10 +11555,17 @@ form {
 .wpforms-container textarea,
 .wpforms-container input[type=email],
 .wpforms-container select,
+.wpforms-container select.give-select,
+form[id*=give-form] input[type=text],
+form[id*=give-form] textarea,
+form[id*=give-form] input[type=email],
+form[id*=give-form] select,
+form[id*=give-form] select.give-select,
 form[id*=give-form] .form-row input[type=text],
 form[id*=give-form] .form-row textarea,
 form[id*=give-form] .form-row input[type=email],
-form[id*=give-form] .form-row select {
+form[id*=give-form] .form-row select,
+form[id*=give-form] .form-row select.give-select {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -11574,24 +11581,35 @@ form[id*=give-form] .form-row select {
   padding: 6px 17px; }
 
 .wpforms-container select option,
-form[id*=give-form] .form-row select option {
+.wpforms-container select.give-select option,
+form[id*=give-form] select option,
+form[id*=give-form] select.give-select option,
+form[id*=give-form] .form-row select option,
+form[id*=give-form] .form-row select.give-select option {
   color: #4a4a4a; }
 
 .wpforms-container textarea,
+form[id*=give-form] textarea,
 form[id*=give-form] .form-row textarea {
   padding: 17px;
   height: 179px;
   line-height: 1.36; }
 
 .wpforms-container select,
-form[id*=give-form] .form-row select {
+.wpforms-container select.give-select,
+form[id*=give-form] select,
+form[id*=give-form] select.give-select,
+form[id*=give-form] .form-row select,
+form[id*=give-form] .form-row select.give-select {
   padding: 2px 17px; }
 
 .wpforms-container.wpforms-container-full .wpforms-form .wpforms-field,
+form[id*=give-form].wpforms-container-full .wpforms-form .wpforms-field,
 form[id*=give-form] .form-row.wpforms-container-full .wpforms-form .wpforms-field {
   padding: 7px 0; }
 
 .wpforms-container ::placeholder,
+form[id*=give-form] ::placeholder,
 form[id*=give-form] .form-row ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #4a4a4a;
@@ -11599,16 +11617,19 @@ form[id*=give-form] .form-row ::placeholder {
   /* Firefox */ }
 
 .wpforms-container :-ms-input-placeholder,
+form[id*=give-form] :-ms-input-placeholder,
 form[id*=give-form] .form-row :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #4a4a4a; }
 
 .wpforms-container ::-ms-input-placeholder,
+form[id*=give-form] ::-ms-input-placeholder,
 form[id*=give-form] .form-row ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #4a4a4a; }
 
 .wpforms-container .wpforms-submit-container,
+form[id*=give-form] .wpforms-submit-container,
 form[id*=give-form] .form-row .wpforms-submit-container {
   text-align: left; }
 
