@@ -183,50 +183,6 @@ button.btn_cl {
         @include btn_small;
     }
 }
-/* FORMS */
-
-select {
-    @include labelfont();
-    font-weight: 500;
-}
-
-.select-container,
-.wpforms-field-container {
-    position: relative;
-    display: inline-block;
-    margin-right: 18px;
-}
-
-.select-container:after,
-.wpforms-field-container:after {
-    position: absolute;
-    content: '';
-    display: block;
-    right: 11px;
-    width: 0;
-    height: 0;
-    border: solid $dark-blue;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 4px;
-    transform: rotate(45deg);
-    top: calc(50% - 9px);
-    pointer-events: none; 
-}
-
-select.select-custom {
-    color: $dark-blue;
-    background: linear-gradient(to right, $white-one 0%, $white-one calc(100% - 35px), $marigold calc(100% - 35px), $marigold 100%);
-    padding: 0 55px 0 20px;
-    border: none;
-    transition: border 300ms ease;
-    border-radius: 0;
-    height: 51px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    text-transform: uppercase;
-    border-radius: 0;
-}
 
 /* Tables */
 
