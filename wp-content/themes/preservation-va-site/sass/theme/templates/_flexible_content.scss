@@ -144,6 +144,10 @@ section.headline-row + section {
         background-color: $marigold;
         color: $dark-blue;
 
+        h3.title_related {
+            color: $dark-blue;
+        }
+
         .card_related {
             .title_cont {
                 font-weight: 500;
@@ -151,6 +155,7 @@ section.headline-row + section {
             .time_range {
                 font-weight: 300;
                 line-height: 1.47;
+                display: block;
             }
         }
 
