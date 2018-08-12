@@ -11547,10 +11547,18 @@ section.headline-row + section {
     border-color: white;
     text-decoration: underline; }
 
-.form_pva input[type=text],
-.form_pva textarea,
-.form_pva input[type=email],
-.form_pva select {
+/* FORMS */
+form {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
+
+.wp_forms_container input[type=text],
+.wp_forms_container textarea,
+.wp_forms_container input[type=email],
+.wp_forms_container select,
+.give_form input[type=text],
+.give_form textarea,
+.give_form input[type=email],
+.give_form select {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
@@ -11565,43 +11573,47 @@ section.headline-row + section {
   border-radius: 0;
   padding: 6px 17px; }
 
-.form_pva select option {
+.wp_forms_container select option,
+.give_form select option {
   color: #4a4a4a; }
 
-.form_pva textarea {
+.wp_forms_container textarea,
+.give_form textarea {
   padding: 17px;
   height: 179px;
   line-height: 1.36; }
 
-.form_pva select {
+.wp_forms_container select,
+.give_form select {
   padding: 2px 17px; }
 
-.form_pva.wpforms-container-full .wpforms-form .wpforms-field {
+.wp_forms_container.wpforms-container-full .wpforms-form .wpforms-field,
+.give_form.wpforms-container-full .wpforms-form .wpforms-field {
   padding: 7px 0; }
 
-.form_pva ::placeholder {
+.wp_forms_container ::placeholder,
+.give_form ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #4a4a4a;
   opacity: 1;
   /* Firefox */ }
 
-.form_pva :-ms-input-placeholder {
+.wp_forms_container :-ms-input-placeholder,
+.give_form :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #4a4a4a; }
 
-.form_pva ::-ms-input-placeholder {
+.wp_forms_container ::-ms-input-placeholder,
+.give_form ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #4a4a4a; }
 
-.form_pva .wpforms-submit-container {
+.wp_forms_container .wpforms-submit-container,
+.give_form .wpforms-submit-container {
   text-align: left; }
 
 div.wpforms-container-full {
   margin-bottom: 54px; }
-
-/* FORMS */
-form {
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
 
 select {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
