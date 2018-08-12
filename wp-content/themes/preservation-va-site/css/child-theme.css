@@ -11339,13 +11339,13 @@ section.headline-row + section {
 .events .entry-content .event-dates {
   margin-bottom: 20px; }
 
-.events .event-link {
+.more-link {
   font-style: italic;
   color: #A12017; }
-  .events .event-link:hover {
+  .more-link:hover {
     color: #A12017;
     text-decoration: underline; }
-  .events .event-link:after {
+  .more-link:after {
     content: '';
     display: inline-block;
     width: .4em;
