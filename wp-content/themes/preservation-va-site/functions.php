@@ -163,6 +163,18 @@ function pva_tiny_mce_before_init( $settings ) {
     return $settings;
 }
 
+function pva_social_links($atts){
+    extract(shortcode_atts(array(
+      'count' => 9
+    ), $atts));
+
+    ob_start();
+    get_template_part( 'global-templates/social-links' );
+    $output =  '<span class="social-links">' . ob_get_clean() . '</span>';
+    return $output;
+}
+add_shortcode( 'pva-social', 'pva_social_links' );
+
 function pr_archive($atts){
     extract(shortcode_atts(array(
       'count' => 9
