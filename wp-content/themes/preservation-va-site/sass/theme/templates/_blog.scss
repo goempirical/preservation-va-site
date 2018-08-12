@@ -75,7 +75,12 @@
 
         .image-text {
             margin-bottom: 20px;
+
+            .image {
+                margin-bottom: 20px;
+            }
         }
+        
         @include media-breakpoint-up(md) { 
             .image-text {
 
@@ -83,22 +88,18 @@
                     padding-left: 2em;
                 }
 
-                > div {
-                    flex:1;
+                .details {
+                    flex:3;
+                }
+
+                .image {
+                    flex: 2;
                 }
             }
         }
 
         .details {
-            @include media-breakpoint-up(md) { 
-                > div + div {
-                    padding-left: 2em;
-                }
 
-                > div {
-                    flex:1;
-                }
-            }
             .event-date {
                 display: flex;
                 color: $dark-blue;
@@ -117,6 +118,10 @@
                 color: $nice-blue;
                 margin-left: 1em;
             }
+        }
+
+        .event-dates {
+            margin-bottom: 20px;
         }
     }
 
