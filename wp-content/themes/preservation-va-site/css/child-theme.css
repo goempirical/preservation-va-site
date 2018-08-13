@@ -10676,7 +10676,7 @@ li.search {
   padding-top: 60px;
   margin-top: -60px; }
 
-.page-template-flexible-template .social-links a:hover {
+body .social-links a:hover {
   text-decoration: none; }
 
 .layout-block {
@@ -11230,6 +11230,10 @@ section.headline-row + section {
   .hs-basic-info .content_address.greyish p {
     color: #4a4a4a; }
 
+.hs-basic-info .social-links {
+  display: block;
+  margin-bottom: 20px; }
+
 .red_banner_message .row {
   max-width: 618px;
   margin-left: auto;
@@ -11283,6 +11287,16 @@ section.headline-row + section {
   text-align: center;
   margin: 1em 0 2em; }
 
+.entry-header h4, .entry-header #give-recurring-form h3.give-section-break, #give-recurring-form .entry-header h3.give-section-break, .entry-header #give-recurring-form h4.give-section-break, #give-recurring-form .entry-header h4.give-section-break, .entry-header #give-recurring-form legend, #give-recurring-form .entry-header legend, .entry-header form.give-form h3.give-section-break, form.give-form .entry-header h3.give-section-break, .entry-header form.give-form h4.give-section-break, form.give-form .entry-header h4.give-section-break, .entry-header form.give-form legend, form.give-form .entry-header legend, .entry-header form[id*=give-form] h3.give-section-break, form[id*=give-form] .entry-header h3.give-section-break, .entry-header form[id*=give-form] h4.give-section-break, form[id*=give-form] .entry-header h4.give-section-break, .entry-header form[id*=give-form] legend, form[id*=give-form] .entry-header legend {
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-size: 0.875em;
+  line-height: 1.14286; }
+
+article.page .entry-header h2.entry-title {
+  font-size: 2.25em;
+  line-height: 1.22222; }
+
 .date_release {
   background-color: #15467b;
   margin-right: 17px;
@@ -11304,14 +11318,10 @@ section.headline-row + section {
     font-size: 10px;
     display: block; }
 
-@media (max-width: 991.98px) {
-  .blog-flex-row {
-    margin: 0; } }
-
 .blog-flex-row > div {
   flex: 1; }
-  .blog-flex-row > div:last-child {
-    flex: 10; }
+  .blog-flex-row > div:first-child {
+    flex: 0 0 60px; }
 
 .page-template-events-upcoming h2,
 .events h2,
@@ -11373,12 +11383,17 @@ section.headline-row + section {
 .events .entry-content .event-dates {
   margin-bottom: 20px; }
 
+.archive .content_headline h1, .archive .content_headline h2,
+.search .content_headline h1,
+.search .content_headline h2 {
+  max-width: none; }
+
 .page-template-events-upcoming article,
 .events article,
 .archive article,
 .blog article,
 .single article {
-  margin-bottom: 60px; }
+  margin-bottom: 80px; }
 
 .page-template-events-upcoming .entry-content,
 .events .entry-content,

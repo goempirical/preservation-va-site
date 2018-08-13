@@ -77,7 +77,7 @@
 add_action('pre_get_posts', function($query) {
   if ( ! is_admin() && $query->is_main_query() ) {
 
-      if ( is_archive() || is_tax('our_work') || is_tax('historic_sites') ) {
+      if ( is_archive() && ( is_tax('our_work') || is_tax('historic_sites') ) ) {
           $query->set( 'post_type', array( 'post', 'events' ) );
       }
 

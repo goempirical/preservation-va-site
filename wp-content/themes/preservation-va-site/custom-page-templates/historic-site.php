@@ -73,8 +73,39 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 </div>
 
                 <div class="col-md-3 sws_right-col content_address">
+
                     <h3>Address</h3>
                     <?php echo $mainContent['right_column']['hs_address']; ?>
+
+                    <div class="social-links">
+                    <?php 
+                        foreach ($mainContent['right_column']['social'] as $key => $val) {
+                            switch ($val['platform']) {
+                                case 'facebook':
+                                    $img_id = '28';
+                                    break;
+                                case 'twitter':
+                                    $img_id = '27';
+                                    break;
+                                case 'instagram':
+                                    $img_id = '29';
+                                    break;
+                                case 'youtube':
+                                    $img_id = '31';
+                                    break;
+                                
+                                default:
+                                    $img_id = '26';
+                                    break;
+                            }
+                    ?>
+                            <a href="<?php echo $val['link'] ?>" target="_blank">
+                                <img src="<?php echo THEME_IMG_PATH ?>group-<?php echo $img_id; ?>@2x.png" width="35" />
+                            </a>
+                    <?php
+                        }
+                    ?>
+                    </div>
                    
                     <h3>Hours</h3>
                     <?php echo $mainContent['right_column']['hs_hours']; ?>
@@ -275,19 +306,21 @@ if ($taxonomies_hs) {
     }
 }
 
-// Arguments for get Events with taxonomies choosed of Historic Sites and Our Work
+// Arguments for get Events with taxonomies choosed of Historic Sites
 $args = array(
     'posts_per_page' => 3,
     'order' => 'ASC',
     'post_type' => 'events',
     'tax_query' => array(
-        'taxonomy' => 'historic_sites',
-        'field'    => 'slug',
-        'terms'    => $array_taxonomies_hs,
+        array(
+            'taxonomy' => 'historic_sites',
+            'field'    => 'slug',
+            'terms'    => $array_taxonomies_hs,
+        ),
     ),
 );
 
-// Query for get Events with taxonomies choosed of Historic Sites and Our Work
+// Query for get Events with taxonomies choosen from Historic Sites
 
 $eventquery = new WP_Query( $args );
 ?>
@@ -298,25 +331,52 @@ $eventquery = new WP_Query( $args );
     <div class="col-md-6  no_padding_both_sides">
         <div class="content_related events">
             <h3 class="title_related"><?php the_title() ?> Events</h3>
-                <div class="wrapper_related">
-                <?php while ( $eventquery->have_posts() ) : $eventquery->the_post(); ?>
-                    <div class="card_related"> 
-                        <div class="date_release">
-													<span><?php echo date( 'M<\b\\r>j', strtotime( get_the_date() ) );?></span>
-												</div>
-                        <div class="side_content_related">
-                            <span class="title_cont"> <?php the_title(); ?> </span>
-                            <span class="time_range"> <?php echo get_field('e_start_time'); ?> </span>
-                            <a class="more-link" href="<?php echo get_field('e_link')['url'] ?>">Learn more</a>
-                        </div>
-                    </div>
-                <?php endwhile; wp_reset_postdata(); ?>
-                </div>
-                <div class="see_all"><a href="<?php site_url(); ?>/historic_sites/<?php echo $post->post_name; ?>" class="more-link">See all</a></div>
-        </div>
-    </div>
 
-    <div class="col-md-6  no_padding_both_sides">
+            <?php $cnt = 0; ?>
+
+            <div class="wrapper_related">
+
+                <?php while ( $eventquery->have_posts() ) : $eventquery->the_post(); ?>
+
+                    <?php if( have_rows('event_dates_times') ): ?>
+                        <?php while ( have_rows('event_dates_times') ) : the_row(); ?>
+                            <?php if ($cnt < 3) : ?>
+
+                                <div class="card_related">
+
+                                    <div class="date_release">
+                                        <span><?php echo date( 'M<\b\\r>j', strtotime( get_sub_field('e_start_date') ) );?></span>
+                                    </div>
+
+                                    <div class="side_content_related">
+
+                                        <span class="title_cont"> <?php the_title(); ?> </span>
+
+                                        <?php if( have_rows('event_times') ): ?>
+                                            <?php while ( have_rows('event_times') ) : the_row(); ?>
+                                                <span class="time_range"><?php the_sub_field('e_start_time'); ?> – <?php the_sub_field('e_end_time'); ?></span>
+                                            <?php endwhile; ?>
+                                        <?php else : ?>
+
+                                        <?php endif; ?>
+
+                                        <a class="more-link" href="<?php echo get_field('e_link')['url'] ?>">Learn more</a>
+
+                                    </div>
+
+                                </div>                      
+                                <?php $cnt++; ?>
+                            <?php endif; // cnt ?>
+                        <?php endwhile; // have rows event_dates_times ?>
+                    <?php endif; // have rows event_dates_times ?>
+
+                <?php endwhile; wp_reset_postdata(); // eventquery ?>
+            </div><!-- .wrapper_related -->
+
+            <div class="see_all"><a href="<?php site_url(); ?>/historic_sites/<?php echo $post->post_name; ?>" class="more-link">See all</a></div>
+        </div><!-- .content_related.events -->
+    </div><!-- .col-md-6 -->
+    <div class="col-md-6 no_padding_both_sides">
         <div class="content_related stories">
             <h3 class="title_related"><?php the_title() ?> Stories</h3>
 
@@ -331,19 +391,19 @@ $eventquery = new WP_Query( $args );
             <?php if ($query->have_posts() ) :?>
                 <div class="wrapper_related">
                     <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                        <div class="card_related">
-                            <div class="side_content_related">
-                                <span class="title_cont"> <?php the_title(); ?> </span>
-                                <a class="more-link" href="<?php echo esc_url( get_permalink( get_post()->ID ) ); ?>">Read more</a>
-                            </div>
-                        </div>														
+                    <div class="card_related">
+                        <div class="side_content_related">
+                            <span class="title_cont"> <?php the_title(); ?> </span>
+                            <a class="more-link" href="<?php echo esc_url( get_permalink( get_post()->ID ) ); ?>">Read more</a>
+                        </div>
+                    </div>														
                     <?php endwhile; wp_reset_postdata(); ?>
                 </div>
                 <div class="see_all"><a href="<?php site_url(); ?>/historic_sites/<?php echo $post->post_name; ?>" class="more-link">See all</a></div>
             <?php endif; ?>
         </div>
-    </div>
-</div>
+    </div><!-- .col-md-6 -->
+</div><!-- #events -->
 <?php endif; // event query ?>
 
 <!-- Tours & Site Rental -->

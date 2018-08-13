@@ -16,6 +16,9 @@
 		</div>
 		<div>
 			<header class="entry-header">
+				<?php if ( get_post_type() == 'press_release' ) : ?>
+					<h4>Press Release</h4>
+				<?php endif; ?>
 				<?php 
 					the_title( sprintf( 
 						'<h2 class="entry-title"><a href="%s" rel="bookmark">', 

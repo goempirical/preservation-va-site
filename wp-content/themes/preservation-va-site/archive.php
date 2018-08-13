@@ -10,21 +10,13 @@
 get_header();
 ?>
 
-<?php
-$container   = get_theme_mod( 'understrap_container_type' );
-?>
-
-<section class="row headline-row">
-
-	<div class="col-md-12 no_padding_both_sides">
+<section class="headline-row">
 
 		<div class="content_headline secondary_gray ">
 								
 			<?php the_archive_title( '<h2 class="page-title">', '</h2>' ); ?>
 															 
 		</div>
-
-	</div>
 
 </section>
 
