@@ -9,17 +9,19 @@
 
 get_header();
 ?>
+<section class="headline-row">
 
-<?php
-$container   = get_theme_mod( 'understrap_container_type' );
-?>
+		<div class="content_headline secondary_gray ">
+								
+			<h2 class="page-title">Events Archive</h2>
+															 
+		</div>
+
+</section>
 
 <div class="wrapper" id="archive-wrapper">
 
 	<div class="container" id="content" tabindex="-1">
-		<div class="header">
-			<h2 class="blog-title">Events Archive</h2>
-		</div>
 
 		<div class="row">
 

@@ -10,18 +10,19 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<div class="row">
 		<div>
-			<header class="entry-header">
-				<?php 
-					the_title( sprintf( 
-						'<h2 class="entry-title"><a href="%s" rel="bookmark">', 
-						esc_url( get_permalink() ) ), 
-						'</a></h2>' 
-					); 
-				?>
-			</header><!-- .entry-header -->
 
 			<?php if ( get_page_template_slug( $post->ID ) === 'custom-page-templates/historic-site.php' ) : ?>
 
+				<header class="entry-header">
+					<h4>Historic Site</h4>
+					<?php 
+						the_title( sprintf( 
+							'<h2 class="entry-title"><a href="%s" rel="bookmark">', 
+							esc_url( get_permalink() ) ), 
+							'</a></h2>' 
+						); 
+					?>
+				</header><!-- .entry-header -->
 				<?php 
 					$hs_main_section = get_field('hs_main_section');
 
@@ -39,6 +40,16 @@
 			</div><!-- .entry-content -->
 
 			<?php else: ?>
+
+				<header class="entry-header">
+					<?php 
+						the_title( sprintf( 
+							'<h2 class="entry-title"><a href="%s" rel="bookmark">', 
+							esc_url( get_permalink() ) ), 
+							'</a></h2>' 
+						); 
+					?>
+				</header><!-- .entry-header -->
 
 				<?php echo get_the_post_thumbnail( $post->ID, 'thumbnail' ); ?>
 				<div class="entry-content">

@@ -8,19 +8,15 @@
 get_header();
 
 ?>
-<section class="row headline-row">
+<section class="headline-row">
 
-	<div class="col-md-12 no_padding_both_sides">
-
-		<div class="content_headline secondary_gray ">
+	<div class="content_headline secondary_gray ">
 								
-						<h2 class="page-title"><?php printf(
-					/* translators:*/
-					 esc_html__( 'Search Results for: %s', 'understrap' ),
-						'<span>' . get_search_query() . '</span>' ); ?></h2>
-															 
-		</div>
-
+		<h2 class="page-title"><?php printf(
+	/* translators:*/
+	 esc_html__( 'Search Results for: %s', 'understrap' ),
+		'<span>' . get_search_query() . '</span>' ); ?></h2>
+														 
 	</div>
 
 </section>
