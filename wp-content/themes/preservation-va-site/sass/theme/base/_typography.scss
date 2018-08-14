@@ -160,7 +160,9 @@ button.btn_cl {
 
 .btn,
 .content-area .btn,
-.give-btn-reveal {
+.give-btn-reveal,
+.btn-wrap a {
+
     @include btn_big;
     border: 0 none;
     color: $dark-blue;
@@ -181,6 +183,20 @@ button.btn_cl {
     }
     &.small {
         @include btn_small;
+    }
+}
+
+#wrapper-navbar .navbar-dark .navbar-nav .btn-wrap a.nav-link {
+    @include btn_small;
+    color: $dark-blue;
+    padding: 5px 22px;
+    margin-left: .5em;
+    font-size: 16px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $marigold;
     }
 }
 

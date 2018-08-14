@@ -23,6 +23,8 @@
 }
 
 #wrapper-navbar .navbar-dark .navbar-nav {
+    align-items: center;
+
     .nav-link {
         color: $white;
         @include font-sizing(17, 17);
@@ -67,7 +69,7 @@
 
 .navbar-brand {
     padding-top: 0;
-    padding-bottom: 13px;
+    padding-bottom: 7px;
 
     img {
         width: 100%;
@@ -80,6 +82,7 @@ li.search {
     position: relative;
     transition: width $anim-dur ease;
     height:40px;
+    padding: 5px 0;
 
     &.closed {
         width:40px;
