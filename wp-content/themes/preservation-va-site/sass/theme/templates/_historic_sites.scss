@@ -140,3 +140,12 @@
         }
     }
 }
+
+.hs_key_visitor_info > .row > div {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+
+    > * {
+        max-width: 85ch;
+    }
+}

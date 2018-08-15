@@ -213,6 +213,19 @@ section.headline-row + section {
 
 }
 
+.related-content {
+    > div {
+        width:100%;
+        position: relative;
+    }
+
+    .wrapper_related {
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 /* Images */
 
 .image_row {
