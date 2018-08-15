@@ -24,7 +24,15 @@ get_header();
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
+					<section class="layout-block single_column none">
+
+						<div class="row">
+
+							<?php the_content(); ?>
+
+						</div>
+
+					</section>
 
 					<?php
 					// If comments are open or we have at least one comment, load up the comment template.
