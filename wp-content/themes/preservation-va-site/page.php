@@ -20,36 +20,38 @@ get_header();
 
 		<div class="row">
 
-			<main class="site-main" id="main">
+			<div class="col-md-12 content-area" id="primary">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<main class="site-main" id="main">
 
-					<section class="layout-block single_column none">
+					<?php while ( have_posts() ) : the_post(); ?>
 
-						<div class="row">
+						<section class="layout-block single_column none">
 
-							<?php the_content(); ?>
+							<div class="row">
 
-						</div>
+								<?php the_content(); ?>
 
-					</section>
+							</div>
 
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+						</section>
 
-				<?php endwhile; // end of the loop. ?>
+						<?php
+						// If comments are open or we have at least one comment, load up the comment template.
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
+						?>
 
-			</main><!-- #main -->
+					<?php endwhile; // end of the loop. ?>
 
-		</div><!-- #primary -->
+				</main><!-- #main -->
 
-	</div><!-- .row -->
+			</div><!-- #primary -->
 
-</div><!-- Container end -->
+		</div><!-- .row -->
+
+	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
