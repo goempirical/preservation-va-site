@@ -37,8 +37,8 @@ function understrap_footer_menu() {
 }
 add_action( 'init', 'understrap_footer_menu' );
 
-add_image_size('banner_size', 1024, 339, true);
-add_image_size('Home Banner', 1024, 514, true);
+add_image_size('banner_size', 2000, 667, true);
+add_image_size('Home Banner', 2600, 867, true);
 
 // Build Table for Plugin https://wordpress.org/plugins/advanced-custom-fields-table-field/
 function buildTable($table) {

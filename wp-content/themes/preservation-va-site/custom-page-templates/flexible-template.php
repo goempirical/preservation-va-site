@@ -366,6 +366,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 										$tax_query = array(
 											'posts_per_page' => 3,
 											'order' => 'ASC',
+											'post_type' => 'post',
 										);
 
 										if($historic && $work) {
@@ -401,32 +402,33 @@ $container   = get_theme_mod( 'understrap_container_type' );
 										}							
 
 									?>
-									
-									<div class="row">
-										
-										<div class="col-md-12">
+									<?php
 
-										<div class="row">
+											$blogquery = new WP_Query( $tax_query );
 
-											<div class="col-md-6 no_padding_both_sides">
+											$tax_query["post_type"] = "events";
+											
+											$eventquery = new WP_Query( $tax_query );
+
+											$has_blogs = $blogquery->have_posts() ? true : false;
+											$has_events = $eventquery->have_posts() ? true : false;
+									?>
+
+									<?php if($has_blogs || $has_events) : ?>
+									<section class="row related-content">
+
+											<?php if ( $has_events ) :?>
+											<div class="<?php if($has_blogs) { ?>col-md-6 <?php } ?>no_padding_both_sides">
 
 												<div class="content_related events">
 
 													<h3 class="title_related">Related Events</h3>
 
-													<?php
-													$tax_query["post_type"] = "events";
-													
-													$query = new WP_Query( $tax_query );
-													?>
-
-													<?php if ($query->have_posts() ) :?>
-
 														<?php $cnt = 0; ?>
 
 														<div class="wrapper_related">
 
-														<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+														<?php while ( $eventquery->have_posts() ) : $eventquery->the_post(); ?>
 
 															<?php if( have_rows('event_dates_times') ): ?>
 																<?php while ( have_rows('event_dates_times') ) : the_row(); ?>
@@ -470,29 +472,21 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 														<a href="<?php echo site_url(); ?>/upcoming-events" class="see_all more-link">See All</a>
 
-													<?php endif; ?>
 												</div>
 
 											</div>
+										<?php endif; //eventquery ?>
+										<?php if($has_blogs) : ?>
 
-											<div class="col-md-6  no_padding_both_sides">
+											<div class="<?php if($has_events) { ?>col-md-6 <?php } ?>no_padding_both_sides">
 
 												<div class="content_related stories">
 
 													<h3 class="title_related">Related Stories</h3>
 
-													<?php
-													$tax_query["post_type"] = "post";
-													
-													$query = new WP_Query( $tax_query );
-													
-													?>
-
-													<?php if ($query->have_posts() ) :?>
-
 														<div class="wrapper_related">
 
-															<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+															<?php while ( $blogquery->have_posts() ) : $blogquery->the_post(); ?>
 																
 																<div class="card_related">
 																	
@@ -507,19 +501,16 @@ $container   = get_theme_mod( 'understrap_container_type' );
 														</div>
 
 														<a href="#" class="see_all more-link">See All</a>
-
-													<?php endif; ?>
 													
 												</div>
 
 											</div>
 
-										</div>
-											
-										
-									</div>
+										<?php endif; //blogquery ?>
 
-								</div>
+								</section>
+
+							<?php endif; //blogquery || eventquery ?>
 
 <?php // <!-- End Related -->	?>
 

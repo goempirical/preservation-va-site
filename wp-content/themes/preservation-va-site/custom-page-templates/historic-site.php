@@ -6,6 +6,44 @@ get_header();
 
 $container   = get_theme_mod( 'understrap_container_type' );
 
+$hs_key_visitor_info = get_field('hs_key_visitor_info');
+$location = $hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'];
+$regulations = $hs_key_visitor_info['hs_key_visitor_info_rules_and_regulations'];
+
+$location = $location !== '' ? $location : false;
+$regulations = $regulations !== '' ? $regulations : false;
+
+// Get Taxonimies Historic Sites
+$taxonomies_hs = get_the_terms($post, 'historic_sites');
+$array_taxonomies_hs = array();
+
+if ($taxonomies_hs) {
+    foreach ( $taxonomies_hs as $term ) {
+        $array_taxonomies_hs[] = $term->slug;
+    }
+}
+
+// Arguments for get Events with taxonomies choosed of Historic Sites
+$args = array(
+    'posts_per_page' => 3,
+    'order' => 'ASC',
+    'post_type' => 'events',
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'historic_sites',
+            'field'    => 'slug',
+            'terms'    => $array_taxonomies_hs,
+        ),
+    ),
+);
+
+// Query for get Events with taxonomies choosen from Historic Sites
+
+$eventquery = new WP_Query( $args );
+
+$args['post_type'] = 'post';
+$blogquery = new WP_Query( $args );
+
 ?>
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
@@ -43,20 +81,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     <h1> <?php the_sub_field('hs_title'); ?></h1>
                     <div class="hs_submenu">
                         <a href="#basic-info">Basic Info</a>
-                        <a href="#events">Events</a>
+                        <?php if ( $eventquery->have_posts() || $blogquery->have_posts() ) { ?><a href="#events">Events</a><?php } ?>
                         <a href="#donate">Donate</a>
                         <a href="#plan-your-visit">Plan your Visit</a>
                         <a href="#admissions">Admissions</a>
                         <a href="#tours-rentals">Tours/Rentals</a>
-                        <?php 
-
-                        $hs_key_visitor_info = get_field('hs_key_visitor_info');
-
-                        if($hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] && $hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] !== ''){ 
-
-                        ?>
-                        <a href="#key-visitor-info">Key Visitor Info</a>
-                        <?php } ?>
+                        <?php if($location || $regulations) { ?><a href="#key-visitor-info">Key Visitor Info</a><?php } ?>
                     </div>
                 </div>
             </div>
@@ -77,6 +107,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     <h3>Address</h3>
                     <?php echo $mainContent['right_column']['hs_address']; ?>
 
+
+                    <?php if(!empty($mainContent['right_column']['social'])) : ?>
                     <div class="social-links">
                     <?php 
                         foreach ($mainContent['right_column']['social'] as $key => $val) {
@@ -106,6 +138,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                         }
                     ?>
                     </div>
+                    <?php endif; ?>
                    
                     <h3>Hours</h3>
                     <?php echo $mainContent['right_column']['hs_hours']; ?>
@@ -183,7 +216,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
             <div class="row justify-content-between">
                 <div class="col-md-6">
                     <?php the_sub_field('hs_visit_text') ?>
-                    <a href="#key-visitor-info" class="btn marigold small">VISITOR INFO</a>
+                    <?php if($location || $regulations) { ?><a href="#key-visitor-info" class="btn marigold small">VISITOR INFO</a><?php } ?>
                 </div>
                 <div class="col-md-6 hs_pyv--right">
                     <div class="content_address greyish map">
@@ -295,40 +328,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
     <?php endwhile; ?>
 <?php endif; ?>
-<?php
-// Get Taxonimies Historic Sites
-$taxonomies_hs = get_the_terms($post, 'historic_sites');
-$array_taxonomies_hs = array();
 
-if ($taxonomies_hs) {
-    foreach ( $taxonomies_hs as $term ) {
-        $array_taxonomies_hs[] = $term->slug;
-    }
-}
-
-// Arguments for get Events with taxonomies choosed of Historic Sites
-$args = array(
-    'posts_per_page' => 3,
-    'order' => 'ASC',
-    'post_type' => 'events',
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'historic_sites',
-            'field'    => 'slug',
-            'terms'    => $array_taxonomies_hs,
-        ),
-    ),
-);
-
-// Query for get Events with taxonomies choosen from Historic Sites
-
-$eventquery = new WP_Query( $args );
-?>
-
-<?php if ($eventquery->have_posts() ) :?>
+<?php if ( $eventquery->have_posts() || $blogquery->have_posts() ) :?>
 <!-- Related Content -->
-<div id="events" class="row">
-    <div class="col-md-6  no_padding_both_sides">
+<section class="related-content row">
+    <?php if ( $eventquery->have_posts() ) :?>
+    <div class="<?php if ( $blogquery->have_posts() ) { ?>col-md-6 <?php } ?>no_padding_both_sides">
         <div class="content_related events">
             <h3 class="title_related"><?php the_title() ?> Events</h3>
 
@@ -376,7 +381,9 @@ $eventquery = new WP_Query( $args );
             <div class="see_all"><a href="<?php site_url(); ?>/historic_sites/<?php echo $post->post_name; ?>" class="more-link">See all</a></div>
         </div><!-- .content_related.events -->
     </div><!-- .col-md-6 -->
-    <div class="col-md-6 no_padding_both_sides">
+    <?php endif; ?>
+    <?php if ( $blogquery->have_posts() ) :?>
+    <div class="<?php if ( $eventquery->have_posts() ) { ?>col-md-6 <?php } ?>no_padding_both_sides">
         <div class="content_related stories">
             <h3 class="title_related"><?php the_title() ?> Stories</h3>
 
@@ -403,8 +410,9 @@ $eventquery = new WP_Query( $args );
             <?php endif; ?>
         </div>
     </div><!-- .col-md-6 -->
-</div><!-- #events -->
-<?php endif; // event query ?>
+    <?php endif; ?>
+</section><!-- .related-content -->
+<?php endif; // event + blog query ?>
 
 <!-- Tours & Site Rental -->
 <?php if( have_rows('hs_tours_and_site_rental') ): ?>
@@ -421,10 +429,14 @@ $eventquery = new WP_Query( $args );
         <?php $admissionContent = get_sub_field('hs_admission_content');?>
         <div class="row">
             <div class="col-md-6">
+            <?php if ($tourSiteRental['hs_tour_content']['content_left']['hs_tour_site_rental_special_events']) { ?>
                 <h3>Site Rental & Special Events</h3>
                 <?php echo $tourSiteRental['hs_tour_content']['content_left']['hs_tour_site_rental_special_events']; ?>
+            <?php } ?>
+            <?php if ($tourSiteRental['hs_tour_content']['content_left']['hs_tour_group_tour_bookings']) { ?>
                 <h3>Group Tour Bookings</h3>
                 <?php echo $tourSiteRental['hs_tour_content']['content_left']['hs_tour_group_tour_bookings']; ?>
+            <?php } ?>
                 <?php
                     $table = $tourSiteRental['hs_tour_content']['content_left']['hr_tour_table_prices'];
                     buildTable($table);
@@ -442,13 +454,8 @@ $eventquery = new WP_Query( $args );
 <?php endif; ?>
 
 <!-- Key Visitor Info -->
-<?php if( have_rows('hs_key_visitor_info') ): ?>
-<?php // loop through the rows of data
-    while ( have_rows('hs_key_visitor_info') ) : the_row(); ?>
-        <?php 
-            $hs_key_visitor_info = get_field('hs_key_visitor_info');
-
-            if($hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] && $hs_key_visitor_info['hs_key_visitor_info_location_and_arrival'] !== ''){ 
+        <?php
+            if($location || $regulations) :
         ?>
     <div id="key-visitor-info" class="row">
         <div class="col-md-12 no_padding_both_sides margin_bottom">
@@ -462,22 +469,24 @@ $eventquery = new WP_Query( $args );
 
         <div class="row">
 
-            <div class="col-md-6">
+            <?php if($location) : ?>
+            <div<?php if($regulations) { ?> class="col-md-6"<?php } ?>>
                 <h3>Location & Arrival</h3>
-                <?php the_sub_field('hs_key_visitor_info_location_and_arrival'); ?>
+                <?php echo $location; ?>
             </div>
-            <div class="col-md-6">
+            <?php endif; ?>
+
+            <?php if($regulations) : ?>
+            <div<?php if($location) { ?> class="col-md-6"<?php } ?>>
                 <h3>Rules & Regulations</h3>
-                <?php the_sub_field('hs_key_visitor_info_rules_and_regulations'); ?>
+                <?php echo $regulations; ?>
             </div>
+            <?php endif; ?>
 
         </div> <!-- .ROW -->
 
     </section>
-        <?php } ?>
-
-    <?php endwhile; ?>
-<?php endif; ?>
+        <?php endif; // location || regulations ?>
 
 				<?php endwhile; // end of the loop. ?>
 

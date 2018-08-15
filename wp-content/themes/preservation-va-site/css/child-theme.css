@@ -10842,6 +10842,15 @@ section.headline-row + section {
   width: 100%;
   height: 242px; }
 
+.related-content > div {
+  width: 100%;
+  position: relative; }
+
+.related-content .wrapper_related {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto; }
+
 /* Images */
 .image_row .owl-height_for_three .owl-stage {
   display: flex;
@@ -11322,6 +11331,12 @@ section.headline-row + section {
     background-color: #ffffff; }
     .hs_donate_info > .row .btn:hover, .hs_donate_info > .row .wpcf7 input[type=submit]:hover, .wpcf7 .hs_donate_info > .row input[type=submit]:hover, .hs_donate_info > .row .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .hs_donate_info > .row .give-submit:hover, .hs_donate_info > .row .btn:focus, .hs_donate_info > .row .wpcf7 input[type=submit]:focus, .wpcf7 .hs_donate_info > .row input[type=submit]:focus, .hs_donate_info > .row .give-submit-button-wrap .give-submit:focus, .give-submit-button-wrap .hs_donate_info > .row .give-submit:focus {
       background-color: #ffca05; }
+
+.hs_key_visitor_info > .row > div {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem; }
+  .hs_key_visitor_info > .row > div > * {
+    max-width: 85ch; }
 
 .page-template-events-upcoming h2.blog-title,
 .events h2.blog-title,
