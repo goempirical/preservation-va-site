@@ -92,6 +92,23 @@ $blogquery = new WP_Query( $args );
             </div>
         </div>
 
+        <?php $optional_notification = get_sub_field('optional_notification'); ?>
+
+        <?php if($optional_notification['show_this_section']) : ?>
+
+
+        <section class="layout-block single_column light_blue content_action_block">
+
+            <div class="row">
+                <?php if($optional_notification['title']) { ?><h2><?php echo $optional_notification['title']; ?></h2><?php } ?>
+                
+                <?php echo $optional_notification['text']; ?>
+            </div>
+
+        </section>
+
+        <?php endif; ?>
+
         <!-- section_with_sidebar -->
 
         <section id="basic-info" class="layout-block section_with_sidebar hs-basic-info">
@@ -487,6 +504,52 @@ $blogquery = new WP_Query( $args );
 
     </section>
         <?php endif; // location || regulations ?>
+
+        <?php $optional_section = get_field('optional_last_section'); ?>
+
+        <?php if($optional_section['show_this_section']) : ?>
+
+        <?php if($optional_section['title']) : ?>
+
+            <section class="row headline-row">
+
+            <div class="col-md-12 no_padding_both_sides">
+
+                <div class="content_headline light_blue ">
+                    
+                    <h1><?php echo $optional_section['title']; ?></h1>  
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <?php endif; ?>
+
+        <section class="layout-block two_columns white">
+
+            <div class="row">
+
+                    <div class="col-md-6 left-column">
+                        
+                        <div class="content_media">
+                            <?php echo wp_get_attachment_image( $optional_section['image']['ID'], 'full' ); ?>                              
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 right-column">
+                                                                    
+                        <div class="content_media">
+                            <?php echo $optional_section['text']; ?>
+                        </div>
+                    </div>
+
+            </div> <!-- .ROW -->
+
+        </section>
+
+    <?php endif; ?>
 
 				<?php endwhile; // end of the loop. ?>
 
