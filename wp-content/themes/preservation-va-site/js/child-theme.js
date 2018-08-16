@@ -7350,11 +7350,11 @@ jQuery( document ).ready(function( $ ) {
             if( $('#give-ffm-section').children().eq(-1).is('.mailing-address') ) {
                 console.log('mailing starts at end');
             }
-            $('.give-form').each(function(i) {
+            $('.give-form').each(function(inc) {
                 $this_cc_address = $(this).find('#give_cc_address');
 
                 $('<fieldset/>', {
-                    id: 'give_mailing_address',
+                    id: 'give_mailing_address-'+i,
                     class: 'mailing-address-group'
                 }).insertAfter($this_cc_address);
 
@@ -7362,7 +7362,7 @@ jQuery( document ).ready(function( $ ) {
 
                     console.log('mailing-match');
 
-                    $('#give_mailing_address').append($(this));
+                    $('#give_mailing_address-'+inc).append($(this));
                 });
 
             });
