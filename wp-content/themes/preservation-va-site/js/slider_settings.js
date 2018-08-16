@@ -38,7 +38,10 @@ jQuery( document ).ready(function( $ ) {
             if( $('#give-ffm-section').children().eq(-1).is('.mailing-address') ) {
                 console.log('mailing starts at end');
             }
-            $('#give_cc_address').after('<fieldset id="give_mailing_address" class="mailing-address-group"></fieldset>');
+            $('<fieldset/>', {
+                id: 'give_mailing_address',
+                class: 'mailing-address-group'
+            }).insertAfter('#give_cc_address');
 
             $('#give-ffm-section div.mailing-address').each(function( i ) {
 
@@ -50,6 +53,7 @@ jQuery( document ).ready(function( $ ) {
                 $('#give_mailing_address').append($(this));
             });
         }
+
     }
 
     if(getParameterByName('hsd')){
