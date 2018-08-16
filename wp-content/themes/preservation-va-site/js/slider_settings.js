@@ -38,19 +38,21 @@ jQuery( document ).ready(function( $ ) {
             if( $('#give-ffm-section').children().eq(-1).is('.mailing-address') ) {
                 console.log('mailing starts at end');
             }
-            $('<fieldset/>', {
-                id: 'give_mailing_address',
-                class: 'mailing-address-group'
-            }).insertAfter('#give_cc_address');
+            $('.give-form').each(function(i) {
+                $this_cc_address = $(this).find('#give_cc_address');
 
-            $('#give-ffm-section div.mailing-address').each(function( i ) {
+                $('<fieldset/>', {
+                    id: 'give_mailing_address',
+                    class: 'mailing-address-group'
+                }).insertAfter($this_cc_address);
 
-                console.log('mailing-match');
+                $(this).find('#give-ffm-section .mailing-address').each(function( i ) {
 
-                if($(this).prev().is("[id^='ffm_section_'")){
-                    $('#give_mailing_address').append($(this).prev());
-                }
-                $('#give_mailing_address').append($(this));
+                    console.log('mailing-match');
+
+                    $('#give_mailing_address').append($(this));
+                });
+
             });
         }
 
