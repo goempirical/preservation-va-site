@@ -7354,7 +7354,7 @@ jQuery( document ).ready(function( $ ) {
                 $this_cc_address = $(this).find('#give_cc_address');
 
                 $('<fieldset/>', {
-                    id: 'give_mailing_address-'+i,
+                    id: 'give_mailing_address-'+inc,
                     class: 'mailing-address-group'
                 }).insertAfter($this_cc_address);
 
