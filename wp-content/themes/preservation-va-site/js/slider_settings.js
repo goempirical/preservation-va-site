@@ -32,12 +32,18 @@ jQuery( document ).ready(function( $ ) {
         });
 
         if($('#give-ffm-section .mailing-address').length && $('#give_cc_address').length){
-            if( $('#give-ffm-section').children().eq(-1).is('.mailing-address') ) {
 
+            console.log('mailing');
+
+            if( $('#give-ffm-section').children().eq(-1).is('.mailing-address') ) {
+                console.log('mailing starts at end');
             }
             $('#give_cc_address').after('<fieldset id="give_mailing_address" class="mailing-address-group"></fieldset>');
 
             $('#give-ffm-section div.mailing-address').each(function( i ) {
+
+                console.log('mailing-match');
+
                 if($(this).prev().is("[id^='ffm_section_'")){
                     $('#give_mailing_address').append($(this).prev());
                 }
