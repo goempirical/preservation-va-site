@@ -2,6 +2,10 @@
 
 form {
 	font-family: $font-family-header;
+
+    input::placeholder {
+        color:#999;
+    }
 }
 
 .wpforms-container,
