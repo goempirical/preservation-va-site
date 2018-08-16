@@ -30,6 +30,20 @@ jQuery( document ).ready(function( $ ) {
                 $('#address_of_person_to_notify-wrap, #name_of_honoreememorium-wrap, #type_of_gift-wrap').hide('fast');
             }
         });
+
+        if($('#give-ffm-section .mailing-address').length && $('#give_cc_address').length){
+            if( $('#give-ffm-section').children().eq(-1).is('.mailing-address') ) {
+
+            }
+            $('#give_cc_address').after('<fieldset id="give_mailing_address" class="mailing-address-group"></fieldset>');
+
+            $('#give-ffm-section div.mailing-address').each(function( i ) {
+                if($(this).prev().is("[id^='ffm_section_'")){
+                    $('#give_mailing_address').append($(this).prev());
+                }
+                $('#give_mailing_address').append($(this));
+            });
+        }
     }
 
     if(getParameterByName('hsd')){

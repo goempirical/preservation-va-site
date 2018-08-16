@@ -9975,7 +9975,8 @@ button.btn_cl {
 .content-area .give-submit-button-wrap .give-submit, .give-submit-button-wrap
 .content-area .give-submit,
 .give-btn-reveal,
-.btn-wrap a {
+.btn-wrap a,
+input[type=submit] {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   border: none;
   border-radius: 0px;
@@ -10001,7 +10002,8 @@ button.btn_cl {
   .content-area .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap
   .content-area .give-submit:hover,
   .give-btn-reveal:hover,
-  .btn-wrap a:hover {
+  .btn-wrap a:hover,
+  input[type=submit]:hover {
     background-color: #15467b;
     color: #ffffff;
     text-decoration: none; }
@@ -10012,7 +10014,8 @@ button.btn_cl {
   .content-area .give-submit-button-wrap .white.give-submit, .give-submit-button-wrap
   .content-area .white.give-submit,
   .give-btn-reveal.white,
-  .btn-wrap a.white {
+  .btn-wrap a.white,
+  input[type=submit].white {
     background-color: #ffffff;
     color: #15467b; }
   .btn.white:hover, .wpcf7 input.white[type=submit]:hover, .give-submit-button-wrap .white.give-submit:hover,
@@ -10022,7 +10025,8 @@ button.btn_cl {
   .content-area .give-submit-button-wrap .white.give-submit:hover, .give-submit-button-wrap
   .content-area .white.give-submit:hover,
   .give-btn-reveal.white:hover,
-  .btn-wrap a.white:hover {
+  .btn-wrap a.white:hover,
+  input[type=submit].white:hover {
     background-color: #15467b;
     color: #ffffff; }
   .btn.small, .wpcf7 input.small[type=submit], .give-submit-button-wrap .small.give-submit,
@@ -10032,10 +10036,16 @@ button.btn_cl {
   .content-area .give-submit-button-wrap .small.give-submit, .give-submit-button-wrap
   .content-area .small.give-submit,
   .give-btn-reveal.small,
-  .btn-wrap a.small {
+  .btn-wrap a.small,
+  input[type=submit].small {
     font-size: 14px;
     height: 51px;
     line-height: 41px; }
+
+input[type=submit] {
+  font-size: 14px;
+  height: 51px;
+  line-height: 41px; }
 
 #wrapper-navbar .navbar-dark .navbar-nav .btn-wrap a.nav-link {
   font-size: 14px;
@@ -11649,6 +11659,8 @@ article.page .entry-header h2.entry-title {
 /* FORMS */
 form {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif; }
+  form input::placeholder {
+    color: #999; }
 
 .wpforms-container input[type=text],
 .wpforms-container textarea,

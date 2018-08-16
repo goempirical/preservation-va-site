@@ -161,7 +161,8 @@ button.btn_cl {
 .btn,
 .content-area .btn,
 .give-btn-reveal,
-.btn-wrap a {
+.btn-wrap a,
+input[type=submit] {
 
     @include btn_big;
     border: 0 none;
@@ -184,6 +185,10 @@ button.btn_cl {
     &.small {
         @include btn_small;
     }
+}
+
+input[type=submit] {
+    @include btn_small;
 }
 
 #wrapper-navbar .navbar-dark .navbar-nav .btn-wrap a.nav-link {
