@@ -535,16 +535,21 @@ section.headline-row + section {
     }
 
     .tcll_label_col {
-        @include media-breakpoint-up(md) { 
+        @include media-breakpoint-up(xl) { 
             margin-right: 4.16%;
         }
     }
 
     .grid-two-col {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 52px;
-        padding-left: 52px;
+        @include media-breakpoint-up(md) { 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 52px;
+        }
+
+        @include media-breakpoint-up(lg) { 
+            padding-left: 52px;
+        }
     }
 }
 
@@ -569,8 +574,11 @@ section.headline-row + section {
     }  
 
     .sws_right-col {
-        text-align: right;
         padding-top: 14px;
+
+        @include media-breakpoint-up(md) {
+            text-align: right;
+        }
 
         h3, h4 {
             margin-bottom: 16px;

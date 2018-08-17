@@ -56,6 +56,10 @@
             border-radius: 0;
             padding: 0 1em;
 
+            @include media-breakpoint-down(md) { 
+                margin-bottom: 4px;
+            }
+
             &::placeholder {
                 font-size:13px;
             }
