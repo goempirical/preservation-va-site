@@ -543,7 +543,7 @@ section.headline-row + section {
     .grid-two-col {
         @include media-breakpoint-up(md) { 
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, minmax(250px, 1fr));
             grid-gap: 52px;
         }
 
