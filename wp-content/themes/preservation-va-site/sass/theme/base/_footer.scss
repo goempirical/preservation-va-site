@@ -62,7 +62,7 @@
             border-radius: 0;
             padding: 0 1em;
 
-            @include media-breakpoint-down(md) { 
+            @include media-breakpoint-down(lg) { 
                 margin-bottom: 4px;
             }
 

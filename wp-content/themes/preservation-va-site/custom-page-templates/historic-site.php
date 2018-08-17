@@ -284,11 +284,19 @@ $blogquery = new WP_Query( $args );
                     <?php $highlightRightColumn = $hs_highlight_information['hs_highlight_right_column']; ?>
                     <h2><?php echo $highlightRightColumn['hs_highlight_title']; ?></h2>
                     <p><?php echo $highlightRightColumn['hs_highlight_content'] ?></p>
-                    <a href="<?php echo $highlightRightColumn['hs_highlight_button']['url'] ?>" 
-                        target="<?php echo $highlightRightColumn['hs_highlight_button']['target'] ?>" 
+                    <?php
+
+                        $hl_button = $highlightRightColumn['hs_highlight_button'];
+                        if($hl_button) : 
+                    ?>
+                    <a href="<?php echo $hl_button['url'] ?>" 
+                        target="<?php echo $hl_button['target'] ?>" 
                         class="btn marigold small">
-                        <?php echo $highlightRightColumn['hs_highlight_button']['title'] ?>
+                        <?php echo $hl_button['title'] ?>
                     </a>
+
+                <?php endif; ?>
+
                 </div>
 
             </div> <!-- .ROW -->
@@ -349,6 +357,7 @@ $blogquery = new WP_Query( $args );
             </div>
         </div>
 
+
         <section class="layout-block single_column hs_donate_info content_action_block dark_blue">
 
             <div id="donate" class="row">
@@ -356,13 +365,10 @@ $blogquery = new WP_Query( $args );
                 <div class="content_button">
                     <?php 
                         $button_1 = get_sub_field('hs_donate_button_link'); 
-                        $link = $button_1 ? $button_1['url'] : get_site_url() . '/support/historic-site-donation/?hsd=' . $post->post_name;
+                        $link = $button_1 ? $button_1 : get_site_url() . '/support/historic-site-donation/?hsd=' . $post->post_name;
 
                     ?>
-
-                    <?php if ( $button_1 ) : ?>
-                        <a href="<?php echo link; ?>" class="btn">Donate</a>
-                    <?php endif; ?>
+                    <a href="<?php echo $link; ?>" class="btn">Donate</a>
                 </div>
             </div>
 
