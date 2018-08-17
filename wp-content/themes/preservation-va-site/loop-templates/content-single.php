@@ -26,14 +26,13 @@
 
 			<div class="entry-content">
 				<?php 
-					if ( has_post_thumbnail() ) :
+					if ((1533081600 < strtotime( get_the_date() )) && has_post_thumbnail() ) : //published after 8/1/2018
 						echo get_the_post_thumbnail( $post->ID, 'full');
 
 						$attach_id = get_post_thumbnail_id( $post->ID );
 						$image_data = wp_get_attachment( $attach_id );
-				?>
-						<p class="caption"><?php echo $image_data["caption"]; ?></p>
-			<?php endif; ?>
+
+					endif; ?>
 
 				<?php the_content(); ?>
 
