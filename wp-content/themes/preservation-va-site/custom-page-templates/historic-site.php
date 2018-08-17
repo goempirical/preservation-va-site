@@ -211,15 +211,17 @@ $blogquery = new WP_Query( $args );
         </section>
         <?php endif; ?>
 
+        <?php if(get_sub_field('hs_caption_gallery')) : ?>
         <!-- Red Banner Message -->
         <section class="red_banner_message red layout-block">
             <div class="row">
                 <h2><?php the_sub_field('hs_caption_gallery'); ?></h2>
             </div>
         </section>
+        <?php endif; ?>
 
     <?php endwhile; ?>
-<?php endif ?>
+<?php endif; ?>
 
 <!-- Plan your visit -->
 <?php if( have_rows('hs_plan_your_visit') ): ?>
@@ -253,19 +255,23 @@ $blogquery = new WP_Query( $args );
 <?php endif; ?>
 
 <!-- Highlight -->
-<?php if( have_rows('hs_highlight_information') ): ?>
-<?php // loop through the rows of data
-    while ( have_rows('hs_highlight_information') ) : the_row(); ?>
+    <?php 
+
+        $hs_highlight_information = get_field('hs_highlight_information');
+
+        if( $hs_highlight_information && !$hs_highlight_information['hide_this_section']) : 
+
+    ?>
         <section class="layout-block two_columns dark_blue">
 
             <div class="row align-items-center">
 
                 <div class="col-md-6">
-                    <?php $image = get_sub_field('hs_highlight_image'); ?>
+                    <?php $image = $hs_highlight_information['hs_highlight_image']; ?>
                     <?php echo wp_get_attachment_image( $image['ID'], 'large', false, array('alt' => $image['alt']) ); ?>
                 </div>
                 <div class="col-md-6 p_medium">
-                    <?php $highlightRightColumn = get_sub_field('hs_highlight_right_column'); ?>
+                    <?php $highlightRightColumn = $hs_highlight_information['hs_highlight_right_column']; ?>
                     <h2><?php echo $highlightRightColumn['hs_highlight_title']; ?></h2>
                     <p><?php echo $highlightRightColumn['hs_highlight_content'] ?></p>
                     <a href="<?php echo $highlightRightColumn['hs_highlight_button']['url'] ?>" 
@@ -279,21 +285,24 @@ $blogquery = new WP_Query( $args );
 
         </section>
 
-    <?php endwhile; ?>
 <?php endif; ?>
 
 <!-- Admission -->
-<?php if( have_rows('hs_admission_info') ): ?>
-<?php // loop through the rows of data
-    while ( have_rows('hs_admission_info') ) : the_row(); ?>
+    <?php 
+
+        $hs_admission_info = get_field('hs_admission_info');
+
+        if( $hs_admission_info && !$hs_admission_info['hide_this_section']) : 
+
+    ?>
         <section id="admissions" class="hs_admission_info layout-block">
             <div class="row justify-content-center margin_bottom">
                 <div class="content_headline intro_text">                  
                     <h2>Admission</h2>  
-                    <?php the_sub_field('hs_admission_intro_text') ?>
+                    <?php $hs_admission_info['hs_admission_intro_text'] ?>
                 </div>
             </div>
-            <?php $admissionContent = get_sub_field('hs_admission_content');?>
+            <?php $admissionContent = $hs_admission_info['hs_admission_content'];?>
             <div class="row">
                 <div class="col-md-6">
                     <h3>Pricing</h3>
@@ -311,13 +320,15 @@ $blogquery = new WP_Query( $args );
 
         </section>
 
-    <?php endwhile; ?>
 <?php endif; ?>
 
 <!-- Donate -->
 <?php if( have_rows('hs_donate_info') ): ?>
 <?php // loop through the rows of data
-        while ( have_rows('hs_donate_info') ) : the_row(); ?>
+        while ( have_rows('hs_donate_info') ) : the_row(); 
+
+            if(!get_sub_field('hide_this_section')) :
+            ?>
 
         <?php $image = get_sub_field('hs_donate_image'); ?>        
         <div class="row">
@@ -333,16 +344,21 @@ $blogquery = new WP_Query( $args );
             <div id="donate" class="row">
                 <h2>Donate to <?php the_title() ?></h2>
                 <div class="content_button">
-                    <?php $button_1 = get_sub_field('hs_donate_button_link'); ?>
+                    <?php 
+                        $button_1 = get_sub_field('hs_donate_button_link'); 
+                        $link = $button_1 ? $button_1['url'] : get_site_url() . '/support/historic-site-donation/?hsd=' . $post->post_name;
+
+                    ?>
 
                     <?php if ( $button_1 ) : ?>
-                        <a href="<?php echo site_url(); ?>/support/historic-site-donation/?hsd=<?php echo $post->post_name; ?>" class="btn">Donate</a>
+                        <a href="<?php echo link; ?>" class="btn">Donate</a>
                     <?php endif; ?>
                 </div>
             </div>
 
         </section>
 
+        <?php endif; ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
@@ -432,18 +448,22 @@ $blogquery = new WP_Query( $args );
 <?php endif; // event + blog query ?>
 
 <!-- Tours & Site Rental -->
-<?php if( have_rows('hs_tours_and_site_rental') ): ?>
-<?php // loop through the rows of data
-    while ( have_rows('hs_tours_and_site_rental') ) : the_row(); ?>
+    <?php 
+
+        $hs_tours_and_site_rental = get_field('hs_tours_and_site_rental');
+
+        if( $hs_tours_and_site_rental && !$hs_tours_and_site_rental['hide_this_section']) : 
+
+    ?>
     <section id="tours-rentals" class="hs_tours_and_site_rental layout-block">
         <div class="row justify-content-center margin_bottom">
             <div class="content_headline intro_text">                  
                 <h2>Tours & Site Rental</h2>  
-                <?php $tourSiteRental = get_sub_field('h2_tours_site_rental_info'); ?>
+                <?php $tourSiteRental = $hs_tours_and_site_rental['h2_tours_site_rental_info']; ?>
                 <?php echo $tourSiteRental['hs_tour_site_renta_intro_text']; ?>
             </div>
         </div>
-        <?php $admissionContent = get_sub_field('hs_admission_content');?>
+        <?php $admissionContent = $hs_tours_and_site_rental['hs_admission_content'];?>
         <div class="row">
             <div class="col-md-6">
             <?php if ($tourSiteRental['hs_tour_content']['content_left']['hs_tour_site_rental_special_events']) { ?>
@@ -467,7 +487,6 @@ $blogquery = new WP_Query( $args );
 
     </section>
 
-    <?php endwhile; ?>
 <?php endif; ?>
 
 <!-- Key Visitor Info -->
