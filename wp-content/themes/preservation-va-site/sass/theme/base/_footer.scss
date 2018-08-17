@@ -11,6 +11,7 @@
     list-style: none;
     margin: 0;
     text-align: right;
+    padding: 0;
 
     @include media-breakpoint-down(md) {
         padding:0;
@@ -19,11 +20,16 @@
     }
 }
 
-#wrapper-footer #footer-menu a{
-    @include font-sizing(18, 36);
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    color: $white;
+#wrapper-footer #footer-menu li {
+    margin-bottom: 8px;
+
+    a {
+        @include font-sizing(16, 20);
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: $white;
+        text-transform: uppercase;
+    }
 }
 
 .footer {

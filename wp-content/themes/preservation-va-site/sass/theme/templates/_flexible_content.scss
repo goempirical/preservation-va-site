@@ -211,6 +211,11 @@ section.headline-row + section {
         }
     }
 
+    @include media-breakpoint-down(md) { 
+        .col-md-6:first-child {
+            margin-bottom: 12px;
+        }
+    }
 }
 
 .related-content {
@@ -493,6 +498,10 @@ section.headline-row + section {
                 background-color: $dark-blue;
                 color: $white;
             }
+        }
+
+        h2 a {
+            color: white;
         }
     }
     &.light_blue {
