@@ -600,7 +600,7 @@ section.headline-row + section {
     .grid-three-col {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: initial;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }

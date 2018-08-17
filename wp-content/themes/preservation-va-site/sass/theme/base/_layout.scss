@@ -75,7 +75,7 @@ section {
         background: $red-punch;
         color: $white;
 
-        *:not(a, select, button) {
+        *:not(a, select, button, option) {
             color: $white;
         }
 
