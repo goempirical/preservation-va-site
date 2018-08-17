@@ -451,19 +451,17 @@ $blogquery = new WP_Query( $args );
     <?php 
 
         $hs_tours_and_site_rental = get_field('hs_tours_and_site_rental');
-
-        if( $hs_tours_and_site_rental && !$hs_tours_and_site_rental['hide_this_section']) : 
+        $tourSiteRental = $hs_tours_and_site_rental['h2_tours_site_rental_info'];
+        if( $tourSiteRental && !$tourSiteRental['hide_this_section']) : 
 
     ?>
     <section id="tours-rentals" class="hs_tours_and_site_rental layout-block">
         <div class="row justify-content-center margin_bottom">
             <div class="content_headline intro_text">                  
                 <h2>Tours & Site Rental</h2>  
-                <?php $tourSiteRental = $hs_tours_and_site_rental['h2_tours_site_rental_info']; ?>
                 <?php echo $tourSiteRental['hs_tour_site_renta_intro_text']; ?>
             </div>
         </div>
-        <?php $admissionContent = $hs_tours_and_site_rental['hs_admission_content'];?>
         <div class="row">
             <div class="col-md-6">
             <?php if ($tourSiteRental['hs_tour_content']['content_left']['hs_tour_site_rental_special_events']) { ?>
