@@ -49,9 +49,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 			<div class="col-xl-4 col-lg-3 social_media">
 				<?php get_template_part( 'global-templates/social-links' ); ?>
+
+				<?php 
+
+				$link = get_field('link');
+
+				if( $link ): ?>
+
 				<div>
-					<a href="/contact-us" class="btn marigold small">CONTACT US</a>
+					<a href="<?php echo $link['url']; ?>" class="btn marigold small" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
 				</div>
+
+				<?php endif; ?>
 			</div>
 
 			<div class="col-lg-2">
