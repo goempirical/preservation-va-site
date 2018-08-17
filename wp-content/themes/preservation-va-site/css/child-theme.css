@@ -10606,19 +10606,23 @@ li.search {
 #wrapper-footer #footer-menu {
   list-style: none;
   margin: 0;
-  text-align: right; }
+  text-align: right;
+  padding: 0; }
   @media (max-width: 991.98px) {
     #wrapper-footer #footer-menu {
       padding: 0;
       text-align: center;
       margin-top: 2rem; } }
 
-#wrapper-footer #footer-menu a {
-  font-size: 1.125em;
-  line-height: 2;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  color: #ffffff; }
+#wrapper-footer #footer-menu li {
+  margin-bottom: 8px; }
+  #wrapper-footer #footer-menu li a {
+    font-size: 1em;
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    text-transform: uppercase; }
 
 .footer {
   color: #ffffff;
@@ -10854,6 +10858,10 @@ section.headline-row + section {
 .two_columns .content_media iframe {
   width: 100%;
   height: 242px; }
+
+@media (max-width: 991.98px) {
+  .two_columns .col-md-6:first-child {
+    margin-bottom: 12px; } }
 
 .related-content > div {
   width: 100%;
@@ -11198,6 +11206,9 @@ section.headline-row + section {
     .two_columns.red .give-submit:hover {
       background-color: #15467b;
       color: #ffffff; }
+  .single_column.red h2 a,
+  .two_columns.red h2 a {
+    color: white; }
 
 .single_column.light_blue,
 .two_columns.light_blue {

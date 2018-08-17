@@ -56,6 +56,15 @@ $blogquery = new WP_Query( $args );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
+        <?php 
+
+            $hs_highlight_information = get_field('hs_highlight_information');
+            $hs_admission_info = get_field('hs_admission_info');
+            $hs_donate_info = get_field('hs_donate_info');
+            $hs_tours_and_site_rental = get_field('hs_tours_and_site_rental');
+            $tourSiteRental = $hs_tours_and_site_rental['h2_tours_site_rental_info'];
+
+        ?>
 
 <?php if( have_rows('hs_main_section') ): ?>
     <?php // loop through the rows of data
@@ -74,6 +83,7 @@ $blogquery = new WP_Query( $args );
             </div>
         </div>
 
+
         <!-- Title -->
         <div class="row">
             <div class="col-md-12 no_padding_both_sides">
@@ -82,10 +92,10 @@ $blogquery = new WP_Query( $args );
                     <div class="hs_submenu">
                         <a href="#basic-info">Basic Info</a>
                         <?php if ( $eventquery->have_posts() || $blogquery->have_posts() ) { ?><a href="#events">Events</a><?php } ?>
-                        <a href="#donate">Donate</a>
+                        <?php if( $hs_donate_info && !$hs_donate_info['hide_this_section']) { ?><a href="#donate">Donate</a><?php } ?>
                         <a href="#plan-your-visit">Plan your Visit</a>
-                        <a href="#admissions">Admissions</a>
-                        <a href="#tours-rentals">Tours/Rentals</a>
+                        <?php if( $hs_admission_info && !$hs_admission_info['hide_this_section']) { ?><a href="#admissions">Admissions</a><?php } ?>
+                        <?php if( $tourSiteRental && !$tourSiteRental['hide_this_section']) { ?><a href="#tours-rentals">Tours/Rentals</a><?php } ?>
                         <?php if($location || $regulations) { ?><a href="#key-visitor-info">Key Visitor Info</a><?php } ?>
                     </div>
                 </div>

@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<div class="footer">
 
 		<div class="row">
-			<div class="col-lg-7 col-xl-6 footer--contact-details">
+			<div class="col-lg-6 col-xl-5 footer--contact-details">
 				<?php 
 
 				$opt_subscribe = get_field('opt_subscribe', 'option');
@@ -51,38 +51,42 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
 				<p>&copy; <?php echo date('Y') ?> Preservation Virginia. All Rights Reserved.</p>
 			</div>
-			<div class="col-xl-4 col-lg-3 social_media">
-				<?php get_template_part( 'global-templates/social-links' ); ?>
+			<div class="col-lg-6 col-xl-7 row">
 
-				<?php 
+				<div class="col-lg-6 social_media">
+					<?php get_template_part( 'global-templates/social-links' ); ?>
 
-				$link = $opt_footer["primary_button"];
+					<?php 
 
-				if( $link ): ?>
+					$link = get_field('primary_button', 'option');
 
-				<div>
-					<a href="<?php echo $link['url']; ?>" class="btn marigold small" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+					if( $link ): ?>
+
+					<div>
+						<a href="<?php echo $link['url']; ?>" class="btn marigold small" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+					</div>
+
+					<?php endif; ?>
 				</div>
 
-				<?php endif; ?>
-			</div>
+				<div class="col-lg-6">
 
-			<div class="col-lg-2">
+					<footer class="site-footer" id="colophon">
 
-				<footer class="site-footer" id="colophon">
+						<div class="site-info">
 
-					<div class="site-info">
+							<!-- The WordPress Menu goes here -->
+							<?php wp_nav_menu(
+								array(
+									'theme_location'  => 'footermenu',
+									'menu_id'         => 'footer-menu'
+								)
+							); ?>
+						</div><!-- .site-info -->
 
-						<!-- The WordPress Menu goes here -->
-						<?php wp_nav_menu(
-							array(
-								'theme_location'  => 'footermenu',
-								'menu_id'         => 'footer-menu'
-							)
-						); ?>
-					</div><!-- .site-info -->
+					</footer><!-- #colophon -->
 
-				</footer><!-- #colophon -->
+				</div>
 
 			</div><!--col end -->
 
