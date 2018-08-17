@@ -9,18 +9,92 @@
 //
 // Color system
 //
-$font-family-base: FreightTextProBook, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-base: "Noto Serif", Georgia, Times, "Times New Roman", serif;
+$font-family-header: "Roboto", "Helvetica Neue", Arial, sans-serif;
+
 $white-one: #f6f5f5;
-$white-two: #ffffff;
-$light-navy: #15467b;
+$white: #ffffff;
+$white-three: #f2f2f2;
+$dark-blue : #15467b;
 $marigold: #ffca05;
 $nice-blue: #0f7ab5;
 $greyish-brown: #4a4a4a;
-$white-three: #f2f2f2;
 $greyish-brown-two: #4a4a4a;
 $red-brown: #91331a;
+$red-punch: #A12017;
 $aux_gray: #d8d8d8;
+$gray_2: #979797;
 $primary: $greyish-brown;
 $range-head-title: (h1, h2, h3, h4);
 
-$grid-gutter-width: 50px !default;
+$grid-gutter-width: 3rem;
+$max-width: 1300px;
+$narrow-width: 618px;
+$mid-width: 800px;
+
+$anim-dur : 800ms;
+
+// MIXINS
+
+@mixin font-sizing($fsize, $lheight) {
+    font-size: $fsize/16 * 1em;
+    line-height: $lheight/$fsize;
+}
+
+/* $weight = 700,500,400 */
+
+@mixin labelfont($weight: 700) {
+  font-family:$font-family-header;
+  text-transform:uppercase;
+  font-size:.875em;
+  letter-spacing: .08em;
+  font-weight: $weight;
+  @include font-smoothing;
+}
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin narrow_block {
+  max-width: $narrow-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin mid_width_block {
+  max-width: $mid-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin max_block {
+	margin-right: -1.5rem;
+	margin-left: -1.5rem;
+    
+  .row {
+	  margin-left: auto;
+	  margin-right: auto;
+	  max-width: $max-width;
+	  padding-right: 1rem;
+    padding-left: 1rem;
+
+	  @include media-breakpoint-up(md) { 	
+	  	padding-right: 1.5rem;
+	    padding-left: 1.5rem;
+	  }
+  }
+}
+
+@each $header in $range-head-title {
+    #{$header} {
+        color: $greyish-brown-two;
+    }
+}

@@ -1,0 +1,220 @@
+/* FORMS */
+
+form {
+	font-family: $font-family-header;
+
+    input::placeholder {
+        color:#999;
+    }
+}
+#give-fee-recovery-wrap-1194 label {
+    text-align: center;
+}
+
+.wpforms-container,
+form[id*=give-form],
+form[id*=give-form] .form-row {
+    input[type=text], 
+    textarea,
+    input[type=email],
+    select,
+    select.give-select {
+        font-family: $font-family-header;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 3.36;
+        letter-spacing: 0.4px;
+        color: $greyish-brown-two;
+        height: 51px;
+        border: 0 none;
+        background-color: #e6e6e6;
+        border-radius: 0;
+        padding: 6px 17px;
+        
+    }
+    select option,
+    select.give-select option {
+        color: $greyish-brown-two;
+    }
+    textarea {
+        padding: 17px;
+        height: 179px;
+        line-height: 1.36;
+    }
+    select,
+    select.give-select {
+        padding: 2px 17px;
+    }
+    &.wpforms-container-full .wpforms-form .wpforms-field {
+        padding: 7px 0;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $greyish-brown-two;
+        opacity: 1; /* Firefox */
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $greyish-brown-two;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        color: $greyish-brown-two;
+    }
+    .wpforms-submit-container{
+        text-align: left;
+    }
+}
+
+form[id*=give-form] select {
+  padding: 2px 17px;
+}
+
+div.wpforms-container-full {
+    margin-bottom: 54px;
+}
+
+select {
+    @include labelfont();
+    font-weight: 500;
+}
+
+.select-container {
+    position: relative;
+}
+
+.hp_historic_sites_navigator .select-container {
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.select-container::after {
+    position: absolute;
+    content: '';
+    display: block;
+    right: 11px;
+    width: 0;
+    height: 0;
+    border: solid $dark-blue;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    top: calc(50% - 9px);
+    pointer-events: none; 
+}
+
+select.select-custom {
+    color: $dark-blue;
+    background: linear-gradient(to right, $white-one 0%, $white-one calc(100% - 35px), $marigold calc(100% - 35px), $marigold 100%);
+    padding: 0 55px 0 20px;
+    border: none;
+    transition: border 300ms ease;
+    border-radius: 0;
+    height: 51px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.page-template-flexible-template form h3[id] {
+    margin-top: 12px;
+    padding-top: 0;
+    margin-bottom: 0px;
+}
+
+form[id*=wpforms] {
+
+	.wpforms-field-label {
+		font-weight: normal;
+		opacity: 0.85;
+	}
+
+	.wpforms-field {
+    padding: 0 0 28px;
+	}
+
+	ul {
+		padding:0;
+		font-size: 1em !important;
+		margin-bottom: 0 !important;
+	}
+
+	.wpforms-field-radio ul {
+		display: flex;
+		flex-wrap: wrap;
+	  justify-content: flex-start;
+
+	  li {
+	  	margin-right: 1em;
+	  }
+	}
+}
+
+form[id*=give-form] .give-donation-amount .give-currency-symbol.give-currency-position-before,
+form[id*=give-form] #give-final-total-wrap .give-donation-total-label {
+    background: $nice-blue;
+    color: white;
+    border-color: $nice-blue;
+    font-family: $font-family-header;
+}
+
+.give-submit-button-wrap .give-submit {
+    @extend .btn;
+}
+
+#give-recurring-form h3.give-section-break, #give-recurring-form h4.give-section-break, #give-recurring-form legend, form.give-form h3.give-section-break, form.give-form h4.give-section-break, form.give-form legend, form[id*=give-form] h3.give-section-break, form[id*=give-form] h4.give-section-break, form[id*=give-form] legend {
+    @extend h4;
+}
+
+.give-form-1194 {
+    .give-btn-reveal {
+    	margin: 0 auto!important;
+    	display: block;
+    }
+
+    .give-total-wrap {
+	    display: flex;
+	    justify-content: center;
+    }
+}
+
+.give-label {
+  font-family: $font-family-header;
+}
+
+form[id*=give-form] label {
+    font-family: $font-family-header;
+    font-size: 14px;
+    line-height: 2.5;
+}
+
+.ffm-radio-field {
+    width: 100%;
+}
+
+#give_error_test_mode {
+    height: 3px;
+    overflow: hidden;
+    padding: initial;
+    box-shadow: none;
+    width: 3px;
+    border-radius: 50%;
+
+    &:hover {
+    	position: relative;
+	    padding: 1em 1.5em 1em 2em;
+	    box-shadow: 0 1px 1px rgba(0,0,0,.125);
+	    height: auto;
+	    width: auto;
+	    overflow: visible;
+	    border-radius: 0;
+    }
+}
+
+.give-btn-reveal {
+	@include btn_small;
+}

@@ -1,0 +1,122 @@
+// Footer
+#wrapper-footer {
+    background-color: $nice-blue;
+    padding: 55px 0 68px;
+
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+#wrapper-footer #footer-menu{
+    list-style: none;
+    margin: 0;
+    text-align: right;
+    padding: 0;
+
+    @include media-breakpoint-down(md) {
+        padding:0;
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+
+#wrapper-footer #footer-menu li {
+    margin-bottom: 8px;
+
+    a {
+        @include font-sizing(16, 20);
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: $white;
+        text-transform: uppercase;
+    }
+}
+
+.footer {
+    color: $white;
+    @include font-smoothing;
+    font-family: $font-family-header;
+    @include max_block;
+
+    ul li {
+        line-height: 21px;
+    }
+
+    #mc_embed_signup {
+        margin-bottom: 30px;
+        background-color: transparent;
+
+        form {
+            padding: 0;
+            margin: 0;
+        }
+
+        input.email {
+            background-color: $white;
+            margin: 0;
+            display: inline-block;
+            line-height: 39px;
+            height: 39px;
+            min-width: 19em;
+            border: 1px solid $white;
+            border-radius: 0;
+            padding: 0 1em;
+
+            @include media-breakpoint-down(lg) { 
+                margin-bottom: 4px;
+            }
+
+            &::placeholder {
+                font-size:13px;
+            }
+        }
+
+        input.button{
+            display: inline-block;
+            @include btn_big;
+            font-size: 14px;
+            height: 39px;
+            line-height: 30px;
+            background-color: $marigold;
+            color: $dark-blue;
+
+            &:hover {
+                background-color: $dark-blue;
+                color: $white;
+            }
+        }
+    }
+    .social_media {
+        text-align: center;
+
+        a {
+            margin-right: 12px;
+            display: inline-block;
+        }
+        .btn.marigold {
+            border: solid 1px $marigold;
+            background-color: transparent;
+            color: $white;
+            margin-top: 38px;
+        }
+    }
+}
+
+.footer--contact-details {
+    @include media-breakpoint-down(md) {
+        margin: 0 auto 2rem;
+        text-align: center;
+    }
+
+    p {
+        @include font-sizing(14, 21);
+        font-weight: 300;
+        margin-bottom: 0;
+        color:$white;
+
+        .gold {
+            display: inline-block;
+            margin: 0 .5em;
+        }
+    }
+}

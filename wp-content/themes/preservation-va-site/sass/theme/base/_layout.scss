@@ -1,0 +1,145 @@
+body {
+    overflow-x: hidden; /* prevents mega menu overflow to the right of the body */
+}
+
+.flex-row {
+    @include media-breakpoint-up(md) { 
+        display: flex;
+    }
+}
+
+.ui-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*//deprecate this*/
+
+.content_side {
+    padding: 60px 35px;
+
+    .side_text {
+        max-width: 550px;
+
+        & > p {
+            @include p_medium;
+            color: $greyish-brown-two;
+        }
+    }
+
+    .row {
+    	align-items: center;
+    }
+
+    img {
+        width: 100%;
+    }
+    .content_address {
+        &, & > * {
+            text-align: right;
+        }
+        h3 {
+            line-height: 26px;
+            margin-top: 20px;
+            margin-bottom: 3px;
+            :first-child {
+                margin-top: 0px;
+            }
+        }
+        p {
+            color: $dark-blue;
+            line-height: 22px;
+        }
+        .btn {
+            margin-top: 30px;
+        }
+        &.greyish p {
+            color: $greyish-brown-two;
+        }
+        &.map iframe {
+            height: 242px;
+        }
+    }
+}
+
+section {
+    &.red,
+    &.light_blue,
+    &.dark_blue {
+        background: $red-punch;
+        color: $white;
+
+        *:not(a, select, button, option) {
+            color: $white;
+        }
+
+        a:not(.btn) {
+            color: $marigold;
+
+            &:hover,
+            &:focus {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &.light_blue {
+        background: $nice_blue;
+    }
+
+    &.dark_blue {
+        background: $dark_blue;
+    }
+}
+
+.pr-items {
+    margin:0;
+    padding:0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+        margin:0 0 24px;
+
+        @include media-breakpoint-up(lg) {
+            width: 45%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            width: 30%;
+        }
+    }
+
+    .date {
+        padding:0;
+        margin:0;
+        font-family: $font-family-header;
+        letter-spacing: 0.04em;
+    }
+    h4 {
+        margin-top: 0;
+    }
+}
+
+.sws_right-col ul {
+    list-style: none;
+
+    li {
+        line-height: 1.5;
+        margin-bottom: 8px;
+    
+        &::before {
+            content: "• ";
+        }
+    }
+}

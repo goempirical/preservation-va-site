@@ -15,31 +15,78 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+	<div class="footer">
 
 		<div class="row">
+			<div class="col-lg-6 col-xl-5 footer--contact-details">
+				<?php 
 
-			<div class="col-md-12">
+				$opt_subscribe = get_field('opt_subscribe', 'option');
+				if ($opt_subscribe["title"]) {
+					echo '<h4>'.$opt_subscribe["title"].'</h4>';
+				}
+				if ($opt_subscribe["opt_subscribe_snippet"]) {
+					echo $opt_subscribe["opt_subscribe_snippet"];
+				}
 
-				<footer class="site-footer" id="colophon">
+				$opt_footer = get_field('opt_footer', 'option'); 
 
-					<div class="site-info">
+				if ($opt_footer["opt_footer_address"]) {
+					echo "<p class='address'>" . $opt_footer["opt_footer_address"] . "</p>";
+				}
 
-						<!-- The WordPress Menu goes here -->
-						<?php wp_nav_menu(
-							array(
-								'theme_location'  => 'footermenu',
-								//'container_class' => 'collapse navbar-collapse',
-								//'container_id'    => 'navbarNavDropdown',
-								//'menu_class'      => 'navbar-nav',
-								//'fallback_cb'     => '',
-								'menu_id'         => 'footer-menu',
-								//'walker'          => new understrap_WP_Bootstrap_Navwalker(),
-							)
-						); ?>
-					</div><!-- .site-info -->
+				echo "<p class='more_info'>";
+				if ($opt_footer["opt_footer_phone"]) {
+					echo "<span>phone " . $opt_footer["opt_footer_phone"] . "</span> <span class='gold'>|</span> ";
+				}
 
-				</footer><!-- #colophon -->
+				if ($opt_footer["opt_footer_fax"]) {
+					echo "<span>fax " . $opt_footer["opt_footer_fax"] . "</span> <span class='gold'>|</span> ";
+				}
+
+				if ($opt_footer["opt_footer_email"]) {
+					echo "<span>" . $opt_footer["opt_footer_email"] . "</span>";
+				}
+				echo "</p>";
+				?>
+				<p>&copy; <?php echo date('Y') ?> Preservation Virginia. All Rights Reserved.</p>
+			</div>
+			<div class="col-lg-6 col-xl-7 row">
+
+				<div class="col-lg-6 social_media">
+					<?php get_template_part( 'global-templates/social-links' ); ?>
+
+					<?php 
+
+					$link = get_field('primary_button', 'option');
+
+					if( $link ): ?>
+
+					<div>
+						<a href="<?php echo $link['url']; ?>" class="btn marigold small" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+					</div>
+
+					<?php endif; ?>
+				</div>
+
+				<div class="col-lg-6">
+
+					<footer class="site-footer" id="colophon">
+
+						<div class="site-info">
+
+							<!-- The WordPress Menu goes here -->
+							<?php wp_nav_menu(
+								array(
+									'theme_location'  => 'footermenu',
+									'menu_id'         => 'footer-menu'
+								)
+							); ?>
+						</div><!-- .site-info -->
+
+					</footer><!-- #colophon -->
+
+				</div>
 
 			</div><!--col end -->
 

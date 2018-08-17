@@ -1,58 +1,42 @@
-<?php if (!is_paged()) : ?>
-		<aside class="sidebar calendar-sidebar">
-			<?php
-				date_default_timezone_set('America/New_York');
+<?php
+	date_default_timezone_set('America/New_York');
 
-				$args = array(
-					'post_type' => 'events',
-					'meta_key'     => 'e_end_date', // @seba this matches the acf key we want to target for sorting
-					'meta_value'   => date( "Ymd", strtotime('yesterday') ), // @seba this filters out items that ended in the past
-					'meta_compare' => '>=',
-					'orderby'			=> 'meta_value_num', // and this orders by the previously set meta value as a number
-					'order'					=> 'ASC',
-					'posts_per_page' => 10
-				);
+	$yesterday = date( "Ymd", strtotime('yesterday') );
 
-				$query = new WP_Query($args);
+	$number   = 4; // number of terms to display per page
+	$paged  = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	$offset = ( $paged > 0 ) ?  $number * ( $paged - 1 ) : 1;
 
-				if ( $query->have_posts() ) {
-					while ( $query->have_posts() ) : $query->the_post();
+	$args = array(
+		'posts_per_page'	=> $number,
+		'offset'       => $offset,
+		'post_type' => 'events',
+		'meta_key'     => 'event_dates_times_$_e_end_date', // this matches the acf key we want to target for sorting
+		'meta_value'   => $yesterday, // this filters out items that ended in the past
+		'meta_compare' => '>=',
+		'paged' => $paged
+	);
 
-						$eTitle = get_field('event_title');
-            $eDesc = get_field('event_description');
-            $eStartDate = get_field('e_start_date');
-            $eEndDate = get_field('e_end_date');
-            $eTime = get_field('e_time');
+	$query = new WP_Query($args);
 
-						$eLocation = get_field('e_location');
-						$link = get_field('e_link');
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) : $query->the_post(); ?>
 
-						if ($eStartDate) : ?>
+        <?php get_template_part('loop-templates/content-events') ?>
+		<?php
 
-							<div class="calendar-event">
-								<span class="calendar-event-title"><?php the_title(); ?></span>
-								<div class="calendar-event-meta">
-									<span class="calendar-event-date"><strong>Date: </strong><?php echo $eStartDate; ?></span>
-									<?php if ( $eTime ) echo '<span class="calendar-event-time"><strong>Time: </strong>'.$eTime.'</span>'; ?>
-									<?php if ( $eLocation ) echo '<span class="calendar-event-location"><strong>Location: </strong>'.$eLocation.'</span>'; ?>
-								</div>
+		endwhile;
 
-								<?php if ( $eDesc ) echo '<span class="calendar-event-desc">'.$eDesc.'</span>'; ?>
+$args['posts_per_page'] = -1;
+$countquery = new WP_Query($args);
+$max   	= $countquery->post_count;
+$totalpages   = ceil( $max / $number );
 
-								<?php if ( $link ) echo '<a class="calendar-event-link" href="'.$link['url'].'" target="'.$link['target'].'">more info</a>'; ?>
+echo custom_page_navi( $totalpages, $paged, 3, 0 );
 
-							</div>
+	} else {
+		echo 'no upcoming events';
+	}
+	wp_reset_postdata();
+?>
 
-						<?php
-						endif;
-
-					endwhile;
-					wp_reset_postdata();
-
-				} else {
-					echo 'no upcoming events';
-				}
-			?>
-			<a class="btn" href="<?php echo home_url(); ?>/events">See all events</a>
-		</aside>
-<?php endif; ?>

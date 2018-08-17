@@ -4,38 +4,28 @@
  */
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
-
 ?>
 
-<div class="wrapper" id="page-wrapper">
+<div class="wrapper" id="index-wrapper">
+	<div class="container" id="content" tabindex="-1">
+		
+		<?php while ( have_posts() ) : the_post(); ?>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+		<div class="header">
+			<h2 class="blog-title"><?php the_title(); ?></h2>
+			<?php the_content(); ?>
+		</div>
+
+		<?php endwhile; // end of the loop. ?>
 
 		<div class="row">
 
-			<!-- Do the left sidebar check -->
+			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
-          <h1>Upcoming Event List</h1>
-
-          <!-- This is an include to test the query on cutom post events-->
-          <?php get_template_part('custom-post-templates/events-search') ?>
-
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
-
-				<?php endwhile; // end of the loop. ?>
+        <?php get_template_part('custom-post-templates/events-search') ?>
 
 			</main><!-- #main -->
 

@@ -25,16 +25,20 @@ function theme_enqueue_styles() {
 }
 
 include 'custom-post-types/events.php';
+include 'custom-post-types/press-releases.php';
 include 'taxonomies/index.php';
-//include 'custom-page-templates-fields/custom-fields-updated.php';
+//include 'custom-page-templates-fields/custom-fields.php';
+
+add_post_type_support( 'page', 'excerpt' );
 
 function understrap_footer_menu() {
+    register_nav_menu('historicmenu',__( 'Historic Mega Menu' ));
     register_nav_menu('footermenu',__( 'Footer Menu' ));
 }
 add_action( 'init', 'understrap_footer_menu' );
 
-add_image_size('banner_size', 1024, 339, true);
-add_image_size('Home Banner', 1024, 514, true);
+add_image_size('banner_size', 2000, 667, true);
+add_image_size('Home Banner', 2600, 867, true);
 
 // Build Table for Plugin https://wordpress.org/plugins/advanced-custom-fields-table-field/
 function buildTable($table) {
@@ -67,6 +71,14 @@ function buildTable($table) {
     }
 }
 
+// register google map API for acf
+function my_acf_init() {
+    
+    acf_update_setting('google_api_key', 'AIzaSyBGoU3uwZTeYotBXgkkUKL0ipu6l6CfiGs');
+}
+
+add_action('acf/init', 'my_acf_init');
+
 // Add support to files upload SVG
 function cc_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
@@ -78,4 +90,216 @@ function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 	return $post_excerpt . '';
 }
 add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
-?>
+
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(array(
+        'page_title'    => 'Theme General Settings',
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+}
+
+// Get Image Description
+function wp_get_attachment( $attachment_id ) {
+    $attachment = get_post( $attachment_id );
+    return array(
+        'alt' => get_post_meta( $attachment->ID, '_wp_attachment_image_alt', true ),
+        'caption' => $attachment->post_excerpt,
+        'description' => $attachment->post_content,
+        'href' => get_permalink( $attachment->ID ),
+        'src' => $attachment->guid,
+        'title' => $attachment->post_title
+    );
+}
+    
+define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/img/' );
+
+add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+
+function add_search_form($items, $args) {
+    if( $args->theme_location == 'primary' ) {
+        $search_query = get_search_query(); 
+        $search_query = $search_query === 'search' ? '' : $search_query;
+        $class = !$search_query || $search_query === '' ? 'closed' : 'open';
+        $items .= '<li class="search '.$class.'"><form class="header__search" action="'.home_url( '/' ).'" method="get">
+        <label for="s" class="ui-hidden">Search</label>
+        <input autocomplete="off" id="s" name="s" type="text" placeholder="Search">
+        <button type="submit">
+          <span aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21 21"><defs><path id="a" d="M0 21V0h21v21z"/></defs><g fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path fill="#FFF" d="M8.71 3.067a5.61 5.61 0 0 1 5.626 5.635 5.61 5.61 0 0 1-5.626 5.635 5.612 5.612 0 0 1-5.634-5.635A5.612 5.612 0 0 1 8.71 3.067M8.71 0C3.92 0 0 3.91 0 8.702c0 4.791 3.92 8.712 8.71 8.712 1.842 0 3.548-.59 4.954-1.57l4.71 4.7a1.528 1.528 0 0 0 2.177 0 1.533 1.533 0 0 0 0-2.169l-4.71-4.71a8.628 8.628 0 0 0 1.57-4.963c0-4.791-3.92-8.702-8.7-8.702" mask="url(#b)"/></g></svg>
+          </span>
+          <span class="ui-hidden">
+            Submit
+          </span>
+        </button>
+</form></li>';
+    }
+    return $items;
+}
+
+add_filter( 'tiny_mce_before_init', 'pva_tiny_mce_before_init' );
+
+function pva_tiny_mce_before_init( $settings ) {
+
+  $style_formats = array(
+      array(
+          'title' => 'Large Button Link',
+          'classes' => 'btn',
+          'inline' => 'a'
+      ),
+      array(
+          'title' => 'Small Button Link',
+          'classes' => 'btn small',
+          'inline' => 'a'
+      )
+  );
+  
+    if ( isset( $settings['style_formats'] ) ) {
+      $orig_style_formats = json_decode($settings['style_formats'],true);
+      $style_formats = array_merge($orig_style_formats,$style_formats);
+    }
+
+    $settings['style_formats'] = json_encode( $style_formats );
+    return $settings;
+}
+
+function pva_social_links($atts){
+    extract(shortcode_atts(array(
+      'count' => 9
+    ), $atts));
+
+    ob_start();
+    get_template_part( 'global-templates/social-links' );
+    $output =  '<span class="social-links">' . ob_get_clean() . '</span>';
+    return $output;
+}
+add_shortcode( 'pva-social', 'pva_social_links' );
+
+function pr_archive($atts){
+    extract(shortcode_atts(array(
+      'count' => 9
+    ), $atts));
+
+    $args = array(
+        'post_type' => 'press_release',
+        'order' => 'DESC',
+        'posts_per_page' => $count
+    );
+
+    $pr_query = new wp_query( $args );
+
+    $return_string = '<ul class="pr-items">';
+
+    while( $pr_query->have_posts() ) {
+        $pr_query->the_post();
+        $return_string .= '<li>';
+        $return_string .= '<p class="date">'.get_the_date( 'F j, Y' ).'</p>';
+        $return_string .= '<h4><a href="'.get_permalink().'">'.get_the_title().'</a></h4>';
+        $return_string .= '</li>';
+    }
+
+    $return_string .= '</ul>';
+
+    wp_reset_query();
+    return $return_string;
+
+}
+add_shortcode( 'pr-archive', 'pr_archive' );
+
+// filter used on upcoming events template
+function pva_events_where( $where ) {
+    
+    $where = str_replace("meta_key = 'event_dates_times_$", "meta_key LIKE 'event_dates_times_%", $where);
+
+    return $where;
+}
+
+add_filter('posts_where', 'pva_events_where');
+
+/**
+ * Give Form Require Fields
+ *
+ * @description: Cusomize the prefix of this function before using. The $required_fields array key is the name of the field you would like to make required; ie " name='card_address_2' " - find using Debug Tools, etc.
+ *
+ * @param $required_fields
+ *
+ * @return mixed
+ */
+function pva_give_form_required_fields( $required_fields ) {
+
+    //First Name
+    $required_fields['give_first'] = array(
+        'error_id' => 'invalid_last_name',
+        'error_message' => __( 'Please enter your first name.', 'give' )
+    );
+
+    //Last Name
+    $required_fields['give_last'] = array(
+        'error_id' => 'invalid_last_name',
+        'error_message' => __( 'Please enter your last name.', 'give' )
+    );
+
+        //Uncomment to add Address
+   $required_fields['card_address'] = array(
+       'error_id' => 'invalid_card_address',
+       'error_message' => __( 'Please enter your address.', 'give' )
+   );
+
+      //ACustom Field
+//    $required_fields['my_custom_field'] = array(
+//        'error_id' => 'invalid_my_custom_field',
+//        'error_message' => __( 'Custom field required message.', 'give' )
+//    );
+
+    return $required_fields;
+}
+add_filter( 'give_purchase_form_required_fields', 'pva_give_form_required_fields' );
+
+add_filter('give_checkout_personal_info_text', 'new_personal_info_text');
+
+function new_personal_info_text() { 
+    return __('Your Personal Info', 'give');
+}
+
+function custom_page_navi( $totalpages, $paged, $end_size, $mid_size )
+{
+    $bignum = 999999999;
+
+    if ( $totalpages <= 1 || $paged > $totalpages ) { 
+        // echo $paged . 'paged | ' . $totalpages . 'totalpages'; 
+        return; 
+    }
+
+    $args = array(
+        'base'          => str_replace( $bignum, '%#%', esc_url( get_pagenum_link( $bignum ) ) ),
+        'format'        => 'pagination',
+        'current'       => max( 1, $paged ),
+        'total'         => $totalpages,
+        'prev_text'     => 'Prev',
+        'next_text'     => 'Next',
+        'type'          => 'list',
+        'show_all'      => false,
+        'end_size'      => $end_size,
+        'mid_size'      => $mid_size,
+        'type'          => 'array',
+    );
+
+            $links     = paginate_links($args);
+            ?>
+
+            <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+                <ul class="pagination">
+                    <?php
+                    $i = 1;
+                        foreach ( $links as $link ) { ?>
+                            <li class="page-item <?php if ($i == $args['current']) { echo active; }; ?>">
+                    <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+                            </li>
+
+                    <?php $i++;} ?>
+                </ul>
+            </nav>
+            <?php
+}

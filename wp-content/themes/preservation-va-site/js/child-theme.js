@@ -7310,76 +7310,205 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 })(window.Zepto || window.jQuery, window, document);
 
+// also contains historic site donation scripts
 
-    jQuery(document).ready(function() {
-        
-        var owl_dots = $('.owl-two');
-        var owl_next = $('.owl-one');
-        
-        /* TODO: Refactor for dynamic detect between dots or nav */
-       
-        var stand_obj = {
-            loop:true,
-            autoplay:true,
-            autoplayTimeout:5000,
-            nav: false,
-            dots: false,
-            autoplayHoverPause:true,
-            margin:0,
-            autoHeight:true,
-            smartSpeed: 1000
-        };
-        
-        owl_dots.owlCarousel({
-            items:1,
-            loop:true,
-            autoplay:true,
-            autoplayTimeout:5000,
-            dots:true,
-            autoplayHoverPause:true,
-            margin:0,
-            autoHeight:true,
-            smartSpeed: 1000
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function convertToSlug(Text) {
+    return Text
+        .toLowerCase()
+        .replace(/[^\w ]+/g,'')
+        .replace(/ +/g,'-')
+        ;
+}
+
+jQuery( document ).ready(function( $ ) {
+
+    if($('#give-ffm-section').length){
+        $('#address_of_person_to_notify-wrap, #name_of_honoreememorium-wrap, #type_of_gift-wrap').hide();
+
+        $('input[name=is_this_a_gift]').click(function() {
+            if($('input[name=is_this_a_gift]:checked').val() === 'yes') { 
+                $('#address_of_person_to_notify-wrap, #name_of_honoreememorium-wrap, #type_of_gift-wrap').show('fast');
+            } else {
+                $('#address_of_person_to_notify-wrap, #name_of_honoreememorium-wrap, #type_of_gift-wrap').hide('fast');
+            }
         });
-        
-         owl_next.owlCarousel({
-            item:3,
-            loop:true,
-            autoplay:true,
-            autoplayTimeout:5000,
-            nav: true,
-            dots: false,
-            autoplayHoverPause:true,
-            margin:0,
-            autoHeight:true,
-            smartSpeed: 1000
-        }); 
-        
 
-     /*    $.each(owl, function( index, value  ) {
-            
-            var aux_cont = $(value);
-            var aux_per = {};
+        if($('#give-ffm-section .mailing-address').length && $('#give_cc_address').length){
 
-                if ( aux_cont.hasClass( 'next' ) ) {
+            console.log('mailing');
 
-                  aux_per = $.extend( { item:3 }, stand_obj )
-                  aux_per.nav = true; 
-                    
+            if( $('#give-ffm-section').children().eq(-1).is('.mailing-address') ) {
+                console.log('mailing starts at end');
+            }
+            $('.give-form').each(function(inc) {
+                $this_cc_address = $(this).find('#give_cc_address');
 
-                } else {
+                $('<fieldset/>', {
+                    id: 'give_mailing_address-'+inc,
+                    class: 'mailing-address-group'
+                }).insertAfter($this_cc_address);
 
-                  aux_per = $.extend( { item:1}, stand_obj );
-                  aux_per.dots = true;
+                $(this).find('#give-ffm-section .mailing-address').each(function( i ) {
 
-                }
-            
-                console.log(aux_per);
-            aux_cont.owlCarousel(aux_per);
-        }); */
+                    console.log('mailing-match');
 
+                    $('#give_mailing_address-'+inc).append($(this));
+                });
+
+            });
+        }
+
+    }
+
+    if(getParameterByName('hsd')){
+        var hsd = getParameterByName('hsd')
+        console.log(hsd);
+
+        $("#ffm-historic_site > option").each(function() {
+            var slugVal = convertToSlug(this.value);
+
+            if (slugVal == hsd) {
+                $("#ffm-historic_site").val(this.value);            }
+        });
+    }
+
+    
+    var owl_dots = $('.owl-two');
+    var owl_next = $('.owl-one');
+    
+    /* TODO: Refactor for dynamic detect between dots or nav */
+   
+    var stand_obj = {
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:5000,
+        nav: false,
+        dots: false,
+        autoplayHoverPause:true,
+        margin:0,
+        autoHeight:false,
+        smartSpeed: 1000
+    };
+    
+    owl_dots.owlCarousel({
+        items:1,
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:5000,
+        dots:true,
+        autoplayHoverPause:true,
+        margin:0,
+        autoHeight:false,
+        smartSpeed: 1000
     });
+    
+     owl_next.owlCarousel({
+        item:3,
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:5000,
+        nav: true,
+        dots: false,
+        autoplayHoverPause:true,
+        margin:0,
+        autoHeight:false,
+        smartSpeed: 1000
+    }); 
+    
 
+ /*    $.each(owl, function( index, value  ) {
+        
+        var aux_cont = $(value);
+        var aux_per = {};
+
+            if ( aux_cont.hasClass( 'next' ) ) {
+
+              aux_per = $.extend( { item:3 }, stand_obj )
+              aux_per.nav = true; 
+                
+
+            } else {
+
+              aux_per = $.extend( { item:1}, stand_obj );
+              aux_per.dots = true;
+
+            }
+        
+            console.log(aux_per);
+        aux_cont.owlCarousel(aux_per);
+    }); */
+
+});
+
+
+
+/**
+ * Scrolling in jquery
+ */
+jQuery( document ).ready(function( $ ) {
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+        && 
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+  });
+
+  $('.navbar').on('click', '.search.closed button', function(e){
+    e.preventDefault();
+    console.log('search');
+    $('.search.closed').removeClass('closed').addClass('open');
+    $('body').addClass('search-open');
+  });
+
+  $('html').on('click', '.search-open', function(e) {    
+    console.log('click');                
+    if(!$(e.target).hasClass('open') && !$(e.target).parents('.open').length ) {
+      console.log('close');
+      $('.search.open').removeClass('open').addClass('closed');
+      $('body').removeClass('search-open');           
+    }
+  }); 
+
+});
 /**
  * File skip-link-focus-fix.js.
  *

@@ -93,7 +93,7 @@ Follow [these instructions](https://wpengine.com/support/set-git-push-user-porta
 Now add the remote to your local:
 
 ```zsh
-git add remote staging git@git.wpengine.com:staging/preservationva.git
+git remote add staging git@git.wpengine.com:staging/preservationva.git
 ```
 
 You need to push a commit to this remote before you can pull anything. Make a commit and push it with:

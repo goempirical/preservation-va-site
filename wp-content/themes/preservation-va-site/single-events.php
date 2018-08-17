@@ -18,7 +18,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="page-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
 
 		<div class="row">
 
@@ -27,27 +27,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-        <h1> Single Event </h1>
-
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'page' ); ?>
-
-          <h4>Start Date: <?php the_field('e_start_date'); ?></h4>
-          <h4>End Date: <?php the_field('e_end_date'); ?></h4>
-          <h4>Link: <?php the_field('e_link'); ?></h4>
-          <h4>Time: <?php the_field('e_time'); ?></h4>
-
-          <!-- This is an include to test the query on cutom post events-->
-          <h1> Upcoming events </h1>
-          <?php include 'custom-post-templates/events-search.php' ?>
-
-					<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-					?>
+					<?php get_template_part( 'loop-templates/content', 'events' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 

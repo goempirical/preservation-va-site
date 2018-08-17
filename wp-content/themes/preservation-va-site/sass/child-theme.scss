@@ -9,4 +9,14 @@
 @import "assets/owl";
 
 // Any additional imported files //
+@import "theme/base/typography";
 @import "theme/child_theme";  // <--------- Add your styles into this file
+@import "theme/base/layout";
+@import "theme/base/header";
+@import "theme/base/footer";
+@import "theme/templates/flexible_content";
+@import "theme/templates/homepage";
+@import "theme/templates/historic_sites";
+@import "theme/templates/blog";
+@import "theme/templates/contact";
+@import "theme/templates/forms";
