@@ -120,7 +120,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 										
 										</div>
 
-										<div class="col-md-8 grid-two-col">
+										<div class="col-md-9 col-lg-10 col-xl-8 grid-two-col">
 
 												<?php
 

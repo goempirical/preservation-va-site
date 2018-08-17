@@ -20,7 +20,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 			<div class="col-lg-7 col-xl-6 footer--contact-details">
 				<?php 
+
 				$opt_subscribe = get_field('opt_subscribe', 'option');
+				if ($opt_subscribe["title"]) {
+					echo '<h4>'.$opt_subscribe["title"].'</h4>';
+				}
 				if ($opt_subscribe["opt_subscribe_snippet"]) {
 					echo $opt_subscribe["opt_subscribe_snippet"];
 				}

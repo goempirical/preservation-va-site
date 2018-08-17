@@ -10655,6 +10655,9 @@ li.search {
       border: 1px solid #ffffff;
       border-radius: 0;
       padding: 0 1em; }
+      @media (max-width: 991.98px) {
+        .footer #mc_embed_signup input.email {
+          margin-bottom: 4px; } }
       .footer #mc_embed_signup input.email::placeholder {
         font-size: 13px; }
     .footer #mc_embed_signup input.button {
@@ -11236,15 +11239,19 @@ section.headline-row + section {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .two_column_with_left_label .tcll_label_col {
     margin-right: 4.16%; } }
 
-.two_column_with_left_label .grid-two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 52px;
-  padding-left: 52px; }
+@media (min-width: 768px) {
+  .two_column_with_left_label .grid-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 52px; } }
+
+@media (min-width: 992px) {
+  .two_column_with_left_label .grid-two-col {
+    padding-left: 52px; } }
 
 .section_with_sidebar .row {
   justify-content: space-between; }
@@ -11263,8 +11270,10 @@ section.headline-row + section {
   -moz-osx-font-smoothing: grayscale; }
 
 .section_with_sidebar .sws_right-col {
-  text-align: right;
   padding-top: 14px; }
+  @media (min-width: 768px) {
+    .section_with_sidebar .sws_right-col {
+      text-align: right; } }
   .section_with_sidebar .sws_right-col h3, .section_with_sidebar .sws_right-col h4, .section_with_sidebar .sws_right-col #give-recurring-form h3.give-section-break, #give-recurring-form .section_with_sidebar .sws_right-col h3.give-section-break, .section_with_sidebar .sws_right-col #give-recurring-form h4.give-section-break, #give-recurring-form .section_with_sidebar .sws_right-col h4.give-section-break, .section_with_sidebar .sws_right-col #give-recurring-form legend, #give-recurring-form .section_with_sidebar .sws_right-col legend, .section_with_sidebar .sws_right-col form.give-form h3.give-section-break, form.give-form .section_with_sidebar .sws_right-col h3.give-section-break, .section_with_sidebar .sws_right-col form.give-form h4.give-section-break, form.give-form .section_with_sidebar .sws_right-col h4.give-section-break, .section_with_sidebar .sws_right-col form.give-form legend, form.give-form .section_with_sidebar .sws_right-col legend, .section_with_sidebar .sws_right-col form[id*=give-form] h3.give-section-break, form[id*=give-form] .section_with_sidebar .sws_right-col h3.give-section-break, .section_with_sidebar .sws_right-col form[id*=give-form] h4.give-section-break, form[id*=give-form] .section_with_sidebar .sws_right-col h4.give-section-break, .section_with_sidebar .sws_right-col form[id*=give-form] legend, form[id*=give-form] .section_with_sidebar .sws_right-col legend {
     margin-bottom: 16px; }
 
