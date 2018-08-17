@@ -10966,106 +10966,257 @@ section.headline-row + section {
   .single_column .content_button .btn + .btn, .single_column .content_button .wpcf7 input[type=submit] + .btn, .wpcf7 .single_column .content_button input[type=submit] + .btn, .single_column .content_button .give-submit-button-wrap .give-submit + .btn, .give-submit-button-wrap .single_column .content_button .give-submit + .btn, .single_column .content_button .wpcf7 .btn + input[type=submit], .wpcf7 .single_column .content_button .btn + input[type=submit], .single_column .content_button .wpcf7 input[type=submit] + input[type=submit], .wpcf7 .single_column .content_button input[type=submit] + input[type=submit], .single_column .content_button .give-submit-button-wrap .wpcf7 .give-submit + input[type=submit], .wpcf7 .single_column .content_button .give-submit-button-wrap .give-submit + input[type=submit], .give-submit-button-wrap .single_column .content_button .wpcf7 .give-submit + input[type=submit], .wpcf7 .give-submit-button-wrap .single_column .content_button .give-submit + input[type=submit], .single_column .content_button .give-submit-button-wrap .btn + .give-submit, .give-submit-button-wrap .single_column .content_button .btn + .give-submit, .single_column .content_button .wpcf7 .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .single_column .content_button .wpcf7 input[type=submit] + .give-submit, .wpcf7 .single_column .content_button .give-submit-button-wrap input[type=submit] + .give-submit, .give-submit-button-wrap .wpcf7 .single_column .content_button input[type=submit] + .give-submit, .single_column .content_button .give-submit-button-wrap .give-submit + .give-submit, .give-submit-button-wrap .single_column .content_button .give-submit + .give-submit {
     margin-left: 34px; }
 
-.single_column.none {
+.single_column.none,
+.two_columns.none {
   background: #ffffff; }
-  .single_column.none h1 {
+  .single_column.none h1,
+  .two_columns.none h1 {
     color: #0f7ab5; }
-  .single_column.none h2 {
+  .single_column.none h2,
+  .two_columns.none h2 {
     color: #0f7ab5; }
-  .single_column.none h3 {
+  .single_column.none h3,
+  .two_columns.none h3 {
     color: #0f7ab5; }
-  .single_column.none h4, .single_column.none #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.none h3.give-section-break, .single_column.none #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.none h4.give-section-break, .single_column.none #give-recurring-form legend, #give-recurring-form .single_column.none legend, .single_column.none form.give-form h3.give-section-break, form.give-form .single_column.none h3.give-section-break, .single_column.none form.give-form h4.give-section-break, form.give-form .single_column.none h4.give-section-break, .single_column.none form.give-form legend, form.give-form .single_column.none legend, .single_column.none form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.none h3.give-section-break, .single_column.none form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.none h4.give-section-break, .single_column.none form[id*=give-form] legend, form[id*=give-form] .single_column.none legend {
+  .single_column.none h4, .single_column.none #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.none h3.give-section-break, .single_column.none #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.none h4.give-section-break, .single_column.none #give-recurring-form legend, #give-recurring-form .single_column.none legend, .single_column.none form.give-form h3.give-section-break, form.give-form .single_column.none h3.give-section-break, .single_column.none form.give-form h4.give-section-break, form.give-form .single_column.none h4.give-section-break, .single_column.none form.give-form legend, form.give-form .single_column.none legend, .single_column.none form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.none h3.give-section-break, .single_column.none form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.none h4.give-section-break, .single_column.none form[id*=give-form] legend, form[id*=give-form] .single_column.none legend,
+  .two_columns.none h4,
+  .two_columns.none #give-recurring-form h3.give-section-break, #give-recurring-form
+  .two_columns.none h3.give-section-break,
+  .two_columns.none #give-recurring-form h4.give-section-break, #give-recurring-form
+  .two_columns.none h4.give-section-break,
+  .two_columns.none #give-recurring-form legend, #give-recurring-form
+  .two_columns.none legend,
+  .two_columns.none form.give-form h3.give-section-break, form.give-form
+  .two_columns.none h3.give-section-break,
+  .two_columns.none form.give-form h4.give-section-break, form.give-form
+  .two_columns.none h4.give-section-break,
+  .two_columns.none form.give-form legend, form.give-form
+  .two_columns.none legend,
+  .two_columns.none form[id*=give-form] h3.give-section-break, form[id*=give-form]
+  .two_columns.none h3.give-section-break,
+  .two_columns.none form[id*=give-form] h4.give-section-break, form[id*=give-form]
+  .two_columns.none h4.give-section-break,
+  .two_columns.none form[id*=give-form] legend, form[id*=give-form]
+  .two_columns.none legend {
     color: #0f7ab5; }
-  .single_column.none p {
+  .single_column.none p,
+  .two_columns.none p {
     color: #4a4a4a; }
-  .single_column.none button, .single_column.none .btn, .single_column.none .wpcf7 input[type=submit], .wpcf7 .single_column.none input[type=submit], .single_column.none .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.none .give-submit {
+  .single_column.none button, .single_column.none .btn, .single_column.none .wpcf7 input[type=submit], .wpcf7 .single_column.none input[type=submit], .single_column.none .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.none .give-submit,
+  .two_columns.none button,
+  .two_columns.none .btn,
+  .two_columns.none .wpcf7 input[type=submit], .wpcf7
+  .two_columns.none input[type=submit],
+  .two_columns.none .give-submit-button-wrap .give-submit, .give-submit-button-wrap
+  .two_columns.none .give-submit {
     background-color: #ffca05;
     color: #15467b; }
-    .single_column.none button:hover, .single_column.none .btn:hover, .single_column.none .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.none input[type=submit]:hover, .single_column.none .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.none .give-submit:hover {
+    .single_column.none button:hover, .single_column.none .btn:hover, .single_column.none .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.none input[type=submit]:hover, .single_column.none .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.none .give-submit:hover,
+    .two_columns.none button:hover,
+    .two_columns.none .btn:hover,
+    .two_columns.none .wpcf7 input[type=submit]:hover, .wpcf7
+    .two_columns.none input[type=submit]:hover,
+    .two_columns.none .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap
+    .two_columns.none .give-submit:hover {
       background-color: #15467b;
       color: #ffffff; }
 
-.single_column[class$="blue"] {
+.single_column[class$="blue"],
+.two_columns[class$="blue"] {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  .single_column[class$="blue"] button {
+  .single_column[class$="blue"] button,
+  .two_columns[class$="blue"] button {
     background-color: #ffca05;
     color: #15467b; }
-    .single_column[class$="blue"] button:hover {
+    .single_column[class$="blue"] button:hover,
+    .two_columns[class$="blue"] button:hover {
       background-color: #ffffff;
       color: #15467b; }
-  .single_column[class$="blue"] a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
+  .single_column[class$="blue"] a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit),
+  .two_columns[class$="blue"] a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
     color: #ffca05; }
 
-.single_column.dark_blue {
+.single_column.dark_blue,
+.two_columns.dark_blue {
   background-color: #15467b;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  .single_column.dark_blue h1 {
+  .single_column.dark_blue h1,
+  .two_columns.dark_blue h1 {
     color: #ffffff; }
-  .single_column.dark_blue h2 {
+  .single_column.dark_blue h2,
+  .two_columns.dark_blue h2 {
     color: #ffffff; }
-  .single_column.dark_blue h3 {
+  .single_column.dark_blue h3,
+  .two_columns.dark_blue h3 {
     color: #ffffff; }
-  .single_column.dark_blue h4, .single_column.dark_blue #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.dark_blue h3.give-section-break, .single_column.dark_blue #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.dark_blue h4.give-section-break, .single_column.dark_blue #give-recurring-form legend, #give-recurring-form .single_column.dark_blue legend, .single_column.dark_blue form.give-form h3.give-section-break, form.give-form .single_column.dark_blue h3.give-section-break, .single_column.dark_blue form.give-form h4.give-section-break, form.give-form .single_column.dark_blue h4.give-section-break, .single_column.dark_blue form.give-form legend, form.give-form .single_column.dark_blue legend, .single_column.dark_blue form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.dark_blue h3.give-section-break, .single_column.dark_blue form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.dark_blue h4.give-section-break, .single_column.dark_blue form[id*=give-form] legend, form[id*=give-form] .single_column.dark_blue legend {
+  .single_column.dark_blue h4, .single_column.dark_blue #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.dark_blue h3.give-section-break, .single_column.dark_blue #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.dark_blue h4.give-section-break, .single_column.dark_blue #give-recurring-form legend, #give-recurring-form .single_column.dark_blue legend, .single_column.dark_blue form.give-form h3.give-section-break, form.give-form .single_column.dark_blue h3.give-section-break, .single_column.dark_blue form.give-form h4.give-section-break, form.give-form .single_column.dark_blue h4.give-section-break, .single_column.dark_blue form.give-form legend, form.give-form .single_column.dark_blue legend, .single_column.dark_blue form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.dark_blue h3.give-section-break, .single_column.dark_blue form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.dark_blue h4.give-section-break, .single_column.dark_blue form[id*=give-form] legend, form[id*=give-form] .single_column.dark_blue legend,
+  .two_columns.dark_blue h4,
+  .two_columns.dark_blue #give-recurring-form h3.give-section-break, #give-recurring-form
+  .two_columns.dark_blue h3.give-section-break,
+  .two_columns.dark_blue #give-recurring-form h4.give-section-break, #give-recurring-form
+  .two_columns.dark_blue h4.give-section-break,
+  .two_columns.dark_blue #give-recurring-form legend, #give-recurring-form
+  .two_columns.dark_blue legend,
+  .two_columns.dark_blue form.give-form h3.give-section-break, form.give-form
+  .two_columns.dark_blue h3.give-section-break,
+  .two_columns.dark_blue form.give-form h4.give-section-break, form.give-form
+  .two_columns.dark_blue h4.give-section-break,
+  .two_columns.dark_blue form.give-form legend, form.give-form
+  .two_columns.dark_blue legend,
+  .two_columns.dark_blue form[id*=give-form] h3.give-section-break, form[id*=give-form]
+  .two_columns.dark_blue h3.give-section-break,
+  .two_columns.dark_blue form[id*=give-form] h4.give-section-break, form[id*=give-form]
+  .two_columns.dark_blue h4.give-section-break,
+  .two_columns.dark_blue form[id*=give-form] legend, form[id*=give-form]
+  .two_columns.dark_blue legend {
     color: #ffffff; }
-  .single_column.dark_blue p {
+  .single_column.dark_blue p,
+  .two_columns.dark_blue p {
     color: #ffffff; }
-  .single_column.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
+  .single_column.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit),
+  .two_columns.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
     color: #ffca05; }
 
-.single_column.gold {
+.single_column.gold,
+.two_columns.gold {
   background-color: #ffca05;
   color: #15467b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  .single_column.gold h1 {
+  .single_column.gold h1,
+  .two_columns.gold h1 {
     color: #15467b; }
-  .single_column.gold h2 {
+  .single_column.gold h2,
+  .two_columns.gold h2 {
     color: #15467b; }
-  .single_column.gold h3 {
+  .single_column.gold h3,
+  .two_columns.gold h3 {
     color: #15467b; }
-  .single_column.gold h4, .single_column.gold #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.gold h3.give-section-break, .single_column.gold #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.gold h4.give-section-break, .single_column.gold #give-recurring-form legend, #give-recurring-form .single_column.gold legend, .single_column.gold form.give-form h3.give-section-break, form.give-form .single_column.gold h3.give-section-break, .single_column.gold form.give-form h4.give-section-break, form.give-form .single_column.gold h4.give-section-break, .single_column.gold form.give-form legend, form.give-form .single_column.gold legend, .single_column.gold form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.gold h3.give-section-break, .single_column.gold form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.gold h4.give-section-break, .single_column.gold form[id*=give-form] legend, form[id*=give-form] .single_column.gold legend {
+  .single_column.gold h4, .single_column.gold #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.gold h3.give-section-break, .single_column.gold #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.gold h4.give-section-break, .single_column.gold #give-recurring-form legend, #give-recurring-form .single_column.gold legend, .single_column.gold form.give-form h3.give-section-break, form.give-form .single_column.gold h3.give-section-break, .single_column.gold form.give-form h4.give-section-break, form.give-form .single_column.gold h4.give-section-break, .single_column.gold form.give-form legend, form.give-form .single_column.gold legend, .single_column.gold form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.gold h3.give-section-break, .single_column.gold form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.gold h4.give-section-break, .single_column.gold form[id*=give-form] legend, form[id*=give-form] .single_column.gold legend,
+  .two_columns.gold h4,
+  .two_columns.gold #give-recurring-form h3.give-section-break, #give-recurring-form
+  .two_columns.gold h3.give-section-break,
+  .two_columns.gold #give-recurring-form h4.give-section-break, #give-recurring-form
+  .two_columns.gold h4.give-section-break,
+  .two_columns.gold #give-recurring-form legend, #give-recurring-form
+  .two_columns.gold legend,
+  .two_columns.gold form.give-form h3.give-section-break, form.give-form
+  .two_columns.gold h3.give-section-break,
+  .two_columns.gold form.give-form h4.give-section-break, form.give-form
+  .two_columns.gold h4.give-section-break,
+  .two_columns.gold form.give-form legend, form.give-form
+  .two_columns.gold legend,
+  .two_columns.gold form[id*=give-form] h3.give-section-break, form[id*=give-form]
+  .two_columns.gold h3.give-section-break,
+  .two_columns.gold form[id*=give-form] h4.give-section-break, form[id*=give-form]
+  .two_columns.gold h4.give-section-break,
+  .two_columns.gold form[id*=give-form] legend, form[id*=give-form]
+  .two_columns.gold legend {
     color: #15467b; }
-  .single_column.gold button, .single_column.gold .btn, .single_column.gold .wpcf7 input[type=submit], .wpcf7 .single_column.gold input[type=submit], .single_column.gold .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.gold .give-submit {
+  .single_column.gold button, .single_column.gold .btn, .single_column.gold .wpcf7 input[type=submit], .wpcf7 .single_column.gold input[type=submit], .single_column.gold .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.gold .give-submit,
+  .two_columns.gold button,
+  .two_columns.gold .btn,
+  .two_columns.gold .wpcf7 input[type=submit], .wpcf7
+  .two_columns.gold input[type=submit],
+  .two_columns.gold .give-submit-button-wrap .give-submit, .give-submit-button-wrap
+  .two_columns.gold .give-submit {
     background-color: #15467b;
     color: #ffffff; }
-    .single_column.gold button:hover, .single_column.gold .btn:hover, .single_column.gold .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.gold input[type=submit]:hover, .single_column.gold .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.gold .give-submit:hover {
+    .single_column.gold button:hover, .single_column.gold .btn:hover, .single_column.gold .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.gold input[type=submit]:hover, .single_column.gold .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.gold .give-submit:hover,
+    .two_columns.gold button:hover,
+    .two_columns.gold .btn:hover,
+    .two_columns.gold .wpcf7 input[type=submit]:hover, .wpcf7
+    .two_columns.gold input[type=submit]:hover,
+    .two_columns.gold .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap
+    .two_columns.gold .give-submit:hover {
       background-color: #ffffff;
       color: #15467b; }
-  .single_column.gold a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
+  .single_column.gold a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit),
+  .two_columns.gold a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
     color: #15467b; }
 
-.single_column.red {
+.single_column.red,
+.two_columns.red {
   background-color: #A12017;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  .single_column.red h1 {
+  .single_column.red h1,
+  .two_columns.red h1 {
     color: #ffffff; }
-  .single_column.red h2 {
+  .single_column.red h2,
+  .two_columns.red h2 {
     color: #ffffff; }
-  .single_column.red h3 {
+  .single_column.red h3,
+  .two_columns.red h3 {
     color: #ffffff; }
-  .single_column.red h4, .single_column.red #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.red h3.give-section-break, .single_column.red #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.red h4.give-section-break, .single_column.red #give-recurring-form legend, #give-recurring-form .single_column.red legend, .single_column.red form.give-form h3.give-section-break, form.give-form .single_column.red h3.give-section-break, .single_column.red form.give-form h4.give-section-break, form.give-form .single_column.red h4.give-section-break, .single_column.red form.give-form legend, form.give-form .single_column.red legend, .single_column.red form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.red h3.give-section-break, .single_column.red form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.red h4.give-section-break, .single_column.red form[id*=give-form] legend, form[id*=give-form] .single_column.red legend {
+  .single_column.red h4, .single_column.red #give-recurring-form h3.give-section-break, #give-recurring-form .single_column.red h3.give-section-break, .single_column.red #give-recurring-form h4.give-section-break, #give-recurring-form .single_column.red h4.give-section-break, .single_column.red #give-recurring-form legend, #give-recurring-form .single_column.red legend, .single_column.red form.give-form h3.give-section-break, form.give-form .single_column.red h3.give-section-break, .single_column.red form.give-form h4.give-section-break, form.give-form .single_column.red h4.give-section-break, .single_column.red form.give-form legend, form.give-form .single_column.red legend, .single_column.red form[id*=give-form] h3.give-section-break, form[id*=give-form] .single_column.red h3.give-section-break, .single_column.red form[id*=give-form] h4.give-section-break, form[id*=give-form] .single_column.red h4.give-section-break, .single_column.red form[id*=give-form] legend, form[id*=give-form] .single_column.red legend,
+  .two_columns.red h4,
+  .two_columns.red #give-recurring-form h3.give-section-break, #give-recurring-form
+  .two_columns.red h3.give-section-break,
+  .two_columns.red #give-recurring-form h4.give-section-break, #give-recurring-form
+  .two_columns.red h4.give-section-break,
+  .two_columns.red #give-recurring-form legend, #give-recurring-form
+  .two_columns.red legend,
+  .two_columns.red form.give-form h3.give-section-break, form.give-form
+  .two_columns.red h3.give-section-break,
+  .two_columns.red form.give-form h4.give-section-break, form.give-form
+  .two_columns.red h4.give-section-break,
+  .two_columns.red form.give-form legend, form.give-form
+  .two_columns.red legend,
+  .two_columns.red form[id*=give-form] h3.give-section-break, form[id*=give-form]
+  .two_columns.red h3.give-section-break,
+  .two_columns.red form[id*=give-form] h4.give-section-break, form[id*=give-form]
+  .two_columns.red h4.give-section-break,
+  .two_columns.red form[id*=give-form] legend, form[id*=give-form]
+  .two_columns.red legend {
     color: #ffffff; }
-  .single_column.red a {
+  .single_column.red a,
+  .two_columns.red a {
     color: #ffca05; }
-  .single_column.red button, .single_column.red .btn, .single_column.red .wpcf7 input[type=submit], .wpcf7 .single_column.red input[type=submit], .single_column.red .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.red .give-submit {
+  .single_column.red button, .single_column.red .btn, .single_column.red .wpcf7 input[type=submit], .wpcf7 .single_column.red input[type=submit], .single_column.red .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.red .give-submit,
+  .two_columns.red button,
+  .two_columns.red .btn,
+  .two_columns.red .wpcf7 input[type=submit], .wpcf7
+  .two_columns.red input[type=submit],
+  .two_columns.red .give-submit-button-wrap .give-submit, .give-submit-button-wrap
+  .two_columns.red .give-submit {
     background-color: #ffffff;
     color: #15467b; }
-    .single_column.red button:hover, .single_column.red .btn:hover, .single_column.red .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.red input[type=submit]:hover, .single_column.red .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.red .give-submit:hover {
+    .single_column.red button:hover, .single_column.red .btn:hover, .single_column.red .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.red input[type=submit]:hover, .single_column.red .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.red .give-submit:hover,
+    .two_columns.red button:hover,
+    .two_columns.red .btn:hover,
+    .two_columns.red .wpcf7 input[type=submit]:hover, .wpcf7
+    .two_columns.red input[type=submit]:hover,
+    .two_columns.red .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap
+    .two_columns.red .give-submit:hover {
       background-color: #15467b;
       color: #ffffff; }
 
-.single_column.light_blue {
+.single_column.light_blue,
+.two_columns.light_blue {
   background-color: #0f7ab5; }
-  .single_column.light_blue a {
+  .single_column.light_blue a,
+  .two_columns.light_blue a {
     color: #ffca05; }
-  .single_column.light_blue button, .single_column.light_blue .btn, .single_column.light_blue .wpcf7 input[type=submit], .wpcf7 .single_column.light_blue input[type=submit], .single_column.light_blue .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.light_blue .give-submit {
+  .single_column.light_blue button, .single_column.light_blue .btn, .single_column.light_blue .wpcf7 input[type=submit], .wpcf7 .single_column.light_blue input[type=submit], .single_column.light_blue .give-submit-button-wrap .give-submit, .give-submit-button-wrap .single_column.light_blue .give-submit,
+  .two_columns.light_blue button,
+  .two_columns.light_blue .btn,
+  .two_columns.light_blue .wpcf7 input[type=submit], .wpcf7
+  .two_columns.light_blue input[type=submit],
+  .two_columns.light_blue .give-submit-button-wrap .give-submit, .give-submit-button-wrap
+  .two_columns.light_blue .give-submit {
     color: #15467b; }
-    .single_column.light_blue button:hover, .single_column.light_blue .btn:hover, .single_column.light_blue .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.light_blue input[type=submit]:hover, .single_column.light_blue .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.light_blue .give-submit:hover {
+    .single_column.light_blue button:hover, .single_column.light_blue .btn:hover, .single_column.light_blue .wpcf7 input[type=submit]:hover, .wpcf7 .single_column.light_blue input[type=submit]:hover, .single_column.light_blue .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap .single_column.light_blue .give-submit:hover,
+    .two_columns.light_blue button:hover,
+    .two_columns.light_blue .btn:hover,
+    .two_columns.light_blue .wpcf7 input[type=submit]:hover, .wpcf7
+    .two_columns.light_blue input[type=submit]:hover,
+    .two_columns.light_blue .give-submit-button-wrap .give-submit:hover, .give-submit-button-wrap
+    .two_columns.light_blue .give-submit:hover {
       background-color: #15467b;
       color: #ffffff; }
 

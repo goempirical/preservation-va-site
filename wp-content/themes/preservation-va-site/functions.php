@@ -262,3 +262,44 @@ add_filter('give_checkout_personal_info_text', 'new_personal_info_text');
 function new_personal_info_text() { 
     return __('Your Personal Info', 'give');
 }
+
+function custom_page_navi( $totalpages, $paged, $end_size, $mid_size )
+{
+    $bignum = 999999999;
+
+    if ( $totalpages <= 1 || $paged > $totalpages ) { 
+        // echo $paged . 'paged | ' . $totalpages . 'totalpages'; 
+        return; 
+    }
+
+    $args = array(
+        'base'          => str_replace( $bignum, '%#%', esc_url( get_pagenum_link( $bignum ) ) ),
+        'format'        => 'pagination',
+        'current'       => max( 1, $paged ),
+        'total'         => $totalpages,
+        'prev_text'     => 'Prev',
+        'next_text'     => 'Next',
+        'type'          => 'list',
+        'show_all'      => false,
+        'end_size'      => $end_size,
+        'mid_size'      => $mid_size,
+        'type'          => 'array',
+    );
+
+            $links     = paginate_links($args);
+            ?>
+
+            <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+                <ul class="pagination">
+                    <?php
+                    $i = 1;
+                        foreach ( $links as $link ) { ?>
+                            <li class="page-item <?php if ($i == $args['current']) { echo active; }; ?>">
+                    <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+                            </li>
+
+                    <?php $i++;} ?>
+                </ul>
+            </nav>
+            <?php
+}

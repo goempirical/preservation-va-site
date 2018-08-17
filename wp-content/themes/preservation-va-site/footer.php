@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<?php 
 
-				$link = get_field('link');
+				$link = $opt_footer["primary_button"];
 
 				if( $link ): ?>
 
