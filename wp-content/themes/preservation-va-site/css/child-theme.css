@@ -10246,7 +10246,7 @@ body {
 section.red, section.light_blue, section.dark_blue {
   background: #A12017;
   color: #ffffff; }
-  section.red *:not(a):not(select):not(button), section.light_blue *:not(a):not(select):not(button), section.dark_blue *:not(a):not(select):not(button) {
+  section.red *:not(a):not(select):not(button):not(option), section.light_blue *:not(a):not(select):not(button):not(option), section.dark_blue *:not(a):not(select):not(button):not(option) {
     color: #ffffff; }
   section.red a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit), section.light_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit), section.dark_blue a:not(.btn):not(.wpcf7 input[type=submit]):not(.give-submit-button-wrap .give-submit) {
     color: #ffca05; }
@@ -11297,7 +11297,7 @@ section.headline-row + section {
 .three_column_grid .grid-three-col {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: initial;
   padding-right: 1.5rem;
   padding-left: 1.5rem; }
 
