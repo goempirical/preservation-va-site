@@ -74,7 +74,7 @@ function buildTable($table) {
 // register google map API for acf
 function my_acf_init() {
     
-    acf_update_setting('google_api_key', 'AIzaSyBGoU3uwZTeYotBXgkkUKL0ipu6l6CfiGs');
+    acf_update_setting('google_api_key', 'AIzaSyDtIv9ZKAVxymrRFSrr4QAE2t4G08NZ0NQ');
 }
 
 add_action('acf/init', 'my_acf_init');
